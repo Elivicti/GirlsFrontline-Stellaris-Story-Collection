@@ -118,9 +118,7 @@ GF_trait_analysis_model = {
 	opposites = { "GF_trait_logical_subroutine" }
 	icon="gfx/interface/icons/traits/doll/analysis.dds"
 	modifier = {
-		planet_jobs_engineering_research_produces_mult = 0.1
-		planet_jobs_physics_research_produces_mult = 0.1
-		planet_jobs_society_research_produces_mult = 0.1
+		researcher_jobs_bonus_workforce_mult = 0.1
 	}
 }
 ######(perk1)
@@ -129,7 +127,7 @@ GF_trait_logical_subroutine = {
 	allowed_archetypes = { GF_ANDROID }
 	initial = no
 	randomized = no
-	
+
 	icon = "gfx/interface/icons/traits/doll/logic.dds"
 	opposites = { "GF_trait_analysis_model" }
 	species_potential_add = {
@@ -140,9 +138,7 @@ GF_trait_logical_subroutine = {
 	}
 	custom_tooltip_with_modifiers = GF_trait_logical_subroutine_effect
 	modifier = {
-		planet_jobs_engineering_research_produces_mult = 0.2
-		planet_jobs_physics_research_produces_mult = 0.2
-		planet_jobs_society_research_produces_mult = 0.2
+		researcher_jobs_bonus_workforce_mult = 0.2
 	}
 }
 GF_trait_mind_cloud = {
@@ -167,7 +163,7 @@ GF_trait_tacticalchip = {
 	allowed_archetypes = { GF_ANDROID }
 	initial = no
 	randomized = no
-	
+
 	icon = "gfx/interface/icons/traits/doll/tacticalchip.dds"
 	species_potential_add = {
 		exists = from
@@ -185,7 +181,7 @@ GF_trait_zener_protocol = {
 	allowed_archetypes = { GF_ANDROID }
 	initial = no
 	randomized = no
-	
+
 	opposites = { "GF_trait_emotional_subroutine" }
 	icon = "gfx/interface/icons/traits/doll/zener.dds"
 	species_potential_add = {
@@ -196,6 +192,7 @@ GF_trait_zener_protocol = {
 	}
 	custom_tooltip_with_modifiers = GF_trait_zener_protocol_effect
 	modifier = {
+		bureaucrat_jobs_bonus_workforce_mult = 0.20
 		planet_jobs_unity_produces_mult = 0.20
 		species_empire_size_mult = -0.10
 	}
@@ -206,7 +203,7 @@ GF_trait_sercurity_program = {
 	sorting_priority = 20
 	allowed_archetypes = { GF_ANDROID }
 	randomized = no
-	
+
 	icon = "gfx/interface/icons/traits/doll/defense.dds"
 	species_potential_add = {
 		exists = from
@@ -225,7 +222,7 @@ GF_trait_nanobot_hives = {
 	allowed_archetypes = { GF_ANDROID }
 	initial = no
 	randomized = no
-	
+
 	opposites = { "GF_trait_vanometriccell" }
 	icon = "gfx/interface/icons/traits/doll/nanobot.dds"
 	species_potential_add = {
@@ -251,8 +248,8 @@ GF_trait_quantum_processors = {
 		}
 	}
 	modifier = {
-		planet_jobs_ruler_produces_mult = 0.10
-		planet_jobs_specialist_produces_mult = 0.10
+		pop_cat_ruler_bonus_workforce_mult = 0.10
+		pop_cat_specialist_bonus_workforce_mult = 0.10
 	}
 }
 GF_trait_overclock = {
@@ -260,7 +257,7 @@ GF_trait_overclock = {
 	allowed_archetypes = { GF_ANDROID }
 	initial = no
 	randomized = no
-	
+
 	icon = "gfx/interface/icons/traits/doll/overclock.dds"
 	species_potential_add = {
 		exists = from
@@ -277,7 +274,7 @@ GF_trait_nuclear_engine = {
 	allowed_archetypes = { GF_ANDROID }
 	initial = no
 	randomized = no
-	
+
 	icon = "gfx/interface/icons/traits/doll/nuclear.dds"
 	species_potential_add = {
 		exists = from
@@ -286,6 +283,6 @@ GF_trait_nuclear_engine = {
 		}
 	}
 	modifier = {
-		planet_jobs_worker_produces_mult = 0.20
+		pop_cat_worker_bonus_workforce_mult = 0.20
 	}
 }
