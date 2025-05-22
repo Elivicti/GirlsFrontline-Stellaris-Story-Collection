@@ -1,0 +1,6 @@
+# editor configs
+.idea/
+.vscode/
+
+.unused/
+temp/
