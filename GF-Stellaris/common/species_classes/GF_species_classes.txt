@@ -1,0 +1,106 @@
+GF_doll = {
+	archetype = GF_ANDROID
+	playable = { always = no }
+	# possible = {
+	# 	origin	  = { value = GF_origin_commonwealth }
+	# 	authority = { value = GF_auth_commonwealth }
+	# }
+	possible_secondary = { always = no }
+	gender = no
+	use_climate_preference = no
+	portrait_modding = yes
+	randomized = no
+
+	leader_age_min = 1
+	leader_age_max = 5
+	graphical_culture = GF_new_type_01
+	move_pop_sound_effect = "robot_pops_move"
+	trait = "GF_trait_doll"
+
+	resources = {
+		category = GF_doll_pops
+		upkeep = {
+			trigger = { is_being_purged = no }
+			gf_core_chip = 0.1
+		}
+		upkeep = {
+			trigger = {
+				is_being_purged = no
+				owner = {
+					NOR = {
+						has_policy_flag = GF_run_mode_policy_no_food
+						has_policy_flag = GF_run_mode_policy_overload
+					}
+				}
+			}
+			food = 0.5
+		}
+	}
+}
+
+GF_new_type = {
+	archetype = BIOLOGICAL
+	possible = {
+		origin = { value = GF_origin_commonwealth }
+		authority = { value = GF_auth_commonwealth }
+	}
+	possible_secondary = { always = no }
+	randomized = no
+	
+	graphical_culture = GF_new_type_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+	trait = "GF_trait_sequela"
+}
+
+GF_new_type_robot = {
+	archetype = ROBOT
+
+	playable = {
+		has_global_flag = game_started
+	}
+	randomized = no
+
+	gender = yes
+	use_climate_preference = no
+	portrait_modding = yes
+	leader_age_min = 1
+	leader_age_max = 10
+	graphical_culture = ai_01
+	move_pop_sound_effect = "robot_pops_move"
+	resources = {}
+}
+
+
+ogas_consciousness = {
+	archetype = collective_consciousness
+
+	playable = { always = no }
+
+	gender = no
+	use_climate_preference = no
+	portrait_modding = no
+	randomized = no
+	
+	leader_age_min = 100
+	leader_age_max = 500
+	graphical_culture = extra_dimensional_01
+	move_pop_sound_effect = "robot_pops_move"
+	trait = "trait_mechanical"
+}
+
+aggressive_elid = {
+	archetype = LITHOID
+
+	playable = { always = no }
+
+	gender = no
+	use_climate_preference = no
+	portrait_modding = no
+	randomized = no
+
+	leader_age_min = 100
+	leader_age_max = 500
+	graphical_culture = extra_dimensional_01
+	move_pop_sound_effect = "robot_pops_move"
+	trait = "trait_extremely_adaptive"
+}

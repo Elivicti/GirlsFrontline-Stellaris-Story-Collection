@@ -1,0 +1,197 @@
+namespace = GF_doll_leader
+
+# on_leader_spawned
+# a new leader is generated for an empire, to be available for recruitment
+# scope: country, from: leader
+country_event = {
+	id = GF_doll_leader.0
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		from = {
+			species = { has_trait = GF_trait_doll }
+			GF_is_ogas_leader = no
+		}
+	}
+
+	immediate = {
+		from = {
+			add_trait = GF_trait_leader_doll
+			switch = {
+				trigger = leader_class
+				commander = {
+					if = {
+						limit = { species = { has_trait = GF_trait_tacticalchip } }
+						add_trait = GF_trait_leader_commander_plus
+					}
+				}
+				scientist = {
+					if = {
+						limit = { species = { has_trait = GF_trait_logical_subroutine } }
+						add_trait = GF_trait_leader_scientist_plus
+					}
+				}
+				official = {
+					if = {
+						limit = { species = { has_trait = GF_trait_zener_protocol } }
+						add_trait = GF_trait_leader_official_plus
+					}
+				}
+			}
+		}
+	}
+}
+
+# from = species
+country_event = {
+	id = GF_doll_leader.1
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		from = { has_trait = GF_trait_tacticalchip }
+	}
+
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				is_exact_same_species = from
+				leader_class = commander
+				NOT = { has_trait = GF_trait_leader_commander_plus }
+			}
+			add_trait = GF_trait_leader_commander_plus
+		}
+	}
+}
+
+# from = species
+country_event = {
+	id = GF_doll_leader.2
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		from = { has_trait = GF_trait_zener_protocol }
+	}
+
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				is_exact_same_species = from
+				leader_class = official
+				NOT = { has_trait = GF_trait_leader_official_plus }
+				NOT = { has_leader_flag = flag_GF_ogas_leader }
+			}
+			add_trait = GF_trait_leader_official_plus
+		}
+	}
+}
+
+# from = species
+country_event = {
+	id = GF_doll_leader.3
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		from = { has_trait = GF_trait_logical_subroutine }
+	}
+
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				is_exact_same_species = from
+				leader_class = scientist
+				NOT = { has_trait = GF_trait_leader_scientist_plus }
+			}
+			add_trait = GF_trait_leader_scientist_plus
+		}
+	}
+}
+
+# on_leader_spawned
+# from = leader
+country_event = {
+	id = GF_doll_leader.10
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		from = { GF_portrait_correction_allowed = yes }
+	}
+
+	immediate = {
+		from = { GF_set_random_doll_leader_portrait_and_name = yes }
+	}
+}
+
+country_event = {
+	id = GF_doll_leader.15
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		from = { has_trait = GF_trait_doll }
+	}
+
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				is_exact_same_species = from
+				GF_has_doll_leader_flag = yes
+			}
+			GF_correct_doll_leader_portrait_and_name = yes
+		}
+		every_envoy = {
+			limit = {
+				is_exact_same_species = from
+				GF_has_doll_leader_flag = yes
+			}
+			GF_correct_doll_leader_portrait_and_name = yes
+		}
+	}
+}
+
+country_event = {
+	id = GF_doll_leader.18
+	hide_window = yes
+
+	is_triggered_only = yes
+	immediate = {
+		every_owned_leader = {
+			limit = { GF_has_doll_leader_flag = yes }
+			GF_correct_doll_leader_portrait_and_name = yes
+		}
+		every_envoy = {
+			limit = { GF_has_doll_leader_flag = yes }
+			GF_correct_doll_leader_portrait_and_name = yes
+		}
+	}
+}
+
+country_event = {
+	id = GF_doll_leader.100
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		NOT = { has_country_flag = flag_GF_doll_reprogram_interval }
+		has_edict = GF_doll_reprogram
+	}
+	immediate = {
+		set_timed_country_flag = {
+			flag = flag_GF_doll_reprogram_interval
+			days = @GF_doll_leader_reprogram_interval
+		}
+		every_owned_leader = {
+			limit = { GF_is_doll_leader = yes }
+			remove_all_negative_traits = yes
+		}
+		country_event = {
+			id = GF_doll_leader.100
+			days = @GF_doll_leader_reprogram_interval
+		}
+	}
+}

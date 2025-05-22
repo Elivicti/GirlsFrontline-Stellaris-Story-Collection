@@ -1,0 +1,436 @@
+guiTypes = {
+	### EVENT OPTION ###
+
+	containerWindowType = {
+		name = "GF_OGAS_archive_system_option"
+		size = { width = 475 height = 42 }
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_event_button_450_34"
+			position = { x = 0 y = 0 }
+			buttonFont = "cg_16b"
+			buttonText = "OPTION_TEXT"
+			borderSize = { x = 30 y = 0 }
+			multiline = yes
+		}
+		overlappingElementsBoxType = {
+			name = "trigger_icons"
+			position = { x = -4 y = 12 }
+			size = { x = 65 y = 28 }
+		}
+	}
+
+	### EVENT WINDOW ###
+
+	containerWindowType = {
+		name = "GF_OGAS_archive_system"
+		orientation = center
+		origo = center
+		moveable = yes
+		size = { width = 1650 height = 800 }
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tile_large_bg_plain"
+		}
+
+		@event_picture_x = -1000
+		@event_picture_y = 160
+		iconType = {
+			name = "header_line"
+			position = { x = @event_picture_x y = 58 }
+			spriteType = "GFX_line_center"
+			orientation = upper_right
+			centerPosition = yes
+			alwaysTransparent = yes
+		}
+		buttonType = {
+			name = "focus_button"
+			position = { x = -45 y = 7 }
+			orientation = upper_right
+			spriteType = "GFX_fleetview_focus"
+			buttonFont = "cg_16b"
+			shortcut = "q"
+		}
+		instantTextBoxType = {
+			name = "heading"
+			font = "large_title_font"
+			text = "DIPLOMACY"
+			position = { x = -1200 y = 20 }
+			orientation = upper_right
+			maxWidth = 400
+			maxHeight = 24
+			fixedSize = yes
+			format = center
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "event_background_image"
+			spriteType = "GFX_GF_leader_OGAS_bg"
+			position = { x = 1 y = 1 }
+			alwaysTransparent = yes
+		}
+		### EVENT PICTURE ###
+		iconType = {
+			name = "event_picture"
+			orientation = upper_right
+			position = { x = @event_picture_x y = @event_picture_y }
+			spriteType = "GFX_evt_GF_command_room"
+			centerPosition = yes
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "picture_frame"
+			orientation = upper_right
+			position = { x = @event_picture_x y = @event_picture_y }
+			spriteType = "GFX_event_frame"
+			centerPosition = yes
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "stripes_1"
+			orientation = upper_right
+			spriteType = "GFX_event_stripes_1"
+			centerPosition = yes
+			position = { x = @event_picture_x y = @event_picture_y }
+			alwaystransparent = yes
+		}
+
+		### PORTRAIT ###
+		# ？？？这玩意到底是干嘛的
+		containerWindowType = {
+			name = "portrait_background"
+			position = { x = 10000 y = 56 }
+			size = { width = 964 height = 350 }
+			orientation = center_up
+			origo = center_up
+			clipping = yes
+			iconType = {
+				name = "event_picture"
+				spriteType = "GFX_diplomacy_portrait_frame"
+			}
+			iconType = {
+				name = "portrait"
+				position = { x = 256 y = 5 }
+				spriteType = "GFX_portrait_character"
+			}
+		}
+		containerWindowType = {
+			name = "portrait"
+			position = { x = 0 y = 20 }
+			size = { width = 575 height = 500 } # not changable
+			clipping = yes
+			iconType = {
+				name = "portrait"
+				spriteType = "GFX_GF_diplo_character_portrait_no_room"
+				position = { x = -70 y = -40 }
+				alwaysTransparent = yes
+				scale = 1
+			}
+			iconType = {
+				name = "black_frame"
+				spriteType = "GFX_diplomacy_portrait_shadow_frame"
+				position = { x = 200000 y = 0 }
+				alwaysTransparent = yes
+			}
+			iconType = {
+				name = "stripes_1"
+				spriteType = "GFX_diplomacy_stripes_2"
+				position = { x = 600000 y = 5 }
+				alwaysTransparent = yes
+			}
+			iconType = {
+				name = "city_frame"
+				position = { x = 600000 y = 5 }
+				spriteType = "GFX_diplomacy_portrait_frame"
+				alwaysTransparent = yes
+			}
+		}
+
+		### EMPIRE INFO ###
+		iconType = {
+			name = "empire_info_bg"
+			spriteType = "GFX_diplomacy_dark_fade_bg"
+			position = { x = 360000 y = 75 }
+			alwaysTransparent = yes
+		}
+		instantTextBoxType = {
+			name = "empire_name"
+			font = "malgun_goth_24"
+			text = "Kammarian Galactic Concordat"
+			position = { x = 480000 y = 81 }
+			maxWidth = 450
+			maxHeight = 24
+			format = left
+			text_color_code = "E"
+			fixedSize = yes
+		}
+		instantTextBoxType = {
+			name = "empire_government_type"
+			font = "cg_16b"
+			text = "Autocracy"
+			position = { x = 480000 y = 106 }
+			maxWidth = 250
+			maxHeight = 16
+			format = left
+			fixedSize = yes
+			text_color_code = "Y"
+		}
+		instantTextBoxType = {
+			name = "empire_personality_type"
+			font = "cg_16b"
+			text = "Despicable Neutrals"
+			position = { x = 480000 y = 123 }
+			maxWidth = 250
+			maxHeight = 16
+			format = left
+			fixedSize = yes
+		}
+		overlappingElementsBoxType = {
+			name = "empire_ethics_icons"
+			position = { x = 480000 y = 149 }
+			size = { x = 240 y = 30 }
+			spacing = 2.0
+			format = left
+		}
+		buttonType = {
+			name = "empire_flag"
+			quadTextureSprite = "GFX_empire_flag_128"
+			position = { x = 280000 y = 248 }
+		}
+		containerWindowType = {
+			name = "leader_details"
+			position = { x = 22500 y = 86 }
+			containerWindowType = {
+				name = "empire_traits_box"
+				position = { x = 0 y = -5 }
+				size = { width = 210 height = 75 }
+				background = {
+					name = "ethics_bg"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+			}
+			instantTextBoxType = {
+				name = "empire_traits_label"
+				position = { x = 214 y = 37 }
+				font = "cg_16b"
+				maxWidth = 230
+				maxHeight = 20
+				fixedSize = yes
+				format = left
+				#text_color_code = "E"
+				text = "RULER_TRAITS"
+				alwaysTransparent = yes
+			}
+			overlappingElementsBoxType = {
+				name = "leader_traits"
+				position = { x = 215 y = 55 }
+				size = { x = 125 y = 330 }
+			}
+			instantTextBoxType = {
+				name = "leader_name"
+				position = { x = 10 y = 0 }
+				font = "cg_16b"
+				maxWidth = 330
+				maxHeight = 20
+				fixedSize = yes
+				format = left
+				text = "Leader Name"
+				text_color_code = "E"
+			}
+			instantTextBoxType = {
+				name = "leader_species"
+				position = { x = 10 y = 18 }
+				font = "cg_16b"
+				maxWidth = 330
+				maxHeight = 20
+				fixedSize = yes
+				text = "Leader Species"
+				format = left
+			}
+		}
+
+		### OPINION
+		containerWindowType = {
+			name = "opinion_window"
+			position = { x = 27000 y = 123 }
+			size = { width = 94 height = 30 }
+			# Use this for tooltip area, picture comes from somewhere else
+			background = {
+				name = "opinion_bg"
+				spriteType = "GFX_tiled_window_transparent"
+			}
+			iconType = {
+				name = "their_opinion_icon"
+				spriteType = "GFX_diplomacy_opinion"
+				position = { x = 7 y = 4 }
+				alwaysTransparent = yes
+			}
+			instantTextBoxType = {
+				name = "their_opinion"
+				font = "cg_16b"
+				maxWidth = 40
+				position = { x = 40 y = 7 }
+				format = left
+				text = "100"
+				alwaysTransparent = yes
+			}
+		}
+		buttonType = {
+			name = "tts_button"
+			position = { x = 461 y = 643 }
+			spriteType = "GFX_button_tts_start"
+			buttonFont = "cg_16b"
+			shortCut = "t"
+		}
+
+		### ARCHIVE ###
+		containerWindowType = {
+			name = "GF_OGAS_archive_title_container"
+			position = { x = 930 y = 30 }
+			size = { width = 705 height = 55 }
+			background = {
+				name = "description_frame"
+				spriteType = "GFX_tiles_frame_light"
+				alwaystransparent = yes
+			}
+			effectButtonType = {
+				name = "GF_OGAS_archive_title"
+				text = "GF_archive_title"
+				font = "large_title_font_28"
+				effect = GF_effect_button_always_on
+				position = { x = 10 y = 2 }
+				size = { x = 685 y = 50 }
+				format = left
+				alwaysTransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "description_container" # archive bg
+			position = { x = 930 y = 90 }
+			size = { width = 705 height = 692 }
+			background = {
+				name = "description_frame"
+				spriteType = "GFX_tiles_frame_light"
+				alwaystransparent = yes
+			}
+		}
+		instantTextBoxType = {
+			name = "alien_message" # archive desc
+			font = "malgun_goth_24"
+			position = { x = 940 y = 100 }
+			maxWidth  = 685 # -20
+			maxHeight = 672 # -20
+			format = left
+			scrollbartype = "standardtext_slider"
+			# text_color_code = ""
+		}
+
+		containerWindowType = {
+			name = "vertical_seperater"
+			position = { x = 905 y = 22 }
+			size = { width = 9 height = 768 }
+			background = {
+				name = "description_frame"
+				spriteType = "GFX_tiles_frame_light"
+				alwaystransparent = yes
+			}
+		}
+
+		### DESCRIPTION ###
+		containerWindowType = {
+			name = "alien_message_background"
+			# position = { x = 20 y = 441 }
+			position = { x = 20000 y = 441 }
+			size = { width = 480 height = 240 }
+			background = {
+				name = "ethics_bg"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+			}
+		}
+		containerWindowType = {
+			name = "GF_OGAS_archive_tip_container"
+			position = { x = 20 y = 360 }
+			size = { width = 390 height = 360 }
+			background = {
+				name = "description_frame"
+				spriteType = "GFX_tiles_frame_light"
+				alwaystransparent = yes
+			}
+		}
+		instantTextBoxType = {
+			name = "GF_OGAS_archive_tip"
+			text = GF_archive_system_desc
+			font = "malgun_goth_24"
+			position = { x = 30 y = 370 }
+			maxWidth = 370
+			maxHeight = 340
+			format = left
+			scrollbartype = "standardtext_slider_small"
+			# text_color_code = ""
+		}
+
+		containerWindowType = {
+			name = "GF_OGAS_threads_tip_container"
+			position = { x = 20 y = 732 }
+			size = { width = 390 height = 50 }
+			background = {
+				name = "description_frame"
+				spriteType = "GFX_tiles_frame_light"
+				alwaystransparent = yes
+			}
+			effectButtonType = {
+				name = "GF_OGAS_threads_tip"
+				text = "GF_OGAS_threads_info_from"
+				font = "malgun_goth_24"
+				effect = GF_effect_button_always_on
+				position = { x = 10 y = 1 }
+				size = { x = 410 y = 50 }
+				format = left
+				alwaysTransparent = yes
+			}
+		}
+		### EVENT DIPLO ###
+		containerWindowType = {
+			name = "EVENT_DIPLO"
+			position = { x = -750 y = 262 }
+			orientation = upper_right
+			size = { width = 100%% height = 100%% }
+			instantTextBoxType = {
+				name = "action_title"
+				font = "malgun_goth_24"
+				position = { x = -325 y = 70 }
+				maxWidth = 300
+				format = right
+				alwaysTransparent = yes
+			}
+			instantTextBoxType = {
+				name = "action_desc"
+				font = "malgun_goth_24"
+				position = { x = 510 y = 0 }
+				maxWidth = 480
+				maxHeight = 180
+				format = center
+				alwaysTransparent = yes
+				text_color_code = "H"
+			}
+			listboxType = {
+				name = "option_list"
+				position = { x = -485 y = 90 }
+				size = { x = 475 y = 420 }
+				spacing = 1
+				scrollbartype = "standardlistbox_slider"
+				borderSize = { x = 0 y = 0 }
+			}
+		}
+		buttonType = {
+			name = "confirm_button"
+			quadTextureSprite = "GFX_standard_button_230_34_button"
+			position = { x = -264 y = -112 }
+			orientation = lower_right
+			font = "cg_16b"
+			text = "MESSAGE_OK"
+			clicksound = "confirmation"
+		}
+	}
+}

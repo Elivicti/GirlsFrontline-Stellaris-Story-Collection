@@ -1,0 +1,70 @@
+@base_agenda_cost = 7000
+# Remember to update initial progress for "agenda_infinite_opportunities" in game_start.60 if above is changed.
+
+GF_agenda_automation = {
+	agenda_cost = @base_agenda_cost
+	allow = {
+		has_tradition = tr_gf_automation_adopt
+		ruler = {
+			NOT = { has_trait = GF_trait_leader_ogas_glitch }
+		}
+	}
+	potential = {
+		has_technology = GF_tech_ogas_computing_center
+	}
+	modifier = {
+		planet_building_build_speed_mult = 0.10
+		GF_automated_city_districts_produces_mult = 0.05
+		GF_system_maintenance = 0.05
+		GF_automated_city_construction_speed_agenda_mult = 0.15
+	}
+	finish_modifier = GF_agenda_automation_finish
+}
+
+GF_agenda_doll_cloud_network = {
+	agenda_cost = @base_agenda_cost
+	allow = {
+		has_tradition = tr_gf_mind_upgrade_adopt
+	}
+	potential = {
+		has_ascension_perk = ap_GF_mind_upgrade
+	}
+	modifier = {
+		leaders_upkeep_mult = -0.10
+	}
+	finish_modifier = GF_agenda_doll_cloud_network_finish
+	effect = {
+		if = {
+			limit = {
+				NOT = { any_owned_leader = { GF_is_doll_leader = yes } }
+			}
+			custom_tooltip = GF_agenda_doll_cloud_network_no_doll_leader_tooltip
+		}
+		else = {
+			hidden_effect = {
+				ruler = {
+					set_variable = {
+						which = v_GF_official_doll
+						value = prev.value:GF_count_doll_leader|CLASS|official|MAX|25|
+					}
+					set_variable = {
+						which = v_GF_scientist_doll
+						value = prev.value:GF_count_doll_leader|CLASS|scientist|MAX|25|
+					}
+					set_variable = {
+						which = v_GF_commander_doll
+						value = prev.value:GF_count_doll_leader|CLASS|commander|MAX|25|
+					}
+					add_timed_trait = {
+						trait = GF_trait_leader_doll_cloud_network
+						days = prev.value:GF_doll_cloud_network_trait_duration
+					}
+				}
+				GF_add_doll_cloud_network_node_traits = { CLASS = official }
+				GF_add_doll_cloud_network_node_traits = { CLASS = scientist }
+				GF_add_doll_cloud_network_node_traits = { CLASS = commander }
+			}
+		}
+		custom_tooltip = GF_agenda_doll_cloud_network_effect_tooltip
+	}
+}

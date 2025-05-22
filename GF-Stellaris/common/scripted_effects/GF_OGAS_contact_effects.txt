@@ -1,0 +1,163 @@
+# this = country
+GF_OGAS_contact_begin = {
+	hidden_effect = { set_country_flag = flag_GF_OGAS_contact_diplomacy_engaged }
+}
+
+# this = country
+GF_OGAS_contact_end = {
+	hidden_effect = { remove_country_flag = flag_GF_OGAS_contact_diplomacy_engaged }
+}
+
+
+# this = country
+GF_zion_comm_begin = {
+	hidden_effect = { set_country_flag = flag_GF_zion_comm_engaged }
+}
+
+# this = country
+GF_zion_comm_end = {
+	hidden_effect = { remove_country_flag = flag_GF_zion_comm_engaged }
+}
+
+# this = country
+GF_set_archive_title = {
+	event_target:GF_archive_title = {
+		set_name = $TITLE$
+	}
+}
+
+# this = country
+GF_unlock_keyword_notification_yes = {
+	create_message = {
+		type = MESSAGE_TYPE_GF_UNLOCKED_KEYWORD
+		localization = MESSAGE_TYPE_GF_UNLOCKED_KEYWORD_DESC
+		days = 30
+		variable = {
+			type = key
+			localization = VALUE
+			value = $VALUE$
+		}
+	}
+}
+GF_unlock_keyword_notification_no = {}
+GF_unlock_event_archive_notification_yes = {
+	create_message = {
+		type = MESSAGE_TYPE_GF_UNLOCKED_EVENT_ARCHIVE
+		localization = MESSAGE_TYPE_GF_UNLOCKED_ARCHIVE_DESC
+		days = 30
+		variable = {
+			type = key
+			localization = VALUE
+			value = $VALUE$
+		}
+	}
+}
+GF_unlock_event_archive_notification_no = {}
+GF_unlock_history_archive_notification_yes = {
+	create_message = {
+		type = MESSAGE_TYPE_GF_UNLOCKED_HISTORY_ARCHIVE
+		localization = MESSAGE_TYPE_GF_UNLOCKED_ARCHIVE_DESC
+		days = 30
+		variable = {
+			type = key
+			localization = VALUE
+			value = $VALUE$
+		}
+	}
+}
+GF_unlock_history_archive_notification_no = {}
+
+GF_unlock_archive_notification_impl = {
+	# forward notification call
+	GF_unlock_$TYPE$_notification_$NOTIFICATION$ = {
+		VALUE = $VALUE$
+	}
+}
+
+# this = country
+# @param NOTIFICATION: yes | no (default: no)
+# @param TYPE:  keyword | history_archive | event_archive
+# @param VALUE: concept | localisation
+GF_unlock_archive = {
+	if = {
+		limit = {
+			NOT = { GF_has_unlocked_archive = { TYPE = $TYPE$ VALUE = $VALUE$ } }
+		}
+		GF_unlock_archive_notification_impl = {
+			TYPE  = $TYPE$
+			VALUE = $VALUE$
+			NOTIFICATION = $NOTIFICATION|yes$
+		}
+		hidden_effect = {
+			event_target:GF_ogas_country = {
+				set_country_flag = flag_$TYPE$_$VALUE$
+			}
+		}
+	}
+	hidden_effect = {
+		event_target:GF_ogas_country = {
+			set_country_flag = flag_GF_has_unlocked_any_$TYPE$
+		}
+	}
+}
+
+GF_unlock_inital_keywords = {
+	event_target:GF_ogas_country = {
+		set_country_flag = flag_keyword_concept_GF_dolls
+		set_country_flag = flag_keyword_concept_GF_neural_cloud
+		set_country_flag = flag_keyword_concept_GF_core_chip
+		set_country_flag = flag_keyword_concept_GF_beilan_event
+		set_country_flag = flag_keyword_concept_GF_collapse_relic
+		set_country_flag = flag_keyword_concept_GF_contaminated_zone
+		set_country_flag = flag_keyword_concept_GF_collapse_liquid
+		set_country_flag = flag_keyword_concept_GF_epiphyllum
+		set_country_flag = flag_keyword_concept_GF_elid
+		set_country_flag = flag_keyword_concept_GF_elid_infected
+		set_country_flag = flag_keyword_concept_GF_siliconization
+	}
+}
+
+# this = country
+GF_set_OGAS_story_event_picture = {
+	hidden_effect = {
+		if = {
+			limit = {
+				OR = {
+					# 当前没有设置图片
+					NOT = { exists = event_target:GF_ogas_story_event_picture@this }
+					# 设置的图片与当前领袖身上标记的图片不一致
+					event_target:GF_ogas_story_event_picture@this = {
+						NOT = { has_leader_flag = flag_$PICTURE$ }
+					}
+				}
+			}
+			GF_clear_OGAS_story_event_picture = yes
+			event_target:GF_ogas_country = {
+				create_leader = {
+					class = scientist
+					name = random
+					species = prev
+					event_leader = yes
+					skip_background_generation = yes
+					skill = 10
+					effect = {
+						save_global_event_target_as = GF_ogas_story_event_picture@prevprev
+						set_leader_flag = flag_$PICTURE$
+					}
+				}
+			}
+		}
+	}
+}
+
+# this = country
+GF_clear_OGAS_story_event_picture = {
+	hidden_effect = {
+		if = {
+			limit = { exists = event_target:GF_ogas_story_event_picture@this }
+			event_target:GF_ogas_story_event_picture@this = {
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+}

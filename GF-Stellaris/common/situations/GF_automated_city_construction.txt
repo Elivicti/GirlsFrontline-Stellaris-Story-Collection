@@ -1,0 +1,215 @@
+GF_automated_city_construction = {
+	picture = GFX_evt_city_planet
+	category = positive
+
+	fail_icon = GFX_situation_outcome_negative
+	fail_icon_frame = GFX_situation_outcome_frame_red
+	complete_icon = GFX_situation_outcome_meh
+	complete_icon_frame = GFX_situation_outcome_frame_green
+
+	desc = {
+		text = GF_automated_city_construction_desc_base
+		trigger = { target = { has_planet_flag = flag_p_GF_automated_city_base_resources } }
+	}
+	desc = {
+		text = GF_automated_city_construction_desc_advanced
+		trigger = { target = { has_planet_flag = flag_p_GF_automated_city_advanced_resources } }
+	}
+	desc = {
+		text = GF_automated_city_construction_desc_special
+		trigger = { target = { has_planet_flag = flag_p_GF_automated_city_special_resources } }
+	}
+
+	start_value = 0
+	stages = {
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_green
+			end = 60
+
+		}
+		stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_green
+			end = 90
+			
+			modifier = {
+				GF_OGAS_threads_used_add = 1
+			}
+			triggered_modifier = {
+				potential = {
+					target = { has_planet_flag = flag_p_GF_automated_city_special_resources }
+				}
+				modifier = { GF_OGAS_threads_used_add = 1 }
+			}
+			target_modifier = {
+				planet_districts_upkeep_mult = -0.10
+			}
+		}
+		stage_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_green
+			end = 120
+
+			modifier = {
+				GF_OGAS_threads_used_add = 2
+			}
+			triggered_modifier = {
+				potential = {
+					target = { has_planet_flag = flag_p_GF_automated_city_advanced_resources }
+				}
+				modifier = { GF_OGAS_threads_used_add = 1 }
+			}
+			triggered_modifier = {
+				potential = {
+					target = { has_planet_flag = flag_p_GF_automated_city_special_resources }
+				}
+				modifier = { GF_OGAS_threads_used_add = 2 }
+			}
+			target_modifier = {
+				planet_districts_upkeep_mult = -0.20
+			}
+		}
+	}
+
+	on_monthly = {
+		events = {
+			GF_situations.100
+		}
+	}
+
+	monthly_progress = {
+		base = 1
+		modifier = {
+			desc = GF_automated_city_construction_districts_city
+			add = target.value:GF_count_district|TYPE|district_city|FACTOR|0.05|
+			NOT = {
+				current_situation_approach = GF_automated_city_construction_approach_cancel
+			}
+		}
+		modifier = {
+			desc = GF_automated_city_construction_districts_industrial
+			add = target.value:GF_count_district|TYPE|district_industrial|FACTOR|0.05|
+			NOT = {
+				current_situation_approach = GF_automated_city_construction_approach_cancel
+			}
+		}
+		modifier = {
+			desc = GF_automated_city_construction_districts_other
+			add = target.value:GF_count_district_non_urban|FACTOR|0.02|
+			NOT = {
+				current_situation_approach = GF_automated_city_construction_approach_cancel
+			}
+		}
+		modifier = {
+			desc = GF_automated_city_construction_approach_speed_up
+			factor = 1.5
+			current_situation_approach = GF_automated_city_construction_approach_speed_up
+		}
+		modifier = {
+			desc = GF_automated_city_construction_speed_from_agenda
+			factor = owner.value:scripted_modifier_mult|MODIFIER|GF_automated_city_construction_speed_agenda_mult|
+			NOT = {
+				current_situation_approach = GF_automated_city_construction_approach_cancel
+			}
+			owner = {
+				OR = {
+					has_modifier = GF_agenda_automation_finish
+					has_agenda_selected = GF_agenda_automation
+				}
+			}
+		}
+		modifier = {
+			desc = GF_automated_city_construction_approach_cancel
+			subtract = 3
+			current_situation_approach = GF_automated_city_construction_approach_cancel
+		}
+		modifier = {
+			desc = GF_automated_city_construction_no_threads
+			factor = 0.25
+			OR = {
+				current_stage = stage_2
+				current_stage = stage_3
+			}
+			NOT = { current_situation_approach = GF_automated_city_construction_approach_cancel }
+			owner = { GF_OGAS_has_used_threads_over_cap = yes }
+		}
+	}
+
+	on_fail = {
+		custom_tooltip = GF_automated_city_construction_fail_tooltip
+		hidden_effect = {
+			target = {
+				remove_planet_flag = flag_p_GF_automated_city_base_resources
+				remove_planet_flag = flag_p_GF_automated_city_advanced_resources
+				remove_planet_flag = flag_p_GF_automated_city_special_resources
+			}
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = GF_automated_city_construction_complete_tooltip
+		hidden_effect = {
+			owner = {
+				set_country_flag = flag_GF_has_completed_autocity_construction
+			}
+			target = {
+				GF_autocity_construction_complete_effect = yes
+			}
+			destroy_situation = this
+		}
+	}
+
+
+	approach = {
+		name = GF_automated_city_construction_approach_cancel
+		icon = GFX_situation_approach_suspicious
+		icon_background = GFX_situation_approach_bg_red
+
+		on_select = {
+			custom_tooltip = GF_automated_city_construction_approach_cancel_effect_desc
+		}
+
+		resources = {
+			category = situations
+			upkeep = { energy = 5 }
+		}
+	}
+
+	approach = {
+		name = GF_automated_city_construction_approach_normal
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_green
+		default = yes
+
+		on_select = {
+			custom_tooltip = GF_automated_city_construction_approach_normal_effect_desc
+		}
+
+		resources = {
+			category = situations
+			upkeep = {
+				minerals = 150
+				alloys = 25
+			}
+		}
+	}
+
+	approach = {
+		name = GF_automated_city_construction_approach_speed_up
+		icon = GFX_situation_approach_scales
+		icon_background = GFX_situation_approach_bg_yellow
+
+		on_select = {
+			custom_tooltip = GF_automated_city_construction_approach_speed_up_effect_desc
+		}
+
+		resources = {
+			category = situations
+			upkeep = {
+				minerals = 300
+				alloys = 50
+			}
+		}
+	}
+}

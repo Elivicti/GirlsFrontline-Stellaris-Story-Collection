@@ -1,0 +1,223 @@
+# A country has increased the level of a tech, use last_increased_tech trigger to check tech and level.
+# This = Country
+on_tech_increased = {
+	events = {
+		GF_alaya.0	# “遗迹技术”研究完成
+		GF_evt_misc.200
+
+		GF_doll.510
+		GF_doll.515
+	}
+}
+
+# this/root = planet that have been fired upon
+# from = fleet that fired
+on_destroy_planet_with_PLANET_KILLER_GF_COLLAPSE_ENDING_FLASH = {
+	events = {
+		toxoids.8016 #Destroyed knight Keep
+		crisis.5015 # Menace Objective - Destroy World/Empire
+		origin.3245 # Glassing a Progenitors Nest
+		planet_destruction.600 # frag holy world
+		
+		GF_ending_flash.100
+		awareness.150 # Planet cracker used OR planet terraformed, chance to gain 20 awareness.
+	}
+}
+
+# Planet has taken damage from orbital bombardment - Damage is applied daily
+# This = Planet
+# From = Bombarder
+on_planet_bombarded = {
+	events = {
+		GF_bombardment.1000
+		# GF_bombardment.1200	# 向轰炸目标添加污染区
+		# GF_bombardment.1310 # 居住站
+		GF_bombardment.3000
+	}
+}
+
+# Planet has reached 0 pops from orbital bombardment
+# This = Planet
+# From = Bombarder
+on_planet_zero_pops = {
+	events = {
+		GF_bombardment.2000
+		# GF_bombardment.1100	# 轰炸目标概率变为坍塌死寂星球
+		# GF_bombardment.1300 # 轰炸目标为居住站
+	}
+}
+
+# 当星球被轰炸为坍塌死寂星球时触发，触发时间满足：
+## 早于星球类型被更改
+## 以下两个on_action分别在轰炸者(国家)和行星所有者(国家)先后触发一次
+# 注意：当被轰炸的是居住站时，居住站将在这两个on_action之后移除
+
+# This = country (轰炸者)
+# From = planet
+on_planet_bombarded_to_collapse_bombarder = {
+	events = {
+		GF_bombardment.1101	# 非居住站
+		GF_bombardment.1201
+		GF_bombardment.1301 # 居住站
+	}
+}
+# This = country (行星所有者)
+# From = planet
+# FromFrom = bombarder (fleet)
+on_planet_bombarded_to_collapse_victim = {
+	events = {
+		GF_bombardment.1102	# 非居住站
+		GF_bombardment.1202
+		GF_bombardment.1302 # 居住站
+		GF_bombardment.1400 # 轰炸圣地
+	}
+}
+
+# this = planet
+# from = pop (captured)
+# fromfrom = fleet (bombarder)
+on_pop_GF_bombard_captured = {
+	events = {
+		GF_bombardment.3010
+	}
+}
+
+# this = planet
+# from = country (GF Country; owner?)
+on_GF_elid_invasion_spawned = {
+	events = {
+		GF_elid.510
+		GF_elid.511
+	}
+}
+
+# this = planet
+on_GF_elid_invasion_defeated = {
+	events = {
+		GF_elid.1010 # 周期性ELID进攻：玩家胜利
+
+		GF_elid.2110 # 清理黑区：玩家胜利
+		GF_elid.2210 # 清理红区：玩家胜利
+		GF_elid.2310 # 清理黄区：玩家胜利
+	}
+}
+# this = planet
+on_GF_elid_invasion_lost = {
+	events = {
+		GF_elid.1020 # 周期性ELID进攻：玩家失败
+
+		GF_elid.2120 # 清理黑区：玩家失败
+		GF_elid.2220 # 清理红区：玩家失败
+		GF_elid.2320 # 清理黄区：玩家失败
+	}
+}
+
+# Triggers country_event for the defender upon victory
+# Root = country, planet owner
+# From = country, attack leader
+# FromFrom = planet
+on_planet_defenders_win = {
+	events = {
+		GF_elid.610
+	}
+}
+
+# Triggers country_event for the defender upon defeat
+# This = country, planet owner
+# From = country, attack leader
+# FromFrom = planet
+on_planet_defenders_lose = {
+	events = {
+		GF_elid.620
+	}
+}
+
+# 当OGAS线程占用超上限时触发
+# This = country
+# From = any		# 由发射源指定，通常为发射源的域或导致OGAS线程占用超上限的原因所在的域
+on_OGAS_used_threads_over_cap = {
+	events = {
+		GF_ogas.500
+	}
+}
+
+
+# 深入锡安，低能量
+# this = country
+on_GF_Zion_project_low_energy = {
+	random_events = {
+		10 = GF_zion_project.31100
+		40 = GF_zion_project.31200
+		50 = GF_zion_project.31300
+	}
+}
+# 深入锡安，中等能量
+# this = country
+on_GF_Zion_project_mid_energy = {
+	random_events = {
+		# buff
+		12 = GF_zion_project.32101 # 科研
+		12 = GF_zion_project.32102 # 星球发展
+		12 = GF_zion_project.32103 # 陆军
+		12 = GF_zion_project.32104 # 机器人产出
+		12 = GF_zion_project.32105 # 舰船火力
+		12 = GF_zion_project.32106 # 舰船经验
+		12 = GF_zion_project.32107 # 帝国规模
+		12 = GF_zion_project.32108 # 轨道空间站产出
+		# debuff
+		1 = GF_zion_project.32109 # 舰船火力
+		1 = GF_zion_project.32110 # 帝国规模
+		1 = GF_zion_project.32111 # 科研速度
+		1 = GF_zion_project.32112 # 机器人产出
+
+		# 机械领袖
+		17 = GF_zion_project.32201 # 机械领袖增强：特质 受祝福
+		18 = GF_zion_project.32202 # 机械领袖增强：移除所有负面特质
+		17 = GF_zion_project.32203 # 机械领袖削弱：特质 核心故障
+		18 = GF_zion_project.32204 # 机械领袖增强：添加经验 或 给予特殊特质 受启发
+
+		# 探测器
+		30 = GF_zion_project.32300
+	}
+}
+# 深入锡安，高能量
+# this = country
+on_GF_Zion_project_high_energy = {
+	random_events = {
+		# buff
+		28 = GF_zion_project.33101
+		28 = GF_zion_project.33102
+		28 = GF_zion_project.33103
+		28 = GF_zion_project.33104
+		# debuff
+		21 = GF_zion_project.33201
+		21 = GF_zion_project.33202
+		21 = GF_zion_project.33203
+		21 = GF_zion_project.33204
+
+		# 特殊事件：获得遗珍（提供强力buff），使天灾强度翻倍
+		4 = GF_zion_project.33300
+	}
+}
+
+# Called upon entering FTL (on-action name scripted on the Bypass type)
+# THIS = Fleet
+# FROM = System jumping to
+# FROMFROM = System jumped from
+on_entering_GF_RCgateway = { }
+
+
+# Fired by scripted_action_possible in utility_component_template on a ship,
+# This = planet
+# From = fleet
+on_GF_RC_beacon_deployed = {
+	events = {
+		GF_mega.329
+		GF_mega.330
+	}
+}
+# This = planet
+# From = fleet
+on_GF_RC_beacon_deployment_canceled = {
+	events = { }
+}

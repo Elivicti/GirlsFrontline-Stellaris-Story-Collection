@@ -1,0 +1,214 @@
+namespace = GF_sf_site
+###铁血事件链遗迹（1-3）
+##遗迹1（1-3）
+#遗迹1事件1
+fleet_event = {
+	id = GF_sf_site.11
+	title = "GF_sf_site.11.name"
+	desc = "GF_sf_site.11.desc"
+	picture = GFX_evt_crusher_droid
+	show_sound = event_door_opening
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	option = {
+		name = "GF_sf_site.11.a"
+		small_artifact_reward = yes
+	}
+}
+#遗迹1事件2
+fleet_event = {
+	id = GF_sf_site.12
+	title = "GF_sf_site.12.name"
+	desc = "GF_sf_site.12.desc"
+	picture = GFX_evt_GF_burning_factory
+	show_sound = event_door_opening
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	option = {
+		name = "GF_sf_site.12.a"
+		small_artifact_reward = yes
+	}
+}
+#遗迹1事件3
+fleet_event = {
+	id = GF_sf_site.13
+	title = "GF_sf_site.13.name"
+	desc = "GF_sf_site.13.desc"
+	picture = GFX_evt_GF_core_with_body
+	show_sound = event_door_opening
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		solar_system = {
+			GF_select_sf_event_target = {
+				OWNER = owner
+				ASTEROID = yes
+				EVENT_TARGET = GF_sf_site_target
+			}
+		}
+	}
+	option = {
+		name = "GF_sf_site.13.a"
+		fleet_event = {
+			id = GF_sf.30
+			scopes = { from = event_target:GF_sf_site_target }
+		}
+		owner = {
+			small_artifact_reward = yes
+			hidden_effect = {
+				GF_unlock_archive = {
+					TYPE = keyword
+					VALUE = concept_GF_butterfly_incident
+				}
+				GF_unlock_archive = {
+					TYPE = event_archive
+					VALUE = GF_sf_event_archive_1
+				}
+			}
+		}
+	}
+}
+
+##遗迹2（1-4）
+#遗迹2事件1
+fleet_event = {
+	id = GF_sf_site.21
+	title = "GF_sf_site.21.name"
+	desc = "GF_sf_site.21.desc"
+	picture = GFX_evt_relic_shipyard
+	show_sound = event_door_opening
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	option = {
+		name = "GF_sf_site.21.a"
+		small_artifact_reward = yes
+	}
+}
+#遗迹2事件2
+fleet_event = {
+	id = GF_sf_site.22
+	title = "GF_sf_site.22.name"
+	desc = "GF_sf_site.22.desc"
+	picture = GFX_evt_warm_barren
+	show_sound = event_door_opening
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	option = {
+		name = "GF_sf_site.22.a"
+		small_artifact_reward = yes
+	}
+}
+#遗迹2事件3
+fleet_event = {
+	id = GF_sf_site.23
+	title = "GF_sf_site.23.name"
+	desc = "GF_sf_site.23.desc"
+	picture = GFX_evt_mysterious_signal
+	show_sound = event_door_opening
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	option = {
+		name = "GF_sf_site.23.a"
+		small_artifact_reward = yes
+	}
+}
+#遗迹2事件4
+fleet_event = {
+	id = GF_sf_site.24
+	title = "GF_sf_site.24.name"
+	desc = "GF_sf_site.24.desc"
+	picture = GFX_evt_derelict_interior
+	show_sound = event_door_opening
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		solar_system = {
+			GF_select_sf_event_target = {
+				OWNER = owner
+				ASTEROID = yes
+				EVENT_TARGET = GF_sf_site_target
+			}
+		}
+	}
+	option = {
+		name = "GF_sf_site.24.a"
+		fleet_event = {
+			id = GF_sf.50
+			scopes = { from = event_target:GF_sf_site_target }
+		}
+		owner = {
+			small_artifact_reward = yes
+		}
+	}
+}
+##遗迹3（1-4）
+#遗迹3事件1
+fleet_event = {
+	id = GF_sf_site.31
+	title = "GF_sf_site.31.name"
+	desc = "GF_sf_site.31.desc"
+	picture = GFX_evt_contingency_planet
+	show_sound = event_door_opening
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	option = {
+		name = "GF_sf_site.31.a"
+		small_artifact_reward = yes
+	}
+}
+#遗迹3事件2
+fleet_event = {
+	id = GF_sf_site.32
+	title = "GF_sf_site.32.name"
+	desc = "GF_sf_site.32.desc"
+	picture = GFX_evt_city_ruins
+	show_sound = event_door_opening
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	option = {
+		name = "GF_sf_site.32.a"
+		small_artifact_reward = yes
+	}
+}
+#遗迹3事件3
+fleet_event = {
+	id = GF_sf_site.33
+	title = "GF_sf_site.33.name"
+	desc = "GF_sf_site.33.desc"
+	picture = GFX_evt_GF_deep_well
+	show_sound = event_door_opening
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	option = {
+		name = "GF_sf_site.33.a"
+		small_artifact_reward = yes
+	}
+}
+#遗迹3事件4
+fleet_event = {
+	id = GF_sf_site.34
+	title = "GF_sf_site.34.name"
+	desc = "GF_sf_site.34.desc"
+	picture = GFX_evt_GF_down_sf
+	show_sound = event_door_opening
+	location = from
+	archaeology = yes
+	is_triggered_only = yes
+	option = {
+		name = "GF_sf_site.34.a"
+		small_artifact_reward = yes
+		owner = {
+			country_event = { id = GF_sf.70 }
+		}
+	}
+}

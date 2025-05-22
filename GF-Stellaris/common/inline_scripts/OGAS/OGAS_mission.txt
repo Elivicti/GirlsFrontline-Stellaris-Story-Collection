@@ -1,0 +1,8 @@
+inline_script = {
+	script = OGAS/OGAS_mission_condition
+	CONDITION = "always = yes"
+	MISSION = $MISSION$
+	THREAD_COST = $THREAD_COST$
+}
+
+# 参数说明参见OGAS_mission_condition.txt

@@ -1,0 +1,378 @@
+spriteTypes = {
+	# council agenda
+	spriteType = {
+		name = "GFX_council_agenda_icon_GF_agenda_automation"
+		texturefile = "gfx/interface/icons/agenda_icons/GF_agenda_automation.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_GF_agenda_doll_cloud_network"
+		texturefile = "gfx/interface/icons/agenda_icons/GF_agenda_doll_cloud_network.dds"
+	}
+
+	# messages
+	spriteType = {
+		name = "GFX_message_GF_decision_started"
+		texturefile = "gfx/interface/icons/message/message_GF_decision_started.dds"
+	}
+	spriteType = {
+		name = "GFX_message_GF_robot_pop_assimilated"
+		texturefile = "gfx/interface/icons/message/message_GF_robot_pop_assimilated.dds"
+	}
+	spriteType = {
+		name = "GFX_toast_GF_archive_unlocked"
+		texturefile = "gfx/interface/icons/toasts/toast_GF_archive_unlocked.dds"
+	}
+	spriteType = {
+		name = "GFX_message_GF_RC_beacon_deployed"
+		textureFile = "gfx/interface/icons/message/message_GF_reverse_collapse_beacon_deployed.dds"
+	}
+	spriteType = {
+		name = "GFX_message_GF_RC_beacon_deployment_failed"
+		textureFile = "gfx/interface/icons/message/message_GF_reverse_collapse_beacon_deployment_failed.dds"
+	}
+
+	# armies
+	spriteType = {
+		name = "GFX_GF_army_type_armored_train"
+		texturefile = "gfx/interface/planetview/GF_armored_train_army.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_army_type_gavirul"
+		texturefile = "gfx/interface/planetview/GF_gavirul_army.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_army_type_doll"
+		texturefile = "gfx/interface/planetview/GF_doll_army.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_army_type_shrike"
+		texturefile = "gfx/interface/planetview/GF_shrike_army.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_army_type_shrike_boss"
+		texturefile = "gfx/interface/planetview/GF_shrike_boss_army.dds"
+	}
+
+	# ship components
+	spriteType = {
+		name = "GFX_GF_collapse_power_core"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_collapse_power_core.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_collapse_armor"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_collapse_armor.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_collapse_jump_drive"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_collapse_jump_drive.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GF_collapse_energy_lance"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_collapse_lance.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_collpase_ending_flash"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_world_collapser.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GF_miniaturized_collapse_lance"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_miniaturized_collapse_lance.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GF_ogas_computer_default"
+		textureFile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_ogas_default.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_ogas_computer_picket"
+		textureFile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_ogas_picket.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_ogas_computer_swarm"
+		textureFile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_ogas_swarm.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_ogas_computer_line"
+		textureFile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_ogas_line.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_ogas_computer_artillery"
+		textureFile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_ogas_artillery.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_ogas_computer_carrier"
+		textureFile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_ogas_carrier.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_ogas_computer_platform"
+		textureFile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_ogas_platform.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GF_collapse_artillery"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_collapse_artillery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GF_collapse_cannon"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_collapse_cannon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GF_collapse_mass_accelerator"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_collapse_mass_accelerator.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GF_collapse_missile"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_collapse_missile.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GF_collapse_torpedo"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_collapse_torpedo.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GF_strike_craft_nb200"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_strike_craft_nb200.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GF_aura_hostile_supression"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_aura_hostile_supression.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_aura_hostile_harassment"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_aura_hostile_harassment.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_reverse_collapse_warp_beacon"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_reverse_collapse_warp_beacon.dds"
+	}
+
+	## shrike
+	spriteType = {
+		name = "GFX_GF_shrike_armor"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_shrike_armor.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_shrike_heart"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_shrike_heart.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_shrike_thruster"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_shrike_thruster.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_shrike_sensor"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_shrike_sensor.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_shrike_bomber"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_shrike_bomber.dds"
+	}
+	### shrike computer
+	spriteType = {
+		name = "GFX_GF_thorn_collar_free"
+		textureFile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_thorn_collar_default.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_thorn_collar_picket"
+		textureFile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_thorn_collar_picket.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_thorn_collar_swarm"
+		textureFile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_thorn_collar_swarm.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_thorn_collar_artillery"
+		textureFile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_thorn_collar_artillery.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_thorn_collar_carrier"
+		textureFile = "gfx/interface/icons/ship_parts/computers/ship_part_computer_thorn_collar_carrier.dds"
+	}
+
+	spriteType = {
+		name = "GFX_GF_collapsed_silicon_armor"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_collapsed_silicon_armor.dds"
+	}
+
+	# edicts
+	spriteType = {
+		name = "GFX_GF_edict_type_robot"
+		textureFile = "gfx/interface/icons/edicts/roboticist.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_edict_type_leader_exp"
+		textureFile = "gfx/interface/icons/edicts/GF_edict_leader_exp.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_edict_type_ai"
+		textureFile = "gfx/interface/icons/edicts/GF_edict_ai.dds"
+	}
+
+	# factions
+	spriteType = {
+		name = "GFX_faction_icon_GF_relic_department"
+		textureFile = "gfx/interface/icons/faction_icons/GF_relic_department.dds"
+		noOfFrames = 1
+	}
+
+	spriteType = {
+		name = "GFX_faction_icon_GF_doll_rights_organization"
+		textureFile = "gfx/interface/icons/faction_icons/faction_icons_progressives.dds"
+		noOfFrames = 1
+	}
+
+	# colony types
+	spriteType = {
+		name = "GFX_colony_type_GF_auto_colony"
+		textureFile = "gfx/interface/planetview/GF_colony_type_auto_colony.dds"
+	}
+	spriteType = {
+		name = "GFX_colony_type_GF_auto_city"
+		textureFile = "gfx/interface/planetview/GF_colony_type_automated_city.dds"
+	}
+	spriteType = {
+		name = "GFX_colony_type_GF_auto_city_energy"
+		textureFile = "gfx/interface/planetview/GF_colony_type_automated_city_energy.dds"
+	}
+	spriteType = {
+		name = "GFX_colony_type_GF_auto_city_minerals"
+		textureFile = "gfx/interface/planetview/GF_colony_type_automated_city_minerals.dds"
+	}
+	spriteType = {
+		name = "GFX_colony_type_GF_auto_city_food"
+		textureFile = "gfx/interface/planetview/GF_colony_type_automated_city_food.dds"
+	}
+	spriteType = {
+		name = "GFX_colony_type_GF_auto_city_alloys"
+		textureFile = "gfx/interface/planetview/GF_colony_type_automated_city_alloys.dds"
+	}
+	spriteType = {
+		name = "GFX_colony_type_GF_auto_city_consumer_goods"
+		textureFile = "gfx/interface/planetview/GF_colony_type_automated_city_consumer_goods.dds"
+	}
+	spriteType = {
+		name = "GFX_colony_type_GF_auto_city_refinery"
+		textureFile = "gfx/interface/planetview/GF_colony_type_automated_city_refinery.dds"
+	}
+	spriteType = {
+		name = "GFX_colony_type_GF_auto_city_research"
+		textureFile = "gfx/interface/planetview/GF_colony_type_automated_city_research.dds"
+	}
+	spriteType = {
+		name = "GFX_colony_type_GF_auto_city_factory"
+		textureFile = "gfx/interface/planetview/GF_colony_type_automated_city_factory.dds"
+	}
+	spriteType = {
+		name = "GFX_colony_type_GF_auto_city_collapse"
+		textureFile = "gfx/interface/planetview/GF_colony_type_automated_city_collapse.dds"
+	}
+	spriteType = {
+		name = "GFX_colony_type_GF_auto_city_reverse_collapse"
+		textureFile = "gfx/interface/planetview/GF_colony_type_automated_city_reverse_collapse.dds"
+	}
+
+	# planet types
+	spriteType = {
+		name = "GFX_planet_type_GF_collapsed"
+		textureFile = "gfx/interface/icons/planet_types/pc_type_GF_collapsed.dds"
+	}
+	spriteType = {
+		name = "GFX_planet_type_GF_automated_city"
+		textureFile = "gfx/interface/icons/planet_types/pc_type_GF_automated_city.dds"
+	}
+
+	# districts
+	spriteType = {
+		name = "GFX_district_GF_automated_nexus"
+		textureFile = "gfx/interface/icons/districts/district_GF_automated_nexus.dds"
+	}
+	spriteType = {
+		name = "GFX_district_GF_automated_energy"
+		textureFile = "gfx/interface/icons/districts/district_rw_generator.dds"
+	}
+	spriteType = {
+		name = "GFX_district_GF_automated_mining"
+		textureFile = "gfx/interface/icons/districts/district_mining.dds"
+	}
+	spriteType = {
+		name = "GFX_district_GF_automated_farming"
+		textureFile = "gfx/interface/icons/districts/district_rw_farming.dds"
+	}
+	spriteType = {
+		name = "GFX_district_GF_automated_foundry"
+		textureFile = "gfx/interface/icons/districts/district_arcology_arms_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_district_GF_automated_industry"
+		textureFile = "gfx/interface/icons/districts/district_arcology_civilian_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_district_GF_automated_refinery"
+		textureFile = "gfx/interface/icons/districts/district_GF_automated_refinery.dds"
+	}
+	spriteType = {
+		name = "GFX_district_GF_automated_research"
+		textureFile = "gfx/interface/icons/districts/district_research.dds"
+	}
+	spriteType = {
+		name = "GFX_district_GF_automated_factory"
+		textureFile = "gfx/interface/icons/districts/district_GF_assembly.dds"
+	}
+	spriteType = {
+		name = "GFX_district_GF_automated_collapse"
+		textureFile = "gfx/interface/icons/districts/district_GF_collapse.dds"
+	}
+	spriteType = {
+		name = "GFX_district_GF_automated_reverse_collapse"
+		textureFile = "gfx/interface/icons/districts/district_GF_automated_reverse_collapse.dds"
+	}
+
+	# megastructures
+	spriteType = {
+		name = "GFX_GF_computing_center_0_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/crisis_sphere.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_computing_center_1_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/crisis_sphere.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_computing_center_2_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/crisis_sphere.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_computing_center_3_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/crisis_sphere.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_computing_center_background"
+		textureFile = "gfx/interface/planetview/GF_OGAS_computing_center.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_computing_center_0_build_icon"
+		textureFile = "gfx/interface/icons/technologies/GF_tech_ogas_computing_center.dds"
+	}
+
+
+	spriteType = {
+		name = "GFX_GF_reverse_collapse_beacon_outliner_icon"
+		textureFile = "gfx/interface/icons/megastructures/gateway.dds"
+	}
+
+	# text icon
+	spriteType = {
+		name = "GFX_text_invisible"
+		textureFile = "gfx/interface/icons/text_icons/invisible.dds"
+	}
+	spriteType = {
+		name = "GFX_text_GF_OGAS_threads_add"
+		textureFile = "gfx/interface/icons/modifiers/mod_GF_OGAS_threads_add.dds"
+	}
+}

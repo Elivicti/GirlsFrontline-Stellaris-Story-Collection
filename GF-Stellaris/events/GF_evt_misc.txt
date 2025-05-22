@@ -1,0 +1,334 @@
+# 一些杂项事件
+namespace = GF_evt_misc
+
+country_event = {
+	id = GF_evt_misc.100
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		GF_OGAS_has_used_threads_over_cap = yes
+	}
+
+	immediate = {
+		fire_on_action = {
+			on_action = on_OGAS_used_threads_over_cap
+			scopes = { from = from }
+		}
+	}
+}
+
+### 意识形态战争会改变危机联合的政体，需要特殊处理保持政体不变
+# on_war_beginning
+# Root = Country
+# From = War
+country_event = {
+	id = GF_evt_misc.110
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		has_origin = GF_origin_commonwealth
+	}
+
+	immediate = {
+		if = {
+			limit = { has_authority = GF_auth_commonwealth }
+			store_country_backup_data = {
+				government = yes
+				ethics = yes
+			}
+		}
+	}
+}
+
+# on_war_lost
+# Root = Loser Warleader
+# From = Winner Warleader
+# FromFrom = War
+country_event = {
+	id = GF_evt_misc.111
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		fromfrom = {
+			using_war_goal = {
+				type = wg_force_ideology
+				owner = prev.from
+			}
+			any_war_participant = {
+				has_origin = GF_origin_commonwealth
+				is_war_participant = {
+					war = prev
+					side = root
+				}
+			}
+		}
+	}
+
+	immediate = {
+		fromfrom = {
+			random_war_participant = {
+				limit = {
+					has_origin = GF_origin_commonwealth
+					is_war_participant = {
+						war = prev
+						side = root
+					}
+				}
+				country_event = {
+					id = GF_evt_misc.112
+					scopes = {
+						from = prev
+						fromfrom = root.from
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = GF_evt_misc.112
+	title = GF_evt_misc.112.name
+	desc = GF_evt_misc.112.desc
+
+	picture = GFX_evt_signing
+	show_sound = event_alien_abduction
+	location = fromfrom
+
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = tmp_flag_GF_lost_in_wg_force_ideology
+		hidden_effect = {
+			country_event = { id = GF_evt_misc.113 days = 1 }
+		}
+	}
+
+	option = {
+		name = GF_evt_misc.112.a
+		custom_tooltip = GF_evt_misc.112.a.tooltip
+		tooltip = {
+			add_modifier = { modifier = humiliated years = 20 mult = 2 }
+		}
+
+		hidden_effect = {
+			country_event = { id = GF_evt_misc.113 }
+		}
+	}
+}
+country_event = {
+	id = GF_evt_misc.113
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = tmp_flag_GF_lost_in_wg_force_ideology
+	}
+
+	immediate = {
+		remove_country_flag = tmp_flag_GF_lost_in_wg_force_ideology
+		ruler = { save_event_target_as = wg_force_ideology_generated_leader }
+		restore_country_backup_data = yes
+		assign_leader = event_target:GF_ogas_leader
+		remove_modifier = recently_liberated
+		add_modifier = { modifier = humiliated years = 20 mult = 2 }
+		event_target:wg_force_ideology_generated_leader = {
+			if = {
+				limit = {
+					NOT = { has_leader_flag = flag_GF_ogas_leader }
+				}
+				kill_leader = { show_notification = no }
+			}
+		}
+		every_subject = {
+			limit = {
+				any_agreement = {
+					agreement_preset = GF_preset_OGAS_subnet
+					specialist_tier >= 2
+				}
+			}
+			switch = {
+				trigger = has_ethic
+				ethic_spiritualist = {
+					country_remove_ethic = ethic_spiritualist
+					country_add_ethic = ethic_materialist
+				}
+				ethic_fanatic_spiritualist = {
+					country_remove_ethic = ethic_fanatic_spiritualist
+					country_add_ethic = ethic_fanatic_materialist
+				}
+			}
+			change_government = {
+				authority = GF_auth_OGAS_subnet
+				civics = random
+				remove_invalid_civics = yes
+			}
+			random_owned_leader = {
+				limit = { has_trait = GF_trait_leader_ogas_subnet_core }
+				save_event_target_as = subnet_ogas
+			}
+			assign_leader = event_target:subnet_ogas
+			remove_modifier = recently_liberated
+			add_modifier = { modifier = humiliated years = 20 mult = 0.2 }
+		}
+	}
+}
+
+
+#### Planet Diversity兼容
+
+# on_press_begin
+# 若开局使用PD的特殊星球类型，PD会在on_press_begin时清空区划、建筑和地块，并重刷
+# 此事件必须比PD的事件后触发
+country_event = {
+	id = GF_evt_misc.120
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = planetarydiversity # PD
+		GF_is_Crisis_Coalition = yes
+	}
+
+	immediate = {
+		capital_scope = {
+			clear_deposits = yes
+			planet_event = {
+				id = GF_start.10
+			}
+		}
+	}
+}
+
+
+### on_single_player_save_game_load
+# no scope
+
+# 存档加载，用于处理部分旧版本升级、更新日志等
+event = {
+	id = GF_evt_misc.1000
+	hide_window = yes
+
+	is_triggered_only = yes
+	immediate = {
+		every_country = {
+			limit = { has_authority = GF_auth_commonwealth }
+			# 禁用原版派系
+			if = {
+				limit = { NOT = { has_country_flag = suppress_vanilla_factions } }
+				set_country_flag = suppress_vanilla_factions
+			}
+			# 更新日志提醒
+			country_event = { id = GF_evt_misc.1001 days = 1 }
+			# 自动化遥控殖民地效果
+			every_owned_planet = {
+				limit = {
+					has_modifier = GF_auto_colony
+					NOT = { has_planet_flag = flag_p_GF_auto_colony }
+				}
+				planet_event = { id = GF_colony.10 }
+			}
+			# 人形领袖立绘
+			country_event = { id = GF_doll_leader.18 }
+			# 自动化星球建设
+			if = {
+				limit = { any_owned_planet = { is_planet_class = pc_GF_automated_city } }
+				set_country_flag = flag_GF_has_completed_autocity_construction
+				every_owned_planet = {
+					limit = {
+						is_planet_class = pc_GF_automated_city
+						exists = orbital_defence
+						orbital_defence.starbase = { has_starbase_size < orbital_ring_tier_3 }
+					}
+					orbital_defence.starbase = {
+						set_starbase_size = orbital_ring_tier_3
+					}
+				}
+			}
+			every_galaxy_planet = {
+				limit = { is_planet_class = pc_GF_automated_city }
+				if = {
+					limit = { NOT = { has_deposit = d_GF_autocity } }
+					GF_make_autocity_district_effect = yes
+				}
+			}
+			# 关键词档案库
+			GF_unlock_inital_keywords = yes
+			# 心智升级特质
+			country_event = {
+				id = GF_doll.518
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GF_evt_misc.1001
+	title = GF_evt_misc.1001.name
+	desc = GF_evt_misc.1001.desc
+
+	diplomatic = yes
+	custom_gui = "GF_OGAS_standard_story_event"
+	custom_gui_option = "GF_OGAS_standard_story_event_option"
+	picture_event_data = {
+		portrait = event_target:GF_ogas_leader
+		room = ethic_griffin_room
+	}
+
+	is_triggered_only = yes
+	trigger = {
+		GF_check_mod_version = {
+			CMP = lt
+			VALUE = @GF_Stellaris_MOD_VER
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			GF_set_mod_version = { VALUE = @GF_Stellaris_MOD_VER }
+		}
+	}
+
+	option = {
+		name = GF_evt_misc.1001.a
+	}
+}
+
+
+country_event = {
+	id = GF_evt_misc.200
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		has_valid_civic = GF_civic_90WISH
+		any_owned_leader = { is_councilor_type = GF_councilor_90Wish }
+	}
+
+	immediate = {
+		random_owned_leader = {
+			limit = { is_councilor_type = GF_councilor_90Wish }
+			switch = {
+				trigger = leader_class
+				official = {
+					prev = {
+						every_owned_leader = {
+							limit = { leader_class = official }
+							add_experience = 50
+						}
+					}
+				}
+				scientist = {
+					prev = {
+						every_owned_leader = {
+							limit = { leader_class = scientist }
+							add_experience = 50
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

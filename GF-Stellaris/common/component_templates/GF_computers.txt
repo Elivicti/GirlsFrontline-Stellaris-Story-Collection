@@ -1,0 +1,647 @@
+@core_chip_upkeep_t1 = 0.25
+@core_chip_upkeep_t2 = 0.5
+
+# modifier = { } For non-starbase ships, only takes the following modifiers:
+#	hull, shield & armor add/mult and regen add perc/static
+#	evasion add/mult
+#	speed/base speed mult
+#	weapon damage mult    # 不包括武器tag生成的修正
+#	upkeep mult
+#	For other modifiers, use ship_modifier = { }
+# SB蠢驴
+
+utility_component_template = {
+	key = "GF_OGAS_COMPUTER_TORPEDO"
+	size = small
+	icon = "GFX_GF_ogas_computer_swarm"
+	icon_frame = 1
+	power = -25
+	resources = {
+		category = GF_ship_computers
+		cost = {
+			alloys = 25
+		}
+		upkeep = { gf_core_chip = @core_chip_upkeep_t1 }
+	}
+	class_restriction = { shipclass_military }
+	size_restriction = { frigate crisis_destroyer cosmo_crisis_destroyer cruiser offspring_cruiser nanite_swarmer}
+	component_set = "combat_computers"
+	ship_behavior = "torpedo"
+	prerequisites = { "GF_tech_combat_ogas_computers" }
+	ai_tags = { explosive explosive_stealth }
+	ai_tag_weight = 0
+
+	modifier = {
+		ship_evasion_mult = 0.10
+	}
+	ship_modifier = {
+		weapon_type_explosive_weapon_damage_mult = 0.20
+	}
+
+	ai_weight = {
+		inline_script = {
+			script = "weights/GF_non_default_country_components_weight"
+			weight = 8
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = gf_core_chip }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "GF_OGAS_COMPUTER_SWARM"
+	size = small
+	icon = "GFX_GF_ogas_computer_swarm"
+	icon_frame = 1
+	power = -25
+	resources = {
+		category = GF_ship_computers
+		cost = {
+			alloys = 25
+		}
+		upkeep = { gf_core_chip = @core_chip_upkeep_t1 }
+	}
+	class_restriction = { shipclass_military }
+	size_restriction = { corvette crisis_corvette offspring_corvette nanite_swarmer }
+	component_set = "combat_computers"
+	ship_behavior = "swarm"
+	prerequisites = { "GF_tech_combat_ogas_computers" }
+	ai_tags = { gunship brawler brawler_stealth }
+	ai_tag_weight = 0
+
+	modifier = {
+		ship_evasion_mult = 0.50
+		ship_speed_mult = 0.20
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 0.15
+	}
+
+	ai_weight = {
+		inline_script = {
+			script = "weights/GF_non_default_country_components_weight"
+			weight = 8
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = gf_core_chip }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "GF_OGAS_COMPUTER_PICKET"
+	size = small
+	icon = "GFX_GF_ogas_computer_picket"
+	icon_frame = 1
+	power = -25
+	resources = {
+		category = GF_ship_computers
+		cost = {
+			alloys = 25
+		}
+		upkeep = { gf_core_chip = @core_chip_upkeep_t1 }
+	}
+	class_restriction = { shipclass_military }
+	size_restriction = { corvette destroyer cruiser crisis_corvette crisis_destroyer cosmo_crisis_destroyer crisis_cruiser offspring_corvette offspring_destroyer offspring_cruiser nanite_swarmer }
+	component_set = "combat_computers"
+	ship_behavior = "picket"
+	prerequisites = { "GF_tech_combat_ogas_computers" }
+	ai_tags = { screen }
+	ai_tag_weight = 0
+
+	modifier = {
+		ship_evasion_mult = 0.25
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 0.20
+		ship_tracking_add = 30
+	}
+
+	ai_weight = {
+		inline_script = {
+			script = "weights/GF_non_default_country_components_weight"
+			weight = 9
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = gf_core_chip }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "GF_OGAS_COMPUTER_LINE"
+	size = small
+	icon = "GFX_GF_ogas_computer_line"
+	icon_frame = 1
+	power = -30
+	resources = {
+		category = GF_ship_computers
+		cost = {
+			alloys = 30
+		}
+		upkeep = { gf_core_chip = @core_chip_upkeep_t1 }
+	}
+	class_restriction = { shipclass_military shipclass_military_special }
+	size_restriction = { destroyer cruiser battleship crisis_destroyer cosmo_crisis_destroyer crisis_cruiser star_eater offspring_destroyer offspring_cruiser offspring_battleship cosmo_crisis_battlecruiser }
+	component_set = "combat_computers"
+	ship_behavior = "line"
+	prerequisites = { "GF_tech_combat_ogas_computers" }
+	ai_tags = { gunship }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.30
+		ship_accuracy_add = 25
+	}
+
+	ai_weight = {
+		inline_script = {
+			script = "weights/GF_non_default_country_components_weight"
+			weight = 9
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = gf_core_chip }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "GF_OGAS_COMPUTER_ARTILLERY"
+	size = small
+	icon = "GFX_GF_ogas_computer_artillery"
+	icon_frame = 1
+	power = -30
+	resources = {
+		category = GF_ship_computers
+		cost = {
+			alloys = 30
+		}
+		upkeep = { gf_core_chip = @core_chip_upkeep_t1 }
+	}
+	# class_restriction = { shipclass_military shipclass_starbase }
+	size_restriction = {
+		frigate
+		destroyer
+		cruiser
+		battleship
+		titan
+		juggernaut
+		crisis_destroyer
+		crisis_cruiser
+		cosmo_crisis_destroyer
+		cosmo_crisis_battlecruiser
+		cosmo_crisis_titan
+		star_eater
+		offspring_destroyer
+		offspring_cruiser
+		offspring_battleship
+
+		GF_fire_support_ship
+	}
+	component_set = "combat_computers"
+	ship_behavior = "GF_ogas_artillery"
+	prerequisites = { "GF_tech_combat_ogas_computers" }
+	ai_tags = { artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.25
+		ship_weapon_range_mult = 0.25
+		ship_tracking_add = 5
+	}
+
+	ai_weight = {
+		inline_script = {
+			script = "weights/GF_non_default_country_components_weight"
+			weight = 9
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = gf_core_chip }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "GF_OGAS_COMPUTER_CARRIER"
+	size = small
+	icon = "GFX_GF_ogas_computer_carrier"
+	icon_frame = 1
+	power = -30
+	resources = {
+		category = GF_ship_computers
+		cost = {
+			alloys = 30
+		}
+		upkeep = { gf_core_chip = @core_chip_upkeep_t1 }
+	}
+	# class_restriction = { shipclass_military shipclass_starbase }
+	size_restriction = {
+		cruiser
+		battleship
+		juggernaut
+		titan
+		star_eater
+		offspring_cruiser
+		offspring_battleship
+		cosmo_crisis_battlecruiser
+		cosmo_crisis_titan
+		nanite_swarmer
+
+		GF_fire_support_ship
+	}
+	component_set = "combat_computers"
+	ship_behavior = "GF_ogas_carrier"
+	prerequisites = { "GF_tech_combat_ogas_computers" }
+	ai_tags = { carrier }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		ship_engagement_range_mult = 1.0
+		ship_weapon_range_mult = 0.15
+		ship_tracking_add = 15
+		weapon_type_strike_craft_weapon_damage_mult = 0.15
+		weapon_type_strike_craft_speed_mult = 0.5
+	}
+
+	ai_weight = {
+		inline_script = {
+			script = "weights/GF_non_default_country_components_weight"
+			weight = 8
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = gf_core_chip }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "GF_OGAS_COMPUTER_FREE"
+	size = small
+	icon = "GFX_GF_ogas_computer_default"
+	icon_frame = 1
+	power = -25
+	resources = {
+		category = GF_ship_computers
+		cost = {
+			alloys = 35
+		}
+		upkeep = { gf_core_chip = @core_chip_upkeep_t2 }
+	}
+	class_restriction = { shipclass_military }
+
+	component_set = "combat_computers"
+	ship_behavior = "GF_ogas_free"
+	prerequisites = { "GF_tech_combat_ogas_computers" }
+
+	ship_modifier = {
+		ship_engagement_range_mult = 0.5
+		ship_weapon_range_mult = 0.10
+		ship_fire_rate_mult = 0.10
+	}
+
+	ai_weight = {
+		inline_script = {
+			script = "weights/GF_non_default_country_components_weight"
+			weight = 8
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = gf_core_chip }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "GF_OGAS_COMPUTER_FREE_JUGGERNAUT"
+	size = small
+	icon = "GFX_GF_ogas_computer_default"
+	icon_frame = 1
+	power = -25
+	resources = {
+		category = GF_ship_computers
+		cost = {
+			alloys = 35
+		}
+		upkeep = { gf_core_chip = @core_chip_upkeep_t2 }
+	}
+	size_restriction = {
+		juggernaut
+
+		GF_fire_support_ship
+	}
+
+	component_set = "combat_computers"
+	ship_behavior = "GF_ogas_free"
+	prerequisites = { "GF_tech_combat_ogas_computers" }
+
+	ship_modifier = {
+		ship_engagement_range_mult = 0.5
+		ship_weapon_range_mult = 0.10
+		ship_fire_rate_mult = 0.10
+	}
+
+	ai_weight = {
+		inline_script = {
+			script = "weights/GF_non_default_country_components_weight"
+			weight = 10
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = gf_core_chip }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "GF_OGAS_COMPUTER_PLATFORM"
+	size = small
+	icon = "GFX_GF_ogas_computer_platform"
+	icon_frame = 1
+	power = -20
+	resources = {
+		category = GF_ship_computers
+		cost = {
+			alloys = 25
+		}
+		upkeep = { gf_core_chip = @core_chip_upkeep_t1 }
+	}
+	class_restriction = { shipclass_military_station }
+	component_set = "combat_computers"
+	ship_behavior = "platform"
+	prerequisites = { "GF_tech_combat_ogas_computers" }
+
+	ship_modifier = {
+		ship_fire_rate_mult    = 0.20
+		ship_weapon_range_mult = 0.20
+		ship_tracking_add = 15
+		ship_accuracy_add = 15
+	}
+
+	ai_weight = {
+		inline_script = {
+			script = "weights/GF_non_default_country_components_weight"
+			weight = 8
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = gf_core_chip }
+		}
+	}
+}
+utility_component_template = {
+	key = "GF_OGAS_COMPUTER_PLATFORM_BEACON_STATION"
+	size = small
+	icon = "GFX_GF_ogas_computer_platform"
+	icon_frame = 1
+	power = -20
+	resources = {
+		category = GF_ship_computers
+		cost = {
+			alloys = 25
+		}
+		upkeep = { gf_core_chip = @core_chip_upkeep_t1 }
+	}
+	size_restriction = { GF_RC_beacon_military_station }
+	component_set = "combat_computers"
+	ship_behavior = "platform"
+	prerequisites = { "GF_tech_combat_ogas_computers" }
+
+	ship_modifier = {
+		ship_fire_rate_mult    = 0.20
+		ship_weapon_range_mult = 0.20
+		ship_tracking_add = 15
+		ship_accuracy_add = 15
+	}
+
+	ai_weight = {
+		inline_script = {
+			script = "weights/GF_non_default_country_components_weight"
+			weight = 8
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = gf_core_chip }
+		}
+	}
+}
+
+######### 三进制电磁信号控制器 / 伯劳脑
+utility_component_template = {
+	key = "GF_THORN_COLLAR_SWARM"
+	size = small
+	icon = "GFX_GF_thorn_collar_swarm"
+	icon_frame = 1
+	power = -25
+	resources = {
+		category = GF_ship_computers
+		cost = {
+			alloys = 12
+		}
+		upkeep = { gf_core_chip = @core_chip_upkeep_t1 }
+	}
+	size_restriction = {
+		GF_shrike_warship_small
+	}
+	component_set = "GF_bio_spaceship_computer_components"
+	ship_behavior = "swarm"
+
+	ai_tags = { gunship brawler brawler_stealth }
+	ai_tag_weight = 0
+
+	modifier = {
+		ship_evasion_mult = 0.40
+		ship_speed_mult = 0.40
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 0.15
+	}
+
+	ai_weight = {
+		inline_script = {
+			script = "weights/GF_non_default_country_components_weight"
+			weight = 8
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = gf_core_chip }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "GF_THORN_COLLAR_PICKET"
+	size = small
+	icon = "GFX_GF_thorn_collar_picket"
+	icon_frame = 1
+	power = -25
+	resources = {
+		category = GF_ship_computers
+		cost = {
+			alloys = 12
+		}
+		upkeep = { gf_core_chip = @core_chip_upkeep_t1 }
+	}
+
+	size_restriction = {
+		GF_shrike_warship_small
+	}
+	component_set = "GF_bio_spaceship_computer_components"
+	ship_behavior = picket
+
+	ai_tags = { screen }
+	ai_tag_weight = 0
+
+	modifier = {
+		ship_evasion_mult = 0.30
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 0.20
+		ship_tracking_add = 15
+	}
+
+	ai_weight = {
+		inline_script = {
+			script = "weights/GF_non_default_country_components_weight"
+			weight = 9
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = gf_core_chip }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "GF_THORN_COLLAR_ARTILLERY"
+	size = small
+	icon = "GFX_GF_thorn_collar_artillery"
+	icon_frame = 1
+	power = -30
+	resources = {
+		category = GF_ship_computers
+		cost = {
+			alloys = 18
+		}
+		upkeep = { gf_core_chip = @core_chip_upkeep_t1 }
+	}
+
+	size_restriction = {
+		GF_shrike_warship_large
+		GF_shrike_queen
+	}
+	component_set = "GF_bio_spaceship_computer_components"
+	ship_behavior = artillery
+
+	ai_tags = { artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.20
+		ship_weapon_range_mult = 0.15
+		ship_tracking_add = 10
+	}
+
+	ai_weight = {
+		inline_script = {
+			script = "weights/GF_non_default_country_components_weight"
+			weight = 9
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = gf_core_chip }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "GF_THORN_COLLAR_CARRIER"
+	size = small
+	icon = "GFX_GF_thorn_collar_carrier"
+	icon_frame = 1
+	power = -30
+	resources = {
+		category = GF_ship_computers
+		cost = {
+			alloys = 20
+		}
+		upkeep = { gf_core_chip = @core_chip_upkeep_t1 }
+	}
+
+	size_restriction = {
+		GF_shrike_warship_large
+		GF_shrike_queen
+	}
+	component_set = "GF_bio_spaceship_computer_components"
+	ship_behavior = "carrier"
+
+	ai_tags = { carrier }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		ship_engagement_range_mult = 0.8
+		ship_weapon_range_mult = 0.15
+		ship_tracking_add = 10
+		weapon_type_strike_craft_weapon_damage_mult = 0.25
+		weapon_type_strike_craft_speed_mult = 0.25
+	}
+
+	ai_weight = {
+		inline_script = {
+			script = "weights/GF_non_default_country_components_weight"
+			weight = 8
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = gf_core_chip }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "GF_THORN_COLLAR_FREE"
+	size = small
+	icon = "GFX_GF_thorn_collar_free"
+	icon_frame = 1
+	power = -25
+	resources = {
+		category = GF_ship_computers
+		cost = {
+			alloys = 25
+		}
+		upkeep = { gf_core_chip = @core_chip_upkeep_t2 }
+	}
+
+	size_restriction = {
+		GF_shrike_warship_small
+		GF_shrike_warship_large
+		GF_shrike_queen
+	}
+	component_set = GF_bio_spaceship_computer_components
+
+	ship_behavior = "GF_ogas_free"
+
+	ship_modifier = {
+		ship_evasion_mult = 0.15
+		ship_engagement_range_mult = 0.25
+		ship_weapon_range_mult = 0.05
+		ship_fire_rate_mult = 0.05
+	}
+
+	ai_weight = {
+		inline_script = {
+			script = "weights/GF_non_default_country_components_weight"
+			weight = 8
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = gf_core_chip }
+		}
+	}
+}

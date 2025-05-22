@@ -1,0 +1,110 @@
+# MOD Version
+@GF_Stellaris_MOD_VER = 20250114
+
+# ELID
+@GF_elid_threat_low_threshold = 2 # <= 2
+@GF_elid_threat_mid_threshold = 6 # <= 6
+
+# for leader trait
+@trait_sorting_priority_veteran_always_none = 215
+@trait_sorting_priority_paragon_triggered_none = 240
+
+# projects from Zion
+@GF_zion_project_energy_cost_1 = 5000
+@GF_zion_project_energy_cost_2 = 10000
+@GF_zion_project_energy_cost_3 = 15000
+
+@GF_zion_project_cost_max = 1000000
+
+@GF_zion_cooldown_delay_years_1  = 360
+@GF_zion_cooldown_delay_years_2  = 720
+@GF_zion_cooldown_delay_years_3  = 1080
+@GF_zion_cooldown_delay_years_4  = 1440
+@GF_zion_cooldown_delay_years_5  = 1800
+@GF_zion_cooldown_delay_years_6  = 2160
+@GF_zion_cooldown_delay_years_7  = 2520
+@GF_zion_cooldown_delay_years_8  = 2880
+@GF_zion_cooldown_delay_years_9  = 3240
+@GF_zion_cooldown_delay_years_10 = 3600
+
+# OGAS升级提升线程数的起始等级
+@GF_OGAS_leveled_thread_add_start_after_level = 5
+
+# doll ascension paths
+@GF_doll_upgrade_POINTS = 3
+@GF_doll_upgrade_COST_MULT = -0.25
+@GF_doll_upgrade_leader_trait_selection_options = 2
+@GF_doll_upgrade_leader_agenda_speed = 0.10
+
+@GF_doll_leader_core_chip_upkeep_add = 0.5
+@GF_doll_leader_unity_upkeep_mult = 0.20
+
+@GF_doll_leader_reprogram_interval = 180
+
+@GF_agenda_doll_cloud_network_duration_years = 10
+@GF_agenda_doll_cloud_network_pop_size_mult = -0.02
+@GF_agenda_doll_cloud_network_ship_speed = 0.05
+@GF_agenda_doll_cloud_network_anomaly_speed_mult = 0.05
+# 这个蠢驴犯病，本地化直接引用会不显示，修改后记得改`GF_agenda_doll_cloud_network_effect`的本地化
+@GF_agenda_doll_cloud_network_collateral_damage = -0.05
+
+@GF_shrike_den_army_amenities_usage_mult = 0.02
+@GF_shrike_den_army_planet_stability_add = 0.5
+
+# 逆向坍塌信标
+@GF_reverse_collapse_beacon_deploy_days = 30
+@GF_reverse_collapse_beacon_cooldown_days = 120
+@GF_reverse_collapse_beacon_expire_days = 360
+
+# TECH COSTS
+@GFTech_tier0cost1 = 1000
+@GFTech_tier0cost2 = 1250
+@GFTech_tier0cost3 = 1500
+
+@GFTech_tier1cost1 = 2000
+@GFTech_tier1cost2 = 2500
+@GFTech_tier1cost3 = 3000
+
+@GFTech_tier2cost1 = 4000
+@GFTech_tier2cost2 = 5000
+@GFTech_tier2cost3 = 6000
+
+@GFTech_tier3cost1 = 8000
+@GFTech_tier3cost2 = 10000
+@GFTech_tier3cost3 = 12000
+
+@GFTech_tier4cost1 = 16000
+@GFTech_tier4cost2 = 20000
+@GFTech_tier4cost3 = 24000
+
+@GFTech_tier5cost1 = 32000
+@GFTech_tier5cost2 = 40000
+@GFTech_tier5cost3 = 48000
+
+@GFTech_tier5cost4 = 56000
+@GFTech_tier5cost5 = 64000
+
+@GFTech_tier5cost6 = 72000
+@GFTech_tier5cost7 = 80000
+@GFTech_tier5cost8 = 88000
+
+# TECH WEIGHTS
+@GFTech_tier1weight1 = 100
+@GFTech_tier1weight2 = 95
+@GFTech_tier1weight3 = 90
+
+@GFTech_tier2weight1 = 85
+@GFTech_tier2weight2 = 75
+@GFTech_tier2weight3 = 70
+
+@GFTech_tier3weight1 = 65
+@GFTech_tier3weight2 = 60
+@GFTech_tier3weight3 = 50
+
+@GFTech_tier4weight1 = 45
+@GFTech_tier4weight2 = 40
+@GFTech_tier4weight3 = 35
+
+@GFTech_tier5weight1 = 30
+@GFTech_tier5weight2 = 25
+@GFTech_tier5weight3 = 20

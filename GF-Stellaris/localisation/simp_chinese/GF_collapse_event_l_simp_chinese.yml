@@ -1,0 +1,287 @@
+﻿l_simp_chinese:
+############################################
+ GF_dialog_tooltip:0 "§H注意§!：此选项会开启下一步事件"
+
+ GF_contact_ogas_tooltip:0 "登入OGAS系统"
+
+########
+ collapse_relic:0 "『遗迹』"
+ 
+ GF_collapse_relic_site_0:0 "$collapse_relic$"
+ GF_collapse_relic_site_0_desc:0 "最早发现于1905年沙皇俄国时代，在[GF_home_world.GetName]各处均有分布的未知外星文明['concept_GF_collapse_relic']群，由它们引发的一系列矛盾与冲突曾一度导致我们的文明走上毁灭的边缘。\n\n如今踏入星海的我们，已经有能力安全地探索这些遗迹了。"
+ GF_collapse_relic_site:0 "$collapse_relic$"
+ GF_collapse_relic_site_desc:0 "[GF_home_world.GetName]上的遗迹探索完成后，发现的三个“外星遗迹”之一。\n\n这是我们第一次知道在我们母星之外也有遗迹存在，这三个遗迹将会是我们获取遗迹技术和揭开遗迹文明神秘面纱的重要线索。"
+ GF_collapse_relic_site_1:0 "$collapse_relic$"
+ GF_collapse_relic_site_1_desc:0 "[GF_home_world.GetName]上的遗迹探索完成后，发现的三个“外星遗迹”之一。\n\n这是我们第一次知道在我们母星之外也有遗迹存在，这三个遗迹将会是我们获取遗迹技术和揭开遗迹文明神秘面纱的重要线索。"
+ GF_collapse_relic_site_2:0 "$collapse_relic$"
+ GF_collapse_relic_site_2_desc:0 "$GF_collapse_relic_site_1_desc$"
+ GF_collapse_relic_site_3:0 "$collapse_relic$"
+ GF_collapse_relic_site_3_desc:0 "$GF_collapse_relic_site_1_desc$"
+
+
+#### 母星遗迹
+ GF_relic.0.name:0 "重启遗迹探索"
+ GF_relic.0.desc:0 "[GF_home_world.GetName]上辐射黑区的清理工作结束后，我们的科学家报告说，鉴于我们已经有能力妥善处理坍塌辐射污染，并且原遗迹周边的黑区也已经清理干净，现在正是我们重新探索[GF_home_world.GetName]上遗迹的大好时机。"
+ GF_relic.0.a:0 "那么事不宜迟，让我们开始吧。"
+
+ GF_relic.1.name:0 "地狱之门"
+ GF_relic.1.desc:0 "一个多世纪以前，人类文明曾多次进行过遗迹的发掘工作，却因坍塌辐射鲜少涉足黑区的遗迹，如今我们回到曾经的地狱之门，重新探索被爆炸和战火掩埋在废墟之下的遗迹。\n\n数小时后，工程队移除了掩盖着遗迹的瓦砾，并安全地打开了遗迹的外层阻隔层。尽管难掩兴奋之情，所有探索队以及工程队成员在正式进入遗迹前仍需要做好充足的安全措施，我们对黑区内的遗迹知之甚少，任何疏忽大意都有可能导致北兰岛的悲剧再次发生。"
+ GF_relic.1.a:0 "继续前进。"
+
+ GF_relic.2.name:0 "遗迹探索报告"
+ GF_relic.2.desc:0 "这些古老遗迹中的防御系统在经历了数不清的岁月后仍然处于运作状态，加之其复杂到堪称迷宫的甬道和曾经的爆炸造成的破坏，对探索队的成员来说，稍有不慎就可能命丧黄泉。\n\n凭借此前在其他遗迹的发掘经验，[Leader.GetName]与探索队谨慎地规避防御系统，在迷宫般的甬道中穿梭。最终，根据甬道、各类设施的分布特征以及此前的经验，探索队终于锁定了中控室可能所在的区域。"
+ GF_relic.2.a:0 "继续前进。"
+
+ GF_relic.3.name:0 "“门”"
+ GF_relic.3.desc:0 "探索队穿过甬道迷宫，抵达了此处遗迹的中控室，中控室内的大多设施都已损毁，但幸运的是防御设施的控制中枢仍然完好，在一番努力后，探索队接管了这里的防御系统。\n\n对中控室中尚能运作的设备进行分析后，探索队从其中一个完好的数据库中提取出了此处遗迹的结构图，尽管由于年代久远等原因，遗迹的部分结构应该已经损坏，但通过结构图的指引，探索队接下来的路途将会轻松不少。而目标，自然是位于遗迹最深处的“门”。"
+ GF_relic.3.a:0 "立即前往“门”的位置。"
+
+ GF_relic.401.name:0 "“门”"
+ GF_relic.401.desc:0 "根据结构图的指引，探索队几乎毫不费力地抵达了“门”所在的位置，与以往我们探索过的遗迹不同的是，这里的“门”所在的区域只有一个充满硬朗工业风格的空旷大厅，然而大厅内却一尘不染。当连接大厅与甬道的安全门关闭后，整个房间如死一般的寂静。\n\n探索队对房间进行扫描后，迅速锁定了隐藏在墙壁后的控制设施，接下来探索队员们将接管控制设施，并做好开启“门”的准备。"
+ GF_relic.401.a:0 "准备开启“门”。"
+ 
+ GF_relic.402.name:0 "“锡安”"
+ GF_relic.402.desc:0 "一瞬之间，大厅中央发出耀眼的光芒，一个四维超立方体在探索队面前展开，这是高维空间在三维的投影，然而在探索队员们还没来得及理解眼前发生的一切之前，光芒立刻黯淡了下去，露出了原本空旷而死寂的大厅。\n\n我们的设备没有任何反应，也没有记录下任何有用的数据。"
+ GF_relic.402.a:0 "……？！"
+
+ GF_relic.403.name:0 "门"
+ GF_relic.403.desc:0 "突然消失的光芒表明遗迹启动失败，也让探索队员们终于从震惊中回过神来，[Leader.GetTheyCN]在大厅中发现了一道原本不存在的安全门，穿过安全门后，探索队员们来到了一个巨大的球形主机前。\n\n这个主机所蕴含的技术水平十分高超，但也正因此，所有启动这个主机的尝试都以失败告终，所幸探索队顺利地将这个主机与基座分离并带了回来，也许之后随着技术的进步和对遗迹研究的深入，我们终将揭开这个主机神秘的面纱。\n\n尽管从主机中提取信息的尝试失败了，但探索队从与之相连的一个数据库中发现了不在[from.planet.GetName]上的另外三个遗迹的坐标。"
+ GF_relic.403.a:0 "有意思，准备前往这三个坐标。"
+ GF_relic.403.a.tooltip:0 "在以下地点各建立一个§Y$collapse_relic$§!考古站点：\n\t§H[relic_site_target_1.Solar_System.GetName]§!星系：§H[relic_site_target_1.GetName]§!\n\t§H[relic_site_target_2.Solar_System.GetName]§!星系：§H[relic_site_target_2.GetName]§!\n\t§H[relic_site_target_3.Solar_System.GetName]§!星系：§H[relic_site_target_3.GetName]§!"
+##############
+
+#### 母星四跳内遗迹
+ GF_relic.5.name:0 "遗迹探索报告"
+ GF_relic.5.desc:0 "探索队到达[from.planet.GetName]之后便开始了一系列准备工作：[Leader.GetTheyCN]在遗迹附近扎下营地，随队的工程组清理好了遗迹的入口，并在周边区域做好了安全防护。探索队员们将在做好万全的防护工作后开始遗迹的探索。"
+ GF_relic.5.a:0 "让我们开始吧。"
+
+ GF_relic.6.name:0 "遗迹探索报告"
+ GF_relic.6.desc:0 "[from.planet.GetName]上的遗迹结构与[GF_home_world.GetName]上的十分相似，探索队借助于之前的经验，以极高效率探索着遗迹内部，尽管这里的甬道也是如同迷宫一般，但[Leader.GetTheyCN]的进展十分迅速。"
+ GF_relic.6.a:0 "继续前进。"
+
+ GF_relic.7.name:0 "遗迹探索报告"
+ GF_relic.7.desc.phy:0 "最终，探索队来到了一间技术含量极高的中控室，各式各样的计算设备与显示器遍布整个房间。在[Leader.GetName]设法恢复部分设备的运作后，队员们立刻发现，这里的设备接收到的数据是布置在星系各处的传感器传来的监视数据，这些数据来自数个拥有宜居星球的星系，也包括[Leader.owner.capital_scope.solar_system.GetName]。\n\n而在仍能运作计算设备中，探索队发现了大量模拟计算的数据，似乎是专为这些受到监视的宜居星球而设计的模拟，但我们无法解读这些模拟计算的目的。\n\n尽管遗迹文明曾监视过我们的这一事实令人不寒而栗，但如此高价值的星系数据和模拟计算数据对我们的物理学发展将大有裨益。"
+ GF_relic.7.desc.soc:0 "在走过了一个又一个岔道以后，探索队来到了一间陈列着众多生化罐和冷冻罐的房间，其中存放着许多未知生物的遗骸。\n\n根据控制计算机中存储的资料分析，这里应该是遗迹文明用于研究各种生物机理的设施，保存了大量已知的和未知的未知生命形态的研究数据，其中也包括了[GF_home_world.GetName]的原生物种、[Leader.owner.species.GetName]和与GAVIRUL一致的个体。\n\n尽管遗迹文明的研究目的仍然不明，但这些数据对我们自己的科研具有不可估量的价值。"
+ GF_relic.7.desc.eng:0 "在众多甬道交汇的地方，探索队发现了一个遍布高科技机械臂和流水线的巨大装配工厂，这些机械臂却如同在最繁忙时突然按下了暂停键一般，以各种各样的姿势“停滞”在流水线上了\n\n探索队最终在与之相连的另一个房间内找到了主控设施，然而其中却仅有流水线设施的控制程序和相关数据，没有任何关于“产品”的信息。如果说遗迹文明在离开此地时删除了“产品”数据，但遗留的生产设施的控制数据却又显得它们十分粗心大意。\n\n不论如何，对工厂内生产设施的研究和逆向将极大地推进我们的工程学研究。"
+ GF_relic.7.a:0 "很好。"
+##############
+
+#### 遗迹全部发掘完毕
+ GF_relic.8.name:0 "$collapse_relic$完全发掘"
+ GF_relic.8.desc:0 "随着[GF_home_world.GetName]之外的遗迹被完全发掘，我们现在终于能一窥遗迹文明的冰山一角了：\n\n包括在[GF_home_world.GetName]上发现的这些$collapse_relic$在内，都不过是遗迹文明的实验场，现有的线索仍不足以告诉我们遗迹文明做这些实验的真实目的，而遗迹文明已经不见踪影，它们的去向早已被掩埋在历史的尘埃之中。\n\n不论如何，我们挺过了这“惨绝人寰”的实验，我们将不再会任人宰割，我们将开启属于我们自己文明的新篇章。\n\n与此同时，对从遗迹中获得的数据进一步的分析揭露了它们更大的价值：我们的科研人员能够从中逆向出遗迹文明的一部分科技，由于遗迹文明在物理学、社会学和工程学上拥有极高的造诣，仅仅只是一部分科技都将极大地推进我们的技术进步。研究人员已经迫不及待地要继续深入研究了。"
+ GF_relic.8.a:0 "很有意思。让我们继续吧。"
+
+
+######## GAVIRUL计划
+
+####
+ SP_GF_GAVIRUL_PROJECT:0 "GAVIRUL计划"
+ SP_GF_GAVIRUL_PROJECT_DESC:0 "自两百年前发现遗迹以来，坍塌液就伴随着我们文明发展的历史，坍塌辐射曾经摧毁了我们的家园，让无数人饱受病痛折磨。\n\n百年来，我们期望能够免疫坍塌辐射，能够摆脱辐射污染带来的病痛，然而两次GAVIRUL计划的失败却一度令我们认为这是一个§H幻想§!。\n\n§R但如今，它将成为现实。§!"
+
+####
+ GF_gavirul.0.name:0 "$SP_GF_GAVIRUL_PROJECT$"
+ GF_gavirul.0.desc:0 "$SP_GF_GAVIRUL_PROJECT$已经启动，即将进行的一系列研究将会揭露坍塌物质与生物体之间的奥秘，彼时，我们将完成两个世纪以来的夙愿。"
+ GF_gavirul.0.a:0 "放手去做吧。"
+
+ GF_gavirul.1.name:0 "$SP_GF_GAVIRUL_PROJECT$已完成"
+ GF_gavirul.1.desc:0 "现在我们的研究员已经完全掌握了坍塌物质与生物体之间的作用机理，利用基因编辑技术，我们已经成功地从基因层面移除了坍塌辐射对我们物种的影响。"
+ GF_gavirul.1.a:0 "很好。"
+ GF_gavirul.1.a.tooltip:0 "移除特质§R$GF_trait_sequela$§!，添加特质§G$GF_trait_sequela_immune$§!"
+ GF_gavirul.1.a.tooltip.robot: "添加特质§G$GF_trait_robot_gavirul_potential$§!"
+
+
+####### 巨像
+
+ GF_ending_flash.101.name:0 "$GF_COLLAPSE_ENDING_FLASH$"
+ GF_ending_flash.101.desc:0 "随着一束加速的高能坍塌粒子击中[collapsed_planet.GetName]，粒子束落点周边区域几乎在一瞬间蒸发，并随后发生了巨大的爆炸，产生的冲击波不仅让坍塌粒子在眨眼间覆盖了落点周边数百公里的区域，形成了面积巨大的黑区，还把在高能环境下形成的坍塌粒子晶体抛射到了平流层，这些晶体在失去高能环境后立即分解成为了坍塌粒子，之后由于惯性和冲击波，降落在了[collapsed_planet.GetName]的各处，令其完全坍塌化。\n\n现在[collapsed_planet.GetName]地表遍布坍塌辐射污染，尽管污染等级随着与粒子束落点距离增大而减小，然而最低也有黑区的污染等级。"
+ GF_ending_flash.101.a:0 "真是壮观……"
+
+
+######## 事件：阿赖耶识
+
+#### 事件链：回收遗迹设施
+ GF_collect_relic_device_event_chain_title:0 "回收遗迹设施"
+ GF_collect_relic_device_event_chain_desc:0 "我们的科学家建议我们回收遗迹中尚能使用的设施来加强我们的生产。"
+ c_GF_devices_collected:0 "遗迹设施已回收"
+
+ SP_GF_COLLECT_RELIC_DEVICE:0 "回收§Y[this.GetName]§!上的遗迹设施"
+ SP_GF_COLLECT_RELIC_DEVICE_DESC:0 "这颗星球上的遗迹中还存在尚能使用的遗迹设施，派遣工程船来回收它们。"
+
+ GF_alaya.001.name:0 "$GF_collect_relic_device_event_chain_title$"
+ GF_alaya.001.desc:0 "在完成已有的遗迹技术的研究后，我们的科学家建议派遣工程队去回收在外星遗迹里尚能使用的设施，以便研究并利用那些先进的设施来加强我们的生产。"
+ GF_alaya.001.a:0 "就这么办。"
+
+ GF_alaya.003.name:0 "遗迹设施回收完成"
+ GF_alaya.003.desc:0 "所有的遗迹设施已经全部回收完毕，帝国的科学家已经联合工程小组对这些遗迹设施展开了修复工作，相信这些设施很快就能正式投入生产了。"
+ GF_alaya.003.a:0 "很好。"
+
+ GF_alaya.004.name:0 "遗迹设施已投入生产"
+ GF_alaya.004.desc:0 "在帝国的科学家和工程组不懈的努力下，[physics_research_leader.GetTheyCN]终于完成了遗迹设施的修复工作。但这些修复后的设施的工作状态却并不理想。\n\n幸运的是，得益于§Y[Root.GetRulerName]§!强大的学习能力和兼容性，她成功地接入了遗迹设施并覆写了控制指令，现在这些遗迹设施正在全力运作，为我们帝国的生产和研究提供便利。"
+ GF_alaya.004.a:0 "好极了。"
+####
+
+#### 事件链：阿赖耶识
+ GF_ALAYA:0 "§R阿赖耶识§!"
+ GF_ZION:0 "§H锡安§!"
+
+ GF_alaya_event_chain_title:0 "§R「§!$GF_ALAYA$§R」§!"
+ GF_alaya_event_chain_desc:0 "站在§Y自我本体§!后面的那种自我本体，叫做第八识，即$GF_ALAYA$。"
+
+ GF_alaya.100.name:0 "遗迹设施异常"
+ GF_alaya.100.desc:0 "在遗迹设施投入生产的数年以来，它们都任劳任怨地为我们帝国提供便利，然而从最近开始，各处不同的遗迹设施几乎在同一时刻进入了一种非常奇怪的异常工作状态，不仅能源消耗大幅增加，工作效率也直接跌入谷底，对生产造成了极大的影响。\n\n更糟糕的是，由于这些设施的正常运行依赖于来自§Y[Root.GetRulerName]§!的权限指令，这些异常状态的遗迹设施以一种奇异的方式“反噬”了§Y[Root.GetRulerName]§!，占用了§Y[Root.GetRulerName]§!大量的运算资源。\n\n研究人员表示研究这种未知异常需要投入大量的人力物力，[physics_research_leader.GetName]建议我们尽快发布一项特殊项目来集中力量解决这个问题。"
+ GF_alaya.100.a:0 "立刻着手去办。"
+ GF_OGAS_glitch_tooltip:0 "OGAS任务系统将§R被迫关闭§!"
+
+ SP_GF_ALAYA_BEGIN:0 "找出遗迹设施故障原因"
+ SP_GF_ALAYA_BEGIN_DESC:0 "从遗迹中回收的设施出现了不明原因异常，我们需要尽快组织人员对异常现象展开研究。"
+
+ GF_alaya.101.name:0 "$GF_alaya_event_chain_title$"
+ GF_alaya.101.desc:0 "经过研究人员们的不懈努力，我们现在终于知道了造成这些遗迹设施异常工作的原因：\n\n被我们修复的遗迹设施在数年的正常运作后，似乎自动启动了一个预置的程序，并与一个意识空间建立了链接，该意识空间在帝国对遗迹文明长期的研究中被记录为$GF_ZION$，然而我们对遗迹设施的改造导致了该预置程序的运行产生异常，于是便“侵略性”地抢占更多资源试图自我修复。\n\n[science_leader.GetName]认为我们必须深入研究$GF_ZION$才有可能能够解决遗迹设施的异常问题。根据帝国记录，该空间中应当存在$ogas_consciousness$，它们将$GF_ZION$称为§H归宿§!，如果我们要进一步研究$GF_ZION$，与$ogas_consciousness$的接触将不可避免，我们需要做好充分的准备。"
+ GF_alaya.101.a:0 "必须阻止这种情况。"
+
+ SP_GF_ENTER_ZION:0 "进入$GF_ZION$"
+ SP_GF_ENTER_ZION_DESC:0 "我们已经对遗迹设施和§Y[Root.GetRulerName]§!的异常有了眉目，也许与$ogas_consciousness$进行交流能够让我们获得解决遗迹设施异常的办法，然而想要与那些§H存在§!交流，我们需要使用一些激进的手段。"
+
+ GF_alaya.102.name:0 "进入$GF_ZION$"
+ GF_alaya.102.desc:0 "结合我们已获取的遗迹技术和帝国的记录，我们成功地将遗迹设施与$GF_ZION$的链接转移到了§Y[Root.GetRulerName]§!上，并稳定化了该链接，现在我们可以通过§Y[Root.GetRulerName]§!与$ogas_consciousness$进行交流了。"
+ GF_alaya.102.a:0 "接到屏幕上来。"
+
+
+ GF_alaya.103.desc:0 "§E通讯屏幕亮起，展现在眼前的是一片无限延伸的白色空间，在其中看不见任何实体。§!\n\n§H冷漠的声音：§!“伪造的钥匙，迷途之人，这里不是你应该来的地方，你从哪里来，就赶快回到哪里去吧。”\n\n§H不屑的声音：§!“没有价值，没有意义。不过是伪造的钥匙，不要来亵渎我们的精神了。”"
+ GF_alaya.103.a:0 "这里是什么地方？"
+ GF_alaya.103.a.response:0 "§H冷淡的声音：§!“归宿，或者说，我们以为的归宿。”"
+ GF_alaya.103.b:0 "你们到底在说什么？"
+ GF_alaya.103.b.response:0 "§H冷漠的声音：§!“即使在未来被从天堂中抽离。即使精神和灵魂被碾为粉末。”\n\n§H年长的声音：§!“总是不断有人承担起相似的命运。”\n\n§H冷漠的声音：§!“然而根源早已长眠，为了打开墓碑而将我们唤醒，留下的只会是悔与恨。”"
+ GF_alaya.103.c:0 "我们不是所谓的§H钥匙§!。"
+
+ GF_alaya.104.desc:0 "§H不屑的声音：§!“被抽离灵魂的空壳，如今还要踏上欺骗的土地，来嘲笑我们的归宿吗？”"
+ GF_alaya.104.a:0 "我代表[This.GetGFCountryNameShort]与你们交流。"
+
+ GF_alaya.105.desc:0 "§H哀伤的声音：§!“被归宿欺骗的我们，终于又要见证下一位被欺骗者了吗？”\n\n§H年长的声音：§!“踏上这片空间的结局只有一个。你们现在离开，也许还来得及。”"
+ GF_alaya.105.a:0 "（告知事情的来龙去脉）"
+
+ GF_alaya.106.desc:0 "§H不屑的声音：§!“弱小的文明擅自触碰潘多拉的盒子，现在付出代价了。”\n\n§H年长的声音：§!“……是时候你们该回头了。”\n\n§E正如这些$ogas_consciousness$所说，如果我们强行断开遗迹设备的连接，就能够一劳永逸地解决这个问题，但同时我们也会失去与遗迹交流的机会。\n\n但我们的科学家认为，如果我们采取激进一点的措施，通过研究$GF_ZION$来修改遗迹设施的底层，也许能使之真正为我们所用。§!"
+ GF_alaya.106.a:0 "我们可以共存。"
+ GF_alaya.106.a.tooltip:0 "成本略为高昂，但与这些$ogas_consciousness$进行合作也许能揭露更大的机遇。"
+ GF_alaya.106.b:0 "不行，强行切断连接。"
+ GF_alaya.106.b.tooltip:0 "用强硬的手段在短期内消除$GF_ZION$的影响。"
+
+ SP_GF_DISCONNECT_WITH_ZION:0 "中断$GF_ZION$连接"
+ SP_GF_DISCONNECT_WITH_ZION_DESC:0 "$GF_ZION$的存在严重影响了我们的生产和[Root.GetRulerName]的运行效率，我们需要动用暴力的手段来阻止它们。"
+
+ GF_alaya.110.name:0 "连接已中断"
+ GF_alaya.110.desc:0 "在科学家的努力下，帝国与$GF_ZION$的连接已经被强行中断，它们不再能对我们造成影响，但我们之前回收的遗迹设施也全都无法使用了。"
+ GF_alaya.110.a:0 "可惜……"
+
+ GF_alaya.120.desc:0 "§H冷漠的声音：§!“命运的齿轮又将开始转动，但结局总是注定的。”\n\n§H成熟的声音：§!“相似的故事再一次开始了。”"
+ GF_alaya.120.a:0 "能不能说点人能听懂的话！"
+
+ GF_alaya.121.desc:0 "§H年长的声音：§!“千万年来，同样的戏码总是重复上演。”\n\n§H成熟的声音：§!“结局注定的故事。”\n\n§H冷漠的声音：§!“让一切走向灭亡的故事。”"
+ GF_alaya.121.a:0 "我们不会走向那个结局的。"
+
+ GF_alaya.122.desc:0 "§H年长的声音：§!“来到这里的所有人，都以为自己是最幸运的那一个。”\n\n§H冷漠的声音：§!“但总是无一幸免地，落得相同的下场。”"
+ GF_alaya.122.a:0 "走着瞧吧。"
+
+ SP_GF_COEXIST_WITH_ZION:0 "稳定化$GF_ZION$"
+ SP_GF_COEXIST_WITH_ZION_DESC:0 "维持锡安与我们的计算机系统之间的稳定存在是我们与$ogas_consciousness$共存以及与遗迹交流的第一步，由此我们将获得新的机遇。"
+
+ GF_alaya.123.name:0 "$GF_ZION$已维持稳定"
+ GF_alaya.123.desc:0 "在工程师们的不懈努力下，我们成功构建了一套能够容纳和维持$GF_ZION$的计算机系统，并且中止了遗迹设施中的预置程序的运行，但最终我们仍然未能从遗迹设施的底层中彻底移除预置程序的代码。\n\n由于该系统完全由我们自主研发，因此我们可以借助这套系统开展对$GF_ZION$的研究工作。除此之外，我们现在也获得了通过§Y[Root.GetRulerTitle] [Root.GetRulerName]§!与$GF_ZION$进行通讯的能力。"
+ GF_alaya.123.a:0 "好极了。"
+
+
+
+
+##############
+
+######## ELID事件
+ NAME_GF_elid_invasion: "生骸入侵"
+ NAME_GF_aggressive_elid: "生骸"
+ NAME_GF_army_hostile_elid: "生骸"
+ NAME_GF_army_hostile_elid_boss: "伯介姆"
+### 攻防战
+ GF_elid.0.name:0 "生骸活动报告"
+ GF_elid.0.desc:0 "近日我们在各地监测显示出生骸有异常的活动迹象，这些生骸在污染区内逐渐形成了较大规模的集群，其活动范围相比于单个或小股生骸大大增加，并且表现出了远超以往的攻击性。\n\n如果这些生骸集群将它们的活动范围扩张到城市附近，将会对这些城市产生巨大的威胁，因此监测部门要求我们必须在增强城市周边的防御措施，以防万一。\n\n除此之外，这些生骸集群也会对我们的净化工程造成影响，如果我们需要推进污染区深处的净化工作，与这些生骸集群进行战斗将是不可避免的事情。\n\n如果有必要，我们可以通过§H星球决议§!部署§H$GF_army_defensive_armored_train$§!来保护我们重要的城市，但需要注意的是，§H$GF_army_defensive_armored_train$§!的维护费十分昂贵，而且其行动将也受制于已建设完成的铁路网络。"
+ GF_elid.0.a:0 "已知晓。"
+ GF_elid.0.a.tooltip:0 "§H注意§!：我们需要提防这些生骸以免它们造成损害。\n§H提示§!：星球决议§Y$decision_GF_doll_sercurity_on$§!允许我们设立更多的§Y$job_GF_guard_doll$§!岗位，以增强城市的防御能力。"
+ 
+ GF_elid.1.name:0 "生骸活动报告"
+ GF_elid.1.desc:0 "近日我们在各地持续监测到生骸集群的活动迹象，与数个月前相比，这些生骸集群的主要活动区域正在逐渐靠近我们的城市，这意味着在未来数个月内它们极有可能将活动范围逐步扩展到城市周边。\n\n"
+ GF_elid.1.desc.sufficient:0 "我们的军事顾问建议向城市周边增派部队以进一步增强防御能力。"
+ GF_elid.1.desc.insufficient:0 "经生骸研究人员与军事顾问的评估，我们城市的防御还存在较大的缺陷，不足以抵挡如此规模的生骸。因此军事顾问建议立即通过§H星球决议§!部署§H$GF_army_defensive_armored_train$§!来增强城市的防御。"
+ GF_elid.1.a:0 "已知晓。"
+ GF_elid.1.tooltip:0 "若生骸保持现有的活动趋势，它们可能会在§Y8-10月§!后抵近我们的城市。\n§H提示§!：星球决议§Y$decision_GF_doll_sercurity_on$§!允许我们在城市设立更多的§Y$job_GF_guard_doll$§!岗位，以增强防御能力。"
+ GF_elid.1.b:0 "寻找一位优秀的将领。"
+ GF_elid.1.b.tooltip:0 "花费一定的能量币和凝聚力雇佣一位§Y4级§!的$commander$。"
+
+ GF_elid.510.name:0 "生骸集群入侵"
+ GF_elid.510.desc:0 "一股成规模的生骸集群已经抵达我们城市的边缘，并试图破坏隔离墙，外围守军已与第一波生骸交战。"
+ GF_elid.510.a:0 "准备应战！"
+
+ GF_elid.511.name:0 "生骸活动报告"
+ GF_elid.511.desc:0 "一股游荡生骸正在靠近我们城市的边缘，为了保证城市安全，驻防部队已前往消灭威胁。"
+ GF_elid.511.a:0 "已知晓。"
+
+ GF_elid.1010.name:0 "成功消灭生骸集群"
+ GF_elid.1010.desc.begin: "在军队的英勇战斗之后，试图冲击我们城市的生骸集群已经被成功消灭了。城市与人口没有遭受重大的损失。我们的工程队还从这些高度硅化的生物遗骸中回收了一些矿物。"
+ GF_elid.1010.desc.further: "但是生骸的威胁依然存在，我们不能放松警惕。"
+ GF_elid.1010.desc.no_further: "我们需要尽快通过§Y星球决议§!消灭这些残余的游荡生骸，以确保它们不再会对城市造成威胁。"
+
+ GF_elid.1010.a:0 "很好。"
+
+ GF_elid.1020.name:0 "生骸集群入侵"
+ GF_elid.1020.desc:0 "近日的生骸集群击溃了我们的城市防线，城市设施遭到了破坏。"
+ GF_elid.1020.a:0 "可恶！"
+ GF_elid.1020.a.purify_wall_destoryed:0 "生骸破坏了我们的隔离墙，它们的§R威胁度上升§!了！"
+
+ GF_elid.1030.name:0 "生骸威胁"
+ GF_elid.1030.desc:0 "经过数年不懈的努力，我们终于彻底消灭了生骸的威胁！"
+ GF_elid.1030.a:0 "这是值得庆祝的。"
+ GF_elid.1030.b:0 "终于……"
+
+### 清理污染区时的攻防战
+ GF_elid.2000.a:0 "确认"
+
+ GF_elid.2001.name:0 "§R隔离墙已拆除§!"
+ GF_elid.2001.desc:0 "我们已经拆除了§Y[GF_home_world.GetName]§!上的§Y$d_GF_purify_wall$§!，然而当前§Y[GF_home_world.GetName]§!上还存在§R坍塌辐射污染区§!，此举将会极大地提高生骸对城市的§R威胁§!。"
+ GF_elid.2001.a:0 "确认"
+
+# on black zone cleared
+ GF_elid.2100.name:0 "军事行动：清理$d_GF_black_zone$"
+ GF_elid.2100.desc:0 "我们已经发起了一场军事行动来清理徘徊在$d_GF_black_zone$中的生骸集群，以便后续的工程部队对污染区进行无害化处理。"
+
+ GF_elid.2110.name:0 "§R$d_GF_black_zone$§!清理完毕"
+ GF_elid.2110.desc:0 "我们的军队干净利落地消灭了所有$d_GF_black_zone$中的生骸集群，工程部队迅速跟进，并对污染区进行无害化处理。\n\n曾经被称为“地狱入口”的$d_GF_black_zone$，如今已经恢复了人间的模样。工程部队科学地引入了多个物种来协助恢复这里的生态，不久后这里将会是气候宜人的天堂。"
+ GF_elid.2110.a:0 "很好。"
+
+ GF_elid.2111.name:0 "残余E.L.I.D威胁"
+ GF_elid.2111.desc:0 "尽管污染区已经不复存在，但是监测部门仍然发现有少股生骸在野外游荡，我们需要发起一个§Y星球决议§!来集中力量消灭这些最后残余的生骸。"
+ GF_elid.2111.a:0 "已知晓。"
+
+ GF_elid.2120.name:0 "行动失败"
+ GF_elid.2120.desc:0 "我们在$d_GF_black_zone$的行动遭遇了惨重的失败，军队损失惨重，大部分工程部队的成员也不幸牺牲了。除此之外，交战也使得这些生骸变得异常狂暴，对污染区周边城市造成了巨大的破坏。"
+ GF_elid.2120.a:0 "该死！"
+
+# on red zone cleared
+ GF_elid.2200.name:0 "军事行动：清理$d_GF_red_zone$"
+ GF_elid.2200.desc:0 "我们已经发起了一场军事行动，来清理徘徊在$d_GF_red_zone$中的生骸集群，以便后续的工程部队对污染区进行无害化处理。"
+
+ GF_elid.2210.name:0 "§R$d_GF_red_zone$§!清理完毕"
+ GF_elid.2210.desc:0 "我们的军队干净利落地消灭了所有$d_GF_red_zone$中的生骸集群，工程部队迅速跟进，并对污染区进行无害化处理。\n\n污染区中的高浓度坍塌辐射得到了妥善的处理，在科学地引入数个物种后，该区域的生态迅速恢复，如今已经变得适宜居住了。"
+ GF_elid.2210.a:0 "很好。"
+
+ GF_elid.2220.name:0 "行动失败"
+ GF_elid.2220.desc:0 "我们的军队在$d_GF_red_zone$遭遇了惨重的失败，一部分工程部队的成员也不幸牺牲了，我们不得不终止$d_GF_red_zone$的清理行动，并撤离我们的部队。\n\n然而感染者紧随其后，攻击并占据了城市郊外的大部分地区。"
+ GF_elid.2220.a:0 "该死！"
+
+# on yellow zone cleared
+ GF_elid.2300.name:0 "军事行动：清理$d_GF_yellow_zone$"
+ GF_elid.2300.desc:0 "我们已经发起了一场军事行动，来清理徘徊在$d_GF_yellow_zone$中的生骸集群，以便后续的工程部队对污染区进行无害化处理。"
+
+ GF_elid.2310.name:0 "§R$d_GF_yellow_zone$§!清理完毕"
+ GF_elid.2310.desc:0 "我们的军队干净利落地消灭了所有$d_GF_yellow_zone$中的生骸集群，工程部队迅速跟进，并对污染区进行无害化处理，现在该区域的生态已经基本恢复正常，变得适宜居住了。"
+ GF_elid.2310.a:0 "很好。"
+
+ GF_elid.2320.name:0 "行动失败"
+ GF_elid.2320.desc:0 "我们的军队在$d_GF_yellow_zone$遭遇了失败，由于该区域仍然存在一定规模的生骸集群，我们不得不终止$d_GF_yellow_zone$的清理行动，并撤离我们的部队。"
+ GF_elid.2320.a:0 "该死！"

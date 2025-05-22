@@ -1,0 +1,118 @@
+﻿l_simp_chinese:
+ GF_only_one_computing_center: "$TRIGGER_FAIL$至多只能建造一座$GF_computing_center_3$"
+ GF_mega_requires_single_star_system: "$TRIGGER_FAIL$只能在单恒星星系建造"
+
+ GF_computing_center_0: "OGAS计算中心基址"
+ GF_computing_center_0_DESC: "以OGAS为核心的恒星级计算机的建造基址，是建筑工人和工程师的前沿阵地。"
+ GF_computing_center_0_MEGASTRUCTURE_DETAILS: "$GF_computing_center_4_DESC$"
+ GF_computing_center_1: "OGAS计算中心：框架"
+ GF_computing_center_1_DESC: "未来恒星级计算机的基础框架，其中容纳了数量庞大的计算设备，尽管并未完全上线，但已经足以承担一部分中小型计算任务的负担。"
+ GF_computing_center_2: "OGAS计算中心：恒星稳定器"
+ GF_computing_center_2_DESC: "这座庞大的恒星级计算机能直接利用来自恒星的巨量能源，以承担高负荷的计算任务并扩充OGAS的线程池。"
+ GF_computing_center_3: "OGAS计算中心：高速缓存"
+ GF_computing_center_3_DESC: "安装了高速缓存的恒星级计算机大幅提高了在通讯网络内的连接速率，能够承担较高负荷的计算任务，并扩充OGAS的线程池。"
+ GF_computing_center_4: "OGAS计算中心"
+ GF_computing_center_4_DESC: "一座以OGAS为核心的恒星级计算机，能够承担极高负荷的计算任务，并大幅扩充OGAS的线程池。"
+
+ GF_mega.100.name: "$GF_computing_center_0$"
+ GF_mega.100.desc: "位于[from.System.GetName]的恒星级计算机建造基址已经准备完成，这里将成为我们最优秀的建筑工人和工程师的前沿阵地，为未来的巨型结构打下基础。"
+ GF_mega.100.a: "准备建造。"
+
+ GF_mega.101.name: "$GF_computing_center_1$建设完成"
+ GF_mega.101.desc: "恒星级计算机的主体框架已经建造完成，基础计算系统已上线并连接至中央数据库。"
+ GF_mega.101.a: "继续建造。"
+
+ GF_mega.102.name: "$GF_computing_center_2$建设完成"
+ GF_mega.102.desc: "能源收集系统与恒星稳定装置已安装，能俘获大量来自恒星的能源，以支持更庞大和复杂的计算任务。"
+ GF_mega.102.a: "继续建造。"
+
+ GF_mega.103.name: "$GF_computing_center_3$建设完成"
+ GF_mega.103.desc: "大型高速缓存安装完毕，并已连接至计算机核心，计算机与通讯网络的连接速率大幅提升。"
+ GF_mega.103.a: "继续建造。"
+
+ GF_mega.104.name: "$GF_computing_center_4$建设完成"
+ GF_mega.104.desc: "恒星级计算机剩余设备已全部完成建设、安装与调试，这个超大型计算机系统已经完全上线了。"
+ GF_mega.104.a: "$EXCELLENT$"
+
+
+ GF_mega.184.name:0 "§Y[from.System.GetName]§!已控制"
+ GF_mega.184.desc:0 "我们及时地重新取得了§Y[from.System.GetName]§!星系的控制权，§Y[from.GetName]§!的自毁程序已终止。\n\n"
+ GF_mega.184.a:0 "很好。"
+
+ GF_mega.190.name:0 "失去§Y[from.GetName]§!"
+ GF_mega.190.desc:0 "我们失去了§Y[from.System.GetName]§!星系的控制权，一并失去的还有位于该星系的§Y[from.GetName]§!。\n\n我们需要尽快重新控制§Y[from.System.GetName]§!星系，否则§Y[from.GetName]§!内置的安全协议将在§H90§! £time£ 后（§H[from.computing_center_expire_date]§!）启动自毁程序。\n"
+ GF_mega.190.a:0 "已知晓。"
+
+ GF_mega.191.name:0 "§Y$GF_computing_center_3$§!已自毁"
+ GF_mega.191.desc:0 "我们未能及时取得§Y[from.GetName]§!星系的控制权，§Y$GF_computing_center_3$§!的自毁程序已启动。\n\n"
+ GF_mega.191.a:0 "看来得重新建造一座了……"
+
+ GF_mega.196.name: "已拆除§Y$GF_computing_center_3$§!"
+ GF_mega.196.desc: "位于§Y[From.GetName]§!的$GF_computing_center_3$已被成功拆除，现在我们可以在其他星系重新建造$GF_computing_center_3$了。\n\n"
+ GF_mega.196.a: "已知晓。"
+
+ GF_REVERSE_COLLAPSE_GATEWAY_NAME: "逆向坍塌星门"
+ GF_REVERSE_COLLAPSE_GATEWAY_DESC: "该星系包含一个§Y逆向坍塌星门§!"
+
+ GF_reverse_collapse_gateway: "逆向坍塌$gateway_final$"
+ GF_reverse_collapse_gateway_DESC: "利用逆向坍塌原理穿梭于亚空间的星门，通过其能够快速到达其他星门。"
+
+ GF_requires_no_existing_reverse_collapse_gateway: "$TRIGGER_FAIL$星系中已有一个$GF_reverse_collapse_gateway$。"
+ GF_requires_no_existing_reverse_collapse_beacon: "$TRIGGER_FAIL$星系中已有一个$GF_reverse_collapse_beacon$。"
+
+ GF_reverse_collapse_beacon: "逆向坍塌信标"
+ GF_reverse_collapse_beacon_DESC: "为逆向坍塌空间折跃设立的大功率信标，允许舰队通过逆向坍塌星门网络传送至此。信标依赖于基站与支援舰存在，若二者之一被摧毁，信标也将被摧毁。"
+
+ GF_mega.300.name: "逆向坍塌星门建设完成"
+ GF_mega.300.desc: "位于§H[gateway_system.GetName]§!星系内的逆向坍塌星门已经建造完毕。它已与其余传送门网络建立稳定的亚空间连接，并且正常运转。"
+
+ MESSAGE_GF_REVERSE_BEACON_DEPLOYED: "信标已部署"
+ MESSAGE_GF_REVERSE_BEACON_DEPLOYED_DESC: "§Y$FLEET$§!已成功部署信标于§Y$PLANET$§!"
+
+ MESSAGE_GF_REVERSE_BEACON_DEPLOYMENT_FAILED: "信标部署失败"
+ MESSAGE_GF_REVERSE_BEACON_DEPLOYMENT_FAILED_DESC: "§Y$PLANET$§!上的部署行动已中止"
+
+ MESSAGE_GF_REVERSE_BEACON_DISMANTLED: "信标已拆除"
+ MESSAGE_GF_REVERSE_BEACON_DISMANTLED_DESC: "位于§Y$PLANET$§!的信标已被拆除"
+ MESSAGE_GF_REVERSE_BEACON_EXPIRED_DESC: "由§Y$FLEET$§!部署在§Y$PLANET$§!的信标已失效"
+
+ MESSAGE_GF_REVERSE_BEACON_DESTROYED: "信标被摧毁"
+ MESSAGE_GF_REVERSE_BEACON_DESTROYED_DESC: "位于§Y$PLANET$§!的信标被摧毁"
+
+ GF_mega_requires_not_habitable_planets: "$TRIGGER_FAIL$不能在宜居星球周围建造。"
+
+ GF_bio_warship_assembly_0: "伯劳生物战舰主巢基址"
+ GF_bio_warship_assembly_0_DESC: "REPLACE_ME"
+ GF_bio_warship_assembly_0_MEGASTRUCTURE_DETAILS: "REPLACE_ME"
+ GF_bio_warship_assembly_0_CONSTRUCTION_INFO_DELAYED: "REPLACE_ME"
+ GF_bio_warship_assembly_1: "伯劳生物战舰主巢：肉芽"
+ GF_bio_warship_assembly_1_DESC: "REPLACE_ME"
+ GF_bio_warship_assembly_2: "伯劳生物战舰主巢：发育"
+ GF_bio_warship_assembly_2_DESC: "即将发育成熟的伯劳生物个体。"
+ GF_bio_warship_assembly_3: "伯劳生物战舰主巢：繁育"
+ GF_bio_warship_assembly_3_DESC: "REPLACE_ME"
+ GF_bio_warship_assembly_4: "伯劳生物战舰主巢"
+ GF_bio_warship_assembly_4_DESC: "REPLACE_ME"
+
+ GF_bio_warship_queen_mega: "$GF_shrike_queen$"
+ GF_bio_warship_queen_mega_DESC: "REPLACE_ME"
+
+ GF_mega.200.name: "$GF_bio_warship_assembly_0$"
+ GF_mega.200.desc: "REPLACE_ME"
+ GF_mega.200.a: "REPLACE_ME"
+
+ GF_mega.201.name: "$GF_bio_warship_assembly_1$"
+ GF_mega.201.desc: "REPLACE_ME"
+ GF_mega.201.a: "REPLACE_ME"
+
+ GF_mega.202.name: "$GF_bio_warship_assembly_2$"
+ GF_mega.202.desc: "REPLACE_ME"
+ GF_mega.202.a: "REPLACE_ME"
+
+ GF_mega.203.name: "$GF_bio_warship_assembly_3$"
+ GF_mega.203.desc: "REPLACE_ME"
+ GF_mega.203.a: "REPLACE_ME"
+
+ GF_mega.204.name: "$GF_bio_warship_assembly_4$"
+ GF_mega.204.desc: "REPLACE_ME"
+ GF_mega.204.a: "REPLACE_ME"

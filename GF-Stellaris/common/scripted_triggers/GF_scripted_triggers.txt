@@ -1,0 +1,512 @@
+can_destroy_planet_with_PLANET_KILLER_GF_COLLAPSE_ENDING_FLASH = {
+	custom_tooltip = {
+		fail_text = is_not_a_standard_planet_or_megastructure
+		is_a_planet_megastructure = yes
+	}
+	custom_tooltip = {
+		fail_text = is_shielded
+		NOR = {
+			is_planet_class = pc_shielded
+			is_planet_class = pc_ringworld_shielded
+			is_planet_class = pc_habitat_shielded
+		}
+	}
+	#custom_tooltip = {
+		#fail_text = is_not_hostile
+		OR = {
+			custom_tooltip = {
+				text = is_not_hostile_cracker
+				OR = {
+					AND = {
+						exists = space_owner
+						space_owner = {
+							OR = {
+								is_at_war_with = from.owner
+								is_country_type = swarm
+								is_country_type = extradimensional
+								is_country_type = extradimensional_2
+								is_country_type = extradimensional_3
+								is_country_type = ai_empire
+							}
+						}
+					}
+					AND = { # colony
+						exists = owner
+						owner = {
+							OR = {
+								is_at_war_with = from.owner
+								is_country_type = swarm
+								is_country_type = extradimensional
+								is_country_type = extradimensional_2
+								is_country_type = extradimensional_3
+								is_country_type = ai_empire
+							}
+						}
+					}
+					AND = { # primitive
+						exists = space_owner
+						exists = owner
+						owner = {
+							is_primitive = yes
+						}
+						space_owner = {
+							OR = {
+								is_at_war_with = from.owner
+								is_country_type = swarm
+								is_country_type = extradimensional
+								is_country_type = extradimensional_2
+								is_country_type = extradimensional_3
+								is_country_type = ai_empire
+							}
+						}
+					}
+				}
+			}
+			custom_tooltip = {
+				text = not_barren_molten_frozen_toxic_test_fire
+				NOT = { exists = owner }
+				OR = {
+					NOT = { exists = space_owner }
+					AND = {
+						exists = space_owner
+						space_owner = { is_same_value = from.owner }
+					}
+				}
+				OR = {
+					is_planet_class = pc_barren
+					is_planet_class = pc_barren_cold
+					is_planet_class = pc_frozen
+					is_planet_class = pc_molten
+					is_planet_class = pc_toxic
+					is_planet_class = pc_desert
+					is_planet_class = pc_tropical
+					is_planet_class = pc_arid
+					is_planet_class = pc_continental
+					is_planet_class = pc_ocean
+					is_planet_class = pc_tundra
+					is_planet_class = pc_arctic
+					is_planet_class = pc_alpine
+					is_planet_class = pc_savannah
+					is_planet_class = pc_gaia
+					is_planet_class = pc_relic
+					is_planet_class = pc_nuked
+					is_planet_class = pc_ringworld_habitable
+					is_planet_class = pc_habitat
+				}
+			}
+		}
+	#}
+}
+
+# this = planet
+GF_elid_combat_type_regular = {
+	GF_elid_combat_type_contaminated_zone = no
+}
+GF_elid_combat_type_contaminated_zone = {
+	has_planet_flag = flag_p_GF_battle_in_contaminated_zone
+}
+GF_elid_combat_type_d_GF_black_zone = {
+	GF_elid_combat_type_contaminated_zone = yes
+	has_planet_flag = flag_p_GF_battle_in_d_GF_black_zone
+}
+GF_elid_combat_type_d_GF_red_zone = {
+	GF_elid_combat_type_contaminated_zone = yes
+	has_planet_flag = flag_p_GF_battle_in_d_GF_red_zone
+}
+GF_elid_combat_type_d_GF_yellow_zone = {
+	GF_elid_combat_type_contaminated_zone = yes
+	has_planet_flag = flag_p_GF_battle_in_d_GF_yellow_zone
+}
+
+# this = planet
+GF_check_elid_combat_type = {
+	GF_elid_combat_type_$TYPE$ = yes
+}
+
+# this = planet
+GF_collapse_relic_site_requirements = {
+	OR = {
+		is_planet_class = pc_barren
+		is_planet_class = pc_barren_cold
+		is_planet_class = pc_molten
+		is_planet_class = pc_frozen
+		is_planet_class = pc_toxic
+		habitable_planet = yes
+	}
+	NOR = {
+		exists = archaeological_site
+		has_planet_flag = suppress_archaeological_sites
+		is_colony = yes
+		has_modifier = holy_planet
+	}
+}
+
+## used in archaeology!
+# this = fleet
+# from = archaeological_site
+GF_collapse_relic_site_type = {
+	# INDEX == 1 --> physics
+	# INDEX == 2 --> society
+	# INDEX == 3 --> engineering
+	# others     --> invalid
+	from.planet = { has_planet_flag = flag_p_GF_collapse_relic_site_$INDEX$ }
+}
+
+
+GF_default_zion_comm_trigger = {
+	AND = {
+		has_authority = GF_auth_commonwealth
+		has_country_flag = flag_GF_established_communication_with_zion
+	}
+}
+
+# this = species
+GF_is_gavirul_potential = {
+	OR = {
+		has_trait = GF_trait_sequela_immune
+		has_trait = GF_trait_robot_gavirul_potential
+	}
+}
+
+# this = country
+GF_has_completed_gavirul_project = {
+	custom_tooltip = {
+		has_country_flag = flag_GF_gavirul_project_completed
+		fail_text = GF_gavirul_project_completed
+	}
+}
+
+# this = planet
+GF_elid_threat_exists = {
+	check_variable = {
+		which = v_GF_elid_threat_level
+		value > 0
+	}
+}
+
+# scope = planet
+GF_planet_has_contaminated_zone = {
+	OR = {
+		has_deposit = d_GF_black_zone
+		has_deposit = d_GF_red_zone
+		has_deposit = d_GF_yellow_zone
+	}
+}
+
+# this = system
+GF_sf_event_system_candidate_trigger = {
+	any_playable_country = {
+		has_origin = GF_origin_commonwealth
+		capital_scope.solar_system = {
+			distance = {
+				source = prevprev
+				max_jumps = 7
+				min_jumps = 2
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_star_flag = empire_cluster
+			any_playable_country = {
+				NOT = { has_origin = GF_origin_commonwealth }
+				capital_scope.solar_system = {
+					any_system = {
+						distance = {
+							source = prev
+							max_jumps = 5
+							min_jumps = 1
+						}
+						is_same_value = prevprevprev
+					}
+				}
+			}
+		}
+		always = no
+	}
+}
+
+# this = planet
+# TYPE: barren | asteroid
+GF_sf_event_planet_trigger = {
+	GF_sf_event_$TYPE$ = yes
+}
+
+# this = planet
+GF_sf_event_barren = {
+	OR = {
+		has_planet_flag = flag_p_GF_sf_event_barren_candidate
+		is_planet_class = pc_barren
+	}
+}
+
+# this = planet
+GF_sf_event_asteroid = {
+	OR = {
+		has_planet_flag = flag_p_GF_sf_event_asteroid_candidate
+		is_asteroid = yes
+	}
+}
+
+# this = system
+# TYPE: barren | asteroid
+GF_sf_event_system_trigger = {
+	NOT = { has_star_flag = flag_s_GF_sf_event_system }
+	OR = {
+		AND = {
+			has_star_flag = flag_s_GF_sf_event_system_candidate
+			any_system_planet = {
+				GF_sf_event_planet_trigger = { TYPE = $TYPE$ }
+			}
+		}
+		AND = {
+			NOT = { has_star_flag = flag_s_GF_sf_event_system_candidate }
+			any_system_planet = {
+				GF_sf_event_$TYPE$ = yes
+				has_anomaly = no
+				NOT = { exists = archaeological_site }
+			}
+		}
+	}
+	OR = {
+		NOT = { exists = space_owner }
+		AND = {
+			exists = space_owner
+			space_owner = {
+				OR = {
+					is_same_value = event_target:GF_ogas_owner
+					NOR = {
+						has_closed_borders = event_target:GF_ogas_owner
+						is_hostile = event_target:GF_ogas_owner
+					}
+				}
+			}
+		}
+	}
+}
+
+
+# scope = country
+
+@high_zion_favor_threshold		= 50
+@decent_zion_favor_threshold 	= 30
+@low_zion_favor_threshold		= 0
+
+GF_has_zion_favor_very_high = {
+	AND = {
+		is_variable_set = v_GF_zion_favor
+		check_variable_arithmetic = {
+			which = v_GF_zion_favor
+			subtract = @decent_zion_favor_threshold
+			value >= @high_zion_favor_threshold			# value >= @high + @decent
+		}
+	}
+	
+}
+
+GF_has_zion_favor_high = {
+	AND = {
+		is_variable_set = v_GF_zion_favor
+		check_variable = {
+			which = v_GF_zion_favor
+			value >= @high_zion_favor_threshold
+		}
+	}
+	
+}
+
+GF_has_zion_favor_decent = {
+	AND = {
+		is_variable_set = v_GF_zion_favor
+		check_variable = {
+			which = v_GF_zion_favor
+			value >= @decent_zion_favor_threshold
+		}
+	}
+}
+
+GF_has_zion_favor_mid = {
+	AND = {
+		is_variable_set = v_GF_zion_favor
+		check_variable = {
+			which = v_GF_zion_favor
+			value >= @low_zion_favor_threshold
+		}
+	}
+}
+
+GF_has_zion_favor_low = {
+	AND = {
+		is_variable_set = v_GF_zion_favor
+		check_variable = {
+			which = v_GF_zion_favor
+			value < @low_zion_favor_threshold
+		}
+	}
+}
+
+GF_require_zion_favor_high = {
+	custom_tooltip = {
+		text = GF_require_zion_favor_high
+		GF_has_zion_favor_high = yes
+	}
+}
+GF_require_zion_favor_decent = {
+	custom_tooltip = {
+		text = GF_require_zion_favor_decent
+		GF_has_zion_favor_decent = yes
+	}
+}
+GF_require_zion_favor_mid = {
+	custom_tooltip = {
+		text = GF_require_zion_favor_mid
+		GF_has_zion_favor_mid = yes
+	}
+}
+# GF_require_zion_favor_low = {
+# 	custom_tooltip = {
+# 		text = GF_require_zion_favor_low
+# 		GF_has_zion_favor_low = yes
+# 	}
+# }
+
+# 检查锡安项目所需的资源库存
+# 需要$TIER$ * $RES$月收入的$RES$，最少为@GF_zion_project_$RES$_cost_$TIER$（定义于GF_scripted_variables.txt）
+# scope = country
+GF_zion_require_resource_stockpile = {
+	custom_tooltip = {
+		text = GF_zion_require_$RES$_stockpile_$TIER$
+		resource_stockpile_compare = {
+			resource = $RES$
+			value >= value:GF_monthly_resource_income|RES|$RES$|MULT|$TIER$|MIN|@GF_zion_project_$RES$_cost_$TIER$|
+		}
+	}
+}
+
+# scope = pop
+GF_is_non_doll_robot_pop = {
+	AND = {
+		NOT = { has_trait = GF_trait_doll }
+		is_robot_pop = yes
+	}
+}
+
+# scope = country
+GF_has_robotic_leaders = {
+	any_owned_leader = {
+		species = { is_robotic = yes }
+	}
+}
+
+# scope = leader
+GF_is_enhanced_leader = {
+	OR = {
+		has_trait = GF_trait_leader_enhanced_official
+		has_trait = GF_trait_leader_enhanced_scientist
+		has_trait = GF_trait_leader_enhanced_commander
+	}
+}
+
+# scope = leader
+GF_leader_has_vanilla_negative_traits = {
+	num_leader_traits = {
+		value > 0
+		negative = yes
+	}
+}
+
+# scope = leader
+GF_leader_has_core_glitch = {
+	OR = {
+		has_trait = GF_trait_leader_core_glitch_official
+		has_trait = GF_trait_leader_core_glitch_scientist
+		has_trait = GF_trait_leader_core_glitch_commander
+	}
+}
+
+# this = ship
+GF_has_collapse_components = {
+	OR = {
+		has_component = GF_COLLAPSE_ARMOR_LARGE
+		has_component = GF_COLLAPSE_ARMOR_MEDIUM
+		has_component = GF_COLLAPSE_ARMOR_SMALL
+
+		has_component = GF_COLLAPSE_MASS_ACCELERATOR
+
+		has_component = GF_COLLAPSE_ARTILLERY
+		has_component = GF_COLLAPSE_CANNON_LARGE
+		has_component = GF_COLLAPSE_CANNON_MEDIUM
+		has_component = GF_COLLAPSE_CANNON_SMALL
+		has_component = GF_COLLAPSE_MISSILE
+		has_component = GF_COLLAPSE_TORPEDO
+
+		has_component = TITAN_GF_COLLAPSE_ENERGY_LANCE
+		has_component = XLARGE_GF_COLLAPSE_ENERGY_LANCE
+
+		has_component = GF_COLLAPSE_JUMP_DRIVE
+		has_component = CORVETTE_GF_COLLAPSE_REACTOR
+		has_component = DESTROYER_GF_COLLAPSE_REACTOR
+		has_component = CRUISER_GF_COLLAPSE_REACTOR
+		has_component = BATTLESHIP_GF_COLLAPSE_REACTOR
+		has_component = TITAN_GF_COLLAPSE_REACTOR
+		has_component = JUGGERNAUT_GF_COLLAPSE_REACTOR
+		has_component = PLATFORM_GF_COLLAPSE_REACTOR
+		has_component = ION_CANNON_GF_COLLAPSE_REACTOR
+	}
+}
+
+# this = country
+GF_should_have_collapse_liquid_deficit_debuff = {
+	is_nyto_country = no
+	NOT = { has_country_flag = flag_GF_prevent_collapse_liquid_deficit_debuff }
+}
+
+# scope = planet
+GF_is_habitat = {
+	OR = {
+		is_planet_class = pc_habitat
+		has_planet_flag = flag_p_GF_is_habitat_type_planet	# 兼容
+	}
+}
+
+# this = megastructure
+GF_is_working_computing_center = {
+	OR = {
+		is_megastructure_type = GF_computing_center_2
+		is_megastructure_type = GF_computing_center_3
+		is_megastructure_type = GF_computing_center_4
+	}
+}
+GF_is_computing_center = {
+	OR = {
+		is_megastructure_type = GF_computing_center_0
+		is_megastructure_type = GF_computing_center_1
+		GF_is_working_computing_center = yes
+	}
+}
+
+# scope = pop
+GF_can_pop_join_freedom_kindom = {
+	has_citizenship_rights = yes
+}
+
+# this = pop/species
+GF_can_be_assimilated_to_doll = {
+	switch = {
+		trigger = is_scope_type
+		pop     = { is_robot_pop = yes }
+		species = { is_robotic   = yes }
+		default = { always = no }
+	}
+	NOT = { has_trait = GF_trait_doll }
+	NOT = { is_same_species = $OWNER|owner$ }
+}
+
+# this = ship
+GF_has_shrike_heart = {
+	OR = {
+		has_component = GF_SHRIKE_HEART_SMALL
+		has_component = GF_SHRIKE_HEART_MEDIUM
+		has_component = GF_SHRIKE_HEART_LARGE
+	}
+}

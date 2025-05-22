@@ -1,0 +1,647 @@
+decision_GF_doll_sercurity_on = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_GF_doll_sercurity_on
+	
+	resources = {
+		category = decisions
+		cost = {
+			influence = 50
+		}
+	}
+	
+	potential = {
+		owner = { has_authority = GF_auth_commonwealth }
+		NOT = { has_modifier = GF_sercurity_protocol }
+	}
+	
+	allow = {
+		NOT = { has_modifier = GF_sercurity_protocol }
+	}
+	
+	effect = {
+		add_modifier = { modifier = "GF_sercurity_protocol" days = -1 }
+	}
+	
+	ai_weight = { weight = 0 }
+}
+decision_GF_doll_sercurity_off = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_GF_doll_sercurity_off
+	
+	resources = {
+		category = decisions
+		cost = {
+			influence = 0
+		}
+	}
+	
+	potential = {
+		owner = { has_authority = GF_auth_commonwealth }
+		has_modifier = GF_sercurity_protocol
+	}
+	
+	allow = {
+		has_modifier = GF_sercurity_protocol
+	}
+	
+	effect = {
+		remove_modifier = "GF_sercurity_protocol"
+	}
+	
+	ai_weight = { weight = 0 }
+}
+decision_GF_doll_storage_on = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_GF_doll_storage_on
+	
+	resources = {
+		category = decisions
+		cost = {
+			influence = 50
+		}
+	}
+	
+	potential = {
+		owner = { has_authority = GF_auth_commonwealth }
+		NOT = { has_modifier = GF_storage_protocol }
+	}
+	
+	allow = {
+		NOT = { has_modifier = GF_storage_protocol }
+	}
+	
+	effect = {
+		add_modifier = { modifier = "GF_storage_protocol" days = -1 }
+	}
+	
+	ai_weight = { weight = 0 }
+}
+decision_GF_doll_storage_off = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_GF_doll_storage_off
+	
+	resources = {
+		category = decisions
+		cost = {
+			influence = 0
+		}
+	}
+	
+	potential = {
+		owner = { has_authority = GF_auth_commonwealth }
+		has_modifier = GF_storage_protocol
+	}
+	
+	allow = {
+		has_modifier = GF_storage_protocol
+		NOT = { has_modifier = GF_cloud_computing_protocol }
+	}
+	
+	effect = {
+		remove_modifier = "GF_storage_protocol"
+	}
+	
+	ai_weight = { weight = 0 }
+}
+decision_GF_doll_cloud_computing_on = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_GF_doll_cloud_computing_on
+	
+	resources = {
+		category = decisions
+		cost = {
+			energy = 10
+		}
+	}
+	
+	potential = {
+		owner = { has_authority = GF_auth_commonwealth }
+		NOT = { has_modifier = GF_cloud_computing_protocol }		
+	}
+	
+	allow = {
+		has_modifier = GF_storage_protocol
+	}
+	
+	effect = {
+		add_modifier = { modifier = "GF_cloud_computing_protocol" days = -1 }
+	}
+	
+	ai_weight = { weight = 0 }
+}
+decision_GF_doll_cloud_computing_off  = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_GF_doll_cloud_computing_off
+	
+	resources = {
+		category = decisions
+		cost = {
+			influence = 0
+		}
+	}
+	
+	potential = {
+		owner = { has_authority = GF_auth_commonwealth }
+		has_modifier = GF_cloud_computing_protocol
+	}
+	
+	allow = {
+		has_modifier = GF_cloud_computing_protocol
+	}
+	
+	effect = {
+		remove_modifier = "GF_cloud_computing_protocol"
+	}
+	
+	ai_weight = { weight = 0 }
+}
+
+
+###########
+decision_GF_rebuild_purify_wall = {
+	owned_planets_only = yes
+	icon = decision_rebuild_purify_wall
+
+	enactment_time = 120
+	resources = {
+		category = decisions
+		cost = {
+			influence = 5
+			minerals = 200
+			energy = 100
+		}
+	}
+
+	potential = {
+		owner = {
+			has_authority = GF_auth_commonwealth
+			has_origin = GF_origin_commonwealth
+		}
+		OR = {
+			GF_planet_has_contaminated_zone = yes
+			GF_elid_threat_exists = yes
+		}
+		NOT = { has_deposit = d_GF_purify_wall }
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = decision_GF_rebuild_purify_wall_requirements
+			GF_elid_threat_exists = yes
+			
+		}
+	}
+
+	effect = {
+		add_deposit = d_GF_purify_wall
+		custom_tooltip = decision_GF_rebuild_purify_wall_tooltip
+		hidden_effect = {
+			event_target:GF_home_world = {
+				change_variable =  {
+					which = v_GF_elid_threat_level
+					value = -2
+				}
+				planet_event = { id = GF_elid.1030 }
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 100
+			AND = {
+				OR = {
+					has_deposit = d_GF_black_zone
+					has_deposit = d_GF_red_zone
+					has_deposit = d_GF_yellow_zone
+				}
+				NOT = { has_deposit = d_GF_purify_wall }
+			}
+		}
+	}
+}
+
+decision_GF_eliminate_all_elid = {
+	owned_planets_only = yes
+	icon = decision_eliminate_all_elid
+
+	enactment_time = 360
+	resources = {
+		category = decisions
+		cost = {
+			minerals = 50
+			energy = 300
+			multiplier = v_GF_elid_threat_level
+		}
+	}
+
+	potential = {
+		owner = { GF_is_main_country = yes }
+		GF_planet_has_contaminated_zone = no
+		GF_elid_threat_exists = yes
+	}
+
+	allow = {
+		has_ground_combat = no
+		hidden_trigger = {
+			GF_elid_threat_exists = yes
+		}
+	}
+
+	effect = {
+		custom_tooltip = decision_GF_eliminate_all_elid_effects
+		hidden_effect = {
+			set_variable = {
+				which = v_GF_elid_threat_level
+				value = 0
+			}
+			GF_update_elid_threat_modifier = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 20
+		modifier = {
+			factor = 100
+			GF_planet_has_contaminated_zone = no
+			GF_elid_threat_exists = yes
+		}
+	}
+}
+
+decision_GF_construct_railway_line = {
+	icon = decision_GF_construct_railway_line
+	owned_planets_only = yes
+
+	enactment_time = 1080
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+			minerals = 500
+			alloys = 500
+		}
+	}
+
+	potential = {
+		owner = {
+			has_authority = GF_auth_commonwealth
+			has_technology = GF_tech_recover_plan
+		}
+	}
+
+	allow = {
+		if = {
+			limit = { is_capital = yes }
+			custom_tooltip = {
+				fail_text = GF_require_yellow_zone_cleared
+				NOT = { has_deposit = d_GF_yellow_zone }
+			}
+			custom_tooltip = {
+				fail_text = decision_GF_construct_railway_line_fail_tooltip_2
+				count_deposits = {
+					type = d_GF_railway_hub
+					count < 2
+				}
+			}
+		}
+		else = {
+			custom_tooltip = {
+				fail_text = decision_GF_construct_railway_line_fail_tooltip_1
+				count_deposits = {
+					type = d_GF_railway_hub
+					count < 1
+				}
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = decision_GF_construct_railway_line_effects
+		hidden_effect = {
+			GF_construct_railway_line_effect = yes
+		}
+	}
+}
+
+decision_GF_deploy_armored_train = {
+	icon = decision_GF_deploy_armored_train
+	owned_planets_only = yes
+
+	enactment_time = 120
+	resources = {
+		category = decisions
+		cost = {
+			energy = 500
+			alloys = 300
+		}
+	}
+
+	potential = {
+		owner = { has_authority = GF_auth_commonwealth }
+		has_deposit = d_GF_railway_hub
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = decision_GF_deploy_armored_train_fail_tooltip
+			count_planet_army = {
+				limit = { army_type = GF_army_defensive_armored_train }
+				count < v_GF_armored_train_capacity
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = decision_GF_deploy_armored_train_effects
+		hidden_effect = {
+			create_army = {
+				owner = this.owner
+				species = this.owner
+				name = "NAME_GF_armored_train"
+				# land_army = yes
+				type = GF_army_defensive_armored_train
+			}
+		}
+	}
+}
+
+decision_GF_GOSPLAN = {
+	owned_planets_only = yes
+	enactment_time = 30
+	resources = {
+		category = decisions
+		cost = {
+			unity = 10
+			mult = trigger:planet_size
+		}
+	}
+	potential = {
+		exists = owner
+		owner = {
+			has_valid_civic = GF_civic_GOSPLAN
+		}
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = GF_GOSPLAN_ongoing
+			NOT = { has_planet_flag = flag_p_GF_GOSPLAN_ongoing }
+		}
+	}
+	effect = {
+		custom_tooltip = decision_GF_GOSPLAN_effect
+		hidden_effect = {
+			owner = {
+				start_situation = {
+					type = GF_situation_GOSPLAN
+					target = prev
+				}
+			}
+			set_timed_planet_flag = {
+				flag = flag_p_GF_GOSPLAN_ongoing
+				months = 60
+			}
+			create_message = {
+				type = MESSAGE_TYPE_GF_PLANET_GOSPLAN_STARTED
+				localization = MESSAGE_GF_PLANET_GOSPLAN_STARTED_DESC
+				days = 30
+				target = this
+				variable = {
+					type = name
+					localization = PLANET
+					scope = this
+				}
+			}
+		}
+	}
+}
+
+decision_GF_analyse_orb_mainframe_alpha = {
+	icon = decision_engineering_research
+	owned_planets_only = yes
+
+	resources = {
+		category = artifact_actions
+		cost = { unity = 5000 }
+	}
+
+	potential = {
+		is_capital = yes
+		owner = {
+			has_country_flag = flag_GF_analyse_orb_mainframe_alpha_decision_at_capital
+			NOR = {
+				has_special_project = GF_sf_event_project_7
+				has_country_flag = flag_GF_artifact_analyse_orb_mainframe_alpha_finished
+			}
+		}
+	}
+
+	effect = {
+		enable_special_project = {
+			name = GF_sf_event_project_7
+			location = this
+		}
+		hidden_effect = {
+			owner = { remove_point_of_interest = GF_sf_orb_analyse_action }
+		}
+	}
+}
+
+decision_GF_autocity_ring_construction = {
+	owned_planets_only = yes
+
+	resources = {
+		category = starbase_stations
+		cost = {
+			alloys = 2000
+			influence = 150
+		}
+	}
+
+	potential = {
+		NOT = { has_planet_flag = flag_p_GF_has_autocity_ring_dummy }
+		is_planet_class = pc_GF_automated_city
+		from = { has_technology = tech_orbital_ring_tier_1 }
+		NOT = { exists = orbital_defence }
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_no_existing_megastructure"
+			#can_build_megastructure_on_planet = yes
+			NOR = {
+				has_planet_flag = megastructure
+				AND = {
+					has_planet_flag = has_megastructure
+					# Special exception so you can build an orbital ring even if you have MSI's warship as a habitat.
+					NOT = {
+						has_planet_flag = has_payback_habitat
+					}
+				}
+				has_planet_flag = ruined_orbital_ring_planet
+				solar_system = {
+					has_star_flag = ring_world_built
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_orbital_debris"
+			NOR = {
+				has_planet_flag = has_orbital_debris
+			}
+		}
+		if = {
+			limit = { from = { is_ai = yes } }
+			num_pops >= 25
+		}
+	}
+
+	effect = {
+		custom_tooltip = decision_GF_autocity_ring_construction_effect
+		hidden_effect = {
+			solar_system = {
+				spawn_megastructure = {
+					graphical_culture = prev.from
+					type = GF_autocity_ring_dummy
+					planet = prev
+					owner = prev.from
+					init_effect = {
+						upgrade_megastructure_to = GF_autocity_ring
+					}
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 3
+			solar_system = {
+				exists = owner
+				is_same_value = owner.capital_scope.solar_system
+			}
+		}
+		modifier = {
+			factor = 2
+			solar_system = {
+				any_neighbor_system = {
+					exists = owner
+					is_same_value = owner.capital_scope.solar_system
+				}
+			}
+		}
+
+		modifier = {
+			factor = 0.1
+			solar_system = {
+				any_neighbor_system = {
+					exists = owner
+					owner = { NOT = { is_same_value = from } }
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			solar_system = {
+				any_system_colony = {
+					num_pops >= 50
+					NOT = { exists = orbital_defence }
+				}
+			}
+		}
+	}
+}
+decision_GF_autocity_ring_upgrade = {
+	icon = decision_GF_autocity_ring_construction
+	owned_planets_only = yes
+
+	enactment_time = 120
+
+	resources = {
+		category = starbase_stations
+		cost = {
+			alloys = 2500
+			influence = 200
+		}
+	}
+
+	potential = {
+		NOT = { has_planet_flag = flag_p_GF_has_autocity_ring_dummy }
+		is_planet_class = pc_GF_automated_city
+		from = { has_technology = tech_orbital_ring_tier_1 }
+		exists = orbital_defence
+		orbital_defence.starbase = {
+			is_orbital_ring = yes
+			has_starbase_size < orbital_ring_tier_3
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_no_orbital_debris"
+			NOR = {
+				has_planet_flag = has_orbital_debris
+			}
+		}
+		if = {
+			limit = { from = { is_ai = yes } }
+			num_pops >= 25
+		}
+	}
+
+	effect = {
+		custom_tooltip = decision_GF_autocity_ring_construction_effect_upgrade
+		hidden_effect = {
+			orbital_defence.starbase = {
+				set_starbase_size = orbital_ring_tier_3
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 3
+			solar_system = {
+				exists = owner
+				is_same_value = owner.capital_scope.solar_system
+			}
+		}
+		modifier = {
+			factor = 2
+			solar_system = {
+				any_neighbor_system = {
+					exists = owner
+					is_same_value = owner.capital_scope.solar_system
+				}
+			}
+		}
+
+		modifier = {
+			factor = 0.1
+			solar_system = {
+				any_neighbor_system = {
+					exists = owner
+					owner = { NOT = { is_same_value = from } }
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			solar_system = {
+				any_system_colony = {
+					num_pops >= 50
+					NOT = { exists = orbital_defence }
+				}
+			}
+		}
+	}
+}

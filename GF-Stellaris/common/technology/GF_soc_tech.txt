@@ -1,0 +1,337 @@
+# ##################
+# Unity gf
+# ##################
+
+GF_tech_zener_network_1 = {
+	cost = 0
+	area = society
+	start_tech = yes
+	category = { statecraft }
+	tier = 0
+
+	potential = {
+		GF_can_research_tech_trigger = { TECH = GF_tech_zener_network_1 }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_statecraft }
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_statecraft }
+		}
+	}
+}
+
+GF_tech_zener_network_2 = {
+	cost = @GFTech_tier2cost2
+	area = society
+	category = { statecraft }
+	tier = 2
+	prerequisites = { "GF_tech_zener_network_1" }
+	weight = @GFTech_tier2weight2
+
+	potential = {
+		GF_can_research_tech_trigger = { TECH = GF_tech_zener_network_2 }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_statecraft }
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = tech_mine_rare_crystals
+				has_technology = tech_rare_crystals
+				has_country_flag = has_market_access
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_statecraft }
+		}
+	}
+}
+
+GF_tech_zener_network_3 = {
+	cost = @GFTech_tier3cost2
+	area = society
+	category = { statecraft }
+	tier = 3
+	prerequisites = { "GF_tech_zener_network_2" "tech_colonial_centralization" }
+	weight = @GFTech_tier3weight2
+
+	potential = {
+		GF_can_research_tech_trigger = { TECH = GF_tech_zener_network_3 }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_statecraft }
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_statecraft }
+		}
+	}
+}
+
+GF_tech_zener_network_4 = {
+	cost = @GFTech_tier4cost2
+	area = society
+	category = { statecraft }
+	tier = 4
+	prerequisites = { "GF_tech_zener_network_3" "tech_administrative_ai" "tech_galactic_administration"}
+	weight = @GFTech_tier4weight2
+
+	potential = {
+		GF_can_research_tech_trigger = { TECH = GF_tech_zener_network_4 }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_statecraft }
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_statecraft }
+		}
+	}
+}
+
+GF_tech_ecological_recovery = {
+	cost = @GFTech_tier3cost1
+	area = society
+	tier = 3
+	category = { new_worlds }
+	prerequisites = {
+		"GF_tech_collapse"
+		"GF_tech_recover_plan"
+	}
+	weight = @GFTech_tier3weight3
+	potential = {
+		GF_can_research_tech_trigger = { TECH = GF_tech_ecological_recovery }
+	}
+	weight_groups = {
+		deposit_blockers
+	}
+
+	mod_weight_if_group_picked = {
+		deposit_blockers = 0.5
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 2
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_planet =  {
+					has_deposit = d_GF_black_zone
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			years_passed >= 20
+		}
+		modifier = {
+			factor = 10
+			years_passed >= 30
+		}
+		modifier = {
+			factor = 5
+			any_owned_planet =  {
+				has_deposit = d_GF_black_zone
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_trait_in_council = { TRAIT = leader_trait_expertise_new_worlds }
+		}
+	}
+
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_planet =  {
+					has_deposit = d_GF_black_zone
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_trait_in_council = { TRAIT = leader_trait_expertise_new_worlds }
+		}
+	}
+}
+
+
+GF_tech_collapsetech_weaponize = {
+	# 坍塌技术武器化
+	area = society
+	category = { military_theory }
+	tier = 4
+	cost   = @GFTech_tier4cost2
+	weight = @GFTech_tier3weight3
+
+	is_rare = yes
+
+	gateway = GF_tech_gateway_collapse_weapon
+
+	potential = {
+		GF_can_research_tech_trigger = { TECH = GF_tech_collapsetech_weaponize }
+	}
+
+	prerequisites = {
+		"GF_tech_reverse_collapse"
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_military_theory }
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_military_theory }
+		}
+	}
+
+	modifier = {
+		army_damage_mult = 0.15
+		army_collateral_damage_mult = 0.10
+	}
+}
+
+######
+GF_tech_elid_army = {
+	area = society
+	category = { biology }
+	tier = 5
+	cost = @GFTech_tier5cost1
+	weight = @GFTech_tier5weight1
+
+	is_rare = yes
+	
+	potential = {
+		GF_can_research_tech_trigger = { TECH = GF_tech_elid_army }
+	}
+
+	prerequisites = {
+		"GF_tech_collapse_relic_tech"
+		"GF_tech_collapsetech_weaponize"
+		"tech_cloning"
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = { has_valid_civic = civic_reanimated_armies }
+		}
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_military_theory }
+		}
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_biology }
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOT = { has_valid_civic = civic_reanimated_armies }
+		}
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_military_theory }
+		}
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_biology }
+		}
+	}
+}
+
+GF_tech_collapse_bomb = {
+	area = society
+	category = { military_theory }
+	tier = 5
+
+	cost = @GFTech_tier5cost3
+	weight = @GFTech_tier5weight3
+
+	is_rare = yes
+
+	potential = {
+		GF_can_research_tech_trigger = { TECH = GF_tech_collapse_bomb }
+	}
+
+	prerequisites = {
+		"GF_tech_collapsetech_weaponize"
+	}
+
+	prereqfor_desc = {
+		custom = {
+			title = "GF_tech_collapse_bomb_title"
+			desc = "GF_tech_collapse_bomb_effect_desc"
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_military_theory }
+		}
+	}
+}
+#####坍塌辐射污染区恢复及振兴联合开拓协议
+GF_tech_recover_plan = {
+	area = society
+	category = { statecraft }
+	tier = 1
+	cost = 1000
+	prerequisites = { }
+	weight = 0
+	
+	potential = {
+		GF_can_research_tech_trigger = { TECH = GF_tech_recover_plan }
+	}
+
+	ai_weight = {
+		factor  = 0
+	}
+}

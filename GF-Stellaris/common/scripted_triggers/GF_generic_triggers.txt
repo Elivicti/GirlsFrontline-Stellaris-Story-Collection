@@ -1,0 +1,275 @@
+# this = any
+GF_check_mod_version_lt = {
+	event_target:global_event_country = {
+		check_variable = {
+			which = v_GF_Stellaris_MOD_VER
+			value < $VALUE$
+		}
+	}
+}
+GF_check_mod_version_le = {
+	event_target:global_event_country = {
+		check_variable = {
+			which = v_GF_Stellaris_MOD_VER
+			value <= $VALUE$
+		}
+	}
+}
+GF_check_mod_version_eq = {
+	event_target:global_event_country = {
+		check_variable = {
+			which = v_GF_Stellaris_MOD_VER
+			value = $VALUE$
+		}
+	}
+}
+GF_check_mod_version_ge = {
+	event_target:global_event_country = {
+		check_variable = {
+			which = v_GF_Stellaris_MOD_VER
+			value >= $VALUE$
+		}
+	}
+}
+GF_check_mod_version_gt = {
+	event_target:global_event_country = {
+		check_variable = {
+			which = v_GF_Stellaris_MOD_VER
+			value > $VALUE$
+		}
+	}
+}
+# this = any
+GF_check_mod_version = {
+	GF_check_mod_version_$CMP$ = { VALUE = $VALUE$ }
+}
+
+# scope = country
+is_GF_authority = {
+	OR = {
+		has_authority = GF_auth_commonwealth
+		has_authority = GF_auth_OGAS_subnet
+	}
+}
+
+# this = country
+GF_is_main_country = {
+	has_origin = GF_origin_commonwealth
+}
+
+# this = country
+GF_is_URNC = {
+	GF_is_main_country = yes
+	has_civic = GF_civic_URNC
+}
+# this = country
+GF_is_AU = {
+	GF_is_main_country = yes
+	has_civic = GF_civic_AU
+}
+# this = country
+GF_is_GK = {
+	GF_is_main_country = yes
+	has_civic = GF_civic_GK
+}
+# this = country
+GF_is_Crisis_Coalition = {
+	GF_is_main_country = yes
+	has_authority = GF_auth_commonwealth
+}
+
+# this = country
+GF_can_research_tech_trigger = {
+	OR = {
+		has_authority = GF_auth_commonwealth
+		has_country_flag = flag_can_research_$TECH$
+	}
+}
+
+# this = country
+GF_can_research_basic_doll_tech_trigger = {
+	OR = {
+		has_authority = GF_auth_commonwealth
+		has_country_flag = flag_can_research_GF_tech_doll_assemble
+		has_country_flag = flag_can_research_GF_tech_mind_upgrade_1
+		has_country_flag = flag_can_research_GF_tech_doll_modding_point_1
+	}
+}
+
+# scope = country
+is_valid_GF_vassal = {
+	AND = {
+		has_country_flag = flag_GF_commonwealth_vassal			# 必须是少前政体释放的附庸
+
+		has_any_overlord = yes									# 必须有宗主
+		overlord = { has_authority = GF_auth_commonwealth }		# 宗主必须是少前政体
+	}
+}
+
+# scope = country
+is_valid_GF_OGAS_subnet = {
+	AND = {
+		has_country_flag = flag_GF_commonwealth_vassal			# 必须是少前政体释放的附庸
+		has_authority = GF_auth_OGAS_subnet						# 必须是少前的附庸政体
+		has_country_flag = flag_GF_commonwealth_vassal_OGAS_subnet_2
+
+		has_any_overlord = yes									# 必须有宗主
+		overlord = { has_authority = GF_auth_commonwealth }		# 宗主必须是少前政体
+	}
+}
+
+# scope = country, all triggers must be hidden triggers
+GF_can_contact_OGAS = {
+	hidden_trigger = {
+		has_country_flag = flag_GF_can_contact_OGAS
+	}
+}
+
+# scope = country
+GF_OGAS_has_used_threads_over_cap = {
+	check_modifier_value = {
+		modifier = GF_OGAS_threads_used_add
+		value > value:GF_get_OGAS_threads_cap
+	}
+}
+
+# scope = country
+GF_OGAS_has_any_available_threads = {
+	check_modifier_value = {
+		modifier = GF_OGAS_threads_add
+		value > value:GF_get_OGAS_threads_used
+	}
+}
+
+# scope = country
+GF_require_OGAS_has_available_threads = {
+	custom_tooltip = {
+		fail_text = GF_require_OGAS_has_available_threads_more_than_$amount$
+		check_modifier_value = {
+			modifier = GF_OGAS_threads_add
+			value >= value:GF_get_OGAS_threads_used|add|$amount$|
+		}
+	}
+}
+
+# scope = country
+GF_require_OGAS_has_available_threads_with_trigger_icon = {
+	custom_tooltip = {
+		fail_text = GF_require_OGAS_has_available_threads_more_than_$amount$_with_trigger_icon
+		check_modifier_value = {
+			modifier = GF_OGAS_threads_add
+			value >= value:GF_get_OGAS_threads_used|add|$amount$|
+		}
+	}
+}
+
+# this = starbase
+is_real_starbase_starbase = {
+	solar_system = {
+		exists = starbase
+		starbase = {
+			is_same_value = prevprev
+		}
+	}
+}
+# this = fleet
+is_real_starbase_fleet = {
+	is_ship_class = shipclass_starbase
+	starbase = {
+		is_real_starbase_starbase = yes
+	}
+}
+# this = fleet/starbase
+is_real_starbase = {
+	switch = {
+		trigger = is_scope_type
+		fleet = { is_real_starbase_fleet = yes }
+		starbase = { is_real_starbase_starbase = yes }
+		default = { always = no }
+	}
+}
+
+# this = pop/species
+GF_require_doll_mind_upgrade = {
+	GF_doll_mind_upgrade_level_$LEVEL$ = yes
+}
+GF_doll_mind_upgrade_level_1 = {
+	OR = {
+		has_trait = GF_trait_mind_upgrade_1
+		has_trait = GF_trait_mind_upgrade_2
+	}
+}
+GF_doll_mind_upgrade_level_2 = {
+	has_trait = GF_trait_mind_upgrade_2
+}
+
+# this = pop/species
+GF_can_doll_fill_specialist_job = {
+	hidden_trigger = {
+		exists = owner
+		owner = {
+			OR = {
+				is_GF_authority = no
+				has_policy_flag = GF_doll_work_policy_free
+				has_policy_flag = GF_doll_work_policy_high
+				has_policy_flag = GF_doll_work_policy_middle
+			}
+		}
+	}
+}
+# this = pop/species
+GF_can_doll_fill_ruler_job = {
+	hidden_trigger = {
+		GF_require_doll_mind_upgrade = { LEVEL = 2 }
+		exists = owner
+		owner = {
+			OR = {
+				is_GF_authority = no
+				has_policy_flag = GF_doll_work_policy_free
+				has_policy_flag = GF_doll_work_policy_high
+			}
+		}
+	}
+}
+
+
+###### game_rule related triggers
+
+# this = country
+# prev = species
+# root = planet
+GF_can_build_doll_species = {
+	NOT = { has_deficit = gf_core_chip }
+	GF_can_research_basic_doll_tech_trigger = yes
+}
+
+# this = country
+# prev = pop
+GF_allow_doll_leaders = {
+	prev = { GF_require_doll_mind_upgrade = { LEVEL = 1 } }
+	OR = {
+		GF_is_main_country = no
+		has_policy_flag = GF_doll_right_full
+		has_policy_flag = GF_doll_right_limited
+	}
+}
+GF_allow_doll_leaders_military = {
+	GF_allow_doll_leaders = yes
+}
+
+# This = leader, leader we'd like to trade
+# Root = country, country that owns the leader currently
+# From = country, country that would receive the leader
+GF_can_trade_robotic_leader = {
+	AND = {
+		# 是机械领袖
+		species = { is_robotic = yes }
+		# 必须为少前政体附庸
+		ROOT = { is_valid_GF_OGAS_subnet = yes }
+		# 少前政体必须为宗主
+		FROM = {
+			is_overlord_to = ROOT
+			has_authority = GF_auth_commonwealth
+		}
+	}
+}

@@ -1,0 +1,324 @@
+
+#To use one of them, refer to them elsewhere in script via "value:<value>" e.g. value:example_value
+#IMPORTANT NOTE: Be mindful of performance when using these in triggers that are checked often!
+
+# example_value = {
+# 	base = 10 #default: 0
+
+# 	# List of valid mathematical operations:
+# 	# 	Numerical (modifying by a number):
+# 	# 	- set/weight (both do the same, replaces the current result with this value)
+# 	# 	- add
+# 	# 	- subtract
+# 	# 	- factor/mult/multiply ("multiply" fits the name scheme of the rest better, but the other two were kept for historical reasons)
+# 	# 	- divide
+# 	# 	- modulo
+# 	# 	- round_to (rounds to nearest of that value, e.g. 10.7 round_to 5 gives you 10)
+# 	# 	- max (sets to specified value if currently above it)
+# 	# 	- min (sets to specified value if currently below it)
+# 	# 	- pow (value is multiplied by itself to the power of x; be careful, you can get overflows if you are not careful)
+# 	# 	Simple (do not need a number, but just "yes", e.g. "round = yes")
+# 	# 	- round (sets to nearest full number)
+# 	# 	- ceiling (rounds up)
+# 	# 	- floor (rounds down)
+# 	# 	- abs (multiply by -1 if negative)
+# 	# 	- square (multiply by itself)
+# 	# 	- square_root
+
+# 	#All mathematical operations except weight and factor can be used inline e.g.
+# 	add = 100
+# 	multiply = value:some_other_script_value
+# 	round = yes
+# 	#(Note: weight and factor will instead overwrite the base value - use set, mult or multiply instead)
+
+# 	#They can also be used in modifier = {} fields, which lets you only apply them if triggers are true
+# 	modifier = {
+# 		max = owner.max_example_variable 					#Variable set by set_variable
+# 		owner = { is_variable_set = max_example_variable }	#Only applied if this trigger is true
+# 	}
+# 	# What works for right hand side values of mathematical operations? See events/00_how_to_use_variables for full list.
+
+# 	complex_trigger_modifier = { 	#This lets you get the value of a trigger that you can't use in one-liners because it uses {}
+# 		trigger = count_owned_planet
+# 		trigger_scope = owner 		#Lets you get the result of the trigger on a different scope. Default is "this"
+# 		parameters = { 				#Stick any further information necessary in here, like you'd do within the {} of the trigger normally
+# 			limit = { num_pops > 10 }
+# 		}
+# 		mode = add 					#Allows all numerical operations
+# 		mult = 5 					#Multiplies the outcome by this. In this example, this means adding 5 for each planet with more than 10 pops
+# 	}
+# }
+
+# Final note: script_values use the same metascript system as scripted_triggers and scripted_effects
+# This means that you can input parameters into them, in a similar fashion as described in scripted_effects/99_advanced_documentation.txt
+# For format for doing so is value:my_value|PARAM1|value1|PARAM2|value2|.
+# Then you can use $PARAM1$ in the script value and it will replace it with value1
+
+# this = planet
+GF_elid_spawn_count = {
+	set = v_GF_elid_threat_level
+	[[mult] mult = $mult$ ]
+	[[add]  add  = $add$  ]
+}
+
+# scope = country
+GF_monthly_resource_income = {
+	complex_trigger_modifier = {
+		trigger = resource_income_compare
+		parameters = {
+			resource = $RES$
+		}
+		mode = add
+	}
+	mult = $MULT|1$
+	max = $MAX|@GF_zion_project_cost_max$
+	min = $MIN|0$
+	# max = @GF_zion_project_cost_max
+	# min = $MIN$
+}
+
+# this = leader
+GF_zion_inspired_leader_exp = {
+	# 添加的经验的计算公式:
+	# -100 * skill + 2000
+	set = trigger:has_skill
+	max = 10
+	mult = -100
+	add = 2000
+}
+
+# scope = country
+GF_count_non_doll_robot_pop = {
+	complex_trigger_modifier = {
+		trigger = count_owned_pop
+		trigger_scope = owner
+		parameters = {
+			limit = { GF_is_non_doll_robot_pop = yes }
+		}
+		mode = add
+	}
+}
+
+# scope = country
+GF_count_robotic_leader_with_vanilla_negative_traits = {
+	complex_trigger_modifier = {
+		trigger = count_owned_leader
+		trigger_scope = owner
+		parameters = {
+			limit = {
+				has_trait = GF_trait_leader_doll
+				GF_leader_has_vanilla_negative_traits = yes
+			}
+		}
+		mode = add
+	}
+}
+
+# scope = country
+GF_count_doll_leader = {
+	complex_trigger_modifier = {
+		trigger = count_owned_leader
+		parameters = {
+			limit = {
+				GF_is_doll_leader = yes
+				leader_class = $CLASS$
+			}
+		}
+		mode = add
+	}
+	max = $MAX|100$
+}
+
+GF_count_district = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = num_districts
+		trigger_scope = this
+		parameters = {
+			type = $TYPE$
+		}
+		mode = add
+	}
+	[[FACTOR]
+		mult = $FACTOR$
+	]
+}
+# this = planet
+GF_count_district_non_urban = {
+	set = value:GF_count_district|TYPE|any|
+	subtract = value:GF_count_district|TYPE|district_city|
+	subtract = value:GF_count_district|TYPE|district_industrial|
+	[[FACTOR]
+		mult = $FACTOR$
+	]
+}
+
+# scope = planet
+GF_cal_system_maintenance_production_effect = {
+	base = -0.5
+	add = modifier:GF_system_maintenance
+	max = 0.5
+	min = -0.5
+}
+
+# scope = planet
+GF_cal_system_maintenance_upkeep_effect = {
+	base = -0.5
+	mult = modifier:GF_system_maintenance
+	add = 0.2
+	max = 0.25
+	min = -0.2
+}
+
+# scope = planet
+GF_cal_system_maintenance_assembly_effect = {
+	base = 2
+	mult = modifier:GF_system_maintenance
+	subtract = 1
+	modifier = {
+		factor = 0.25
+		check_modifier_value = {
+			modifier = GF_system_maintenance
+			value > 0.5
+		}
+	}
+	max = 0.25
+	min = -1
+}
+
+# scope = planet
+GF_get_system_maintenance_percentage = {
+	base = 100
+	mult = modifier:GF_system_maintenance
+	max = 100
+}
+
+# scope = country
+GF_get_OGAS_threads_cap = {
+	base = $add|0$
+	add = modifier:GF_OGAS_threads_add
+}
+
+# scope = country
+GF_get_OGAS_threads_used = {
+	base = $add|0$
+	add = modifier:GF_OGAS_threads_used_add
+}
+
+# scope = planet/country
+GF_generate_job_from_unemployed_pops = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_pop
+		parameters = {
+			limit = {
+				OR = {
+					is_unemployed = yes
+					has_job = $job$
+				}
+				$append_condition$ = yes
+			}
+		}
+		mode = add
+	}
+}
+
+# scope = pop
+GF_doll_produces_mult = {
+	base = 0
+	add = modifier:GF_doll_produces_mult
+	modifier = {
+		is_pop_category = ruler
+		add = modifier:GF_doll_cat_ruler_produces_mult
+	}
+	modifier = {
+		is_pop_category = specialist
+		add = modifier:GF_doll_cat_specialist_produces_mult
+	}
+	modifier = {
+		is_pop_category = worker
+		add = modifier:GF_doll_cat_worker_produces_mult
+	}
+}
+
+# this = leader
+GF_OGAS_leveled_threads_add = {
+	base = 0
+	add = trigger:has_level
+	subtract = $START_AFTER_LEVEL$
+	min = 0
+}
+
+# this = any
+GF_variable_operate = {
+	base = 0
+	add = $VAR$
+	$OP$ = $VALUE$
+}
+
+# this = planet
+GF_export_district_count = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = num_districts
+		parameters = {
+			type = $DISTRICT$
+		}
+		mode = add
+	}
+	[[FACTOR]
+		mult = $FACTOR$
+	]
+	floor = yes
+}
+
+# this = leader
+GF_doll_cloud_network_trait_duration = {
+	base = @agenda_finish_modifier_duration
+	mult = value:scripted_modifier_mult|MODIFIER|council_agenda_finishing_effect_duration_mult|
+}
+
+years_to_days = {
+	set = $YEARS$
+	mult = 360
+}
+
+# this = planet
+GF_autocity_size_district_count_bonus = {
+	base = 0
+	# (  planet_size + 12  )^3 
+	# (--------------------) + 1
+	# (         13         )
+
+	# ((x - a) / b) ^ 3 + c
+	# x == planet_size
+	# a == -12  b == 13
+	# c ==   1
+	add = trigger:planet_size
+	add = 12
+	divide = 13
+	min = 1
+
+	pow = 3
+	add = 1
+
+	floor = yes
+}
+
+
+# this = planet
+GF_autocity_size_district_empire_size_penalty = {
+	base = 0
+	#  (2 * planet_size - 5) ^ 2 + 1575
+	# ----------------------------------
+	#              900
+
+	add = trigger:planet_size
+	min = 2.5 # lowest point of the curve
+
+	mult = 2
+	subtract = 5
+	pow = 2
+	add = 1575
+	divide = 900
+}

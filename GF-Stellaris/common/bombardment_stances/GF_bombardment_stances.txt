@@ -1,0 +1,86 @@
+collapsebomb = {
+	trigger = {
+		owner = {
+			has_authority = GF_auth_commonwealth
+			has_policy_flag = GF_enable_collapse_bombardment
+		}
+	}
+
+	default = no
+
+	stop_when_armies_dead = no
+	abduct_pops = no
+
+	planet_damage = 2.0
+	army_damage = 3.0
+
+	kill_pop_chance = {
+		base = 5.0
+		modifier = { # 机械人口和人形受到的伤害减少
+			factor = 0.75
+			is_robot_pop = yes
+		}
+		modifier = { # 有坍塌辐射完全免疫的人口更难被杀死
+			factor = 0.25
+			pop_has_trait = GF_trait_sequela_immune
+		}
+	}
+	min_pops_to_kill_pop = 0
+
+	# root = fleet
+	# from = planet
+	ai_weight = {
+		weight = 0.5
+		modifier = {
+			factor = 0.01
+			exists = from
+			from = {
+				owner = { NOT = { is_hostile = root.owner } }
+			}
+		}
+	}
+}
+
+GF_bombardment_capture = {
+	default = no
+	trigger = {
+		owner = { has_civic = GF_civic_svarog }
+	}
+
+	stop_when_armies_dead = no
+	accept_surrender = yes
+	abduct_pops = no
+
+	planet_damage = 0.5
+	army_damage = 1.0
+
+	kill_pop_chance = {
+		base = 0.25
+		modifier = {
+			# do not kill robots
+			factor = 0
+			is_robot_pop = yes
+		}
+	}
+	min_pops_to_kill_pop = 3
+
+	# root = fleet
+	# from = planet
+	ai_weight = {
+		weight = 0.5
+		modifier = {
+			factor = 0.01
+			exists = from
+			from = {
+				owner = { NOT = { is_hostile = root.owner } }
+			}
+		}
+		complex_trigger_modifier = {
+			trigger = count_owned_pop
+			trigger_scope = from
+			parameters = { limit = { is_robot_pop = yes } }
+			mult = 0.5
+			mode = factor
+		}
+	}
+}

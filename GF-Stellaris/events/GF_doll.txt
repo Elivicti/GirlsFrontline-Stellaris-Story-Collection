@@ -1,0 +1,217 @@
+namespace = GF_doll
+
+country_event = {
+	id = GF_doll.510
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		last_increased_tech = GF_tech_mind_upgrade_1
+	}
+
+	immediate = {
+		every_owned_species = {
+			limit = {
+				has_trait = GF_trait_doll
+				NOT = { has_trait = GF_trait_mind_upgrade_1 }
+			}
+			change_species_characteristics = {
+				add_trait = GF_trait_mind_upgrade_1
+			}
+		}
+	}
+}
+country_event = {
+	id = GF_doll.515
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		last_increased_tech = GF_tech_mind_upgrade_2
+	}
+
+	immediate = {
+		every_owned_species = {
+			limit = {
+				has_trait = GF_trait_mind_upgrade_1
+				NOT = { has_trait = GF_trait_mind_upgrade_2 }
+			}
+			change_species_characteristics = {
+				remove_trait = GF_trait_mind_upgrade_1
+				add_trait = GF_trait_mind_upgrade_2
+			}
+		}
+	}
+}
+country_event = {
+	id = GF_doll.518
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			GF_can_research_tech_trigger = { TECH = GF_tech_mind_upgrade_1 }
+			GF_can_research_tech_trigger = { TECH = GF_tech_mind_upgrade_2 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = { has_technology = GF_tech_mind_upgrade_1 }
+			every_owned_species = {
+				limit = {
+					has_trait = GF_trait_doll
+					NOR = {
+						has_trait = GF_trait_mind_upgrade_1
+						has_trait = GF_trait_mind_upgrade_2
+					}
+				}
+				change_species_characteristics = {
+					add_trait = GF_trait_mind_upgrade_1
+				}
+			}
+		}
+		if = {
+			limit = { has_technology = GF_tech_mind_upgrade_2 }
+			every_owned_species = {
+				limit = {
+					has_trait = GF_trait_mind_upgrade_1
+					NOT = { has_trait = GF_trait_mind_upgrade_2 }
+				}
+				change_species_characteristics = {
+					remove_trait = GF_trait_mind_upgrade_1
+					add_trait = GF_trait_mind_upgrade_2
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = GF_doll.1000
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		has_authority = GF_auth_commonwealth
+	}
+
+	immediate = {
+		random_owned_species = {
+			limit = { has_trait = GF_trait_doll }
+			save_global_event_target_as = GF_doll_species_template
+			weights = {
+				base = 1
+				mult = trigger:num_traits
+			}
+		}
+	}
+}
+
+# on_pop_rights_change
+# 修改物种权利的时候，为每一个对应的人口触发这个事件
+pop_event = {
+	id = GF_doll.1005
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		GF_can_be_assimilated_to_doll = yes
+		has_citizenship_type = {
+			type = citizenship_GF_doll_assimilation
+			country = owner
+		}
+		NOT = { has_pop_flag = citizenship_GF_doll_assimilation }
+	}
+
+	immediate = {
+		set_timed_pop_flag = {
+			flag = citizenship_GF_doll_assimilation
+			days = 1
+		}
+		set_purge_type = {
+			type = purge_GF_assimilation
+			country = owner
+			cooldown = yes
+		}
+		set_population_controls = {
+			type = GF_population_control_forced
+			country = owner
+			cooldown = yes
+		}
+	}
+}
+
+# This = Planet scope
+# From = Country
+# FromFrom = Pop
+planet_event = {
+	id = GF_doll.1008
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		fromfrom = { has_purge_type = { type = purge_GF_assimilation country = prev.from } }
+	}
+	immediate = {
+		create_pop = {
+			species = event_target:GF_doll_species_template
+		}
+	}
+}
+
+country_event = {
+	id = GF_doll.3000
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		has_authority = GF_auth_commonwealth
+	}
+
+	immediate = {
+		switch = {
+			trigger = has_policy_flag
+			GF_doll_right_full = {
+				every_owned_species = {
+					limit = { has_trait = GF_trait_doll }
+					set_citizenship_type = {
+						type = citizenship_GF_doll_full
+						country = root
+						cooldown = yes
+					}
+				}
+			}
+			GF_doll_right_limited = {
+				every_owned_species = {
+					limit = { has_trait = GF_trait_doll }
+					set_citizenship_type = {
+						type = citizenship_GF_doll_limited
+						country = root
+						cooldown = yes
+					}
+				}
+			}
+			GF_doll_right_servitude = {
+				every_owned_species = {
+					limit = { has_trait = GF_trait_doll }
+					set_citizenship_type = {
+						type = citizenship_GF_doll_servitude
+						country = root
+						cooldown = yes
+					}
+				}
+			}
+			GF_doll_right_low = {
+				every_owned_species = {
+					limit = { has_trait = GF_trait_doll }
+					set_citizenship_type = {
+						type = citizenship_GF_doll_commodity
+						country = root
+						cooldown = yes
+					}
+				}
+			}
+		}
+	}
+}

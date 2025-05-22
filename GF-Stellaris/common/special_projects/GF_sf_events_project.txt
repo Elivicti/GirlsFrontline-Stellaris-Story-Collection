@@ -1,0 +1,154 @@
+###铁血事件链特殊项目（1-7）
+#特殊项目1:开局在母星上创建事件2
+special_project = {
+	key = "GF_sf_event_project_1"
+	event_chain = "GF_sf_event_chain"
+	days_to_research = 90
+	picture = GFX_evt_announcement
+	event_scope = planet_event
+	on_success = {
+		solar_system = {
+			GF_select_sf_event_target = {
+				OWNER = owner
+				PLANET_CLASS = pc_barren
+				EVENT_TARGET = GF_sf_site_target
+			}
+		}
+		planet_event = {
+			id = GF_sf.20
+			scopes = {
+				from = event_target:GF_sf_site_target
+			}
+		}
+	}
+	on_fail = {}
+}
+
+#特殊项目2:在荒芜星上创建坟1
+special_project = {
+	key = "GF_sf_event_project_2"
+	event_chain = "GF_sf_event_chain"
+	days_to_research = 90
+	picture = GFX_evt_space_hangar
+	event_scope = ship_event
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		#skill = 3
+	}
+	on_success = {
+		ship_event = {
+			id = GF_sf.21
+			scopes = { from = from }
+		}
+	}
+	on_fail = {}
+}
+
+#特殊项目3:在随机行星创建事件4
+special_project = {
+	key = "GF_sf_event_project_3"
+	event_chain = "GF_sf_event_chain"
+	days_to_research = 90
+	picture = GFX_evt_sabotaged_ship
+	event_scope = ship_event
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		#skill = 3
+	}
+	on_success = {
+		solar_system = {
+			GF_select_sf_event_target = {
+				OWNER = owner
+				PLANET_CLASS = pc_barren
+				EVENT_TARGET = GF_sf_site_target
+			}
+		}
+		ship_event = {
+			id = GF_sf.40
+			scopes = {
+				from = event_target:GF_sf_site_target
+				fromfrom = from
+			}
+		}
+	}
+	on_fail = {}
+}
+
+#特殊项目4:在荒芜星上创建坟2
+special_project = {
+	key = "GF_sf_event_project_4"
+	event_chain = "GF_sf_event_chain"
+	days_to_research = 90
+	picture = GFX_evt_relic_world_street
+	event_scope = ship_event
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		#skill = 3
+	}
+	on_success = {
+		ship_event = {
+			id = GF_sf.41
+			scopes = { from = from }
+		}
+	}
+	on_fail = {}
+}
+
+#特殊项目5:在随机行星创建事件6
+special_project = {
+	key = "GF_sf_event_project_5"
+	event_chain = "GF_sf_event_chain"
+	days_to_research = 90
+	picture = GFX_evt_asteroid_field
+	event_scope = ship_event
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		#skill = 3
+	}
+	on_success = {
+		ship_event = {
+			id = GF_sf.60
+			scopes = { from = from }
+		}
+	}
+	on_fail = {}
+}
+
+#特殊项目6:在机械星上创建坟3
+special_project = {
+	key = "GF_sf_event_project_6"
+	event_chain = "GF_sf_event_chain"
+	days_to_research = 90
+	picture = GFX_evt_contingency_planet
+	event_scope = ship_event
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		#skill = 3
+	}
+	on_success = {
+		ship_event = {
+			id = GF_sf.61
+			scopes = { from = from }
+		}
+	}
+	on_fail = {}
+}
+
+#特殊项目7:创建事件8
+special_project = {
+	key = "GF_sf_event_project_7"
+	event_chain = "GF_sf_event_chain"
+	days_to_research = 120
+	location = yes
+	picture = GFX_evt_physics_research
+	event_scope = country_event
+	on_success = {
+		country_event = { id = GF_sf.80 }
+	}
+	on_fail = {}
+}

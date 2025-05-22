@@ -1,0 +1,247 @@
+
+on_game_start = {
+	events = {
+		GF_start.0	# 添加模组的全局标识
+	}
+}
+
+# this = GF country
+on_GF_game_start = {
+	events = {
+		GF_start.1	# 初始化开局
+		GF_start.2	# 移除重复危机联合
+		GF_sf.0		# 铁血事件链
+		GF_recover_plan.0 # 复兴协议
+	}
+}
+
+on_game_start_country = {
+}
+
+# Called during empire initialization when starting a new game if has_secondary_species game rule is true.
+# Called before empire_init_create_capital_pops.
+# scope: planet
+# from: founder species
+# fromfrom: secondary species (if exists)
+empire_init_capital_planet = {
+	events = {
+		GF_start.20	# 初始化第二物种（人形）
+	}
+}
+
+# Triggers when trying to open the diplomacy view for countries with custom diplomacy.
+# Country scope
+# This = target country (player)
+# From = source country
+on_custom_diplomacy = {
+	events = {
+		GF_ogas.9999
+	}
+}
+
+on_GF_OGAS_contact_engaged = {
+	events = {
+		GF_ogas.10000
+		GF_overlord.10000
+
+	}
+}
+
+# A pop has finished assembling
+# This = Planet scope
+# From = Country
+# FromFrom = Pop
+# on_pop_assembled = {
+# 	events = {
+# 		GF_doll.0	# 人形权利相关
+# 	}
+# }
+
+# Executes after a policy has been changed
+# use last_changed_policy to identify which policy it was
+# This = Country
+# on_policy_changed = {
+# 	events = {
+# 		# 权利政策
+# 		GF_doll.1110	# 完整权利 或 有限权利 - 可以生成领袖
+# 		GF_doll.1120	# 侍从权利 或 商品权利 - 不可生成领袖
+
+# 		# 任务分配政策
+# 		GF_doll.1200	#
+# 	}
+# }
+
+# a new leader is generated for an empire, to be available for recruitment
+# scope: country, from: leader
+on_leader_spawned = {
+	events = {
+		GF_new_type.0		# 仅女性新人类物种领袖（都是美少女立绘为什么会有男人）
+		GF_doll_leader.0	# 添加专属领袖特质
+		GF_doll_leader.10 # 人形领袖立绘
+		GF_overlord.100		# OGAS子网 II：机械领袖等级+2
+	}
+}
+
+# this = country
+on_yearly_pulse_country = {
+	events = {
+		GF_doll.1000
+		GF_doll.3000 # 锁定人形的公民权
+	}
+}
+
+# fires when a country releases a sector as a vassal
+# This = released vassal
+# From = overlord
+on_released_as_vassal = {
+	events = {
+		GF_overlord.0		# 少前政体释放附庸
+	}
+}
+
+# No scope, like on_game_start
+# Does not run when loading MP saves due to OOS concerns
+on_single_player_save_game_load = {
+	events = {
+		GF_evt_misc.1000	# 加载旧版存档时的处理
+		GF_mega.320 # 加载时处理逆向坍塌信标归属权
+	}
+}
+
+#Fired whenever a new owner is set for a planet,
+#be it after a war or through a trade
+#FromFrom = Former Owner (if any)
+#From = Country scope (new owner)
+#This = Planet scope
+on_planet_transfer = {
+	events = {
+		GF_colony.2000	# 处理球上的人口组装建筑
+	}
+}
+
+# Executed as a leader has died
+# This = Country
+# From = Leader
+on_leader_death = {
+	events = {
+		GF_ogas.50
+	}
+}
+# Executed as a leader has been fired
+# This = Country
+# From = Leader
+on_leader_fired = {
+	events = {
+		GF_ogas.50 # Remove Event Node Traits
+	}
+}
+
+# Triggers when a Special Project to apply a species modification template has completed.
+# Note that this will trigger once for each combination of planet & original species.
+#
+# This = Country
+# From = Species ( Post Modification )
+on_modification_complete = {
+	events = {
+		GF_doll_leader.1
+		GF_doll_leader.2
+		GF_doll_leader.3
+		GF_doll_leader.15	# 人形领袖立绘修正
+	}
+}
+
+# Executed when a megastructure has a new owner
+# this = new owner
+# from = megastructure
+# fromfrom = old owner (if existing)
+on_megastructure_change_owner = {
+	events = {
+		GF_mega.181
+		GF_mega.184
+	}
+}
+
+# Executed when a megastructure is rendered ownerless
+# this = solar system containing megastructure
+# from = megastructure
+# fromfrom = old owner (if existing)
+on_megastructure_ownerless = {
+	events = {
+		GF_mega.182
+	}
+}
+
+# A Megastructure has been upgraded
+# Root = Country
+# From = Megastructure
+# FromFrom = System
+on_megastructure_upgraded = {
+	events = {
+		GF_mega.310 # 升级星门时检查星系flag
+	}
+}
+
+# We changed a species right
+# This = pop
+on_pop_rights_change = {
+	events = {
+		GF_doll.1005
+	}
+}
+
+# A pop has finished purging
+# This = Planet scope
+# From = Country
+# FromFrom = Pop
+on_pop_purged = {
+	events = {
+		GF_doll.1008
+	}
+}
+
+# A war is beginning, executed for every country in the war.
+# Root = Country
+# From = War
+on_war_beginning = {
+	events = {
+		GF_evt_misc.110 # 阻止“输入意识形态”战争修改联合政府的政体
+	}
+}
+
+# A war has been lost
+# Root = Loser Warleader
+# From = Winner Warleader
+# FromFrom = War
+on_war_lost = {
+	events = {
+		GF_evt_misc.111 # 阻止“输入意识形态”战争修改联合政府的政体，实际事件延迟一天触发
+	}
+}
+
+# Executed when a country picks any tradition (including starters and finishers)
+# THIS = country
+on_tradition_picked = {
+	events = {
+		GF_ascension_path.1000 # synthetics
+		GF_ascension_path.2000 # cybernetics
+	}
+}
+
+# This = owner of fleet 1 (destroyed)
+# From = owner of fleet 2 (combatant)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_fleet_destroyed_victim = {
+	events = {
+		GF_mega.334 # 支援舰被摧毁
+		GF_mega.335 # 信标基站被摧毁
+	}
+}
+
+# This = owner of fleet
+# From = disbanded fleet
+on_fleet_disbanded = {
+	events = {
+		GF_mega.333 # 支援舰被解散
+	}
+}

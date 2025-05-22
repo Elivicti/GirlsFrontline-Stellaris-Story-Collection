@@ -1,0 +1,185 @@
+#message_type = {
+#	key = "CONSTRUCTION_MESSAGE_TYPE"				# Message key, used from code.
+#	icon = "GFX_message_other_construction"			# Sprite to use for gui item "message_icon_button"
+#	icon_frame = 1									# Frame index to use for gui item "message_frame"
+#
+#	name = "MESSAGE_DECLARE_WAR_TITLE"				# Localization key to use for title, if impty it will use "MESSAGE_<key>_TITLE instead.
+#	sound = "advisor_notification_construction_complete"	# Sound to play on message creation
+#
+#	sound_is_advisor = yes							# Depricated and does nothing.
+#	auto_opens = others								# Specifies if the message should be auto opened or not, valid: 'none', 'player', 'others' and 'all' (default: 'player). Some messages as events are ignoring this since thay have their own option.
+#	ping = "ping_notification_green"				# Ping map to use for map visualization.
+#}
+
+message_type = {
+	key = "WE_LEVEL_UP_GF_specialist_OGAS_subnet"
+	icon = "GFX_message_GF_OGAS_subnet_level_up"
+	icon_frame = 1
+
+	sound = "discovery"
+	ping = "mixed_notification_green"
+}
+
+message_type = {
+	key = "SUBJECT_LEVEL_UP_GF_specialist_OGAS_subnet"
+	icon = "GFX_message_GF_OGAS_subnet_level_up"
+	icon_frame = 1
+
+	sound = "discovery"
+	ping = "mixed_notification_green"
+}
+
+
+message_type = {
+	key = MESSAGE_TYPE_GF_ROBOT_POP_TRANSFERED_SUBNET
+	icon = "GFX_message_refugees_arrived"
+	icon_frame = 1
+
+	name = "MESSAGE_TYPE_GF_ROBOT_POP_TRANSFERED_TITLE"
+	sound = "notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = MESSAGE_TYPE_GF_ROBOT_POP_TRANSFERED_OVERLORD
+	icon = "GFX_message_refugees_arrived"
+	icon_frame = 1
+
+	name = "MESSAGE_TYPE_GF_ROBOT_POP_TRANSFERED_TITLE"
+	sound = "notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = MESSAGE_TYPE_GF_ROBOT_POP_CAPTURED
+	icon = "GFX_message_GF_robot_pop_assimilated"
+	icon_frame = 1
+
+	name = "MESSAGE_GF_ROBOT_POP_CAPTURED_TITLE"
+	sound = "notification"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = MESSAGE_TYPE_GF_PLANET_BOMBARDED_TO_COLLAPSE
+	icon = "GFX_message_planet_destroyed"
+	icon_frame = 1
+
+	name = "MESSAGE_GF_PLANET_BOMBARDED_TO_COLLAPSE"
+	sound = "event_air_raid_siren"
+	ping = "mixed_notification_red"
+}
+
+message_type = {
+	key = MESSAGE_TYPE_GF_PLANET_GOSPLAN_STARTED
+	icon = "GFX_message_GF_decision_started"
+	icon_frame = 1
+
+	name = "MESSAGE_GF_PLANET_GOSPLAN_STARTED"
+	sound = "notification"
+	ping = "mixed_notification_green"
+}
+
+message_type = {
+	key = MESSAGE_TYPE_GF_PLANET_GOSPLAN_ENDED
+	icon = "GFX_message_conditional_effect_lost"
+	icon_frame = 1
+
+	name = "MESSAGE_GF_PLANET_GOSPLAN_ENDED"
+	sound = "notification"
+	ping = "mixed_notification_yellow"
+}
+
+message_type = {
+	key = MESSAGE_TYPE_GF_EDICT_COOLDOWN_FINISHED
+	icon = "GFX_message_GF_decision_started"
+
+	name = "MESSAGE_GF_EDICT_COOLDOWN_FINISHED"
+	sound = "notification"
+	ping = "mixed_notification_green"
+}
+
+message_type = {
+	key = MESSAGE_TYPE_GF_REVERSE_BEACON_DEPLOYED
+	icon = "GFX_message_GF_RC_beacon_deployed"
+
+	default_toast = yes
+	category = fleets
+
+	name = "MESSAGE_GF_REVERSE_BEACON_DEPLOYED"
+	sound = "notification"
+	ping = "mixed_notification_green"
+}
+message_type = {
+	key = MESSAGE_TYPE_GF_REVERSE_BEACON_DEPLOYMENT_FAILED
+	icon = "GFX_message_GF_RC_beacon_deployment_failed"
+
+	default_toast = yes
+	category = fleets
+
+	name = "MESSAGE_GF_REVERSE_BEACON_DEPLOYMENT_FAILED"
+	sound = "notification"
+	ping = "ping_notification_yellow"
+}
+message_type = {
+	key = MESSAGE_TYPE_GF_REVERSE_BEACON_DISMANTLED
+	icon = "GFX_message_GF_RC_beacon_deployment_failed"
+
+	default_toast = yes
+	category = fleets
+
+	name = "MESSAGE_GF_REVERSE_BEACON_DISMANTLED"
+	sound = "notification"
+	ping = "ping_notification_yellow"
+}
+message_type = {
+	key = MESSAGE_TYPE_GF_REVERSE_BEACON_DESTROYED
+	icon = "GFX_message_GF_RC_beacon_deployment_failed"
+
+	default_toast = yes
+	category = fleets
+
+	name = "MESSAGE_GF_REVERSE_BEACON_DESTROYED"
+	sound = "notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
+	key = MESSAGE_TYPE_GF_UNLOCKED_KEYWORD
+	name = MESSAGE_TYPE_GF_UNLOCKED_KEYWORD
+	icon = "GFX_toast_GF_archive_unlocked"
+	icon_frame = 1
+
+	default_toast = yes
+
+	sound = "notification"
+	ping = "ping_notification_green"
+
+	category = other
+}
+message_type = {
+	key = MESSAGE_TYPE_GF_UNLOCKED_HISTORY_ARCHIVE
+	name = MESSAGE_TYPE_GF_UNLOCKED_HISTORY_ARCHIVE
+	icon = "GFX_toast_GF_archive_unlocked"
+	icon_frame = 1
+
+	default_toast = yes
+
+	sound = "notification"
+	ping = "ping_notification_green"
+
+	category = other
+}
+message_type = {
+	key = MESSAGE_TYPE_GF_UNLOCKED_EVENT_ARCHIVE
+	name = MESSAGE_TYPE_GF_UNLOCKED_EVENT_ARCHIVE
+	icon = "GFX_toast_GF_archive_unlocked"
+	icon_frame = 1
+
+	default_toast = yes
+
+	sound = "notification"
+	ping = "ping_notification_green"
+
+	category = other
+}

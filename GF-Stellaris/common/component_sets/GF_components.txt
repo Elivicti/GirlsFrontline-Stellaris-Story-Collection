@@ -1,0 +1,102 @@
+component_set = {
+	key = "GF_COLLAPSE_ARMOR"
+	icon = "GFX_GF_collapse_armor"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GF_COLLAPSE_LANCE"
+	icon = "GFX_GF_collapse_energy_lance"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GF_COLLAPSE_LANCE_TITAN"
+	icon = "GFX_GF_collapse_energy_lance"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GF_COLLAPSE_ENDING_FLASH"
+	icon = "GFX_GF_collpase_ending_flash"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "MINIATURIZED_GF_COLLAPSE_LANCE"
+	icon = "GFX_GF_miniaturized_collapse_lance"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GF_COLLAPSE_ARTILLERY"
+	icon = GFX_GF_collapse_artillery
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GF_COLLAPSE_CANNON"
+	icon = GFX_GF_collapse_cannon
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GF_COLLAPSE_MASS_ACCELERATOR"
+	icon = GFX_GF_collapse_mass_accelerator
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GF_COLLAPSE_MISSILE"
+	icon = GFX_GF_collapse_missile
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GF_COLLAPSE_TORPEDO"
+	icon = GFX_GF_collapse_torpedo
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GF_STRIKE_CRAFT_NB200"
+	icon = GFX_GF_strike_craft_nb200
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GF_fire_support_ship_aura"
+
+	required_component_set = yes
+	icon = "GFX_ship_part_sensor"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GF_SHRIKE_ARMOR"
+	icon = "GFX_GF_shrike_armor"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GF_SHRIKE_BOMBER"
+
+	icon = "GFX_GF_shrike_bomber"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GF_bio_spaceship_sensor_components"
+
+	required_component_set = yes
+	icon = "GFX_ship_part_sensor"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "GF_bio_spaceship_computer_components"
+
+	required_component_set = yes
+	icon = "GFX_ship_part_computer"
+	icon_frame = 1
+}

@@ -1,0 +1,27 @@
+GF_origin_commonwealth = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_mechanist.dds"
+	picture = GFX_evt_GF_origin_commonwealth
+
+	flags = {
+		custom_start_screen
+		human_1
+	}
+
+	possible = {
+		authority = {
+			value = GF_auth_commonwealth
+		}
+	}
+	description = "GF_origin_commonwealth_effects_tooltip"
+
+	traits = {
+		trait = GF_trait_sequela
+	}
+	initializers = { sol_system_initializer }
+
+	advanced_start = yes
+	max_once_global = yes
+
+	random_weight = { base = 0 }
+}

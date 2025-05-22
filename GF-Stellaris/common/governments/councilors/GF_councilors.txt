@@ -1,0 +1,281 @@
+# Councilor Documentation
+#
+# councilor_name_key = {
+#    civic = civic_imperial_cult		Civic that is required for this council position. Also used by UI. Default = none.
+#    leader_class = { }					Which leader classes can have this council position. Currently only used for the Recruit new Leader buttons. Default = none.
+#    is_leader_possible = { }			Can a leader have this council position. Used to filter leaders. Scope: THIS = Leader.
+#    modifier = { }						Country Modifier, that is multiplied by assigned Leader's level.
+#	 custom_tooltip = "LOC_KEY"			Custom tooltip text shown for the modifier of the council position.
+#	 conditional_tooltip = "LOC_KEY"	Custom tooltip text shown for the requirements of the council position.
+# }
+
+GF_councilor_ruler_commonwealth = {
+	leader_class = { official }
+	possible = { always = no }
+	is_leader_possible = { always = yes }
+	modifier = {
+		country_edict_fund_add = 10
+		edict_length_mult = 0.10
+		country_leader_cap_add = 2
+	}
+	icon = "GFX_icon_councilor_ruler"
+}
+
+GF_councilor_ruler_subnet = {
+	leader_class = { official }
+	possible = { always = no }
+	is_leader_possible = { always = yes }
+	modifier = {
+		country_edict_fund_add = 5
+		edict_length_mult = 0.05
+		country_leader_cap_add = 1
+	}
+	icon = "GFX_icon_councilor_ruler"
+}
+
+ GF_councilor_URNC = {
+ 	civic = GF_civic_URNC
+ 	leader_class = { official }
+ 	is_leader_possible = { leader_class = official }
+
+	modifier = {
+		GF_planet_URNC_commissioner_unity_produces_add = 1
+		pop_job_amenities_mult = 0.05
+	}
+ }
+
+GF_councilor_FSB = {
+	civic = GF_civic_FSB
+	leader_class = { commander }
+	is_leader_possible = {
+		leader_class = commander
+	}
+
+	modifier = {
+		GF_planet_URNC_commissioner_stability_add = 0.5
+		espionage_hostile_operation_difficulty_mult = 0.05
+	}
+}
+
+GF_councilor_KCCO = {
+	civic = GF_civic_KCCO
+	leader_class = { commander }
+	is_leader_possible = {
+		leader_class = commander
+	}
+
+	modifier = {
+		country_war_exhaustion_mult = -0.01
+		country_naval_cap_mult = 0.05
+	}
+}
+
+GF_councilor_AU = {
+	civic = GF_civic_AU
+	leader_class = { scientist }
+	is_leader_possible = { leader_class = scientist }
+
+	modifier = {
+		GF_planet_AU_director_physics_research_produces_mult = 0.02
+		GF_planet_AU_director_society_research_produces_mult = 0.02
+		GF_planet_AU_director_engineering_research_produces_mult = 0.02
+		GF_planet_AU_director_gf_core_chip_produces_add = 0.2
+	}
+}
+
+GF_councilor_MID = {
+	civic = GF_civic_MID
+	leader_class = { commander }
+	is_leader_possible = {
+		leader_class = commander
+	}
+
+	modifier = {
+		espionage_operation_difficulty_mult = -0.05
+		intel_decryption_mult = 0.05
+		add_base_country_intel = 2
+	}
+}
+
+GF_councilor_TASA = {
+	civic = GF_civic_TASA
+	leader_class = { commander }
+	is_leader_possible = {
+		leader_class = commander
+	}
+
+	modifier = {
+		ship_hull_mult = 0.015
+		ship_speed_mult = 0.02
+	}
+}
+
+GF_councilor_GK = {
+	civic = GF_civic_GK
+	leader_class = { official scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+			leader_class = scientist
+		}
+	}
+
+	modifier = {
+		GF_planet_GK_officer_unity_produces_add = 1
+		pop_job_trade_mult = 0.025
+		diplo_weight_envoys_mult = 0.01
+	}
+}
+
+GF_councilor_16LAB = {
+	civic = GF_civic_16LAB
+	leader_class = { scientist official }
+	is_leader_possible = {
+		OR = {
+			leader_class = scientist
+			leader_class = official
+		}
+	}
+
+	modifier = {
+		category_computing_draw_chance_mult = 0.05
+		category_industry_draw_chance_mult = 0.05
+		planet_researchers_produces_mult = 0.02
+	}
+}
+
+GF_councilor_90Wish = {
+	civic = GF_civic_90WISH
+	leader_class = { scientist official }
+	is_leader_possible = {
+		OR = {
+			leader_class = scientist
+			leader_class = official
+		}
+	}
+
+	modifier = {
+		science_ship_survey_speed = 0.10
+		ship_anomaly_generation_chance_mult = 0.05
+		ship_anomaly_research_speed_mult = 0.05
+	}
+
+	custom_tooltip_with_modifiers = GF_councilor_90Wish_effect
+}
+
+
+GF_councilor_IOP = {
+	civic = GF_civic_IOP
+	leader_class = { official }
+	is_leader_possible = { leader_class = official }
+
+	modifier = {
+		planet_building_GF_doll_factory_build_speed_mult = 0.05
+		GF_doll_assemblers_upkeep_mult = -0.015
+	}
+}
+
+
+GF_councilor_GOSPLAN = {
+	civic = GF_civic_GOSPLAN
+	leader_class = { official scientist commander }
+	is_leader_possible = {
+		OR = {
+			leader_class = commander
+			leader_class = scientist
+			leader_class = official
+		}
+	}
+
+	modifier = {
+		megastructures_alloys_cost_mult = -0.02
+		megastructures_alloys_upkeep_mult = -0.02
+		GF_decision_GOSPLAN_effect_mult = 0.02
+	}
+}
+
+GF_councilor_NHC = {
+	civic = GF_civic_NHC
+	leader_class = { official scientist commander }
+	is_leader_possible = {
+		OR = {
+			leader_class = commander
+			leader_class = scientist
+			leader_class = official
+		}
+	}
+
+	modifier = {
+		pop_growth_speed = 0.02
+		modify_species_cost_mult = -0.025
+	}
+}
+
+GF_councilor_svarog = {
+	civic = GF_civic_svarog
+	leader_class = { official commander }
+	is_leader_possible = {
+		OR = {
+			leader_class = commander
+			leader_class = official
+		}
+	}
+
+	modifier = {
+		GF_pop_debuff_from_capture_mult = -0.05
+		country_energy_produces_mult = 0.01
+		planet_building_build_speed_mult = 0.02
+	}
+}
+
+GF_councilor_wave_tech = {
+	civic = GF_civic_wave_tech
+	leader_class = { scientist commander }
+	is_leader_possible = {
+		OR = {
+			leader_class = commander
+			leader_class = scientist
+		}
+	}
+
+	modifier = {
+		add_base_country_intel = 2
+		country_physics_tech_research_speed = 0.02
+		monthly_loyalty_from_subjects = 0.1
+		espionage_hostile_operation_difficulty_mult = 0.05
+	}
+}
+
+GF_councilor_driller = {
+	civic = GF_civic_driller
+	leader_class = { official scientist commander }
+	is_leader_possible = {
+		OR = {
+			leader_class = commander
+			leader_class = scientist
+			leader_class = official
+		}
+	}
+
+	modifier = {
+		station_gatherers_produces_mult = 0.05
+	}
+}
+
+GF_councilor_scanner = {
+	civic = GF_civic_scanner
+	leader_class = { official scientist commander }
+	is_leader_possible = {
+		OR = {
+			leader_class = commander
+			leader_class = scientist
+			leader_class = official
+		}
+	}
+
+	modifier = {
+		planet_structures_rare_crystals_cost_mult = -0.02
+		planet_structures_volatile_motes_cost_mult = -0.02
+		planet_structures_exotic_gases_cost_mult = -0.02
+	}
+}

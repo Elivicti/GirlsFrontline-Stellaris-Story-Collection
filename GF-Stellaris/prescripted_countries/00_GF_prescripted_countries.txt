@@ -1,0 +1,238 @@
+GF_EMPIRE_URNC = {
+	# Union of Rossartrism Nations Coalition
+	name = "EMPIRE_DESIGN_GF_URNC"
+	adjective = "PRESCRIPTED_adjective_GF_URNC"
+	ship_prefix = "PRESCRIPTED_ship_prefix_GF_URNC"
+
+	planet_name = "NAME_Earth"
+	planet_class = "pc_continental"
+	initializer = "sol_system_initializer"
+	system_name = "NAME_Sol"
+	
+	graphical_culture = "GF_new_type_01"
+	city_graphical_culture = "GF_new_type_01"
+
+	spawn_enabled = no
+	spawn_as_fallen = no
+	ignore_portrait_duplication = yes
+
+	origin = GF_origin_commonwealth
+	authority = GF_auth_commonwealth
+	government = GF_gov_commonwealth
+	civics = {
+		"GF_civic_URNC"
+		"GF_civic_KCCO"
+	}
+	ethic = "ethic_egalitarian"
+	ethic = "ethic_militarist"
+	ethic = "ethic_materialist"
+
+	advisor_voice_type = l_the_soldier
+
+	flags = {
+		human_1
+		custom_start_screen
+	}
+
+	empire_flag = {
+		icon = {
+			category = "gk"
+			file = "griffin_flags_05.dds"
+		}
+		background = {
+			category = "backgrounds"
+			file = "circle.dds"
+		}
+		colors = {
+			"red"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender = female
+		name = "PRESCRIPTED_GF_OGAS"
+		portrait = "GF_doll_000"
+		texture = 0
+		clothes = 0
+		trait = "leader_trait_principled"
+		leader_class = official
+	}
+	room = "personality_democratic_crusaders_room"
+
+	species = {
+		class = "GF_new_type"
+		portrait = "GF_new_type"
+		name= "PRESCRIPTED_species_name_humans1"
+		plural = "PRESCRIPTED_species_plural_humans1"
+		adjective = "PRESCRIPTED_species_adjective_humans1"
+		name_list = "GF_URNC"
+
+		trait = "GF_trait_sequela"
+		trait = "GF_trait_self_dependence"
+		trait = "trait_intelligent"
+		trait = "trait_nomadic"
+		trait = "trait_wasteful"
+	}
+}
+
+GF_EMPIRE_AU = {
+	# Antarctic Union
+	name = "EMPIRE_DESIGN_GF_AU"
+	adjective = "PRESCRIPTED_adjective_GF_AU"
+	ship_prefix = "PRESCRIPTED_ship_prefix_GF_AU"
+
+	planet_name = "NAME_Earth"
+	planet_class = "pc_continental"
+	initializer = "sol_system_initializer"
+	system_name = "NAME_Sol"
+	
+	graphical_culture = "GF_new_type_01"
+	city_graphical_culture = "GF_new_type_01"
+
+	spawn_enabled = no
+	spawn_as_fallen = no
+	ignore_portrait_duplication = yes
+
+	origin = GF_origin_commonwealth
+	authority = GF_auth_commonwealth
+	government = GF_gov_commonwealth
+	civics = {
+		"GF_civic_AU"
+		"GF_civic_TASA"
+	}
+	ethic = "ethic_authoritarian"
+	ethic = "ethic_militarist"
+	ethic = "ethic_materialist"
+
+	advisor_voice_type = l_materialist
+
+	flags = {
+		human_1
+		custom_start_screen
+	}
+
+	empire_flag = {
+		icon = {
+			category = "gk"
+			file = "griffin_flags_04.dds"
+		}
+		background = {
+			category = "backgrounds"
+			file = "flag_BG_43.dds"
+		}
+		colors = {
+			"sky_blue"
+			"mist_blue"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		gender = female
+		name = "PRESCRIPTED_GF_OGAS"
+		portrait = "GF_doll_000"
+		texture = 0
+		clothes = 0
+		trait = "trait_ruler_logistic_understanding"
+		leader_class = official
+	}
+	room = "personality_hegemonic_imperialists_room"
+
+	species = {
+		class = "GF_new_type"
+		portrait = "GF_new_type"
+		name= "PRESCRIPTED_species_name_humans1"
+		plural = "PRESCRIPTED_species_plural_humans1"
+		adjective = "PRESCRIPTED_species_adjective_humans1"
+		name_list = "GF_AU"
+
+		trait = "GF_trait_sequela"
+		trait = "GF_trait_doll_master"
+		trait = "trait_intelligent"
+		trait = "trait_traditional"
+		trait = "trait_solitary"
+	}
+}
+
+GF_EMPIRE_GK = {
+	# Griffin & Kryuger Private Military Contractor
+	name = "EMPIRE_DESIGN_GF_GK"
+	adjective = "PRESCRIPTED_adjective_GF_GK"
+	ship_prefix = "PRESCRIPTED_ship_prefix_GF_GK"
+
+	planet_name = "NAME_Earth"
+	planet_class = "pc_continental"
+	initializer = "sol_system_initializer"
+	system_name = "NAME_Sol"
+	
+	graphical_culture = "GF_new_type_01"
+	city_graphical_culture = "GF_new_type_01"
+
+	spawn_enabled = no
+	spawn_as_fallen = no
+	ignore_portrait_duplication = yes
+
+	origin = GF_origin_commonwealth
+	authority = GF_auth_commonwealth
+	government = GF_gov_commonwealth
+	civics = {
+		"GF_civic_GK"
+		"GF_civic_IOP"
+	}
+	ethic = "ethic_egalitarian"
+	ethic = "ethic_xenophile"
+	ethic = "ethic_materialist"
+
+	advisor_voice_type = l_the_diplomat
+
+	flags = {
+		human_1
+		custom_start_screen
+	}
+
+	empire_flag = {
+		icon = {
+			category = "gk"
+			file = "griffin_flags_01.dds"
+		}
+		background = {
+			category = "backgrounds"
+			file = "v.dds"
+		}
+		colors = {
+			"dark_grey"
+			"yellow"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		gender = female
+		name = "PRESCRIPTED_GF_OGAS"
+		portrait = "GF_doll_000"
+		texture = 0
+		clothes = 0
+		trait = "trait_ruler_eye_for_talent"
+		leader_class = official
+	}
+	room = "personality_erudite_explorers_room"
+
+	species = {
+		class = "GF_new_type"
+		portrait = "GF_new_type"
+		name= "PRESCRIPTED_species_name_humans1"
+		plural = "PRESCRIPTED_species_plural_humans1"
+		adjective = "PRESCRIPTED_species_adjective_humans1"
+		name_list = "GF_GK"
+
+		trait = "GF_trait_sequela"
+		trait = "GF_trait_doll_master"
+		trait = "trait_thrifty"
+		trait = "trait_quick_learners"
+		trait = "trait_weak"
+	}
+}

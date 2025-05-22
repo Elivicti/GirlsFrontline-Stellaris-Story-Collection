@@ -1,0 +1,326 @@
+GF_tech_collapse_missile = {
+	area = engineering
+	tier = 5
+	category = { propulsion }
+	ai_update_type = military
+
+	cost = @GFTech_tier5cost3
+	weight = @GFTech_tier5weight1
+
+	potential = {
+		GF_can_research_tech_trigger = { TECH = GF_tech_collapse_missile }
+	}
+
+	prerequisites = {
+		"GF_tech_collapse_bomb"
+		"tech_missiles_5"
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			has_trait_in_council = { TRAIT = leader_trait_expertise_propulsion }
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_propulsion }
+		}
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_explosive
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_explosive }
+		}
+	}
+}
+
+GF_tech_collapse_torpedo = {
+	area = engineering
+	tier = 5
+	category = { propulsion }
+	ai_update_type = military
+
+	cost = @GFTech_tier5cost3
+	weight = @GFTech_tier5weight1
+
+	potential = {
+		GF_can_research_tech_trigger = { TECH = GF_tech_collapse_torpedo }
+	}
+
+	prerequisites = {
+		"GF_tech_collapse_bomb"
+		"tech_torpedoes_3"
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			has_trait_in_council = { TRAIT = leader_trait_expertise_propulsion }
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_propulsion }
+		}
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_explosive
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_explosive }
+		}
+	}
+}
+
+GF_tech_collapse_mass_accelerator = {
+	area = engineering
+	tier = 5
+	category = { propulsion }
+	ai_update_type = military
+
+	cost = @GFTech_tier5cost3
+	weight = @GFTech_tier5weight1
+
+	potential = {
+		GF_can_research_tech_trigger = { TECH = GF_tech_collapse_mass_accelerator }
+	}
+
+	prerequisites = {
+		"GF_tech_collapse_bomb"
+		"tech_mass_accelerator_2"
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			has_trait_in_council = { TRAIT = leader_trait_expertise_propulsion }
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_propulsion }
+		}
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_kinetic }
+		}
+	}
+}
+
+GF_tech_collapse_artillery = {
+	area = engineering
+	tier = 5
+	category = { propulsion }
+	ai_update_type = military
+
+	cost = @GFTech_tier5cost3
+	weight = @GFTech_tier5weight1
+
+	potential = {
+		GF_can_research_tech_trigger = { TECH = GF_tech_collapse_artillery }
+	}
+
+	prerequisites = {
+		"GF_tech_collapse_bomb"
+		"tech_kinetic_artillery_2"
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			has_trait_in_council = { TRAIT = leader_trait_expertise_propulsion }
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_propulsion }
+		}
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_kinetic }
+		}
+	}
+}
+
+GF_tech_collapse_cannon = {
+	area = engineering
+	tier = 5
+	category = { propulsion }
+	ai_update_type = military
+
+	cost = @GFTech_tier5cost3
+	weight = @GFTech_tier5weight1
+
+	potential = {
+		GF_can_research_tech_trigger = { TECH = GF_tech_collapse_cannon }
+	}
+
+	prerequisites = {
+		"GF_tech_collapse_bomb"
+		"tech_autocannons_3"
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			has_trait_in_council = { TRAIT = leader_trait_expertise_propulsion }
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_propulsion }
+		}
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_kinetic }
+		}
+	}
+}
+
+GF_tech_strike_craft_nb200 = {
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	ai_update_type = military
+
+	cost = @GFTech_tier5cost3
+	weight = @GFTech_tier5weight1
+
+	potential = {
+		GF_can_research_tech_trigger = { TECH = GF_tech_strike_craft_nb200 }
+	}
+
+	prerequisites = {
+		GF_tech_collapsetech_weaponize
+		tech_strike_craft_3
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.2
+			has_civic = GF_civic_AU
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = @favored_weapon_ai_tech_factor
+			is_preferred_weapons = weapon_type_strike_craft
+		}
+		modifier = {
+			factor = @disfavored_weapon_ai_tech_factor
+			NOT = { is_preferred_weapons = weapon_type_strike_craft }
+		}
+	}
+}

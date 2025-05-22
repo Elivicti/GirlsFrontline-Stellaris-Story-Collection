@@ -1,0 +1,659 @@
+﻿### Antarctic Union
+
+GF_AU = {
+	category = "GF_new_type"
+	randomized = no
+	# alias = "Human"
+
+	ship_names = {
+		generic = {
+			GF_AU_SHIP_generic_01  GF_AU_SHIP_generic_02  GF_AU_SHIP_generic_03  GF_AU_SHIP_generic_04  GF_AU_SHIP_generic_05
+			GF_AU_SHIP_generic_06  GF_AU_SHIP_generic_07  GF_AU_SHIP_generic_08  GF_AU_SHIP_generic_09  GF_AU_SHIP_generic_10
+			GF_AU_SHIP_generic_11  GF_AU_SHIP_generic_12  GF_AU_SHIP_generic_13  GF_AU_SHIP_generic_14  GF_AU_SHIP_generic_15
+			GF_AU_SHIP_generic_16  GF_AU_SHIP_generic_17  GF_AU_SHIP_generic_18  GF_AU_SHIP_generic_19  GF_AU_SHIP_generic_20
+			GF_AU_SHIP_generic_21  GF_AU_SHIP_generic_22  GF_AU_SHIP_generic_23  GF_AU_SHIP_generic_24  GF_AU_SHIP_generic_25
+			GF_AU_SHIP_generic_26
+		}
+		constructor = {
+			GF_AU_SHIP_constructor_01  GF_AU_SHIP_constructor_02  GF_AU_SHIP_constructor_03  GF_AU_SHIP_constructor_04  GF_AU_SHIP_constructor_05
+			GF_AU_SHIP_constructor_06  GF_AU_SHIP_constructor_07  GF_AU_SHIP_constructor_08  GF_AU_SHIP_constructor_09  GF_AU_SHIP_constructor_10
+			GF_AU_SHIP_constructor_11  GF_AU_SHIP_constructor_12  GF_AU_SHIP_constructor_13
+		}
+		colonizer = {
+			GF_AU_SHIP_colonizer_01  GF_AU_SHIP_colonizer_02  GF_AU_SHIP_colonizer_03  GF_AU_SHIP_colonizer_04  GF_AU_SHIP_colonizer_05
+			GF_AU_SHIP_colonizer_06  GF_AU_SHIP_colonizer_07  GF_AU_SHIP_colonizer_08  GF_AU_SHIP_colonizer_09  GF_AU_SHIP_colonizer_10
+			GF_AU_SHIP_colonizer_11  GF_AU_SHIP_colonizer_12  GF_AU_SHIP_colonizer_13  GF_AU_SHIP_colonizer_14  GF_AU_SHIP_colonizer_15
+			GF_AU_SHIP_colonizer_16  GF_AU_SHIP_colonizer_17  GF_AU_SHIP_colonizer_18
+		}
+		sponsored_colonizer = {
+			GF_AU_SHIP_sponsored_colonizer_01  GF_AU_SHIP_sponsored_colonizer_02  GF_AU_SHIP_sponsored_colonizer_03  GF_AU_SHIP_sponsored_colonizer_04  GF_AU_SHIP_sponsored_colonizer_05
+			GF_AU_SHIP_sponsored_colonizer_06  GF_AU_SHIP_sponsored_colonizer_07  GF_AU_SHIP_sponsored_colonizer_08  GF_AU_SHIP_sponsored_colonizer_09  GF_AU_SHIP_sponsored_colonizer_10
+			GF_AU_SHIP_sponsored_colonizer_11  GF_AU_SHIP_sponsored_colonizer_12  GF_AU_SHIP_sponsored_colonizer_13  GF_AU_SHIP_sponsored_colonizer_14  GF_AU_SHIP_sponsored_colonizer_15
+			GF_AU_SHIP_sponsored_colonizer_16  GF_AU_SHIP_sponsored_colonizer_17  GF_AU_SHIP_sponsored_colonizer_18
+		}
+		science = {
+			GF_AU_SHIP_science_01  GF_AU_SHIP_science_02  GF_AU_SHIP_science_03  GF_AU_SHIP_science_04  GF_AU_SHIP_science_05
+			GF_AU_SHIP_science_06  GF_AU_SHIP_science_07  GF_AU_SHIP_science_08  GF_AU_SHIP_science_09  GF_AU_SHIP_science_10
+			GF_AU_SHIP_science_11  GF_AU_SHIP_science_12  GF_AU_SHIP_science_13  GF_AU_SHIP_science_14  GF_AU_SHIP_science_15
+			GF_AU_SHIP_science_16  GF_AU_SHIP_science_17  GF_AU_SHIP_science_18
+		}
+		corvette = {
+			GF_AU_SHIP_corvette_01  GF_AU_SHIP_corvette_02  GF_AU_SHIP_corvette_03  GF_AU_SHIP_corvette_04  GF_AU_SHIP_corvette_05
+			GF_AU_SHIP_corvette_06  GF_AU_SHIP_corvette_07  GF_AU_SHIP_corvette_08  GF_AU_SHIP_corvette_09  GF_AU_SHIP_corvette_10
+			GF_AU_SHIP_corvette_11  GF_AU_SHIP_corvette_12  GF_AU_SHIP_corvette_13  GF_AU_SHIP_corvette_14  GF_AU_SHIP_corvette_15
+			GF_AU_SHIP_corvette_16  GF_AU_SHIP_corvette_17  GF_AU_SHIP_corvette_18  GF_AU_SHIP_corvette_19  GF_AU_SHIP_corvette_20
+			GF_AU_SHIP_corvette_21  GF_AU_SHIP_corvette_22  GF_AU_SHIP_corvette_23  GF_AU_SHIP_corvette_24  GF_AU_SHIP_corvette_25
+			GF_AU_SHIP_corvette_26  GF_AU_SHIP_corvette_27  GF_AU_SHIP_corvette_28  GF_AU_SHIP_corvette_29  GF_AU_SHIP_corvette_30
+			GF_AU_SHIP_corvette_31  GF_AU_SHIP_corvette_32  GF_AU_SHIP_corvette_33  GF_AU_SHIP_corvette_34  GF_AU_SHIP_corvette_35
+			GF_AU_SHIP_corvette_36  GF_AU_SHIP_corvette_37  GF_AU_SHIP_corvette_38  GF_AU_SHIP_corvette_39  GF_AU_SHIP_corvette_40
+			GF_AU_SHIP_corvette_41  GF_AU_SHIP_corvette_42  GF_AU_SHIP_corvette_43  GF_AU_SHIP_corvette_44  GF_AU_SHIP_corvette_45
+			GF_AU_SHIP_corvette_46  GF_AU_SHIP_corvette_47  GF_AU_SHIP_corvette_48  GF_AU_SHIP_corvette_49  GF_AU_SHIP_corvette_50
+			GF_AU_SHIP_corvette_51  GF_AU_SHIP_corvette_52  GF_AU_SHIP_corvette_53  GF_AU_SHIP_corvette_54  GF_AU_SHIP_corvette_55
+			GF_AU_SHIP_corvette_56  GF_AU_SHIP_corvette_57  GF_AU_SHIP_corvette_58  GF_AU_SHIP_corvette_59  GF_AU_SHIP_corvette_60
+			GF_AU_SHIP_corvette_61  GF_AU_SHIP_corvette_62  GF_AU_SHIP_corvette_63  GF_AU_SHIP_corvette_64  GF_AU_SHIP_corvette_65
+			GF_AU_SHIP_corvette_66  GF_AU_SHIP_corvette_67  GF_AU_SHIP_corvette_68  GF_AU_SHIP_corvette_69  GF_AU_SHIP_corvette_70
+			GF_AU_SHIP_corvette_71  GF_AU_SHIP_corvette_72  GF_AU_SHIP_corvette_73
+		}
+		destroyer = {
+			GF_AU_SHIP_corvette_01  GF_AU_SHIP_corvette_02  GF_AU_SHIP_corvette_03  GF_AU_SHIP_corvette_04  GF_AU_SHIP_corvette_05
+			GF_AU_SHIP_corvette_06  GF_AU_SHIP_corvette_07  GF_AU_SHIP_corvette_08  GF_AU_SHIP_corvette_09  GF_AU_SHIP_corvette_10
+			GF_AU_SHIP_corvette_11  GF_AU_SHIP_corvette_12  GF_AU_SHIP_corvette_13  GF_AU_SHIP_corvette_14  GF_AU_SHIP_corvette_15
+			GF_AU_SHIP_corvette_16  GF_AU_SHIP_corvette_17  GF_AU_SHIP_corvette_18  GF_AU_SHIP_corvette_19  GF_AU_SHIP_corvette_20
+			GF_AU_SHIP_corvette_21  GF_AU_SHIP_corvette_22  GF_AU_SHIP_corvette_23  GF_AU_SHIP_corvette_24  GF_AU_SHIP_corvette_25
+			GF_AU_SHIP_corvette_26  GF_AU_SHIP_corvette_27  GF_AU_SHIP_corvette_28  GF_AU_SHIP_corvette_29  GF_AU_SHIP_corvette_30
+			GF_AU_SHIP_corvette_31  GF_AU_SHIP_corvette_32  GF_AU_SHIP_corvette_33  GF_AU_SHIP_corvette_34  GF_AU_SHIP_corvette_35
+			GF_AU_SHIP_corvette_36  GF_AU_SHIP_corvette_37  GF_AU_SHIP_corvette_38  GF_AU_SHIP_corvette_39  GF_AU_SHIP_corvette_40
+			GF_AU_SHIP_corvette_41  GF_AU_SHIP_corvette_42  GF_AU_SHIP_corvette_43  GF_AU_SHIP_corvette_44  GF_AU_SHIP_corvette_45
+			GF_AU_SHIP_corvette_46  GF_AU_SHIP_corvette_47  GF_AU_SHIP_corvette_48  GF_AU_SHIP_corvette_49  GF_AU_SHIP_corvette_50
+			GF_AU_SHIP_corvette_51  GF_AU_SHIP_corvette_52  GF_AU_SHIP_corvette_53  GF_AU_SHIP_corvette_54  GF_AU_SHIP_corvette_55
+			GF_AU_SHIP_corvette_56  GF_AU_SHIP_corvette_57  GF_AU_SHIP_corvette_58  GF_AU_SHIP_corvette_59  GF_AU_SHIP_corvette_60
+			GF_AU_SHIP_corvette_61  GF_AU_SHIP_corvette_62  GF_AU_SHIP_corvette_63  GF_AU_SHIP_corvette_64  GF_AU_SHIP_corvette_65
+			GF_AU_SHIP_corvette_66  GF_AU_SHIP_corvette_67  GF_AU_SHIP_corvette_68  GF_AU_SHIP_corvette_69  GF_AU_SHIP_corvette_70
+			GF_AU_SHIP_corvette_71  GF_AU_SHIP_corvette_72  GF_AU_SHIP_corvette_73
+		}
+		cruiser = {
+			GF_AU_SHIP_corvette_01  GF_AU_SHIP_corvette_02  GF_AU_SHIP_corvette_03  GF_AU_SHIP_corvette_04  GF_AU_SHIP_corvette_05
+			GF_AU_SHIP_corvette_06  GF_AU_SHIP_corvette_07  GF_AU_SHIP_corvette_08  GF_AU_SHIP_corvette_09  GF_AU_SHIP_corvette_10
+			GF_AU_SHIP_corvette_11  GF_AU_SHIP_corvette_12  GF_AU_SHIP_corvette_13  GF_AU_SHIP_corvette_14  GF_AU_SHIP_corvette_15
+			GF_AU_SHIP_corvette_16  GF_AU_SHIP_corvette_17  GF_AU_SHIP_corvette_18  GF_AU_SHIP_corvette_19  GF_AU_SHIP_corvette_20
+			GF_AU_SHIP_corvette_21  GF_AU_SHIP_corvette_22  GF_AU_SHIP_corvette_23  GF_AU_SHIP_corvette_24  GF_AU_SHIP_corvette_25
+			GF_AU_SHIP_corvette_26  GF_AU_SHIP_corvette_27  GF_AU_SHIP_corvette_28  GF_AU_SHIP_corvette_29  GF_AU_SHIP_corvette_30
+			GF_AU_SHIP_corvette_31  GF_AU_SHIP_corvette_32  GF_AU_SHIP_corvette_33  GF_AU_SHIP_corvette_34  GF_AU_SHIP_corvette_35
+			GF_AU_SHIP_corvette_36  GF_AU_SHIP_corvette_37  GF_AU_SHIP_corvette_38  GF_AU_SHIP_corvette_39  GF_AU_SHIP_corvette_40
+			GF_AU_SHIP_corvette_41  GF_AU_SHIP_corvette_42  GF_AU_SHIP_corvette_43  GF_AU_SHIP_corvette_44  GF_AU_SHIP_corvette_45
+			GF_AU_SHIP_corvette_46  GF_AU_SHIP_corvette_47  GF_AU_SHIP_corvette_48  GF_AU_SHIP_corvette_49  GF_AU_SHIP_corvette_50
+			GF_AU_SHIP_corvette_51  GF_AU_SHIP_corvette_52  GF_AU_SHIP_corvette_53  GF_AU_SHIP_corvette_54  GF_AU_SHIP_corvette_55
+			GF_AU_SHIP_corvette_56  GF_AU_SHIP_corvette_57  GF_AU_SHIP_corvette_58  GF_AU_SHIP_corvette_59  GF_AU_SHIP_corvette_60
+			GF_AU_SHIP_corvette_61  GF_AU_SHIP_corvette_62  GF_AU_SHIP_corvette_63  GF_AU_SHIP_corvette_64  GF_AU_SHIP_corvette_65
+			GF_AU_SHIP_corvette_66  GF_AU_SHIP_corvette_67  GF_AU_SHIP_corvette_68  GF_AU_SHIP_corvette_69  GF_AU_SHIP_corvette_70
+			GF_AU_SHIP_corvette_71  GF_AU_SHIP_corvette_72  GF_AU_SHIP_corvette_73
+		}
+		battleship = {
+			GF_AU_SHIP_corvette_01  GF_AU_SHIP_corvette_02  GF_AU_SHIP_corvette_03  GF_AU_SHIP_corvette_04  GF_AU_SHIP_corvette_05
+			GF_AU_SHIP_corvette_06  GF_AU_SHIP_corvette_07  GF_AU_SHIP_corvette_08  GF_AU_SHIP_corvette_09  GF_AU_SHIP_corvette_10
+			GF_AU_SHIP_corvette_11  GF_AU_SHIP_corvette_12  GF_AU_SHIP_corvette_13  GF_AU_SHIP_corvette_14  GF_AU_SHIP_corvette_15
+			GF_AU_SHIP_corvette_16  GF_AU_SHIP_corvette_17  GF_AU_SHIP_corvette_18  GF_AU_SHIP_corvette_19  GF_AU_SHIP_corvette_20
+			GF_AU_SHIP_corvette_21  GF_AU_SHIP_corvette_22  GF_AU_SHIP_corvette_23  GF_AU_SHIP_corvette_24  GF_AU_SHIP_corvette_25
+			GF_AU_SHIP_corvette_26  GF_AU_SHIP_corvette_27  GF_AU_SHIP_corvette_28  GF_AU_SHIP_corvette_29  GF_AU_SHIP_corvette_30
+			GF_AU_SHIP_corvette_31  GF_AU_SHIP_corvette_32  GF_AU_SHIP_corvette_33  GF_AU_SHIP_corvette_34  GF_AU_SHIP_corvette_35
+			GF_AU_SHIP_corvette_36  GF_AU_SHIP_corvette_37  GF_AU_SHIP_corvette_38  GF_AU_SHIP_corvette_39  GF_AU_SHIP_corvette_40
+			GF_AU_SHIP_corvette_41  GF_AU_SHIP_corvette_42  GF_AU_SHIP_corvette_43  GF_AU_SHIP_corvette_44  GF_AU_SHIP_corvette_45
+			GF_AU_SHIP_corvette_46  GF_AU_SHIP_corvette_47  GF_AU_SHIP_corvette_48  GF_AU_SHIP_corvette_49  GF_AU_SHIP_corvette_50
+			GF_AU_SHIP_corvette_51  GF_AU_SHIP_corvette_52  GF_AU_SHIP_corvette_53  GF_AU_SHIP_corvette_54  GF_AU_SHIP_corvette_55
+			GF_AU_SHIP_corvette_56  GF_AU_SHIP_corvette_57  GF_AU_SHIP_corvette_58  GF_AU_SHIP_corvette_59  GF_AU_SHIP_corvette_60
+			GF_AU_SHIP_corvette_61  GF_AU_SHIP_corvette_62  GF_AU_SHIP_corvette_63  GF_AU_SHIP_corvette_64  GF_AU_SHIP_corvette_65
+			GF_AU_SHIP_corvette_66  GF_AU_SHIP_corvette_67  GF_AU_SHIP_corvette_68  GF_AU_SHIP_corvette_69  GF_AU_SHIP_corvette_70
+			GF_AU_SHIP_corvette_71  GF_AU_SHIP_corvette_72  GF_AU_SHIP_corvette_73
+		}
+		titan = {
+			GF_AU_SHIP_titan_01  GF_AU_SHIP_titan_02  GF_AU_SHIP_titan_03  GF_AU_SHIP_titan_04  GF_AU_SHIP_titan_05
+			GF_AU_SHIP_titan_06  GF_AU_SHIP_titan_07  GF_AU_SHIP_titan_08  GF_AU_SHIP_titan_09  GF_AU_SHIP_titan_10
+			GF_AU_SHIP_titan_11  GF_AU_SHIP_titan_12  GF_AU_SHIP_titan_13  GF_AU_SHIP_titan_14  GF_AU_SHIP_titan_15
+			GF_AU_SHIP_titan_16  GF_AU_SHIP_titan_17  GF_AU_SHIP_titan_18  GF_AU_SHIP_titan_19  GF_AU_SHIP_titan_20
+			GF_AU_SHIP_titan_21  GF_AU_SHIP_titan_22  GF_AU_SHIP_titan_23  GF_AU_SHIP_titan_24
+		}
+		colossus = {
+			GF_AU_SHIP_titan_01  GF_AU_SHIP_titan_02  GF_AU_SHIP_titan_03  GF_AU_SHIP_titan_04  GF_AU_SHIP_titan_05
+			GF_AU_SHIP_titan_06  GF_AU_SHIP_titan_07  GF_AU_SHIP_titan_08  GF_AU_SHIP_titan_09  GF_AU_SHIP_titan_10
+			GF_AU_SHIP_titan_11  GF_AU_SHIP_titan_12  GF_AU_SHIP_titan_13  GF_AU_SHIP_titan_14  GF_AU_SHIP_titan_15
+			GF_AU_SHIP_titan_16  GF_AU_SHIP_titan_17  GF_AU_SHIP_titan_18  GF_AU_SHIP_titan_19  GF_AU_SHIP_titan_20
+			GF_AU_SHIP_titan_21  GF_AU_SHIP_titan_22  GF_AU_SHIP_titan_23  GF_AU_SHIP_titan_24
+		}
+		juggernaut = {
+			GF_AU_SHIP_titan_01  GF_AU_SHIP_titan_02  GF_AU_SHIP_titan_03  GF_AU_SHIP_titan_04  GF_AU_SHIP_titan_05
+			GF_AU_SHIP_titan_06  GF_AU_SHIP_titan_07  GF_AU_SHIP_titan_08  GF_AU_SHIP_titan_09  GF_AU_SHIP_titan_10
+			GF_AU_SHIP_titan_11  GF_AU_SHIP_titan_12  GF_AU_SHIP_titan_13  GF_AU_SHIP_titan_14  GF_AU_SHIP_titan_15
+			GF_AU_SHIP_titan_16  GF_AU_SHIP_titan_17  GF_AU_SHIP_titan_18  GF_AU_SHIP_titan_19  GF_AU_SHIP_titan_20
+			GF_AU_SHIP_titan_21  GF_AU_SHIP_titan_22  GF_AU_SHIP_titan_23  GF_AU_SHIP_titan_24
+		}
+		transport = {
+			GF_AU_SHIP_transport_01  GF_AU_SHIP_transport_02  GF_AU_SHIP_transport_03  GF_AU_SHIP_transport_04  GF_AU_SHIP_transport_05
+			GF_AU_SHIP_transport_06  GF_AU_SHIP_transport_07  GF_AU_SHIP_transport_08  GF_AU_SHIP_transport_09  GF_AU_SHIP_transport_10
+			GF_AU_SHIP_transport_11  GF_AU_SHIP_transport_12  GF_AU_SHIP_transport_13
+		}
+		military_station_small = {
+			GF_AU_SHIP_military_station_small_01  GF_AU_SHIP_military_station_small_02  GF_AU_SHIP_military_station_small_03  GF_AU_SHIP_military_station_small_04  GF_AU_SHIP_military_station_small_05
+			GF_AU_SHIP_military_station_small_06  GF_AU_SHIP_military_station_small_07  GF_AU_SHIP_military_station_small_08  GF_AU_SHIP_military_station_small_09  GF_AU_SHIP_military_station_small_10
+			GF_AU_SHIP_military_station_small_11  GF_AU_SHIP_military_station_small_12  GF_AU_SHIP_military_station_small_13  GF_AU_SHIP_military_station_small_14  GF_AU_SHIP_military_station_small_15
+			GF_AU_SHIP_military_station_small_16  GF_AU_SHIP_military_station_small_17  GF_AU_SHIP_military_station_small_18  GF_AU_SHIP_military_station_small_19  GF_AU_SHIP_military_station_small_20
+			GF_AU_SHIP_military_station_small_21
+		}
+	}
+
+	fleet_names = {
+		sequential_name = GF_AU_FLEET
+	}
+
+	army_names = {
+		# 少前新陆军
+		GF_army_arm_doll = {
+			sequential_name = GF_AU_DOLL
+		}
+
+		GF_army_tactical_doll = {
+			sequential_name = GF_AU_TACTICAL_DOLL
+		}
+
+		GF_army_defensive_auto_doll = {
+			sequential_name = GF_AU_DEFENSIVE_DOLL
+		}
+
+		GF_army_occupation_doll = {
+			sequential_name = GF_AU_OCCUPATION_DOLL
+		}
+		GF_army_gavirul = { sequential_name = GF_URNC_ARMY_GAVIRUL }
+		GF_army_elid_1 = { sequential_name = GF_URNC_ARMY_ELID }
+		GF_army_elid_2 = { sequential_name = GF_URNC_ARMY_ELID }
+		# 原版
+		machine_defense = {
+			sequential_name = GF_AU_PLANETARYGUARD
+		}
+
+		machine_assault_1 = {
+			sequential_name = GF_AU_EXPEDITIONARYFORCE
+		}
+
+		machine_assault_2 = {
+			sequential_name = GF_AU_EXPEDITIONARYFORCE
+		}
+
+		machine_assault_3 = {
+			sequential_name = GF_AU_EXPEDITIONARYFORCE
+		}
+
+		defense_army = {
+			sequential_name = GF_AU_PLANETARYGUARD
+		}
+
+		assault_army = {
+			sequential_name = GF_AU_EXPEDITIONARYFORCE
+		}
+
+		slave_army = {
+			sequential_name = GF_AU_INDENTUREDRIFLES
+		}
+
+		clone_army = {
+			sequential_name = GF_AU_CLONEARMY
+		}
+
+		undead_army = {
+			sequential_name = GF_AU_DREADCOMMANDO
+		}
+
+		robotic_army = {
+			sequential_name = GF_AU_HUNTERKILLERGROUP
+		}
+
+		robotic_defense_army = {
+			sequential_name = GF_AU_GROUNDDEFENSEMATRIX
+		}
+
+		psionic_army = {
+			sequential_name = GF_AU_PSICOMMANDO
+		}
+
+		xenomorph_army = {
+			sequential_name = GF_AU_BIOWARFAREDIVISION
+		}
+
+		gene_warrior_army = {
+			random_names = {
+				GF_AU_ARMY_SARC-AGladiators GF_AU_ARMY_SARC-BWidowmakers GF_AU_ARMY_SARC-CImmortals GF_AU_ARMY_SARC-DBerserkers GF_AU_ARMY_SARC-EAssassins
+				GF_AU_ARMY_SARC-FReapers GF_AU_ARMY_SARC-GNighthawks GF_AU_ARMY_SARC-HDesperados GF_AU_ARMY_SARC-IGreyKnights GF_AU_ARMY_SARC-JRoughnecks
+			}
+			sequential_name = GF_AU_BIOENGINEEREDSQUADRON
+		}
+
+		occupation_army = {
+			sequential_name = GF_AU_GARRISONFORCE
+		}
+
+		robotic_occupation_army = {
+			sequential_name = GF_AU_MECHANIZEDGARRISON
+		}
+
+		primitive_army = {
+			sequential_name = GF_AU_PRIMITIVEARMY
+		}
+		industrial_army = {
+			sequential_name = GF_AU_INDUSTRIALARMY
+		}
+		postatomic_army = {
+			sequential_name = GF_AU_POSTATOMICARMY
+		}
+	}
+
+	planet_names = {
+		# 通用
+		generic = {
+			names = {
+				GF_AU_PLANET_generic_01  GF_AU_PLANET_generic_02  GF_AU_PLANET_generic_03  GF_AU_PLANET_generic_04  GF_AU_PLANET_generic_05
+				GF_AU_PLANET_generic_06  GF_AU_PLANET_generic_07  GF_AU_PLANET_generic_08  GF_AU_PLANET_generic_09  GF_AU_PLANET_generic_10
+				GF_AU_PLANET_generic_11  GF_AU_PLANET_generic_12  GF_AU_PLANET_generic_13  GF_AU_PLANET_generic_14  GF_AU_PLANET_generic_15
+				GF_AU_PLANET_generic_16  GF_AU_PLANET_generic_17  GF_AU_PLANET_generic_18  GF_AU_PLANET_generic_19  GF_AU_PLANET_generic_20
+				GF_AU_PLANET_generic_21  GF_AU_PLANET_generic_22  GF_AU_PLANET_generic_23  GF_AU_PLANET_generic_24  GF_AU_PLANET_generic_25
+				GF_AU_PLANET_generic_26  GF_AU_PLANET_generic_27  GF_AU_PLANET_generic_28  GF_AU_PLANET_generic_29  GF_AU_PLANET_generic_30
+				GF_AU_PLANET_generic_31  GF_AU_PLANET_generic_32  GF_AU_PLANET_generic_33  GF_AU_PLANET_generic_34  GF_AU_PLANET_generic_35
+				GF_AU_PLANET_generic_36  GF_AU_PLANET_generic_37  GF_AU_PLANET_generic_38  GF_AU_PLANET_generic_39  GF_AU_PLANET_generic_40
+				GF_AU_PLANET_generic_41  GF_AU_PLANET_generic_42  GF_AU_PLANET_generic_43  GF_AU_PLANET_generic_44  GF_AU_PLANET_generic_45
+				GF_AU_PLANET_generic_46  GF_AU_PLANET_generic_47  GF_AU_PLANET_generic_48  GF_AU_PLANET_generic_49  GF_AU_PLANET_generic_50
+				GF_AU_PLANET_generic_51  GF_AU_PLANET_generic_52  GF_AU_PLANET_generic_53  GF_AU_PLANET_generic_54  GF_AU_PLANET_generic_55
+				GF_AU_PLANET_generic_56  GF_AU_PLANET_generic_57  GF_AU_PLANET_generic_58  GF_AU_PLANET_generic_59  GF_AU_PLANET_generic_60
+				GF_AU_PLANET_generic_61  GF_AU_PLANET_generic_62  GF_AU_PLANET_generic_63  GF_AU_PLANET_generic_64  GF_AU_PLANET_generic_65
+				GF_AU_PLANET_generic_66  GF_AU_PLANET_generic_67  GF_AU_PLANET_generic_68  GF_AU_PLANET_generic_69  GF_AU_PLANET_generic_70
+				GF_AU_PLANET_generic_71  GF_AU_PLANET_generic_72  GF_AU_PLANET_generic_73  GF_AU_PLANET_generic_74  GF_AU_PLANET_generic_75
+			}
+		}
+		pc_gaia = {
+			names = {
+				GF_AU_PLANET_gaia_01  GF_AU_PLANET_gaia_02  GF_AU_PLANET_gaia_03  GF_AU_PLANET_gaia_04  GF_AU_PLANET_gaia_05
+				GF_AU_PLANET_gaia_06  GF_AU_PLANET_gaia_07  GF_AU_PLANET_gaia_08  GF_AU_PLANET_gaia_09
+			}
+		}
+
+		# no extra names for these
+		pc_desert      = { names = {} }
+		pc_arid        = { names = {} }
+		pc_tropical    = { names = {} }
+		pc_continental = { names = {} }
+		pc_ocean       = { names = {} }
+		pc_tundra      = { names = {} }
+		pc_arctic      = { names = {} }
+		pc_savannah    = { names = {} }
+		pc_alpine      = { names = {} }
+	}
+
+
+	### CHARACTERS
+
+	character_names = {
+
+		names1 = {
+			weight = 40
+			first_names_male = {
+				GF_AU_CHR_John GF_AU_CHR_Brian GF_AU_CHR_Peter GF_AU_CHR_Adam GF_AU_CHR_James GF_AU_CHR_William GF_AU_CHR_Jacob GF_AU_CHR_Christopher GF_AU_CHR_Joshua GF_AU_CHR_Michael GF_AU_CHR_Ethan GF_AU_CHR_Joseph GF_AU_CHR_Matthew GF_AU_CHR_Anthony GF_AU_CHR_Daniel GF_AU_CHR_Ryan GF_AU_CHR_Samuel GF_AU_CHR_Kevin
+				GF_AU_CHR_David GF_AU_CHR_Logan GF_AU_CHR_Carter GF_AU_CHR_Benjamin GF_AU_CHR_Andrew GF_AU_CHR_Henry GF_AU_CHR_Nicholas GF_AU_CHR_Gavin GF_AU_CHR_Owen GF_AU_CHR_Jack GF_AU_CHR_Wyatt GF_AU_CHR_Wayne GF_AU_CHR_Walter GF_AU_CHR_Charles GF_AU_CHR_Louis GF_AU_CHR_Merritt GF_AU_CHR_Earl GF_AU_CHR_Alfred GF_AU_CHR_Vernon
+				GF_AU_CHR_Edward GF_AU_CHR_Donald GF_AU_CHR_George GF_AU_CHR_Paul GF_AU_CHR_Greg GF_AU_CHR_Thomas GF_AU_CHR_Robert GF_AU_CHR_Gene GF_AU_CHR_Glen GF_AU_CHR_Hugh GF_AU_CHR_Ronald GF_AU_CHR_Francis GF_AU_CHR_Stephen GF_AU_CHR_Jon GF_AU_CHR_Richard GF_AU_CHR_Mark GF_AU_CHR_Marcus GF_AU_CHR_Scott GF_AU_CHR_Duncan
+				GF_AU_CHR_Douglas GF_AU_CHR_Keith GF_AU_CHR_Howard GF_AU_CHR_Russell GF_AU_CHR_Clayton GF_AU_CHR_Lee GF_AU_CHR_Steve GF_AU_CHR_Tom GF_AU_CHR_Clay GF_AU_CHR_Oliver GF_AU_CHR_Kenneth GF_AU_CHR_Ralph GF_AU_CHR_Andy GF_AU_CHR_Tony GF_AU_CHR_Tyrone GF_AU_CHR_Lawrence GF_AU_CHR_Patrick GF_AU_CHR_Harry GF_AU_CHR_Alan
+				GF_AU_CHR_Eugene GF_AU_CHR_Frank GF_AU_CHR_Craig GF_AU_CHR_Jason GF_AU_CHR_Martin GF_AU_CHR_Jonathan GF_AU_CHR_Harrison GF_AU_CHR_Connor GF_AU_CHR_Gaylord GF_AU_CHR_Sean GF_AU_CHR_Cooper GF_AU_CHR_Stanley GF_AU_CHR_Calhoun GF_AU_CHR_Neil GF_AU_CHR_Jeffrey GF_AU_CHR_Harold GF_AU_CHR_Raymond GF_AU_CHR_Fred
+				GF_AU_CHR_Marshall GF_AU_CHR_Silas GF_AU_CHR_Roy GF_AU_CHR_Jesse GF_AU_CHR_Ken GF_AU_CHR_Bruce GF_AU_CHR_Norris GF_AU_CHR_Horatio GF_AU_CHR_Clarence GF_AU_CHR_Lloyd GF_AU_CHR_Duane GF_AU_CHR_Mortimer GF_AU_CHR_Ben GF_AU_CHR_Ernest GF_AU_CHR_Warren GF_AU_CHR_Graham GF_AU_CHR_Marvin GF_AU_CHR_Orson GF_AU_CHR_Dennis
+				GF_AU_CHR_Jackson GF_AU_CHR_Dwight GF_AU_CHR_Harlan GF_AU_CHR_Arthur GF_AU_CHR_Percival GF_AU_CHR_Montgomery GF_AU_CHR_Clyde GF_AU_CHR_Rodney GF_AU_CHR_Gerald GF_AU_CHR_Franklin GF_AU_CHR_Jake GF_AU_CHR_Horace GF_AU_CHR_Irving GF_AU_CHR_Seth GF_AU_CHR_Randolph GF_AU_CHR_Floyd GF_AU_CHR_Carl
+				GF_AU_CHR_Brent GF_AU_CHR_Cliff GF_AU_CHR_Malcolm GF_AU_CHR_Timothy GF_AU_CHR_Wallace GF_AU_CHR_Pierce GF_AU_CHR_Edmund GF_AU_CHR_Gary GF_AU_CHR_Tony GF_AU_CHR_Nathan GF_AU_CHR_Eric GF_AU_CHR_Albert GF_AU_CHR_Robin GF_AU_CHR_Geoffrey GF_AU_CHR_Larry GF_AU_CHR_Ian GF_AU_CHR_Leonard GF_AU_CHR_Gordon GF_AU_CHR_Derek
+				GF_AU_CHR_Maxwell GF_AU_CHR_Alec GF_AU_CHR_Bernard GF_AU_CHR_Stuart GF_AU_CHR_Rupert GF_AU_CHR_Dean GF_AU_CHR_Philip GF_AU_CHR_Ross GF_AU_CHR_Colin GF_AU_CHR_Darren GF_AU_CHR_Melvin GF_AU_CHR_Justin GF_AU_CHR_Zack GF_AU_CHR_Elliot GF_AU_CHR_Simon GF_AU_CHR_Morgan GF_AU_CHR_Clark GF_AU_CHR_Xavier GF_AU_CHR_Jared
+				GF_AU_CHR_Edgar GF_AU_CHR_Crispin GF_AU_CHR_Nelson GF_AU_CHR_Emmett GF_AU_CHR_Trevor GF_AU_CHR_Travis GF_AU_CHR_Lance GF_AU_CHR_Adrian GF_AU_CHR_Desmond GF_AU_CHR_Brendan GF_AU_CHR_Brett GF_AU_CHR_Ambrose GF_AU_CHR_Basil GF_AU_CHR_Kieran GF_AU_CHR_Conan GF_AU_CHR_Dermot GF_AU_CHR_Dudley GF_AU_CHR_Felix
+				GF_AU_CHR_Finn GF_AU_CHR_Oscar GF_AU_CHR_Sidney GF_AU_CHR_Aaron GF_AU_CHR_Vincent GF_AU_CHR_Angus GF_AU_CHR_Grant GF_AU_CHR_Luke GF_AU_CHR_Miles GF_AU_CHR_Morton GF_AU_CHR_Randall GF_AU_CHR_Reginald GF_AU_CHR_Herbert GF_AU_CHR_Wesley GF_AU_CHR_Nigel GF_AU_CHR_Alexander GF_AU_CHR_Dominic GF_AU_CHR_Bradley
+				GF_AU_CHR_Liam GF_AU_CHR_Dirk GF_AU_CHR_SirBenjamin GF_AU_CHR_SirJames GF_AU_CHR_SirWalter GF_AU_CHR_SirNigel GF_AU_CHR_SirMontgomery GF_AU_CHR_SirDouglas GF_AU_CHR_SirAndrew GF_AU_CHR_Vance GF_AU_CHR_Kyle GF_AU_CHR_Chester
+			}
+			first_names_female = {
+				GF_AU_CHR_Olivia GF_AU_CHR_Emily GF_AU_CHR_Sophie GF_AU_CHR_Jessica GF_AU_CHR_Alice GF_AU_CHR_Scarlett GF_AU_CHR_Emma GF_AU_CHR_Daisy GF_AU_CHR_Eve GF_AU_CHR_Phoebe GF_AU_CHR_Sienna GF_AU_CHR_Anna GF_AU_CHR_Mary GF_AU_CHR_Megan GF_AU_CHR_Elizabeth GF_AU_CHR_Amy GF_AU_CHR_Darcy GF_AU_CHR_Matilda GF_AU_CHR_Erin
+				GF_AU_CHR_Lucy GF_AU_CHR_Grace GF_AU_CHR_Evelyn GF_AU_CHR_Amber GF_AU_CHR_Harriet GF_AU_CHR_Caitlyn GF_AU_CHR_Jasmine GF_AU_CHR_Madison GF_AU_CHR_Kate GF_AU_CHR_Eleanor GF_AU_CHR_Alexandra GF_AU_CHR_Sarah GF_AU_CHR_Martha GF_AU_CHR_Bethany GF_AU_CHR_Rebecca GF_AU_CHR_Victoria
+				GF_AU_CHR_Gabriella GF_AU_CHR_Naomi GF_AU_CHR_Lauren GF_AU_CHR_Clara GF_AU_CHR_Laura GF_AU_CHR_Kayla GF_AU_CHR_Nicole GF_AU_CHR_Skye GF_AU_CHR_Eliza GF_AU_CHR_Patricia GF_AU_CHR_Linda GF_AU_CHR_Barbara GF_AU_CHR_Jennifer GF_AU_CHR_Maria GF_AU_CHR_Susan GF_AU_CHR_Margaret GF_AU_CHR_Dorothy
+				GF_AU_CHR_Lisa GF_AU_CHR_Nancy GF_AU_CHR_Helen GF_AU_CHR_Sandra GF_AU_CHR_Donna GF_AU_CHR_Carol GF_AU_CHR_Ruth GF_AU_CHR_Sharon GF_AU_CHR_Michelle GF_AU_CHR_Kimberly GF_AU_CHR_Deborah GF_AU_CHR_Amelia GF_AU_CHR_Charlotte GF_AU_CHR_Isabella GF_AU_CHR_Ruby GF_AU_CHR_Addison GF_AU_CHR_Alyssa
+				GF_AU_CHR_Abigail GF_AU_CHR_Julia GF_AU_CHR_Samantha GF_AU_CHR_Brooklyn GF_AU_CHR_Ashley GF_AU_CHR_Natalie GF_AU_CHR_Brianna GF_AU_CHR_Chloe GF_AU_CHR_Hailey GF_AU_CHR_Lillian GF_AU_CHR_Judith GF_AU_CHR_Alison GF_AU_CHR_Amanda GF_AU_CHR_Angela GF_AU_CHR_Audrey GF_AU_CHR_Beatrice
+				GF_AU_CHR_Brenda GF_AU_CHR_Bridget GF_AU_CHR_Caroline GF_AU_CHR_Cassandra GF_AU_CHR_Charity GF_AU_CHR_Cecilia GF_AU_CHR_Anne GF_AU_CHR_Clarissa GF_AU_CHR_Christabel GF_AU_CHR_Cheryl GF_AU_CHR_Cynthia GF_AU_CHR_Cadence GF_AU_CHR_Cordelia GF_AU_CHR_Daphne GF_AU_CHR_Deanna
+				GF_AU_CHR_Denise GF_AU_CHR_Dolores GF_AU_CHR_Doreen GF_AU_CHR_Drusilia GF_AU_CHR_Edith GF_AU_CHR_Edna GF_AU_CHR_Eleonor GF_AU_CHR_Eileen GF_AU_CHR_Edwina GF_AU_CHR_Ellen GF_AU_CHR_Estelle GF_AU_CHR_Ethel GF_AU_CHR_Felicity GF_AU_CHR_Fiona GF_AU_CHR_Genevieve GF_AU_CHR_Gertie GF_AU_CHR_Gwen
+				GF_AU_CHR_Gwendolyn GF_AU_CHR_Henrietta GF_AU_CHR_Imogen GF_AU_CHR_Iris GF_AU_CHR_Imelda GF_AU_CHR_Jacqueline GF_AU_CHR_Jane GF_AU_CHR_Jenna GF_AU_CHR_Joanna GF_AU_CHR_Josephine GF_AU_CHR_Julianne GF_AU_CHR_Kathleen GF_AU_CHR_Kierra GF_AU_CHR_Kaylee GF_AU_CHR_Leah GF_AU_CHR_Lois
+				GF_AU_CHR_Loretta GF_AU_CHR_Lorna GF_AU_CHR_Louisa GF_AU_CHR_Lynnette GF_AU_CHR_Lucinda GF_AU_CHR_Mabel GF_AU_CHR_Marcia GF_AU_CHR_Marilyn GF_AU_CHR_Marissa GF_AU_CHR_Marjorie GF_AU_CHR_Maud GF_AU_CHR_Melanie GF_AU_CHR_Myrna GF_AU_CHR_Mavis GF_AU_CHR_Nadine GF_AU_CHR_Paula GF_AU_CHR_Penelope
+				GF_AU_CHR_Philippa GF_AU_CHR_Priscilla GF_AU_CHR_Rhonda GF_AU_CHR_Rita GF_AU_CHR_Roberta GF_AU_CHR_Rosamund GF_AU_CHR_Rosemary GF_AU_CHR_Roxanne GF_AU_CHR_Sabrina GF_AU_CHR_Selma GF_AU_CHR_Selina GF_AU_CHR_Sibyl GF_AU_CHR_Suzanne GF_AU_CHR_Tara GF_AU_CHR_Tabitha GF_AU_CHR_Thelma
+				GF_AU_CHR_Teresa GF_AU_CHR_Tiffany GF_AU_CHR_Vanessa GF_AU_CHR_Vivian GF_AU_CHR_Melissa GF_AU_CHR_Wanda GF_AU_CHR_Wendy GF_AU_CHR_Winifred GF_AU_CHR_Victoria GF_AU_CHR_Yvette GF_AU_CHR_Vera GF_AU_CHR_Zelda GF_AU_CHR_Joan GF_AU_CHR_Pamela GF_AU_CHR_Sherry GF_AU_CHR_Adrienne GF_AU_CHR_Monica
+				GF_AU_CHR_Irene GF_AU_CHR_Heather GF_AU_CHR_Lindsay GF_AU_CHR_Gillian GF_AU_CHR_Kristen GF_AU_CHR_Odette GF_AU_CHR_Felicia GF_AU_CHR_Christina GF_AU_CHR_Candace GF_AU_CHR_Arlene GF_AU_CHR_Tisha GF_AU_CHR_Majel GF_AU_CHR_Fran GF_AU_CHR_Doris GF_AU_CHR_Julie GF_AU_CHR_Courtney GF_AU_CHR_Shelly
+				GF_AU_CHR_Frances GF_AU_CHR_Mandy GF_AU_CHR_Mindy GF_AU_CHR_Rachel GF_AU_CHR_Miranda GF_AU_CHR_Virginia GF_AU_CHR_Gina GF_AU_CHR_Karla GF_AU_CHR_Tricia GF_AU_CHR_Diane GF_AU_CHR_Phyllis GF_AU_CHR_Sally GF_AU_CHR_Elaine GF_AU_CHR_Kara GF_AU_CHR_Shannon GF_AU_CHR_Susie GF_AU_CHR_Elle GF_AU_CHR_Gail GF_AU_CHR_Ann
+				GF_AU_CHR_Kathryn GF_AU_CHR_Tina GF_AU_CHR_Carrie GF_AU_CHR_Miriam GF_AU_CHR_Vivica GF_AU_CHR_Tamara GF_AU_CHR_Judy GF_AU_CHR_Willow GF_AU_CHR_Hilary GF_AU_CHR_Claire GF_AU_CHR_Danielle GF_AU_CHR_Teri GF_AU_CHR_Jackie GF_AU_CHR_Kelly GF_AU_CHR_Bonnie GF_AU_CHR_Holly GF_AU_CHR_Janice GF_AU_CHR_Brittney
+				GF_AU_CHR_Bianca GF_AU_CHR_Stephanie GF_AU_CHR_Natasha GF_AU_CHR_Lydia GF_AU_CHR_Mona GF_AU_CHR_Meredith GF_AU_CHR_Lynda GF_AU_CHR_Erica GF_AU_CHR_Heidi GF_AU_CHR_Paige GF_AU_CHR_Carmen GF_AU_CHR_Hayden GF_AU_CHR_Mallory GF_AU_CHR_Mercedes GF_AU_CHR_Marion GF_AU_CHR_Winona GF_AU_CHR_Jill
+				GF_AU_CHR_Molly GF_AU_CHR_Constance GF_AU_CHR_Jenny GF_AU_CHR_Penny GF_AU_CHR_Meryl GF_AU_CHR_Jodie GF_AU_CHR_Veronica GF_AU_CHR_April GF_AU_CHR_Sigourney GF_AU_CHR_Jillian GF_AU_CHR_Honor
+			}
+			second_names = {
+				GF_AU_CHR_Smith GF_AU_CHR_Jones GF_AU_CHR_Williams GF_AU_CHR_Taylor GF_AU_CHR_Brown GF_AU_CHR_Davies GF_AU_CHR_Evans GF_AU_CHR_Wilson GF_AU_CHR_Johnson GF_AU_CHR_Robinson GF_AU_CHR_Wright GF_AU_CHR_Thompson GF_AU_CHR_Evans GF_AU_CHR_Walker GF_AU_CHR_White GF_AU_CHR_Roberts GF_AU_CHR_Green GF_AU_CHR_Hall
+				GF_AU_CHR_Wood GF_AU_CHR_Jackson GF_AU_CHR_Clark GF_AU_CHR_Lewis GF_AU_CHR_Mason GF_AU_CHR_Mitchell GF_AU_CHR_Cox GF_AU_CHR_Campbell GF_AU_CHR_Stewart GF_AU_CHR_Quinn GF_AU_CHR_Murphy GF_AU_CHR_Hamilton GF_AU_CHR_Moore GF_AU_CHR_Murray GF_AU_CHR_McLaughlin GF_AU_CHR_Martin GF_AU_CHR_ONeill
+				GF_AU_CHR_Anderson GF_AU_CHR_Scott GF_AU_CHR_MacDonald GF_AU_CHR_Reid GF_AU_CHR_Ross GF_AU_CHR_Watson GF_AU_CHR_Patterson GF_AU_CHR_Morrison GF_AU_CHR_Sanders GF_AU_CHR_Harris GF_AU_CHR_Hughes GF_AU_CHR_Driscoll GF_AU_CHR_Price GF_AU_CHR_Jenkins GF_AU_CHR_Morgan GF_AU_CHR_Moss
+				GF_AU_CHR_Sinclair GF_AU_CHR_Simpson GF_AU_CHR_Zimmerman GF_AU_CHR_Young GF_AU_CHR_York GF_AU_CHR_Youngfellow GF_AU_CHR_Winters GF_AU_CHR_Worley GF_AU_CHR_Woodard GF_AU_CHR_Whitley GF_AU_CHR_Wheeler GF_AU_CHR_Wentworth GF_AU_CHR_West GF_AU_CHR_Weaver GF_AU_CHR_Webb GF_AU_CHR_Welsh
+				GF_AU_CHR_Sparks GF_AU_CHR_Spencer GF_AU_CHR_Stafford GF_AU_CHR_Stanley GF_AU_CHR_Steel GF_AU_CHR_Sterling GF_AU_CHR_Stevens GF_AU_CHR_Stone GF_AU_CHR_Stewart GF_AU_CHR_Sullivan GF_AU_CHR_Swanson GF_AU_CHR_Sweeney GF_AU_CHR_Swift GF_AU_CHR_Sykes GF_AU_CHR_Terrell GF_AU_CHR_Thornton
+				GF_AU_CHR_Tipton GF_AU_CHR_Turner GF_AU_CHR_Tyler GF_AU_CHR_Underwood GF_AU_CHR_Vincent GF_AU_CHR_Voight GF_AU_CHR_Wade GF_AU_CHR_Washington GF_AU_CHR_Watts GF_AU_CHR_OConnor GF_AU_CHR_ODonnell GF_AU_CHR_OHara GF_AU_CHR_Owens GF_AU_CHR_Page GF_AU_CHR_Palmer GF_AU_CHR_Parker
+				GF_AU_CHR_Perry GF_AU_CHR_Parson GF_AU_CHR_Paxton GF_AU_CHR_Payne GF_AU_CHR_Perkins GF_AU_CHR_Peters GF_AU_CHR_Pershing GF_AU_CHR_Phillips GF_AU_CHR_Pitt GF_AU_CHR_Potter GF_AU_CHR_Reynolds GF_AU_CHR_Reaves GF_AU_CHR_Reese GF_AU_CHR_Richardson GF_AU_CHR_Rivers GF_AU_CHR_Robbins
+				GF_AU_CHR_Robertson GF_AU_CHR_Roswell GF_AU_CHR_Ryan GF_AU_CHR_Salinger GF_AU_CHR_Samuels GF_AU_CHR_Sandler GF_AU_CHR_Savage GF_AU_CHR_Saxton GF_AU_CHR_Schneider GF_AU_CHR_Scowley GF_AU_CHR_Sedgwick GF_AU_CHR_Shannon GF_AU_CHR_Flint GF_AU_CHR_Sibbett GF_AU_CHR_Silverman
+				GF_AU_CHR_Silverstone GF_AU_CHR_Smart GF_AU_CHR_Snow GF_AU_CHR_Kruger GF_AU_CHR_Landau GF_AU_CHR_Lawrence GF_AU_CHR_Lawson GF_AU_CHR_Lee GF_AU_CHR_Leonard GF_AU_CHR_Little GF_AU_CHR_Lowell GF_AU_CHR_Michaels GF_AU_CHR_McGillis GF_AU_CHR_McKinnon GF_AU_CHR_McSwain GF_AU_CHR_McCoy
+				GF_AU_CHR_McCarthy GF_AU_CHR_McCormick GF_AU_CHR_McCreary GF_AU_CHR_Marshall GF_AU_CHR_Lynch GF_AU_CHR_Miller GF_AU_CHR_Montgomery GF_AU_CHR_Morris GF_AU_CHR_Nash GF_AU_CHR_Newman GF_AU_CHR_Nichols GF_AU_CHR_North GF_AU_CHR_Masterson GF_AU_CHR_Mayfield GF_AU_CHR_McCall
+				GF_AU_CHR_Hansen GF_AU_CHR_Harrington GF_AU_CHR_Hart GF_AU_CHR_Hendricks GF_AU_CHR_Holmes GF_AU_CHR_Higgins GF_AU_CHR_Hoffman GF_AU_CHR_Hood GF_AU_CHR_Hutchinson GF_AU_CHR_Hyland GF_AU_CHR_Knight GF_AU_CHR_Kirk GF_AU_CHR_King GF_AU_CHR_Kenway GF_AU_CHR_Kennedy GF_AU_CHR_Kelly
+				GF_AU_CHR_Kane GF_AU_CHR_Nathanson GF_AU_CHR_Jennings GF_AU_CHR_Jacobs GF_AU_CHR_Jefferies GF_AU_CHR_Irwin GF_AU_CHR_Gilbert GF_AU_CHR_Glass GF_AU_CHR_Glover GF_AU_CHR_Goldberg GF_AU_CHR_Goldstein GF_AU_CHR_Goodman GF_AU_CHR_Goodwin GF_AU_CHR_Graham GF_AU_CHR_Grant GF_AU_CHR_Graves
+				GF_AU_CHR_Gray GF_AU_CHR_Greenberg GF_AU_CHR_Gorney GF_AU_CHR_Griffin GF_AU_CHR_Halley GF_AU_CHR_Hunter GF_AU_CHR_Holloway GF_AU_CHR_Hoover GF_AU_CHR_Hutchins GF_AU_CHR_Hill GF_AU_CHR_Hines GF_AU_CHR_Holden GF_AU_CHR_Harvey GF_AU_CHR_Handler GF_AU_CHR_Cohen GF_AU_CHR_Collins GF_AU_CHR_Conrad
+				GF_AU_CHR_Conroy GF_AU_CHR_Cook GF_AU_CHR_Conley GF_AU_CHR_Compton GF_AU_CHR_Cody GF_AU_CHR_Crouch GF_AU_CHR_Crosby GF_AU_CHR_Curtis GF_AU_CHR_Fields GF_AU_CHR_Farrell GF_AU_CHR_Felton GF_AU_CHR_Fisher GF_AU_CHR_Fleming GF_AU_CHR_Forrest GF_AU_CHR_Foster GF_AU_CHR_Fox GF_AU_CHR_Freeman
+				GF_AU_CHR_Futterman GF_AU_CHR_Gardner GF_AU_CHR_Garrett GF_AU_CHR_Gates GF_AU_CHR_Garfield GF_AU_CHR_Gabriel GF_AU_CHR_Daniels GF_AU_CHR_Darling GF_AU_CHR_Easterbrook GF_AU_CHR_Edwards GF_AU_CHR_Edelstein GF_AU_CHR_Elliott GF_AU_CHR_Emerson GF_AU_CHR_Ericson
+				GF_AU_CHR_Duncan GF_AU_CHR_Dickinson GF_AU_CHR_Alexander GF_AU_CHR_Allen GF_AU_CHR_Austin GF_AU_CHR_Bauer GF_AU_CHR_Bancroft GF_AU_CHR_Baker GF_AU_CHR_Bailey GF_AU_CHR_Banks GF_AU_CHR_Barks GF_AU_CHR_Bassett GF_AU_CHR_Brewster GF_AU_CHR_Brooks GF_AU_CHR_Breckenridge GF_AU_CHR_Booth
+				GF_AU_CHR_Bloom GF_AU_CHR_Sherman GF_AU_CHR_Sheridan GF_AU_CHR_Billingsley GF_AU_CHR_Billings GF_AU_CHR_Bergman GF_AU_CHR_Bates GF_AU_CHR_Becker GF_AU_CHR_Bell GF_AU_CHR_Bellflower GF_AU_CHR_Bains GF_AU_CHR_Bean GF_AU_CHR_Cartwright GF_AU_CHR_Carpenter GF_AU_CHR_Buckland
+				GF_AU_CHR_Burness GF_AU_CHR_Burnett GF_AU_CHR_Bush GF_AU_CHR_Butler GF_AU_CHR_French GF_AU_CHR_England GF_AU_CHR_Carroll GF_AU_CHR_Carter GF_AU_CHR_Cavanaugh GF_AU_CHR_Chaffin GF_AU_CHR_Chase GF_AU_CHR_Channing GF_AU_CHR_Chapman GF_AU_CHR_Arnold GF_AU_CHR_Fry GF_AU_CHR_Milton
+				GF_AU_CHR_Sharp GF_AU_CHR_Durston GF_AU_CHR_Howell GF_AU_CHR_Mead GF_AU_CHR_Poole GF_AU_CHR_Ashton GF_AU_CHR_Brockbank GF_AU_CHR_Cooper GF_AU_CHR_Cursham GF_AU_CHR_Dixon GF_AU_CHR_Baxter GF_AU_CHR_Drake GF_AU_CHR_Garland GF_AU_CHR_Wells GF_AU_CHR_Hargreaves GF_AU_CHR_Houghton
+				GF_AU_CHR_Haygarth GF_AU_CHR_Hurst GF_AU_CHR_Kingsford GF_AU_CHR_Lindsay GF_AU_CHR_Rawson GF_AU_CHR_Walden GF_AU_CHR_Walters GF_AU_CHR_Whitfield GF_AU_CHR_Bennett GF_AU_CHR_Cross GF_AU_CHR_Buxton GF_AU_CHR_Dyson GF_AU_CHR_McMillan GF_AU_CHR_Russell GF_AU_CHR_Scott GF_AU_CHR_Beauclerk
+				GF_AU_CHR_Ward GF_AU_CHR_Howard GF_AU_CHR_Lloyd GF_AU_CHR_Tanner GF_AU_CHR_Nicholas GF_AU_CHR_Matthews GF_AU_CHR_Ellis GF_AU_CHR_Whyting GF_AU_CHR_Whittaker GF_AU_CHR_Barton GF_AU_CHR_Hawkins GF_AU_CHR_Garrovick GF_AU_CHR_Spector GF_AU_CHR_Reeves GF_AU_CHR_Vernon GF_AU_CHR_McNiven
+				GF_AU_CHR_Rowley GF_AU_CHR_Sandford GF_AU_CHR_Fawcett GF_AU_CHR_Lockhart GF_AU_CHR_Lang GF_AU_CHR_Oliphant GF_AU_CHR_Wilkins GF_AU_CHR_Balfour GF_AU_CHR_Appleby GF_AU_CHR_Buchanan GF_AU_CHR_Yardley GF_AU_CHR_Shaw GF_AU_CHR_Stokes GF_AU_CHR_Allenby GF_AU_CHR_Cockburn GF_AU_CHR_Mundy
+				GF_AU_CHR_Franklin GF_AU_CHR_Armstrong GF_AU_CHR_Chamberlain GF_AU_CHR_Powell GF_AU_CHR_Abbott GF_AU_CHR_Blair GF_AU_CHR_VanHoof GF_AU_CHR_VanRijn GF_AU_CHR_Burnside GF_AU_CHR_Schofield GF_AU_CHR_Farnsworth GF_AU_CHR_Ford GF_AU_CHR_Warner GF_AU_CHR_Porter
+				GF_AU_CHR_Barksdale GF_AU_CHR_Polk GF_AU_CHR_Gibbons GF_AU_CHR_Archer GF_AU_CHR_Pickett GF_AU_CHR_Houston GF_AU_CHR_Whitfield GF_AU_CHR_Pearson GF_AU_CHR_Lucas GF_AU_CHR_Horner GF_AU_CHR_Bainbridge GF_AU_CHR_Rollins GF_AU_CHR_Casey GF_AU_CHR_Cochrane GF_AU_CHR_Merchant
+				GF_AU_CHR_Bowden GF_AU_CHR_Douglas GF_AU_CHR_Muldoon GF_AU_CHR_Wickham GF_AU_CHR_Milligan GF_AU_CHR_Bradley GF_AU_CHR_Findley GF_AU_CHR_Spooner GF_AU_CHR_Harper GF_AU_CHR_Shepard GF_AU_CHR_Kingston GF_AU_CHR_Knox GF_AU_CHR_Colbeck GF_AU_CHR_Shields GF_AU_CHR_Burns GF_AU_CHR_Gibson
+				GF_AU_CHR_Burton GF_AU_CHR_Crutchley GF_AU_CHR_Gilligan GF_AU_CHR_Bridges GF_AU_CHR_Richter GF_AU_CHR_Fowler GF_AU_CHR_Novak GF_AU_CHR_Longfield GF_AU_CHR_Seabrook GF_AU_CHR_Hazelton GF_AU_CHR_Kingsley GF_AU_CHR_Doggart GF_AU_CHR_Wilcox GF_AU_CHR_Hudson GF_AU_CHR_Hooks GF_AU_CHR_Hicks
+				GF_AU_CHR_Cameron GF_AU_CHR_Hammond GF_AU_CHR_Knotts GF_AU_CHR_Jefferson GF_AU_CHR_Coffey GF_AU_CHR_Adams GF_AU_CHR_Babcock GF_AU_CHR_Baldwin GF_AU_CHR_Bannister GF_AU_CHR_Purcell GF_AU_CHR_Baumgartner GF_AU_CHR_Birch GF_AU_CHR_Blackwood GF_AU_CHR_Blake GF_AU_CHR_Bolander
+				GF_AU_CHR_Bolton GF_AU_CHR_Brock GF_AU_CHR_Brannigan GF_AU_CHR_Burke GF_AU_CHR_Weyland GF_AU_CHR_Burrows GF_AU_CHR_Cairns GF_AU_CHR_Carlyle GF_AU_CHR_Carson GF_AU_CHR_Charlesworth GF_AU_CHR_Church GF_AU_CHR_Clancy GF_AU_CHR_Cullen GF_AU_CHR_Dufresne GF_AU_CHR_Bixby GF_AU_CHR_Featherstone
+				GF_AU_CHR_Ferguson GF_AU_CHR_Foley GF_AU_CHR_Funk GF_AU_CHR_Gorman GF_AU_CHR_Haddock GF_AU_CHR_Grisdale GF_AU_CHR_Grimes GF_AU_CHR_Hoffmeyer GF_AU_CHR_Holt GF_AU_CHR_Ingram GF_AU_CHR_Kaiser GF_AU_CHR_Kearns GF_AU_CHR_Keeler GF_AU_CHR_Kellerman GF_AU_CHR_Kinnear GF_AU_CHR_Kurtz GF_AU_CHR_Kyle
+				GF_AU_CHR_Laidlaw GF_AU_CHR_Lankshear GF_AU_CHR_Lessard GF_AU_CHR_Lowe GF_AU_CHR_MacKenzie GF_AU_CHR_MacNevin GF_AU_CHR_MacInnis GF_AU_CHR_Madigan GF_AU_CHR_Maloney GF_AU_CHR_Marsh GF_AU_CHR_McAllister GF_AU_CHR_McBain GF_AU_CHR_Myers GF_AU_CHR_Nicholson GF_AU_CHR_Olsen
+				GF_AU_CHR_OMalley GF_AU_CHR_Peacock GF_AU_CHR_Peckham GF_AU_CHR_Murdoch GF_AU_CHR_Prefontaine GF_AU_CHR_Pratt GF_AU_CHR_Popovic GF_AU_CHR_Pritchard GF_AU_CHR_Quackenbush GF_AU_CHR_Penebscott GF_AU_CHR_Pfaffenbach GF_AU_CHR_Ramsey GF_AU_CHR_Quincey
+				GF_AU_CHR_Reilly GF_AU_CHR_Reinhart GF_AU_CHR_Renaud GF_AU_CHR_Rolston GF_AU_CHR_Shoebottom GF_AU_CHR_Skinner GF_AU_CHR_Sloan GF_AU_CHR_Snell GF_AU_CHR_Snider GF_AU_CHR_Sorensen GF_AU_CHR_Spiller GF_AU_CHR_Spurgeon GF_AU_CHR_Stanfield GF_AU_CHR_Stackhouse GF_AU_CHR_Stiles
+				GF_AU_CHR_Sutherland GF_AU_CHR_Sutton GF_AU_CHR_Taggart GF_AU_CHR_Townsend GF_AU_CHR_Traynor GF_AU_CHR_Stark GF_AU_CHR_Strudwick GF_AU_CHR_MacArthur GF_AU_CHR_Barnes GF_AU_CHR_Atkins GF_AU_CHR_Ballard GF_AU_CHR_Biggs GF_AU_CHR_Baird GF_AU_CHR_Fredericks GF_AU_CHR_Humphry
+				GF_AU_CHR_Colt GF_AU_CHR_Dillard GF_AU_CHR_Cunningham GF_AU_CHR_DeStefano GF_AU_CHR_Finks GF_AU_CHR_Fletcher GF_AU_CHR_Galloway GF_AU_CHR_Kirby GF_AU_CHR_Sutter GF_AU_CHR_Preston GF_AU_CHR_Tucker GF_AU_CHR_SmithJr GF_AU_CHR_WilliamsJr GF_AU_CHR_EvansJr
+				GF_AU_CHR_WalkerJr GF_AU_CHR_TaylorJr GF_AU_CHR_ScottJr GF_AU_CHR_MeriweatherII GF_AU_CHR_BarksdaleIII GF_AU_CHR_LeadbetterIV GF_AU_CHR_PembertonII GF_AU_CHR_TrapierIII GF_AU_CHR_Kowalski
+				GF_AU_CHR_Rabinowitz GF_AU_CHR_Feldman GF_AU_CHR_Katz GF_AU_CHR_Roykirk GF_AU_CHR_Decker
+			}
+			regnal_first_names_male = {
+				GF_AU_CHR_Alexander GF_AU_CHR_Vladimir GF_AU_CHR_Boris GF_AU_CHR_Tiberius GF_AU_CHR_Theobald GF_AU_CHR_Valerian GF_AU_CHR_Maximus GF_AU_CHR_Lucius
+			}
+			regnal_first_names_female = {
+				GF_AU_CHR_Theodora GF_AU_CHR_Fatima GF_AU_CHR_Miranda GF_AU_CHR_Cordelia GF_AU_CHR_Svetlana GF_AU_CHR_Anastasia GF_AU_CHR_Valentina GF_AU_CHR_Henrietta
+			}
+			regnal_second_names = {
+				GF_AU_CHR_Habsburg GF_AU_CHR_Romanov GF_AU_CHR_Windsor GF_AU_CHR_Mountbatten GF_AU_CHR_Salazar GF_AU_CHR_Nelson
+			}
+		}
+
+		names2 = {
+			weight = 20
+			first_names_male = {
+				GF_AU_CHR_Ivan GF_AU_CHR_Nikolai GF_AU_CHR_Boris GF_AU_CHR_Vladimir GF_AU_CHR_Pyotr GF_AU_CHR_Alexei GF_AU_CHR_Dmitri GF_AU_CHR_Sergei GF_AU_CHR_Viktor GF_AU_CHR_Roman GF_AU_CHR_Igor GF_AU_CHR_Mikhail GF_AU_CHR_Vasily GF_AU_CHR_Pavel GF_AU_CHR_Fyodor GF_AU_CHR_Nikita GF_AU_CHR_Valery
+				GF_AU_CHR_Vladislav GF_AU_CHR_Leonid GF_AU_CHR_Maxim GF_AU_CHR_Yuri GF_AU_CHR_Oleg GF_AU_CHR_Andrei GF_AU_CHR_Konstantin GF_AU_CHR_Vyacheslav GF_AU_CHR_Aleksandr GF_AU_CHR_Stanislav GF_AU_CHR_Anatoli GF_AU_CHR_Miroslav GF_AU_CHR_Artyom GF_AU_CHR_Bogdan
+				GF_AU_CHR_Branislav GF_AU_CHR_Ilya GF_AU_CHR_Jaroslav GF_AU_CHR_Radomir GF_AU_CHR_Kirill GF_AU_CHR_Radoslav GF_AU_CHR_Lubomir GF_AU_CHR_Ratimir GF_AU_CHR_Yegor GF_AU_CHR_Ijon
+			}
+			first_names_female = {
+				GF_AU_CHR_Anna GF_AU_CHR_Yelena GF_AU_CHR_Olga GF_AU_CHR_Oksana GF_AU_CHR_Tatyana GF_AU_CHR_Svetlana GF_AU_CHR_Nadya GF_AU_CHR_Yekaterina GF_AU_CHR_Irina GF_AU_CHR_Galina GF_AU_CHR_Miroslava GF_AU_CHR_Anastasia GF_AU_CHR_Vera GF_AU_CHR_Polina GF_AU_CHR_Lyudmila GF_AU_CHR_Elena
+				GF_AU_CHR_Marina GF_AU_CHR_Darya GF_AU_CHR_Irma GF_AU_CHR_Ksenia GF_AU_CHR_Alexandra GF_AU_CHR_Nadesja GF_AU_CHR_Valentina GF_AU_CHR_Arina GF_AU_CHR_Alya GF_AU_CHR_Galenka GF_AU_CHR_Katya GF_AU_CHR_Ljuba GF_AU_CHR_Radmila GF_AU_CHR_Natacha GF_AU_CHR_Vlada GF_AU_CHR_Nadezhda
+				GF_AU_CHR_Tatiana GF_AU_CHR_Sonia GF_AU_CHR_Mira
+
+			}
+			second_names_male = {
+				GF_AU_CHR_Grishin GF_AU_CHR_Fedorov GF_AU_CHR_Komarov GF_AU_CHR_Pushkov GF_AU_CHR_Petrenko GF_AU_CHR_Shatalov GF_AU_CHR_Ivanov GF_AU_CHR_Kamensky GF_AU_CHR_Vasiliev GF_AU_CHR_Ulanov GF_AU_CHR_Volkov GF_AU_CHR_Gryaznov GF_AU_CHR_Dudnik GF_AU_CHR_Yerzov GF_AU_CHR_Zhirov
+				GF_AU_CHR_Zhivenkov GF_AU_CHR_Kazakov GF_AU_CHR_Krutov GF_AU_CHR_Ivannikov GF_AU_CHR_Kolosov GF_AU_CHR_Kuzin GF_AU_CHR_Larionov GF_AU_CHR_Maksimushkin GF_AU_CHR_Markov GF_AU_CHR_Ostrovsky GF_AU_CHR_Polachev GF_AU_CHR_Rychenkov GF_AU_CHR_Romanov
+				GF_AU_CHR_Sayanovich GF_AU_CHR_Statnik GF_AU_CHR_Sorokin GF_AU_CHR_Turgenev GF_AU_CHR_Titov GF_AU_CHR_Tvardovsky GF_AU_CHR_Antonov GF_AU_CHR_Skobelev GF_AU_CHR_Lazarev GF_AU_CHR_Makarov GF_AU_CHR_Dragomirov GF_AU_CHR_Alekseyev GF_AU_CHR_Tichy
+			}
+			second_names_female = {
+				GF_AU_CHR_Grishina GF_AU_CHR_Fedorova GF_AU_CHR_Komarova GF_AU_CHR_Pushkova GF_AU_CHR_Petrenko GF_AU_CHR_Shatalova GF_AU_CHR_Ivanova GF_AU_CHR_Kamenskaya GF_AU_CHR_Vasilyeva GF_AU_CHR_Ulanova GF_AU_CHR_Volkova GF_AU_CHR_Gryaznova GF_AU_CHR_Dudnik GF_AU_CHR_Yerzova
+				GF_AU_CHR_Zhirova GF_AU_CHR_Zhivenkova GF_AU_CHR_Kazakova GF_AU_CHR_Krutova GF_AU_CHR_Ivannikova GF_AU_CHR_Kolosova GF_AU_CHR_Kuzina GF_AU_CHR_Larionova GF_AU_CHR_Maksimushkina GF_AU_CHR_Markova GF_AU_CHR_Ostrovskaya GF_AU_CHR_Polacheva GF_AU_CHR_Rychenkova
+				GF_AU_CHR_Romanova GF_AU_CHR_Statnik GF_AU_CHR_Sorokina GF_AU_CHR_Turgeneva GF_AU_CHR_Titova GF_AU_CHR_Tvardovskaya GF_AU_CHR_Antonova GF_AU_CHR_Skobeleva GF_AU_CHR_Lazareva GF_AU_CHR_Makarova GF_AU_CHR_Dragomirova GF_AU_CHR_Alekseyeva
+			}
+			regnal_first_names_male = {
+				GF_AU_CHR_Alexander GF_AU_CHR_Vladimir GF_AU_CHR_Boris GF_AU_CHR_Tiberius GF_AU_CHR_Theobald GF_AU_CHR_Valerian GF_AU_CHR_Maximus GF_AU_CHR_Lucius
+			}
+			regnal_first_names_female = {
+				GF_AU_CHR_Theodora GF_AU_CHR_Fatima GF_AU_CHR_Miranda GF_AU_CHR_Cordelia GF_AU_CHR_Svetlana GF_AU_CHR_Anastasia GF_AU_CHR_Valentina GF_AU_CHR_Henrietta
+			}
+			regnal_second_names = {
+				GF_AU_CHR_Habsburg GF_AU_CHR_Romanov GF_AU_CHR_Windsor GF_AU_CHR_Mountbatten GF_AU_CHR_Salazar GF_AU_CHR_Nelson
+			}
+		}
+
+		names3 = {
+			weight = 40
+			first_names_male = {
+				GF_AU_CHR_An GF_AU_CHR_Bao GF_AU_CHR_Bo GF_AU_CHR_Cai GF_AU_CHR_Cheng GF_AU_CHR_De GF_AU_CHR_Dong GF_AU_CHR_Feng GF_AU_CHR_Gang GF_AU_CHR_Guo GF_AU_CHR_Hu GF_AU_CHR_Hui GF_AU_CHR_Jian GF_AU_CHR_Jie GF_AU_CHR_Kang GF_AU_CHR_Li GF_AU_CHR_Liang GF_AU_CHR_Long GF_AU_CHR_Meng GF_AU_CHR_Ning GF_AU_CHR_Peng GF_AU_CHR_Qiang GF_AU_CHR_Shi GF_AU_CHR_Song GF_AU_CHR_Tao GF_AU_CHR_Tian GF_AU_CHR_Wei
+				GF_AU_CHR_You GF_AU_CHR_Yong GF_AU_CHR_Yi GF_AU_CHR_Xiong GF_AU_CHR_Wu
+			}
+			first_names_female = {
+				GF_AU_CHR_Ai GF_AU_CHR_Bi GF_AU_CHR_Cui GF_AU_CHR_Chan GF_AU_CHR_Dai GF_AU_CHR_Dan GF_AU_CHR_Fang GF_AU_CHR_Hong GF_AU_CHR_Hua GF_AU_CHR_Huan GF_AU_CHR_Jiao GF_AU_CHR_Ju GF_AU_CHR_Juan GF_AU_CHR_Lan GF_AU_CHR_Lian GF_AU_CHR_Lin GF_AU_CHR_Mei GF_AU_CHR_Na GF_AU_CHR_Ni GF_AU_CHR_Qian GF_AU_CHR_Qiao GF_AU_CHR_Qing GF_AU_CHR_Shan GF_AU_CHR_Shu GF_AU_CHR_Ting GF_AU_CHR_Wen GF_AU_CHR_Xia GF_AU_CHR_Xian
+				GF_AU_CHR_Xiang GF_AU_CHR_Xiu GF_AU_CHR_Xue GF_AU_CHR_Yan GF_AU_CHR_Ying GF_AU_CHR_Yu GF_AU_CHR_Yuan GF_AU_CHR_Yun GF_AU_CHR_Zhen GF_AU_CHR_Zhi GF_AU_CHR_Zhu GF_AU_CHR_Zi
+			}
+			second_names = {
+				GF_AU_CHR_Liang GF_AU_CHR_Luo GF_AU_CHR_Kuang GF_AU_CHR_Lu GF_AU_CHR_Zheng GF_AU_CHR_Lin GF_AU_CHR_Xu GF_AU_CHR_Xie GF_AU_CHR_Wang GF_AU_CHR_Zhu GF_AU_CHR_Yang GF_AU_CHR_Mao GF_AU_CHR_Shen GF_AU_CHR_Hu GF_AU_CHR_Tan GF_AU_CHR_He GF_AU_CHR_Deng GF_AU_CHR_Wu GF_AU_CHR_Cheng GF_AU_CHR_Gao GF_AU_CHR_Wan GF_AU_CHR_Kong GF_AU_CHR_Pan GF_AU_CHR_Sima GF_AU_CHR_Zhuge GF_AU_CHR_Ouyang GF_AU_CHR_Situ
+				GF_AU_CHR_Huang GF_AU_CHR_Zhao GF_AU_CHR_Zhang
+			}
+			regnal_first_names_male = {
+				GF_AU_CHR_You GF_AU_CHR_Yong GF_AU_CHR_Yi GF_AU_CHR_Xiong GF_AU_CHR_Wu GF_AU_CHR_Feng GF_AU_CHR_Gang GF_AU_CHR_Guo GF_AU_CHR_Hu GF_AU_CHR_Hui
+			}
+			regnal_first_names_female = {
+				GF_AU_CHR_Ai GF_AU_CHR_Bi GF_AU_CHR_Lian GF_AU_CHR_Lin GF_AU_CHR_Mei GF_AU_CHR_Na GF_AU_CHR_Ni GF_AU_CHR_Xiu GF_AU_CHR_Xue GF_AU_CHR_Yan GF_AU_CHR_Ying GF_AU_CHR_Yu GF_AU_CHR_Yuan
+			}
+			regnal_second_names = {
+				GF_AU_CHR_Wang GF_AU_CHR_Zhu GF_AU_CHR_Yang
+			}
+		}
+
+		names4 = {
+			weight = 15
+			first_names_male = {
+				GF_AU_CHR_Karl GF_AU_CHR_Wilhelm GF_AU_CHR_Otto GF_AU_CHR_Heinrich GF_AU_CHR_Friedrich GF_AU_CHR_Paul GF_AU_CHR_Hans GF_AU_CHR_Gustav GF_AU_CHR_Max GF_AU_CHR_Ernst GF_AU_CHR_Hermann GF_AU_CHR_Walter GF_AU_CHR_Werner GF_AU_CHR_Gunther GF_AU_CHR_Wolfgang GF_AU_CHR_Helmuth GF_AU_CHR_Kurt GF_AU_CHR_Rolf
+				GF_AU_CHR_Peter GF_AU_CHR_Klaus GF_AU_CHR_Gerhard GF_AU_CHR_Heinz GF_AU_CHR_Horst GF_AU_CHR_Manfred GF_AU_CHR_Uwe GF_AU_CHR_Jurgen GF_AU_CHR_Dieter GF_AU_CHR_Andreas GF_AU_CHR_Thomas GF_AU_CHR_Stefan GF_AU_CHR_Lukas GF_AU_CHR_Felix GF_AU_CHR_Martin GF_AU_CHR_Fritz GF_AU_CHR_Johann GF_AU_CHR_Erich GF_AU_CHR_Arnold
+				GF_AU_CHR_Bruno GF_AU_CHR_Franz GF_AU_CHR_Rudolf GF_AU_CHR_Erhard GF_AU_CHR_Jorg GF_AU_CHR_Axel GF_AU_CHR_Emil GF_AU_CHR_Gerhardt GF_AU_CHR_Gottfried GF_AU_CHR_Holger GF_AU_CHR_Joachim GF_AU_CHR_Konrad GF_AU_CHR_Lothar GF_AU_CHR_Ludwig GF_AU_CHR_Matthias GF_AU_CHR_Moritz GF_AU_CHR_Reinhard
+				GF_AU_CHR_Sigismund GF_AU_CHR_Ulrich GF_AU_CHR_Udo GF_AU_CHR_Hravn
+			}
+			first_names_female = {
+				GF_AU_CHR_Anna GF_AU_CHR_Elsa GF_AU_CHR_Emma GF_AU_CHR_Helga GF_AU_CHR_Ursula GF_AU_CHR_Gisela GF_AU_CHR_Ingrid GF_AU_CHR_Ilse GF_AU_CHR_Jessika GF_AU_CHR_Sandra GF_AU_CHR_Stefanie GF_AU_CHR_Andrea GF_AU_CHR_Anja GF_AU_CHR_Katrin GF_AU_CHR_Birgit GF_AU_CHR_Martina GF_AU_CHR_Heike GF_AU_CHR_Sabine GF_AU_CHR_Erika
+				GF_AU_CHR_Edith GF_AU_CHR_Lena GF_AU_CHR_Lisa GF_AU_CHR_Katharina GF_AU_CHR_Claudia GF_AU_CHR_Silvia GF_AU_CHR_Tina GF_AU_CHR_Annike GF_AU_CHR_Renate GF_AU_CHR_Bettina GF_AU_CHR_Wibke GF_AU_CHR_Sara GF_AU_CHR_Lina GF_AU_CHR_Julia GF_AU_CHR_Marith GF_AU_CHR_Heidi GF_AU_CHR_Angelika GF_AU_CHR_Christel
+				GF_AU_CHR_Gretchen GF_AU_CHR_Hilde GF_AU_CHR_Hildegard GF_AU_CHR_Gertrude GF_AU_CHR_Wilhelmina GF_AU_CHR_Lisbeth GF_AU_CHR_Kerstin GF_AU_CHR_Johanna GF_AU_CHR_Anita
+			}
+			second_names = {
+				GF_AU_CHR_Muller GF_AU_CHR_Schmidt GF_AU_CHR_Schneider GF_AU_CHR_Fischer GF_AU_CHR_Weber GF_AU_CHR_Meyer GF_AU_CHR_Wagner GF_AU_CHR_Schulz GF_AU_CHR_Becker GF_AU_CHR_Hoffmann GF_AU_CHR_Bauer GF_AU_CHR_Brinkmann GF_AU_CHR_Brill GF_AU_CHR_Dietrich GF_AU_CHR_Erhard GF_AU_CHR_Grasser
+				GF_AU_CHR_vonGebser GF_AU_CHR_vonFritsch GF_AU_CHR_vonWrangel GF_AU_CHR_vonHalkett GF_AU_CHR_vonBoyen GF_AU_CHR_vonFalkenstein GF_AU_CHR_Dreyer GF_AU_CHR_Wolf GF_AU_CHR_Klein GF_AU_CHR_Richter GF_AU_CHR_Schafer
+				GF_AU_CHR_Neumann GF_AU_CHR_Braun GF_AU_CHR_Schwarz GF_AU_CHR_Kruger GF_AU_CHR_Stein GF_AU_CHR_Keller GF_AU_CHR_Schubert GF_AU_CHR_Baumann GF_AU_CHR_Ziegler GF_AU_CHR_Brandt GF_AU_CHR_Sauer GF_AU_CHR_Kreutz GF_AU_CHR_Bergmeister GF_AU_CHR_Andbert
+			}
+			regnal_first_names_male = {
+				GF_AU_CHR_Alexander GF_AU_CHR_Vladimir GF_AU_CHR_Boris GF_AU_CHR_Tiberius GF_AU_CHR_Theobald GF_AU_CHR_Valerian GF_AU_CHR_Maximus GF_AU_CHR_Lucius
+			}
+			regnal_first_names_female = {
+				GF_AU_CHR_Theodora GF_AU_CHR_Fatima GF_AU_CHR_Miranda GF_AU_CHR_Cordelia GF_AU_CHR_Svetlana GF_AU_CHR_Anastasia GF_AU_CHR_Valentina GF_AU_CHR_Henrietta
+			}
+			regnal_second_names = {
+				GF_AU_CHR_Habsburg GF_AU_CHR_Romanov GF_AU_CHR_Windsor GF_AU_CHR_Mountbatten GF_AU_CHR_Salazar GF_AU_CHR_Nelson
+			}
+		}
+
+		names5 = {
+			weight = 15
+			first_names_male = {
+				GF_AU_CHR_Philippe GF_AU_CHR_Pierre GF_AU_CHR_Jean-Marie GF_AU_CHR_Marcel GF_AU_CHR_Francois GF_AU_CHR_Hubert GF_AU_CHR_Paul GF_AU_CHR_Antoine GF_AU_CHR_Michel GF_AU_CHR_Henri GF_AU_CHR_Marc GF_AU_CHR_Jean GF_AU_CHR_Maurice GF_AU_CHR_Rene GF_AU_CHR_Claude GF_AU_CHR_Yves GF_AU_CHR_Jacques
+				GF_AU_CHR_Simon GF_AU_CHR_Olivier GF_AU_CHR_Joseph GF_AU_CHR_Robert GF_AU_CHR_Georges GF_AU_CHR_Andre GF_AU_CHR_Raymond GF_AU_CHR_Gaston GF_AU_CHR_Charles GF_AU_CHR_Thierry GF_AU_CHR_Guy GF_AU_CHR_Patrice GF_AU_CHR_Mathieu GF_AU_CHR_Jean-Francois GF_AU_CHR_Lucien GF_AU_CHR_Jean-Paul
+				GF_AU_CHR_Daniel GF_AU_CHR_Thibault GF_AU_CHR_Luc GF_AU_CHR_Dominic GF_AU_CHR_Sebastien GF_AU_CHR_Hugo GF_AU_CHR_Jamie
+			}
+			first_names_female = {
+				GF_AU_CHR_Chloe GF_AU_CHR_Ines GF_AU_CHR_Manon GF_AU_CHR_Camille GF_AU_CHR_Clara GF_AU_CHR_Juliette GF_AU_CHR_Clemence GF_AU_CHR_Jeanne GF_AU_CHR_Charlotte GF_AU_CHR_Marie GF_AU_CHR_Nina GF_AU_CHR_Julia GF_AU_CHR_Elise GF_AU_CHR_Justine GF_AU_CHR_Yasmine GF_AU_CHR_Elina GF_AU_CHR_Andrea
+				GF_AU_CHR_Eleonore GF_AU_CHR_Clarisse GF_AU_CHR_Fanny GF_AU_CHR_Selma GF_AU_CHR_Leila GF_AU_CHR_Veronique GF_AU_CHR_Sophie GF_AU_CHR_Helena GF_AU_CHR_Daphne GF_AU_CHR_Suzanne GF_AU_CHR_Melanie GF_AU_CHR_Bernadette GF_AU_CHR_Maud GF_AU_CHR_Angeline GF_AU_CHR_Celine GF_AU_CHR_Jessica
+				GF_AU_CHR_Pauline GF_AU_CHR_Viviane GF_AU_CHR_Jeanette
+			}
+			second_names = {
+				GF_AU_CHR_Martin GF_AU_CHR_Bernard GF_AU_CHR_Dubois GF_AU_CHR_Durand GF_AU_CHR_Leroy GF_AU_CHR_Moreau GF_AU_CHR_Lambert GF_AU_CHR_Dupont GF_AU_CHR_Leclerc GF_AU_CHR_Laurent GF_AU_CHR_Renard GF_AU_CHR_Tremblay GF_AU_CHR_Gagnon GF_AU_CHR_Roy GF_AU_CHR_Bouchard GF_AU_CHR_Gauthier
+				GF_AU_CHR_Morin GF_AU_CHR_Lavoie GF_AU_CHR_Fortin GF_AU_CHR_Gagne GF_AU_CHR_Duval GF_AU_CHR_Hebert GF_AU_CHR_LeGall GF_AU_CHR_LeRoux GF_AU_CHR_Deville GF_AU_CHR_Gerard GF_AU_CHR_Duchaine GF_AU_CHR_Jauvin GF_AU_CHR_Gilbert GF_AU_CHR_Bergeron GF_AU_CHR_Paquette
+				GF_AU_CHR_Pelletier GF_AU_CHR_Remy GF_AU_CHR_Giroud GF_AU_CHR_Bosquet GF_AU_CHR_deCastelnau GF_AU_CHR_deMontaignac GF_AU_CHR_Lebouef GF_AU_CHR_Pellissier GF_AU_CHR_Deveraux
+			}
+			regnal_first_names_male = {
+				GF_AU_CHR_Alexander GF_AU_CHR_Vladimir GF_AU_CHR_Boris GF_AU_CHR_Tiberius GF_AU_CHR_Theobald GF_AU_CHR_Valerian GF_AU_CHR_Maximus GF_AU_CHR_Lucius
+			}
+			regnal_first_names_female = {
+				GF_AU_CHR_Theodora GF_AU_CHR_Fatima GF_AU_CHR_Miranda GF_AU_CHR_Cordelia GF_AU_CHR_Svetlana GF_AU_CHR_Anastasia GF_AU_CHR_Valentina GF_AU_CHR_Henrietta
+			}
+			regnal_second_names = {
+				GF_AU_CHR_Habsburg GF_AU_CHR_Romanov GF_AU_CHR_Windsor GF_AU_CHR_Mountbatten GF_AU_CHR_Salazar GF_AU_CHR_Nelson
+			}
+		}
+
+		names6 = {
+			weight = 15
+			first_names_male = {
+				GF_AU_CHR_Hiroto GF_AU_CHR_Hikaru GF_AU_CHR_Takumi GF_AU_CHR_Tsubasa GF_AU_CHR_Ren GF_AU_CHR_Minato GF_AU_CHR_Shota GF_AU_CHR_Yuuto GF_AU_CHR_Sota GF_AU_CHR_Yuma GF_AU_CHR_Takeru GF_AU_CHR_Rikuto GF_AU_CHR_Tatsuki GF_AU_CHR_Ryuto GF_AU_CHR_Haru GF_AU_CHR_Yushin GF_AU_CHR_Kosei GF_AU_CHR_Yoshinobu
+				GF_AU_CHR_Jiro GF_AU_CHR_Hiroshi GF_AU_CHR_Yoshida GF_AU_CHR_Mitsue GF_AU_CHR_Keisuke GF_AU_CHR_Saburo GF_AU_CHR_Junichi GF_AU_CHR_Yoshi GF_AU_CHR_Koshiro GF_AU_CHR_Kentaro GF_AU_CHR_Koichiro
+			}
+			first_names_female = {
+				GF_AU_CHR_Haruna GF_AU_CHR_Sakura GF_AU_CHR_Misaki GF_AU_CHR_Aoi GF_AU_CHR_Mihane GF_AU_CHR_Miyu GF_AU_CHR_Rin GF_AU_CHR_Nanami GF_AU_CHR_Yui GF_AU_CHR_Hina GF_AU_CHR_Honoka GF_AU_CHR_Riko GF_AU_CHR_Yuna GF_AU_CHR_Koharu GF_AU_CHR_Hinata GF_AU_CHR_Mei GF_AU_CHR_Saki GF_AU_CHR_Ichika GF_AU_CHR_Hiyori GF_AU_CHR_Yusuki
+				GF_AU_CHR_Shiori GF_AU_CHR_Natsuki GF_AU_CHR_Ayane GF_AU_CHR_Kaho GF_AU_CHR_Hana GF_AU_CHR_Momoka GF_AU_CHR_Himari GF_AU_CHR_Yume GF_AU_CHR_Aomame GF_AU_CHR_Noriko GF_AU_CHR_Kazumi GF_AU_CHR_Kimiko
+			}
+			second_names = {
+				GF_AU_CHR_Sato GF_AU_CHR_Suzuki GF_AU_CHR_Takahashi GF_AU_CHR_Tanaka GF_AU_CHR_Watanabe GF_AU_CHR_Ito GF_AU_CHR_Nakamura GF_AU_CHR_Kobayashi GF_AU_CHR_Yamamoto GF_AU_CHR_Kato GF_AU_CHR_Yoshida GF_AU_CHR_Yamada GF_AU_CHR_Sasaki GF_AU_CHR_Yamaguchi GF_AU_CHR_Matsumoto
+				GF_AU_CHR_Inoue GF_AU_CHR_Kimura GF_AU_CHR_Shimizu GF_AU_CHR_Hayashi GF_AU_CHR_Saito GF_AU_CHR_Yamazaki GF_AU_CHR_Nakajima GF_AU_CHR_Mori GF_AU_CHR_Abe GF_AU_CHR_Ikeda GF_AU_CHR_Hashimoto GF_AU_CHR_Ishikawa GF_AU_CHR_Yamashita GF_AU_CHR_Ogawa GF_AU_CHR_Ishii GF_AU_CHR_Hasegawa
+				GF_AU_CHR_Goto GF_AU_CHR_Okada GF_AU_CHR_Fujita GF_AU_CHR_Sakamoto GF_AU_CHR_Murakami GF_AU_CHR_Nishimura GF_AU_CHR_Nakagawa GF_AU_CHR_Harada GF_AU_CHR_Okamoto GF_AU_CHR_Miura GF_AU_CHR_Takaya GF_AU_CHR_Amano GF_AU_CHR_Higuchi GF_AU_CHR_Ota
+			}
+			regnal_first_names_male = {
+				GF_AU_CHR_Teruhito GF_AU_CHR_Nekuhiko GF_AU_CHR_Mimatsuhiko GF_AU_CHR_Anaho GF_AU_CHR_Hironari GF_AU_CHR_Norinaga
+			}
+			regnal_first_names_female = {
+				GF_AU_CHR_Nukatabe GF_AU_CHR_Toyomike GF_AU_CHR_Takara GF_AU_CHR_Niinomi GF_AU_CHR_Hidaka GF_AU_CHR_Takama GF_AU_CHR_Okiko GF_AU_CHR_Toshiko
+			}
+			regnal_second_names = {
+				GF_AU_CHR_noMikoto GF_AU_CHR_Sumeramikoto GF_AU_CHR_Otomo GF_AU_CHR_Suijin GF_AU_CHR_Mononobe GF_AU_CHR_Yamato
+			}
+		}
+
+		names7 = {
+			weight = 15
+			first_names_male = {
+				GF_AU_CHR_Aarav GF_AU_CHR_Vivaan GF_AU_CHR_Aditya GF_AU_CHR_Arjun GF_AU_CHR_Reyansh GF_AU_CHR_Arnav GF_AU_CHR_Krishna GF_AU_CHR_Ishaan GF_AU_CHR_Shaurya GF_AU_CHR_Atharv GF_AU_CHR_Advik GF_AU_CHR_Pranav GF_AU_CHR_Advaith GF_AU_CHR_Dhruv GF_AU_CHR_Kabir GF_AU_CHR_Ritvik GF_AU_CHR_Aarush
+				GF_AU_CHR_Kayaan GF_AU_CHR_Darsh GF_AU_CHR_Veer GF_AU_CHR_Rahul GF_AU_CHR_Mahesh GF_AU_CHR_Shyam GF_AU_CHR_Raj GF_AU_CHR_Kumar GF_AU_CHR_Palash GF_AU_CHR_Rakesh GF_AU_CHR_Nishant GF_AU_CHR_Neeraj GF_AU_CHR_Prathamesh GF_AU_CHR_Shubham
+			}
+			first_names_female = {
+				GF_AU_CHR_Saanvi GF_AU_CHR_Aanya GF_AU_CHR_Aadhya GF_AU_CHR_Aaradhya GF_AU_CHR_Ananya GF_AU_CHR_Pari GF_AU_CHR_Anika GF_AU_CHR_Navya GF_AU_CHR_Diya GF_AU_CHR_Avani GF_AU_CHR_Myra GF_AU_CHR_Ira GF_AU_CHR_Aahana GF_AU_CHR_Anvi GF_AU_CHR_Prisha GF_AU_CHR_Riya GF_AU_CHR_Aarohi GF_AU_CHR_Anaya GF_AU_CHR_Akshara
+				GF_AU_CHR_Shanaya GF_AU_CHR_Kyra GF_AU_CHR_Siya GF_AU_CHR_Priyanka GF_AU_CHR_Divya GF_AU_CHR_Mahima GF_AU_CHR_Shivangi GF_AU_CHR_Juvina GF_AU_CHR_Anoushka GF_AU_CHR_Anushri GF_AU_CHR_Apoorva GF_AU_CHR_Sanjana
+			}
+			second_names = {
+				GF_AU_CHR_Kumar GF_AU_CHR_Moorthi GF_AU_CHR_Shastri GF_AU_CHR_Prasad GF_AU_CHR_Acharya GF_AU_CHR_Swamy GF_AU_CHR_Pillai GF_AU_CHR_Gowda GF_AU_CHR_Nayak GF_AU_CHR_Desmukh GF_AU_CHR_Bhat GF_AU_CHR_Bhandary GF_AU_CHR_Poojary GF_AU_CHR_Upadhyay GF_AU_CHR_Chowta GF_AU_CHR_Naik
+				GF_AU_CHR_Kulkarni GF_AU_CHR_Dodamani GF_AU_CHR_Patil GF_AU_CHR_Gupta GF_AU_CHR_Sharma GF_AU_CHR_Namboodiri GF_AU_CHR_Pannikar GF_AU_CHR_Potti GF_AU_CHR_Kutty GF_AU_CHR_Varma GF_AU_CHR_Sondharam GF_AU_CHR_Sooriyaprakash GF_AU_CHR_Chandran GF_AU_CHR_Vijay
+				GF_AU_CHR_Venktaesan GF_AU_CHR_Puttappa
+			}
+			regnal_first_names_male = {
+				GF_AU_CHR_Kayaan GF_AU_CHR_Darsh GF_AU_CHR_Veer GF_AU_CHR_Rahul GF_AU_CHR_Mahesh GF_AU_CHR_Shaurya GF_AU_CHR_Atharv GF_AU_CHR_Advik GF_AU_CHR_Pranav
+			}
+			regnal_first_names_female = {
+				GF_AU_CHR_Saanvi GF_AU_CHR_Aanya GF_AU_CHR_Aadhya GF_AU_CHR_Aaradhya GF_AU_CHR_Ananya GF_AU_CHR_Priyanka GF_AU_CHR_Divya GF_AU_CHR_Mahima GF_AU_CHR_Shivangi
+			}
+			regnal_second_names = {
+				GF_AU_CHR_Kumar GF_AU_CHR_Moorthi GF_AU_CHR_Shastri GF_AU_CHR_Prasad GF_AU_CHR_Acharya GF_AU_CHR_Patil GF_AU_CHR_Gupta GF_AU_CHR_Sharma GF_AU_CHR_Namboodiri GF_AU_CHR_Pannikar GF_AU_CHR_Potti GF_AU_CHR_Kutty GF_AU_CHR_Varma GF_AU_CHR_Sondharam
+			}
+		}
+
+		names8 = {
+			weight = 25
+			first_names_male = {
+				GF_AU_CHR_Diego GF_AU_CHR_Luis GF_AU_CHR_Pedro GF_AU_CHR_Joaquin GF_AU_CHR_Jose GF_AU_CHR_Emilio GF_AU_CHR_Eduardo GF_AU_CHR_Alejandro GF_AU_CHR_Carlos GF_AU_CHR_Fernando GF_AU_CHR_Francisco GF_AU_CHR_Julio GF_AU_CHR_JoseAntonio GF_AU_CHR_JoseManuel GF_AU_CHR_Juan
+				GF_AU_CHR_JoseMaria GF_AU_CHR_Ignacio GF_AU_CHR_Manuel GF_AU_CHR_Pablo GF_AU_CHR_Miguel GF_AU_CHR_Ramon GF_AU_CHR_Raimundo GF_AU_CHR_Santiago GF_AU_CHR_Ricardo GF_AU_CHR_Marcelo GF_AU_CHR_Javier GF_AU_CHR_Gaspar GF_AU_CHR_Alfonso GF_AU_CHR_Lorenzo GF_AU_CHR_Enrique
+				GF_AU_CHR_Ernesto GF_AU_CHR_Gerardo GF_AU_CHR_Guillermo GF_AU_CHR_Jesus GF_AU_CHR_Salvadore GF_AU_CHR_Sergio GF_AU_CHR_Roberto GF_AU_CHR_Esteban
+			}
+			first_names_female = {
+				GF_AU_CHR_Hortensia GF_AU_CHR_Isabel GF_AU_CHR_Valentina GF_AU_CHR_Alejandra GF_AU_CHR_Alicia GF_AU_CHR_Antonia GF_AU_CHR_Carla GF_AU_CHR_Carmen GF_AU_CHR_Catalina GF_AU_CHR_Dolores GF_AU_CHR_Estefania GF_AU_CHR_Eva GF_AU_CHR_Fernanda GF_AU_CHR_Florencia
+				GF_AU_CHR_Gabriela GF_AU_CHR_Grizelda GF_AU_CHR_Maria GF_AU_CHR_Lorena GF_AU_CHR_Magdalena GF_AU_CHR_Mercedes GF_AU_CHR_Miriam GF_AU_CHR_Paulina GF_AU_CHR_Sofia GF_AU_CHR_Yolanda GF_AU_CHR_Camila GF_AU_CHR_Luciana GF_AU_CHR_Valeria GF_AU_CHR_Mariana GF_AU_CHR_Daniela
+				GF_AU_CHR_Martina GF_AU_CHR_Julieta GF_AU_CHR_Antonella GF_AU_CHR_Renata GF_AU_CHR_Agustina GF_AU_CHR_Constanza GF_AU_CHR_Fabiana
+			}
+			second_names = {
+				GF_AU_CHR_Garcia GF_AU_CHR_Martinez GF_AU_CHR_Rodriguez GF_AU_CHR_Fernandez GF_AU_CHR_Sanchez GF_AU_CHR_Lopez GF_AU_CHR_Martin GF_AU_CHR_Perez GF_AU_CHR_Gonzalez GF_AU_CHR_Alvarez GF_AU_CHR_Gomez GF_AU_CHR_Diaz GF_AU_CHR_Dominguez GF_AU_CHR_Hernandez
+				GF_AU_CHR_Ramirez GF_AU_CHR_Mendez GF_AU_CHR_Perez GF_AU_CHR_Vasquez GF_AU_CHR_Ruiz GF_AU_CHR_Aguera GF_AU_CHR_Alonso GF_AU_CHR_Batista GF_AU_CHR_Esguerra GF_AU_CHR_Flores GF_AU_CHR_delaGuardia GF_AU_CHR_delaCruz GF_AU_CHR_delaVega
+				GF_AU_CHR_deVargas GF_AU_CHR_Ibanez GF_AU_CHR_Moralez GF_AU_CHR_Riveros GF_AU_CHR_Rosario GF_AU_CHR_Velazco GF_AU_CHR_Torres GF_AU_CHR_Quesada GF_AU_CHR_Saldana GF_AU_CHR_Salazar GF_AU_CHR_Ortega GF_AU_CHR_Ortiz GF_AU_CHR_Solano GF_AU_CHR_Romero
+			}
+			regnal_first_names_male = {
+				GF_AU_CHR_Santiago GF_AU_CHR_Ricardo GF_AU_CHR_Marcelo GF_AU_CHR_Javier GF_AU_CHR_Ernesto GF_AU_CHR_Gerardo GF_AU_CHR_Guillermo
+			}
+			regnal_first_names_female = {
+				GF_AU_CHR_Alicia GF_AU_CHR_Antonia GF_AU_CHR_Carla GF_AU_CHR_Carmen GF_AU_CHR_Catalina GF_AU_CHR_Dolores GF_AU_CHR_Martina GF_AU_CHR_Julieta GF_AU_CHR_Antonella GF_AU_CHR_Renata
+			}
+			regnal_second_names = {
+				GF_AU_CHR_Fernandez GF_AU_CHR_Sanchez GF_AU_CHR_Lopez GF_AU_CHR_Martin GF_AU_CHR_Perez GF_AU_CHR_Gonzalez GF_AU_CHR_Alvarez GF_AU_CHR_Gomez GF_AU_CHR_Diaz
+			}
+		}
+
+		names9 = {
+			weight = 15
+			first_names_male = {
+				GF_AU_CHR_Abdullah GF_AU_CHR_Abbas GF_AU_CHR_Abed GF_AU_CHR_Ahmad GF_AU_CHR_Ahmed GF_AU_CHR_Ali GF_AU_CHR_Ammar GF_AU_CHR_Amir GF_AU_CHR_Hamza GF_AU_CHR_Hassan GF_AU_CHR_Hydar GF_AU_CHR_Ibrahim GF_AU_CHR_Jamal GF_AU_CHR_Kareem GF_AU_CHR_Khathem GF_AU_CHR_Khalil GF_AU_CHR_Khalid GF_AU_CHR_Malik GF_AU_CHR_Mahdi
+				GF_AU_CHR_Hussein GF_AU_CHR_Mohamed GF_AU_CHR_Mohammad GF_AU_CHR_Mohammed GF_AU_CHR_Muhammad GF_AU_CHR_Muhammed GF_AU_CHR_Nasir GF_AU_CHR_Omar GF_AU_CHR_Rashad GF_AU_CHR_Rashid GF_AU_CHR_Samir GF_AU_CHR_Tariq GF_AU_CHR_Yahir GF_AU_CHR_Yasin GF_AU_CHR_Yusuf GF_AU_CHR_Barak
+			}
+			first_names_female = {
+				GF_AU_CHR_Alma GF_AU_CHR_Amani GF_AU_CHR_Amira GF_AU_CHR_Aisha GF_AU_CHR_Fatima GF_AU_CHR_Hala GF_AU_CHR_Hana GF_AU_CHR_Hasti GF_AU_CHR_Imani GF_AU_CHR_Jana GF_AU_CHR_Jaliyah GF_AU_CHR_Jazmin GF_AU_CHR_Jenna GF_AU_CHR_Kaliyah GF_AU_CHR_Layan GF_AU_CHR_Leen GF_AU_CHR_Leila GF_AU_CHR_Lydia GF_AU_CHR_Malak GF_AU_CHR_Maryam
+				GF_AU_CHR_Maritza GF_AU_CHR_Mina GF_AU_CHR_Naima GF_AU_CHR_Noor GF_AU_CHR_Salma GF_AU_CHR_Samira GF_AU_CHR_Sanaa GF_AU_CHR_Yesenia GF_AU_CHR_Zahra GF_AU_CHR_Satayesh GF_AU_CHR_Zeinab GF_AU_CHR_Reihaneh GF_AU_CHR_Mobina GF_AU_CHR_Narges GF_AU_CHR_Masoumeh GF_AU_CHR_Sakineh GF_AU_CHR_Aya
+			}
+			second_names = {
+				GF_AU_CHR_Barakat GF_AU_CHR_Abbas GF_AU_CHR_AbdelNour GF_AU_CHR_Abboud GF_AU_CHR_al-Ahdal GF_AU_CHR_al-Ajlani GF_AU_CHR_al-Bariqi GF_AU_CHR_al-Mubarak GF_AU_CHR_Adwam GF_AU_CHR_Akkad GF_AU_CHR_Alawi GF_AU_CHR_al-Asiri GF_AU_CHR_al-Atrash GF_AU_CHR_al-Dimashqi
+				GF_AU_CHR_Bakir GF_AU_CHR_Hussein GF_AU_CHR_al-Hazmi GF_AU_CHR_al-Bishi GF_AU_CHR_El-Baz GF_AU_CHR_Ibrahim GF_AU_CHR_Ishak GF_AU_CHR_Ismail GF_AU_CHR_El-Farouk GF_AU_CHR_Hassan GF_AU_CHR_El-Ghazali GF_AU_CHR_Bilal GF_AU_CHR_Nadir GF_AU_CHR_Juhani GF_AU_CHR_Jawahir GF_AU_CHR_Hamidi
+				GF_AU_CHR_al-Jazari GF_AU_CHR_al-Samarrai GF_AU_CHR_Salman GF_AU_CHR_Qasim GF_AU_CHR_Qudsi GF_AU_CHR_Qaderi GF_AU_CHR_al-Qadi GF_AU_CHR_Farrokhzad GF_AU_CHR_Madani GF_AU_CHR_Sassani GF_AU_CHR_Turani GF_AU_CHR_Khadem GF_AU_CHR_Ghorbani GF_AU_CHR_Jamshidi GF_AU_CHR_Rahimi
+			}
+			regnal_first_names_male = {
+				GF_AU_CHR_Abdullah GF_AU_CHR_Abbas GF_AU_CHR_Abed GF_AU_CHR_Khalil GF_AU_CHR_Khalid GF_AU_CHR_Malik GF_AU_CHR_Mahdi GF_AU_CHR_Nasir GF_AU_CHR_Omar GF_AU_CHR_Rashad GF_AU_CHR_Rashid GF_AU_CHR_Samir
+			}
+			regnal_first_names_female = {
+				GF_AU_CHR_Zeinab GF_AU_CHR_Reihaneh GF_AU_CHR_Mobina GF_AU_CHR_Narges GF_AU_CHR_Masoumeh GF_AU_CHR_Sakineh GF_AU_CHR_Aya GF_AU_CHR_Alma GF_AU_CHR_Amani GF_AU_CHR_Amira
+			}
+			regnal_second_names = {
+				GF_AU_CHR_arakat GF_AU_CHR_Abbas GF_AU_CHR_AbdelNour GF_AU_CHR_Abboud GF_AU_CHR_al-Ahdal GF_AU_CHR_al-Jazari GF_AU_CHR_al-Samarrai GF_AU_CHR_Salman GF_AU_CHR_Qasim GF_AU_CHR_Qudsi GF_AU_CHR_Qaderi GF_AU_CHR_al-Qadi GF_AU_CHR_Farrokhzad GF_AU_CHR_Madani
+			}
+		}
+
+		names10 = {
+			weight = 15
+			first_names_male = {
+				GF_AU_CHR_Faraji GF_AU_CHR_Imamu GF_AU_CHR_Jelani GF_AU_CHR_Jengo GF_AU_CHR_Jumaane GF_AU_CHR_Khamisi GF_AU_CHR_Kibwe GF_AU_CHR_Mosi GF_AU_CHR_Mwenye GF_AU_CHR_Sefu GF_AU_CHR_Simba GF_AU_CHR_Tendaji GF_AU_CHR_Zuberi GF_AU_CHR_Abasi GF_AU_CHR_Annan GF_AU_CHR_Azizi GF_AU_CHR_Badru GF_AU_CHR_Bakari GF_AU_CHR_Bwana
+				GF_AU_CHR_Chane GF_AU_CHR_Chuma GF_AU_CHR_Enzi GF_AU_CHR_Faraji GF_AU_CHR_Hanisi GF_AU_CHR_Idi GF_AU_CHR_Issa GF_AU_CHR_Jabari GF_AU_CHR_Akani GF_AU_CHR_Aluwanip GF_AU_CHR_Ayanda GF_AU_CHR_Bambanani GF_AU_CHR_Bheka GF_AU_CHR_Bhekithemba GF_AU_CHR_Bhekizizwe GF_AU_CHR_Butholezwe GF_AU_CHR_Dikotsi
+				GF_AU_CHR_Dzingai GF_AU_CHR_Esaia GF_AU_CHR_Hangwani GF_AU_CHR_Humbe GF_AU_CHR_Kabelo GF_AU_CHR_Khathu GF_AU_CHR_Khumbu GF_AU_CHR_Kutlwano GF_AU_CHR_Kwanele GF_AU_CHR_Lentswe GF_AU_CHR_Lesebo GF_AU_CHR_Letswalo GF_AU_CHR_Lutendo GF_AU_CHR_Mahlubandile GF_AU_CHR_Makalo GF_AU_CHR_Mareka
+				GF_AU_CHR_Masingita GF_AU_CHR_Moeketsi GF_AU_CHR_Molapo GF_AU_CHR_Mosemotsane GF_AU_CHR_Motlalentwa GF_AU_CHR_Mothusi GF_AU_CHR_Msizi GF_AU_CHR_Mzwamadoda GF_AU_CHR_Nthofeela GF_AU_CHR_Oagile GF_AU_CHR_Paseka GF_AU_CHR_Phahamo GF_AU_CHR_Poloko GF_AU_CHR_Qukeza GF_AU_CHR_Refilwe
+				GF_AU_CHR_Sanele GF_AU_CHR_Sbu GF_AU_CHR_Sehlolo GF_AU_CHR_Sekgolokhane GF_AU_CHR_Sibusiso GF_AU_CHR_Sizwe GF_AU_CHR_Teboho GF_AU_CHR_Thabiso GF_AU_CHR_Themba GF_AU_CHR_Thuso GF_AU_CHR_Tsebo GF_AU_CHR_Tsehla GF_AU_CHR_Tshawe GF_AU_CHR_Unathi GF_AU_CHR_Wandile GF_AU_CHR_Mbutu GF_AU_CHR_Kofi
+			}
+			first_names_female = {
+				GF_AU_CHR_Asha GF_AU_CHR_Abla GF_AU_CHR_Adhra GF_AU_CHR_Adila GF_AU_CHR_Aeeshah GF_AU_CHR_Afiya GF_AU_CHR_Chausiku GF_AU_CHR_Eshe GF_AU_CHR_Furaha GF_AU_CHR_Imani GF_AU_CHR_Kamaria GF_AU_CHR_Marjani GF_AU_CHR_Mchumba GF_AU_CHR_Mwanajuma GF_AU_CHR_Nia GF_AU_CHR_Nuru GF_AU_CHR_Sanaa GF_AU_CHR_Sauda GF_AU_CHR_Subira
+				GF_AU_CHR_Zuri GF_AU_CHR_Aizivaishe GF_AU_CHR_Anatswanashe GF_AU_CHR_Anodiwa GF_AU_CHR_Anokosha GF_AU_CHR_Awande GF_AU_CHR_Bokang GF_AU_CHR_Bongani GF_AU_CHR_Dikeledi GF_AU_CHR_Edzai GF_AU_CHR_Fikile GF_AU_CHR_Gugu GF_AU_CHR_Kagiso GF_AU_CHR_Keneuwe GF_AU_CHR_Koketso GF_AU_CHR_Langalibalele
+				GF_AU_CHR_Lerato GF_AU_CHR_Lindidwe GF_AU_CHR_Litsoanelo GF_AU_CHR_Lulama GF_AU_CHR_Majobo GF_AU_CHR_Maletsatsi GF_AU_CHR_Matshediso GF_AU_CHR_Mbali GF_AU_CHR_Mmaabo GF_AU_CHR_Mncedisi GF_AU_CHR_Mohau GF_AU_CHR_Moratuoa GF_AU_CHR_Muambiwa GF_AU_CHR_Nnyadzeni GF_AU_CHR_Nofoto
+				GF_AU_CHR_Nthati GF_AU_CHR_Ntsebo GF_AU_CHR_Ntswaki GF_AU_CHR_Phathu GF_AU_CHR_Reneilwe GF_AU_CHR_Rudzani GF_AU_CHR_Shandu GF_AU_CHR_Sinethemba GF_AU_CHR_Sizani GF_AU_CHR_Thanduxolo GF_AU_CHR_Tshanduko GF_AU_CHR_Tungu GF_AU_CHR_Zinhle
+			}
+			second_names = {
+				GF_AU_CHR_Azikiwe GF_AU_CHR_Awolowo GF_AU_CHR_Balewa GF_AU_CHR_Akintola GF_AU_CHR_Nzeogwu GF_AU_CHR_Onwuatuegwu GF_AU_CHR_Okeke GF_AU_CHR_Okonkwo GF_AU_CHR_Babangida GF_AU_CHR_Buhari GF_AU_CHR_Dimka GF_AU_CHR_Ibori GF_AU_CHR_Jomo-Gbomo GF_AU_CHR_Iwu GF_AU_CHR_Bamgboshe GF_AU_CHR_Biobaku
+				GF_AU_CHR_Tinibu GF_AU_CHR_Akinjide GF_AU_CHR_Akiloye GF_AU_CHR_Adeyemi GF_AU_CHR_Sekibo GF_AU_CHR_Bankole GF_AU_CHR_Nnamani GF_AU_CHR_Okadigbo GF_AU_CHR_Ironsi GF_AU_CHR_Ojukwu GF_AU_CHR_Chukwumereije GF_AU_CHR_Iweala GF_AU_CHR_Okonjo GF_AU_CHR_Gbadamosi GF_AU_CHR_Olanrewaju
+				GF_AU_CHR_Madaki GF_AU_CHR_Oyinlola GF_AU_CHR_Onyejekwe GF_AU_CHR_Jakande GF_AU_CHR_Ngige GF_AU_CHR_Uba GF_AU_CHR_Ohakim GF_AU_CHR_Alakija GF_AU_CHR_Onobanjo GF_AU_CHR_Mbanefo GF_AU_CHR_Mbadinuju GF_AU_CHR_Ekwensi GF_AU_CHR_Gowon GF_AU_CHR_Saro-Wiwa GF_AU_CHR_Naidoo GF_AU_CHR_Swanepoel
+				GF_AU_CHR_Msibi GF_AU_CHR_Ngobese GF_AU_CHR_Ngema GF_AU_CHR_Masuku GF_AU_CHR_Khonjwayo GF_AU_CHR_Khumalo GF_AU_CHR_Kwayi GF_AU_CHR_Mambi GF_AU_CHR_Mbanjwa GF_AU_CHR_Mkhwemte GF_AU_CHR_Mtakwenda GF_AU_CHR_Ngwanya GF_AU_CHR_Nkwali GF_AU_CHR_Thwane GF_AU_CHR_Skhosana GF_AU_CHR_Tshangisa
+				GF_AU_CHR_Tshonyane GF_AU_CHR_Xhamela GF_AU_CHR_Xoko GF_AU_CHR_Zangwa GF_AU_CHR_Ndungwane GF_AU_CHR_Bhukhwana GF_AU_CHR_Dzana GF_AU_CHR_Gatyeni GF_AU_CHR_Gxarha GF_AU_CHR_Jwarha GF_AU_CHR_Khawuta
+			}
+			regnal_first_names_male = {
+				GF_AU_CHR_Faraji GF_AU_CHR_Imamu GF_AU_CHR_Jelani GF_AU_CHR_Jengo GF_AU_CHR_Jumaane GF_AU_CHR_Khamisi GF_AU_CHR_Kwanele GF_AU_CHR_Lentswe GF_AU_CHR_Lesebo GF_AU_CHR_Letswalo GF_AU_CHR_Lutendo GF_AU_CHR_Mahlubandile GF_AU_CHR_Makalo GF_AU_CHR_Mareka
+			}
+			regnal_first_names_female = {
+				GF_AU_CHR_Kagiso GF_AU_CHR_Keneuwe GF_AU_CHR_Koketso GF_AU_CHR_Langalibalele GF_AU_CHR_Ntsebo GF_AU_CHR_Ntswaki GF_AU_CHR_Phathu GF_AU_CHR_Reneilwe GF_AU_CHR_Rudzani GF_AU_CHR_Shandu
+			}
+			regnal_second_names = {
+				GF_AU_CHR_Azikiwe GF_AU_CHR_Awolowo GF_AU_CHR_Balewa GF_AU_CHR_Akintola GF_AU_CHR_Nzeogwu GF_AU_CHR_Onwuatuegwu
+			}
+		}
+
+		names11 = {
+			weight = 15
+			first_names_male = {
+				GF_AU_CHR_Mario GF_AU_CHR_Luigi GF_AU_CHR_Giovanni GF_AU_CHR_Giuseppe GF_AU_CHR_Antonio GF_AU_CHR_Roberto GF_AU_CHR_Andrea GF_AU_CHR_Stefano GF_AU_CHR_Marco GF_AU_CHR_Franscesco GF_AU_CHR_Angelo GF_AU_CHR_Vincenzo GF_AU_CHR_Pietro GF_AU_CHR_Salvatore GF_AU_CHR_Carlo GF_AU_CHR_Franco
+				GF_AU_CHR_Domenico GF_AU_CHR_Bruno GF_AU_CHR_Paulo GF_AU_CHR_Michele GF_AU_CHR_Giorgio GF_AU_CHR_Sergio GF_AU_CHR_Luciano GF_AU_CHR_Alessandro GF_AU_CHR_Alfonso GF_AU_CHR_Benito GF_AU_CHR_Fabrizio GF_AU_CHR_Cesare GF_AU_CHR_Enrico GF_AU_CHR_Gustavo GF_AU_CHR_Silvio GF_AU_CHR_Umberto
+				GF_AU_CHR_Nicola GF_AU_CHR_Matteo GF_AU_CHR_Ignazio GF_AU_CHR_Camillo GF_AU_CHR_Daniele GF_AU_CHR_Cristian GF_AU_CHR_Alberto GF_AU_CHR_Guido GF_AU_CHR_Lorenzo GF_AU_CHR_Tommaso GF_AU_CHR_Fabio
+			}
+			first_names_female = {
+				GF_AU_CHR_Maria GF_AU_CHR_Anna GF_AU_CHR_Giuseppina GF_AU_CHR_Rosa GF_AU_CHR_Angela GF_AU_CHR_Giovanna GF_AU_CHR_Teresa GF_AU_CHR_Lucia GF_AU_CHR_Carmela GF_AU_CHR_Caterina GF_AU_CHR_Francesca GF_AU_CHR_Antonietta GF_AU_CHR_Carla GF_AU_CHR_Elena GF_AU_CHR_Concetta GF_AU_CHR_Rita
+				GF_AU_CHR_Margherita GF_AU_CHR_Franca GF_AU_CHR_Paola GF_AU_CHR_Vittoria GF_AU_CHR_Arianna GF_AU_CHR_Orietta GF_AU_CHR_Nicoletta GF_AU_CHR_Clara GF_AU_CHR_Stefania GF_AU_CHR_Gisella GF_AU_CHR_Claudia GF_AU_CHR_Lorenza GF_AU_CHR_Gabriella GF_AU_CHR_Isabella GF_AU_CHR_Valeria
+				GF_AU_CHR_Lucrezia GF_AU_CHR_Dina GF_AU_CHR_Benedetta GF_AU_CHR_Pietra
+			}
+			second_names = {
+				GF_AU_CHR_Rossi GF_AU_CHR_Russo GF_AU_CHR_Ferrari GF_AU_CHR_Bianchi GF_AU_CHR_Ricci GF_AU_CHR_Marino GF_AU_CHR_DeLuca GF_AU_CHR_Costa GF_AU_CHR_Giordano GF_AU_CHR_Mancini GF_AU_CHR_Rizzo GF_AU_CHR_Lombardi GF_AU_CHR_Moretti GF_AU_CHR_Ravelli GF_AU_CHR_Conti GF_AU_CHR_Gallo GF_AU_CHR_Bello
+				GF_AU_CHR_Albricci GF_AU_CHR_Badoglio GF_AU_CHR_Cappello GF_AU_CHR_DiRobilant GF_AU_CHR_DiSavoia GF_AU_CHR_Garibaldi GF_AU_CHR_Saletta GF_AU_CHR_Pallavicino GF_AU_CHR_Pianelli GF_AU_CHR_Mambretti GF_AU_CHR_Marcuzzi GF_AU_CHR_Valeri GF_AU_CHR_Pezzaglia
+				GF_AU_CHR_Balletti GF_AU_CHR_Bianconelli GF_AU_CHR_Antonelli GF_AU_CHR_Corsini GF_AU_CHR_DAlessandro GF_AU_CHR_DAgostino GF_AU_CHR_DeRosa GF_AU_CHR_DeSciglio GF_AU_CHR_DiChiara GF_AU_CHR_DiBartolomei GF_AU_CHR_Delvecchio
+				GF_AU_CHR_DelGrosso GF_AU_CHR_DAntoni GF_AU_CHR_Fazio GF_AU_CHR_DiBella GF_AU_CHR_DiGennaro GF_AU_CHR_Fabbrini GF_AU_CHR_Gambadori GF_AU_CHR_Galvani GF_AU_CHR_Marchetti GF_AU_CHR_Mazzitelli GF_AU_CHR_Olivieri GF_AU_CHR_Pacini GF_AU_CHR_Quadrini
+			}
+			regnal_first_names_male = {
+				GF_AU_CHR_Mario GF_AU_CHR_Luigi GF_AU_CHR_Giovanni GF_AU_CHR_Enrico GF_AU_CHR_Gustavo GF_AU_CHR_Silvio GF_AU_CHR_Umberto
+			}
+			regnal_first_names_female = {
+				GF_AU_CHR_Theodora GF_AU_CHR_Fatima GF_AU_CHR_Miranda GF_AU_CHR_Cordelia GF_AU_CHR_Svetlana GF_AU_CHR_Anastasia GF_AU_CHR_Valentina GF_AU_CHR_Henrietta
+			}
+			regnal_second_names = {
+				GF_AU_CHR_Ferrari GF_AU_CHR_Bianchi GF_AU_CHR_Ricci GF_AU_CHR_Marino GF_AU_CHR_DeLuca GF_AU_CHR_Costa GF_AU_CHR_Giordano
+			}
+		}
+	}
+}

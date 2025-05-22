@@ -1,0 +1,184 @@
+﻿l_simp_chinese:
+#################################
+ gateway_GF_tech_gateway_collapse_tech:0 "§H坍塌科技§!\n§E这项科技将进一步推动物质坍塌和逆向坍塌领域的研究进程。§!"
+ gateway_GF_tech_gateway_collapse_weapon:0 "§H坍塌武器§!\n§E这项科技将推动武器化坍塌技术的研究进程。§!"
+ gateway_GF_tech_gateway_collapse_relic_tech:0 "§H遗迹科技§!\n§E这项科技将推动遗迹技术的研究进程。§!"
+ gateway_GF_tech_gateway_doll_modding:0 "§H人形科技§!\n§E这项科技将推动人形领域的研究进程。§!"
+#################################
+ GF_tech_doll_modding_point_1:0 "人形升级I"
+ GF_tech_doll_modding_point_1_desc:0 "人形升级第一阶段。"
+ GF_tech_doll_modding_point_2:0 "人形升级II"
+ GF_tech_doll_modding_point_2_desc:0 "人形升级第二阶段。"
+ GF_tech_doll_modding_point_3:0 "人形升级III"
+ GF_tech_doll_modding_point_3_desc:0 "人形升级最终阶段。"
+ GF_tech_doll_assemble:0 "人形制造技术"
+ GF_tech_doll_assemble_desc:0 "AI、心智云图、机械动力学科技结合的最终产物，是秩序毁灭的21世纪最伟大发明，给急需劳动力重建的人类文明提供了大量优质可靠的仿生人形仆从，也是我们迈向星海、重获新生的动力来源。"
+ GF_tech_doll_modding:0 "机体改造"
+ GF_tech_doll_modding_desc:0 "现有技术允许我们对人形机体进行一定程度的改装，她们将可以搭载更多特化模块以更好的执行更复杂的任务。"
+ GF_tech_mind_upgrade_1:0 "初步心智算法解析"
+ GF_tech_mind_upgrade_1_desc:0 "在计算机技术发展下，人形心智，这一源于遗迹的技术黑盒终于有了初步突破，在我们的修改下，人形将对任务有更强的主观能动性，这将给予她们担当领袖，独立完成某项任务的可能。"
+ GF_tech_mind_upgrade_2:0 "完全心智算法解析"
+ GF_tech_mind_upgrade_2_desc:0 "人形心智的形成已对我们完全透明，我们能让人形更好的模拟人类，又有谁能分辨出99.9999999999999....%与100%的区别呢？"
+ feature_GF_doll_mind_upgrade:0 "§H解锁特性：§!人形心智升级"
+ feature_GF_doll_mind_upgrade_desc:0 "强化人形心智的算力，使她们可以担任更§H高级§!的岗位。"
+ GF_tech_tactical_doll:0 "战术人形特化生产"
+ GF_tech_tactical_doll_desc:0 "原有的普通人形加装火控核心的简单武装化流程已无法满足高强度星际战争需要，所有军用人形将单独设计并专门化生产，将采用最新材料与技术强化机体防御力与作战效能，同时特别编写对应的心智云图以抑制情绪表达来达到火控计算的最大化。"
+ GF_tech_zener_network_1:0 "齐纳协议网络技术"
+ GF_tech_zener_network_1_desc:0 "齐纳协议网络是仿生自律人形专用的通讯网络，专用于人形的指令收发与交流联络。"
+ GF_tech_zener_network_2:0 "齐纳协议网络升级I"
+ GF_tech_zener_network_2_desc:0 "齐纳协议网络升级第一阶段。"
+ GF_tech_zener_network_3:0 "齐纳协议网络升级II"
+ GF_tech_zener_network_3_desc:0 "齐纳协议网络升级第二阶段。"
+ GF_tech_zener_network_4:0 "齐纳协议网络升级III"
+ GF_tech_zener_network_4_desc:0 "齐纳协议网络升级最终阶段。"
+ GF_tech_maintain_process:0 "人形维护专业化流程"
+ GF_tech_maintain_process_desc:0 "最新改进的人形维护技术，可以让我们的人形维护设施更有效率，从而容纳更多人形。"
+#################################
+ GF_tech_observe_reflection:0 "坍塌现象观察"
+ GF_tech_observe_reflection_desc:0 "实践是认识的来源与发展动力，只有先观察到可控的坍缩过程，才能着手展开对这一技术的研究，然而得到这一可控的坍塌过程并非易事。"
+ GF_tech_mass_rebuild_function:0 "佩斯特级质量重建方程"
+ GF_tech_mass_rebuild_function_desc:0 "佩斯特级质量重建方程表明，物质重建质量与坍塌密位粒子波长成正比，与逆坍塌电子源衍射成反比，这一结果确立了物质从无序的坍塌态到有序的结构互相转化的物理准则。"
+ GF_tech_collapse:0 "物质坍塌技术"
+ GF_tech_collapse_desc:0 "物质坍塌技术可以让我们任意的将任何物体打碎为其最本质的组成状态，也就是单独的一个个粒子状态，而这种被打碎的粒子组合在相互只剩引力的情况下会进行压缩，这个过程中产生辐射，从而成为近一个世纪人们闻之色变的坍塌液。"
+ GF_require_tech_collapse:0 "要求 £physics£ §Y$GF_tech_collapse$§!科技"
+ GF_tech_reverse_collapse:0 "物质逆向坍塌技术"
+ GF_tech_reverse_collapse_desc:0 "逆向坍塌则是坍塌的反过程，正如坍塌是打碎物质一样，逆向坍塌则是先通过计算机导入目标物质的空间模型结构，再按照这个模型，将坍塌液中粒子包解开压缩，让其中的粒子归位到模型对应的位置有序排列，从而构建生成空间模型所指定的新物质。"
+ GF_tech_ecological_recovery:0 "坍塌辐射污染无害化技术"
+ GF_tech_ecological_recovery_desc:0 "以我们目前对于坍塌过程的认识，我们终于有能力处理遍布我们母星的坍塌辐射污染，一劳永逸的将原本的污染区清理出来，以供生产生活需要。"
+ GF_tech_recover_plan:0 "坍塌辐射污染区恢复及振兴联合开拓协议"
+ GF_tech_recover_plan_desc:0 "该协议旨在统合所有与坍塌辐射污染区相关的资料与技术资源，同时推进污染区的治理与恢复行动。"
+
+ GF_tech_collapse_plant_1:0 "试验型坍塌反应釜"
+ GF_tech_collapse_plant_1_desc:0 "坍塌反应是一种通过高能输入把原有物质所组成的粒子完全打碎的过程，当这种处于被打碎状态的高能粒子团储存于特殊晶体格中时，会呈现绿色，这便是坍塌液的由来。在基本理清坍塌反应原理后，我们已经可以稳定生产这一特殊的物质状态。"
+ GF_UNLOCK_COLLAPSE_UPKEEP_POLICY_TITLE:0 "§H解锁政策：§!$policy_GF_collapse_upkeep_policy$"
+ GF_UNLOCK_COLLAPSE_UPKEEP_POLICY_DESC:0 "$policy_GF_collapse_upkeep_policy_desc$"
+ GF_tech_collapse_plant_2:0 "改进型坍塌反应釜"
+ GF_tech_collapse_plant_2_desc:0 "改进后的坍塌反应釜极大加强了设施使用寿命与安全性，将坍塌辐射对环境影响降至最低，同时也提升了坍塌液的产量。"
+ GF_tech_reverse_collapse_plant:0 "逆向坍塌物质重构实验室"
+ GF_tech_reverse_collapse_plant_desc:0 "世界上各种客观物质都是由相同的基本粒子组成，只是不同的组成结构带来了不同的物质性质，只要通过计算机记录相应物质的结构，再像按说明书搭积木一样把特定的粒子放在对应的位置，就可以得到想要的物质，这便是逆向坍塌反应。通过物质重构实验室，我们可以把已经打散的高能粒子团“坍塌液”组合成任意的其他物质，这意味着我们掌握了近乎神的权能，拥有了无限可能。"
+
+##################################
+ GF_tech_collapsetech_weaponize:0 "坍塌技术武器化"
+ GF_tech_collapsetech_weaponize_desc:0 "坍塌物质曾经差一点毁灭我们，但如果我们能掌控这份力量，它将化作我们的利刃。"
+
+ GF_tech_ship_collapse_armor:0 "坍塌零素材料"
+ GF_tech_ship_collapse_armor_desc:0 "在零素材料中混合使用坍塌技术研制而成的尖端反应装甲材料，能够更加高效地抵御敌方舰船的攻击。"
+ GF_tech_collapse_power_core:0 "坍塌反应能源"
+ GF_tech_collapse_power_core_desc:0 "类似于核裂变和核聚变，坍塌反应堆从物质在坍塌的过程中汲取能量。"
+ GF_tech_collapse_jump_drive:0 "逆向坍塌跃迁"
+ GF_tech_collapse_jump_drive_desc:0 "物质的坍塌与逆坍塌过程能够使我们能更轻易地打破时空的连续性，高效地实现空间中点对点的“跳跃”。"
+
+ TECH_UNLOCK_GF_COLLAPSE_POWER_CORE_TITLE:0 "§H解锁部件：§!$GF_COLLAPSE_REACTOR$"
+ TECH_UNLOCK_GF_COLLAPSE_POWER_CORE_DESC:0 "§H$GF_COLLAPSE_REACTOR$§!\n$GF_tech_collapse_power_core_desc$"
+
+ TECH_UNLOCK_GF_COLLAPSE_JUMP_DRIVE_TITLE:0 "§H解锁部件：§!$GF_COLLAPSE_JUMP_DRIVE$"
+ TECH_UNLOCK_GF_COLLAPSE_JUMP_DRIVE_DESC:0 "§H$GF_COLLAPSE_JUMP_DRIVE$§!\n$GF_tech_collapse_jump_drive_desc$"
+
+ GF_tech_reverse_collapse_gateway: "逆向坍塌亚空间隧道"
+ GF_tech_reverse_collapse_gateway_desc: "利用逆向坍塌原理重构星门的亚空间隧道，能够为我们创建一种专有且独享的星际通行方式。"
+ GF_tech_reverse_collapse_gateway_feature_title: "§H解锁特性：§!星门升级"
+ GF_tech_reverse_collapse_gateway_feature_desc: "允许将建设完成的§Y星门§!改造为使用§Y逆向坍塌§!原理进行亚空间移动，任何不掌握§Y$GF_tech_collapse_jump_drive$§!技术的帝国将§R无法穿过§!改造后的星门。"
+
+ GF_tech_reverse_collapse_gateway_beacon: "逆向坍塌信标"
+ GF_tech_reverse_collapse_gateway_beacon_desc: "这种特制的大功率逆向坍塌信标允许逆向坍塌星门从任何地方构建与之相通的亚空间隧道，通过支援舰可在战场上机动部署，能够极大提升我们舰队机动作战的能力。"
+
+ GF_tech_fire_support_ship: "NB-292 “斯特利伯格” 火力支援舰"
+ GF_tech_fire_support_ship_desc: "作为一个世纪前南联空天母舰设计理念在太空时代延续的产物，这种巨大的战舰拥有厚重的装甲和数量众多的武器挂载点，使其能轻易地完成重火力支援或区域压制任务，同时得益于其庞大的载荷，也可以搭载特种设备执行特殊任务。"
+
+ GF_tech_collapse_relic_tech:0 "遗迹技术"
+ GF_tech_collapse_relic_tech_desc:0 "在$collapse_relic$中发现的资料里提取出来的遗迹文明技术碎片，尽管只是全部遗迹文明技术的冰山一角，它也足以重构我们对微观粒子的认知。"
+
+ GF_tech_elid_army:0 "量产E.L.I.D军队"
+ GF_tech_elid_army_desc:0 "这些基因改造的克隆士兵经过坍塌辐射照射后成为了令人胆寒的硅化生物，我们可以通过一定的手段驱使这些ELID感染者，为我们的敌人带去恐惧。"
+
+ GF_tech_collapse_energy_lance:0 "高能坍塌粒子射线"
+ GF_tech_collapse_energy_lance_desc:0 "坍塌粒子能够将物质打碎为最基本的状态，一束聚焦的高能坍塌粒子将成为几乎任何舰船装甲的噩梦。"
+
+ GF_tech_collapse_ending_flash:0 "终末辉光"
+ # GF_tech_collapse_ending_flash_desc:0 "$GF_COLLAPSE_LANCE$已经证明它是对敌人舰船的巨大威胁，但若是我们再进一步，让高能坍塌粒子完全发挥出它们本身就具有的对环境的巨大破坏能力呢？"
+ GF_tech_collapse_ending_flash_desc:0 "以更大的功率向整个星球发射坍塌粒子，能够将地表的任何造物打碎为基本粒子，并彻底摧毁甚至重塑行星地表。"
+
+ GF_tech_combat_ogas_computers:0 "OGAS作战中枢"
+ GF_tech_combat_ogas_computers_desc:0 "OGAS系统具有庞大的算力，在战场的风险评估和战术优化上具有无可比拟的优势。"
+ 
+ GF_tech_miniaturized_collapse_lance:0 "小型坍塌粒子武器"
+ GF_tech_miniaturized_collapse_lance_desc:0 "曾经需要大型发射阵列的坍塌粒子射线如今搬上了快速灵活的中小型舰船，而仍然足够具有威慑力。"
+
+ GF_tech_collapse_bomb:0 "坍塌液脏弹"
+ GF_tech_collapse_bomb_desc:0 "坍塌液能够造成灾难性的基建和生态破坏，将其作为脏弹的装药，并用于轨道轰炸将能有效瓦解敌方星球防御甚至毁灭整个星球。"
+ GF_tech_collapse_bomb_title:0 "§H解锁轨道轰炸姿态：§!$bombardment_collapsebomb$"
+ GF_tech_collapse_bomb_effect_desc:0 "$bombardment_collapsebomb_desc$"
+ # GF_tech_collapse_bomb_desc:0 "我们的舰队将会装备$GF_tech_collapse_bomb$以备用于轨道轰炸，我们可以在政策中选择是否允许我们的舰队这样做。"
+
+ GF_tech_collapse_slingshot_protocal:0 "逆向坍塌量子弹射协议"
+ GF_tech_collapse_slingshot_protocal_desc:0 "优化设备产生逆向坍塌过程的效率，以便更加快捷高效地将舰船投射到星系的每一个角落。"
+
+ GF_tech_collapse_missile:0 "坍塌晶格导弹"
+ GF_tech_collapse_missile_desc:0 "采用高爆型坍塌晶格装药的先进制导导弹，能够对舰船的装甲造成极大的破坏。"
+
+ GF_tech_collapse_torpedo:0 "坍塌晶格鱼雷"
+ GF_tech_collapse_torpedo_desc:0 "采用高爆型坍塌晶格装药的先进鱼雷，改进过的弹体可以轻松穿过护盾对舰船的装甲和船体造成毁灭性打击。"
+
+ GF_tech_collapse_mass_accelerator:0 "千兆级坍塌加农炮"
+ GF_tech_collapse_mass_accelerator_desc:0 "特化改进过的大型质量加速炮，发射特制的坍塌晶格炮弹，能够轻易地撕碎任何装甲单位。"
+
+ GF_tech_collapse_artillery:0 "坍塌动能火炮"
+ GF_tech_collapse_artillery_desc:0 "特化改进过的远程舰载火力系统，发射特制的坍塌晶格炮弹，并且更准、更快、更具威慑力。"
+
+ GF_tech_collapse_cannon:0 "高爆坍塌机炮"
+ GF_tech_collapse_cannon_desc:0 "特化改进过的自动火炮，采用特制的高爆型坍塌晶格装药炮弹，能够向目标倾泻一片致命的弹幕。"
+
+ GF_tech_strike_craft_nb200:0 "物质穿梭舰AR.Cop NB-200"
+ GF_tech_strike_craft_nb200_desc:0 "这种舰载机是基于一个世纪前南联的近地大气战斗航天器AR.Cop NB-90开发而来，专注于在太空作战的改进型号，能够利用坍塌与逆向坍塌技术进行瞬时移动，实现对敌方防空网的快速突防。"
+
+ GF_tech_ternary_quantum_computing:0 "三进制量子计算"
+ GF_tech_ternary_quantum_computing_desc:0 "采用三进制并利用量子力学规律调控量子信息单元进行计算的计算机系统架构，其运算效率远超传统的计算机系统。"
+ GF_UNLOCK_TRADITION_AUTOMATION_TITLE:0 "§H解锁传统：§!$GF_tradition_automation$"
+ GF_UNLOCK_TRADITION_AUTOMATION_DESC:0 "$GF_tradition_automation_desc$"
+
+ GF_tech_automated_coordination: "效率协同算法"
+ GF_tech_automated_coordination_desc: "通过改进的调度算法，使一整个星球的自动化设施融合为一个有机整体成为可能。"
+
+ GF_tech_ogas_computing_center:0 "$GF_computing_center_4$"
+ GF_tech_ogas_computing_center_desc:0 "$GF_computing_center_4_DESC$"
+
+ GF_tech_distributed_subnet_computing: "分布式子网计算技术"
+ GF_tech_distributed_subnet_computing_desc: "通过分布式的计算节点网络为OGAS提供更快速的数据处理能力。"
+ GF_unlock_subnet_specialization: "§H解锁附庸特化：§!$GF_specialist_OGAS_subnet$"
+ GF_unlock_subnet_specialization_desc: "$GF_preset_OGAS_subnet_desc$"
+
+ GF_tech_3d_cloest_packing_1: "高效空间利用"
+ GF_tech_3d_cloest_packing_1_desc: "通过优化各类设施的布局，提高空间的利用率。"
+ GF_tech_3d_cloest_packing_2: "极致空间利用"
+ GF_tech_3d_cloest_packing_2_desc: "大量的自动化工业设备几乎以空间最密堆积的形式层叠在一起，实现极致的空间利用。"
+ GF_tech_autocity_energy: "量子光伏电网"
+ GF_tech_autocity_energy_desc: "这一突破性的能源存储与传输技术极大地提高了能源收集与存储效率。"
+ GF_tech_autocity_food: "自然生态模拟"
+ GF_tech_autocity_food_desc: "在可控环境内模拟作物的最佳生长条件，实现快速增产。"
+ GF_tech_autocity_minerals: "纳米矿物提取"
+ GF_tech_autocity_minerals_desc: "先进的提取工艺确保矿石原料的每一个分子都能得到利用。"
+ GF_tech_autocity_alloys: "高温闪铸工艺"
+ GF_tech_autocity_alloys_desc: "这种特殊的工艺大大加快了合金锻造的速度，显著提高了生产的效率。"
+ GF_tech_autocity_consumer_goods: "智能装配产线"
+ GF_tech_autocity_consumer_goods_desc: "全面优化后的生产流水线能够极大提高消费品的生产速度。"
+ GF_tech_autocity_rare: "先进精炼工艺"
+ GF_tech_autocity_rare_desc: "这种工艺能够显著增加从矿物原料中精炼出稀有资源的产率。"
+ GF_tech_autocity_collapse_fluid: "坍塌流程优化"
+ GF_tech_autocity_collapse_fluid_desc: "针对自动化设施对坍塌液生产流程调优，提高生产效率。"
+
+#### 危险科技路线
+
+## 社会学线（伯劳+ELID）
+ GF_tech_shrike_cage: "鸟笼"
+ GF_tech_shrike_cage_desc: "针对“小型猛禽”而开发的收容与净化设备，用于失效保险。"
+ GF_tech_thorn_collar: "荆棘项圈"
+ GF_tech_thorn_collar_desc: "基于“梭鱼”的控制器开发而来的三进制电磁信号控制设备，用于“为锡人找到心”。"
+
+ GF_tech_restart_cp57: "重启干细胞57号"
+ GF_tech_restart_cp57_desc: "“虹光”实验部队最珍贵的资产之一，别称“伯劳”，屠夫之鸟。"
+
+ GF_tech_shrike_army: "作战型伯劳素体"
+ GF_tech_shrike_army_desc: "“小型猛禽”在百年之后的重生，高效、冷酷、无情的战争机器。"
+ GF_tech_shrike_armor: "伯劳血肉装甲"
+ GF_tech_shrike_armor_desc: "血肉与钢铁的完美结合，拥有强大的防护能力并能快速复原。"
+

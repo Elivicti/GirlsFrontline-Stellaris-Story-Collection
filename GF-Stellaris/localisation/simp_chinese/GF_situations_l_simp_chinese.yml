@@ -1,0 +1,104 @@
+﻿l_simp_chinese:
+ GF_situation_collapse_liquid_deficit_monthly_change_tooltip:0 "$situation_deficit_monthly_change_tooltip$"
+ string_not_in_deficit_GF_nyto_collapse_liquid:0 "$GF_nyto_collapse_liquid$月度结余为正"
+ string_resource_reserves_GF_nyto_collapse_liquid:0 "$GF_nyto_collapse_liquid$储备"
+ string_expenditures_greater_than_income_GF_nyto_collapse_liquid:0 "$GF_nyto_collapse_liquid$赤字"
+
+ GF_situation_collapse_liquid_deficit:0 "$GF_nyto_collapse_liquid_deficit$"
+ GF_situation_collapse_liquid_deficit_type:0 "$GF_nyto_collapse_liquid_deficit$"
+ GF_situation_collapse_liquid_deficit_desc:0 "我们的$GF_nyto_collapse_liquid$赤字已经失控了！"
+ GF_situation_collapse_liquid_deficit_nyto:0 "$GF_nyto_collapse_liquid_deficit_desc$"
+ GF_situation_collapse_liquid_deficit_commonwealth:0 "$GF_situation_collapse_liquid_deficit_desc$所有依赖$GF_nyto_collapse_liquid$的地方都停摆了！"
+
+ GF_deficit_collapse_liquid_failed_tooltip: "消耗 £GF_nyto_collapse_liquid£ §Y$GF_nyto_collapse_liquid$§!的§Y区划§!与§Y建筑§!将被§H全部拆除§!。\n消耗 £GF_nyto_collapse_liquid£ §Y$GF_nyto_collapse_liquid$§!的§Y军用舰船§!将被§H解散一半§!。"
+
+ GF_deficit_collapse_liquid_approach:0 "坍缩液匮乏"
+ GF_deficit_collapse_liquid_approach_nyto:0 "$GF_deficit_collapse_liquid_approach$"
+
+ GF_deficit_collapse_liquid_approach_commonwealth_do_nothing:0 "维持当前支出"
+ GF_deficit_collapse_liquid_approach_commonwealth_collapser_subsidies:0 "坍塌反应技师补贴"
+
+ GF_nyto_collapse_liquid_deficit:0 "坍缩液匮乏"
+ GF_nyto_collapse_liquid_deficit_desc:0 "坍缩液匮乏，无论日常生活还是生产建造都陷入瘫痪。"
+
+
+# 心智核心匮乏
+ GF_situation_core_chip_deficit_monthly_change_tooltip:0 "$situation_deficit_monthly_change_tooltip$"
+ string_deficit_gf_core_chip_progress_limit:0 "已经万策尽了，这是最后的挣扎"
+ string_not_in_deficit_gf_core_chip:0 "$gf_core_chip$月度结余为正"
+ string_resource_reserves_gf_core_chip:0 "$gf_core_chip$储备"
+
+ GF_situation_core_chip_deficit:0 "$gf_core_chip$匮乏"
+ GF_situation_core_chip_deficit_type:0 "$gf_core_chip$匮乏"
+ GF_situation_core_chip_deficit_desc:0 "我们的$gf_core_chip$赤字已经失控了！$situation_deficit_desc_base$"
+
+ GF_core_chip_deficit_kill_all_doll_tooltip:0 "所有的§Y$GF_ANDROID$§!人口和领袖将会§R死亡§!"
+
+ GF_core_chip_deficit_malfunction_doll_leader_tooltip:0 "此阶段开始，$gf_core_chip$短缺将可能造成$GF_ANDROID$§Y领袖§!§R故障并死亡§!。[GF_GetCoreChipDeficitStageSecondTooltip]"
+ GF_core_chip_deficit_malfunction_doll_leader_and_pop_tooltip:0 "此阶段开始，$gf_core_chip$短缺将可能造成$GF_ANDROID$§Y领袖§!或§Y人口§!§R故障并死亡§!。[GF_GetCoreChipDeficitStageThirdTooltip]"
+
+ GF_core_chip_deficit_malfunction_doll_leader_modifier:0 "\n每月人形领袖故障死亡概率: §R+[This.v_GF_doll_leader_monthly_malfunction_chance]%§!"
+ GF_core_chip_deficit_malfunction_doll_leader_and_pop_modifier:0 "$GF_core_chip_deficit_malfunction_doll_leader_modifier$\n每月人形人口故障死亡概率: §R+[This.v_GF_doll_pop_monthly_malfunction_chance]%§!"
+
+ GF_deficit_core_chip_approach_ignore:0 "维持当前支出"
+ GF_deficit_core_chip_approach_dismantle_doll:0 "拆解$GF_ANDROID$"
+ GF_deficit_core_chip_approach_dismantle_doll_tooltip:0 "§Y$GF_ANDROID$§!的公民权将被设置为§H$citizenship_GF_doll_purge$§!，并送去拆解为 £alloys£ §Y$alloys$§!\n§R注意：此操作不可逆！§!"
+#  GF_deficit_core_chip_approach_assimilate_doll:0 "同化$GF_ANDROID$"
+#  GF_deficit_core_chip_approach_assimilate_doll_tooltip:0 ""
+
+ GF_deficit_core_chip_approach_programmer_subsidies:0 "$job_GF_programmer$补贴"
+ GF_deficit_core_chip_approach_programmer_subsidies_tooltip:0 "能在一定程度上§Y降低§!领袖死亡的概率。\n§Y42LAB§!建筑将会额外提供 £job_GF_programmer£ $mod_job_GF_programmer_add$: §G+1§!"
+
+ GF_deficit.50.name:0 "心智损坏"
+ GF_deficit.50.desc:0 "经历了长达数年的$gf_core_chip$短缺，我们仍然没能扭转颓势，现在帝国境内的所有$GF_ANDROID$§Y领袖§!和§Y人口§!都由于长期缺乏维护而完全失去了机能。"
+ GF_deficit.50.a:0 "泣不成声"
+ GF_deficit.50.a.tooltip:0 "所有$GF_ANDROID$§Y领袖§!和§Y人口§!已§R死亡§!"
+
+ GF_deficit.101.name:0 "领袖故障"
+ GF_deficit.101.desc:0 "由于长期缺乏$gf_core_chip$的维护，我们的一位$GF_ANDROID$领袖，§Y[GF_malfunctioned_doll_leader.GetTitle] [GF_malfunctioned_doll_leader.GetName]§!发生了非常严重的故障，现在已经失去了运作机能。"
+ GF_deficit.101.a:0 "不妙啊……"
+
+ GF_deficit.111.name:0 "人口故障"
+ GF_deficit.111.desc:0 "由于长期缺乏$gf_core_chip$的维护，我们的一个$GF_ANDROID$人口发生了非常严重的故障，现在已经失去了运作机能。"
+ GF_deficit.111.a:0 "不妙啊……"
+ GF_deficit.111.a.tooltip:0 "[GF_malfunctioned_pop.planet.GetName]上的一个$GF_ANDROID$ £pop£ 人口已§R死亡§!"
+
+
+# 自动化星球建设
+ GF_automated_city_construction:0 "$pc_GF_automated_city$建设"
+ GF_automated_city_construction_type:0 "$pc_GF_automated_city$建设"
+ GF_automated_city_construction_desc:0 "我们正在对[target.GetName]进行改造，完成后将转变为$pc_GF_automated_city$。"
+ GF_automated_city_construction_desc_base:0 "我们正在对[target.GetName]进行改造，完成后将转变为§H$GFAutomatedCityBaseResource$§!型$pc_GF_automated_city$。\n\n该类型将在完成后产生$mod_GF_OGAS_threads_used_add$：§R+2§!"
+ GF_automated_city_construction_desc_advanced:0 "我们正在对[target.GetName]进行改造，完成后将转变为§H$GFAutomatedCityAdvancedResource$§!型$pc_GF_automated_city$。\n\n该类型将在完成后产生$mod_GF_OGAS_threads_used_add$：§R+3§!"
+ GF_automated_city_construction_desc_special:0 "我们正在对[target.GetName]进行改造，完成后将转变为§H$GFAutomatedCitySpecialResource$§!型$pc_GF_automated_city$。\n\n该类型将在完成后产生$mod_GF_OGAS_threads_used_add$：§R+4§!"
+
+ GF_automated_city_construction_fail_tooltip:0 "$pc_GF_automated_city$建设将被取消，所有已建设的设施将被拆除。"
+ GF_automated_city_construction_complete_tooltip:0 "[target.GetName]将更改为§H$pc_GF_automated_city$§!。"
+
+ GF_automated_city_construction_monthly_change_tooltip:0 "每月建设进度"
+ GF_automated_city_construction_no_threads:0 "OGAS线程不足"
+
+ GF_automated_city_construction_approach_cancel:0 "取消建设"
+ GF_automated_city_construction_approach_cancel_effect_desc:0 "每月建设进度: §R-3§!"
+ GF_automated_city_construction_approach_normal:0 "维持支出"
+ GF_automated_city_construction_approach_normal_effect_desc:0 ""
+ GF_automated_city_construction_approach_speed_up:0 "加快建设"
+ GF_automated_city_construction_approach_speed_up_effect_desc:0 "每月建设进度: §G+50%§!"
+
+ GF_automated_city_construction_districts_city: "$district_city$数量"
+ GF_automated_city_construction_districts_industrial: "$district_industrial$数量"
+ GF_automated_city_construction_districts_other: "其他区划数量"
+ GF_automated_city_construction_speed_from_agenda: "$council_agenda_GF_agenda_automation_name$议程"
+
+
+# 五年经济计划
+ GF_situation_GOSPLAN:0 "经济计划"
+ GF_situation_GOSPLAN_type:0 "$GF_situation_GOSPLAN$"
+ GF_situation_GOSPLAN_desc:0 "为期五年的发展计划，对[target.GetName]的人力与物质资源进行统一规划，有计划地安排重大经济活动，引导和调节经济运行方向，以提高生产效益。"
+ GF_situation_GOSPLAN_approach_slow:0 "降低开支"
+ GF_situation_GOSPLAN_approach_slow_tooltip:0 "降低用于经济计划的预算以节省开支，但这同样会降低计划带来的增益。"
+ GF_situation_GOSPLAN_approach_default:0 "正常开支"
+ GF_GOSPLAN_finish_tooltip:0 "$GF_situation_GOSPLAN$完成。"
+
+ MESSAGE_GF_PLANET_GOSPLAN_ENDED:0 "五年经济计划已结束"
+ MESSAGE_GF_PLANET_GOSPLAN_ENDED_DESC:0 "§Y$PLANET$§!的五年经济计划已结束"

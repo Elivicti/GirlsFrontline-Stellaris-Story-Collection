@@ -1,0 +1,79 @@
+﻿l_simp_chinese:
+
+ GF_councilor_ruler_commonwealth:0 "$GF_RT_OGAS$"
+ GF_councilor_ruler_commonwealth_desc:0 "由绝对智能的AI对国家进行管理。"
+
+ GF_councilor_ruler_subnet:0 "子网自动化处理核心"
+ GF_councilor_ruler_subnet_desc:0 "由隶属于宗主国的绝对智能AI的一个子节点对国家进行管理。"
+
+
+ GF_councilor_URNC: "人民委员会主席"
+ GF_councilor_URNC_female: "$GF_councilor_URNC$"
+ GF_councilor_URNC_desc: "$TITLE$负责协调和处理地方与中央的沟通。"
+ GF_councilor_FSB: "内务部部长"
+ GF_councilor_FSB_female: "$GF_councilor_FSB$"
+ GF_councilor_FSB_desc: "$TITLE$负责保持政府官员的纪律与效率。"
+ GF_councilor_KCCO: "特种作战司令部部长"
+ GF_councilor_KCCO_female: "$GF_councilor_KCCO$"
+ GF_councilor_KCCO_desc: "$TITLE$促进新兴技术运用于实战。"
+
+
+ GF_councilor_AU: "科学理事会会长"
+ GF_councilor_AU_female: "$GF_councilor_AU$"
+ GF_councilor_AU_desc: "$TITLE$负责管理并促进地方理事会的发展。"
+ GF_councilor_MID: "情报局局长"
+ GF_councilor_MID_female: "$GF_councilor_MID$"
+ GF_councilor_MID_desc: "$TITLE$负责统筹对内情报管理工作和对外渗透任务。"
+ GF_councilor_TASA: "战术空降突击部队总司令"
+ GF_councilor_TASA_female: "$GF_councilor_TASA$"
+ GF_councilor_TASA_desc: "$TITLE$负责管理这支精锐快速反应部队。"
+
+
+ GF_councilor_GK: "首席指挥官"
+ GF_councilor_GK_female: "$GF_councilor_GK$"
+ GF_councilor_GK_desc: "$TITLE$负责协调地方代行官与指挥官的工作。"
+ GF_councilor_16LAB: "16LAB首席科学官"
+ GF_councilor_16LAB_female: "$GF_councilor_16LAB$"
+ GF_councilor_16LAB_desc: "$TITLE$负责尖端人形技术的研究。"
+ GF_councilor_90Wish: "90WISH首席负责人"
+ GF_councilor_90Wish_female: "$GF_councilor_90Wish$"
+ GF_councilor_90Wish_desc: "$TITLE$促进对未知的探索和新兴技术的发展。"
+ GF_councilor_90Wish_effect: "\n§E固定效果：§!\n每研究一个£physics£ £society£ £engineering£科技，所有与该席位领袖§Y类别相同§!的领袖立即获得§G50§!经验"
+ GF_councilor_IOP: "I.O.P首席执行官"
+ GF_councilor_IOP_female: "$GF_councilor_IOP$"
+ GF_councilor_IOP_desc: "$TITLE$负责统筹协调管理各地的人形制造任务。"
+
+ GF_councilor_GOSPLAN: "计划经济委员会主席"
+ GF_councilor_GOSPLAN_female: "$GF_councilor_GOSPLAN$"
+ GF_councilor_GOSPLAN_desc: "$TITLE$负责统筹各地的经济计划。"
+
+ GF_councilor_NHC: "卫生健康委员会主席"
+ GF_councilor_NHC_female: "$GF_councilor_NHC$"
+ GF_councilor_NHC_desc: "$TITLE$负责保障人民的基础卫生健康。"
+
+ GF_councilor_svarog: "火神重工首席执行官"
+ GF_councilor_svarog_female: "$GF_councilor_svarog$"
+ GF_councilor_svarog_desc: "$TITLE$负责监管和规划军工生产与能源建设。"
+ GF_councilor_wave_tech: "WAVE科技首席执行官"
+ GF_councilor_wave_tech_female: "$GF_councilor_wave_tech$"
+ GF_councilor_wave_tech_desc: "$TITLE$负责监管集团内各子公司的发展。"
+
+ council_agenda_GF_agenda_automation_name: "$GF_tradition_automation$"
+ council_agenda_GF_agenda_automation_desc: "OGAS将增强一切智能机械的能力。"
+
+ council_agenda_GF_agenda_doll_cloud_network_name: "心智云图网络"
+ council_agenda_GF_agenda_doll_cloud_network_desc: "通过齐纳协议将人形的心智构成分布式网络，来辅助计算与协助完成任务。"
+ GF_is_doll_leader_tooltip:0 "是§Y$GF_ANDROID$§!领袖"
+ GF_agenda_doll_cloud_network_no_doll_leader_tooltip:0 "§H注意：§!帝国内§R没有§!人形领袖，议程启动效果将§R无效§!\n\n"
+ GF_agenda_doll_cloud_network_effect_tooltip: "在§H议程生效§!期间：\n§Y[ruler.GetName]§!获得特质：['concept_GF_trait_leader_doll_cloud_network']\n§Y人形领袖§!获得特质：['concept_GF_trait_leader_doll_cloud_network_node']"
+ GF_agenda_doll_cloud_network_governor_effect_tooltip:0 "每个§Y人形$official$§!产生的£empire£ §Y帝国§!效应：$TABBED_NEW_LINE$—$MOD_EMPIRE_SIZE_POPS_MULT$: $@GF_agenda_doll_cloud_network_pop_size_mult|%0=-$"
+ GF_agenda_doll_cloud_network_scientist_effect_tooltip:0 "每个§Y人形$scientist$§!产生的£empire£ §Y帝国§!效应：$TABBED_NEW_LINE$—$MOD_SHIP_ANOMALY_RESEARCH_SPEED$: $@GF_agenda_doll_cloud_network_anomaly_speed_mult|%0=+$"
+ GF_agenda_doll_cloud_network_commander_effect_tooltip:0 "每个§Y人形$commander$§!产生的£empire£ §Y帝国§!效应：$TABBED_NEW_LINE$—$MOD_SHIP_SPEED_MULT$: $@GF_agenda_doll_cloud_network_ship_speed|%0=+$$TABBED_NEW_LINE$—$MOD_ARMY_COLLATERAL_DAMAGE_MULT$: §Y$@GF_agenda_doll_cloud_network_collateral_damage|%0=$§!"
+
+ GF_councilor_scanner: "战略资源工程研究官"
+ GF_councilor_scanner_female: "$GF_councilor_scanner$"
+ GF_councilor_scanner_desc: "$TITLE$促进战略资源工业体系的发展。"
+
+ GF_councilor_driller: "资源开发委员会主席"
+ GF_councilor_driller_female: "$GF_councilor_driller$"
+ GF_councilor_driller_desc: "$TITLE$负责监管基础资源的生产与采掘。"

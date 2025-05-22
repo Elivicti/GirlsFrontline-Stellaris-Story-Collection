@@ -1,0 +1,73 @@
+GF_quick_ogas_contact = {
+	potential = {
+		exists = from
+		from = { GF_can_contact_OGAS = yes }
+	}
+	allow = {
+		hidden_trigger = {
+			exists = from
+			from = { is_ai = no }
+		}
+		hidden:from = {
+			GF_is_in_OGAS_contact = no
+		}
+	}
+	
+	effect = {
+		custom_tooltip = "GF_quick_ogas_contact_tooltip"
+		hidden_effect = {
+			from = {
+				country_event = {
+					id = GF_ogas.9999
+					scopes = { from = event_target:GF_ogas_country }
+				}
+			}
+		}
+	}
+}
+
+GF_effect_button_always_on = {
+	potential = { always = yes }
+	allow = { always = yes }
+}
+
+GF_show_base_res_district_icons = {
+	potential = {
+		event_target:auto_city = {
+			has_planet_flag = flag_p_GF_automated_city_base_resources
+		}
+	}
+	allow = { always = yes }
+}
+
+GF_show_advanced_res_district_icons = {
+	potential = {
+		event_target:auto_city = {
+			has_planet_flag = flag_p_GF_automated_city_advanced_resources
+		}
+	}
+	allow = { always = yes }
+}
+
+GF_show_special_res_district_icons = {
+	potential = {
+		event_target:auto_city = {
+			has_planet_flag = flag_p_GF_automated_city_special_resources
+		}
+	}
+	allow = { always = yes }
+}
+
+GF_show_district_desc = {
+	potential = {
+		event_target:auto_city = {
+			OR = {
+				has_planet_flag = flag_p_GF_automated_city_base_resources
+				has_planet_flag = flag_p_GF_automated_city_advanced_resources
+				has_planet_flag = flag_p_GF_automated_city_special_resources
+			}
+		}
+	}
+	allow = { always = yes }
+
+}
