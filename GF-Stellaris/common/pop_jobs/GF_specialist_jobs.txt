@@ -79,7 +79,7 @@ GF_liaison = {
 		planet_jobs_robotic_produces_mult_fake = 0.05
 	}
 
-	triggered_pop_group_modifier = {
+	triggered_planet_modifier = {
 		potential = {
 			owner = { has_valid_civic = GF_civic_90WISH }
 		}
