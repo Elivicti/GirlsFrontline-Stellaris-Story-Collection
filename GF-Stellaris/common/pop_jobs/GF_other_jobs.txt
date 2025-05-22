@@ -1,5 +1,6 @@
 GF_freedom_kingdom = {
 	category = GF_freedom_class
+	is_capped_by_modifier = no
 
 	swappable_data = {
 		default = {
@@ -16,17 +17,8 @@ GF_freedom_kingdom = {
 	possible = {
 		hidden_trigger = { exists = owner }
 		exists = planet
+		planet = { is_planet_class = pc_GF_automated_city }
 		GF_can_pop_join_freedom_kindom = yes
-	}
-
-	triggered_pop_group_modifier = {
-		potential = {
-			exists = planet
-			planet = { has_modifier = GF_automated_city_supressed }
-		}
-		description = GF_automated_city_supressed
-		pop_amenities_usage_mult = 1
-		mult = modifier:GF_freedom_kingdom_amenities_usage_mult
 	}
 
 	resources = {
