@@ -14,6 +14,13 @@ district_GF_center = {
 		uses_district_set = GF_sf_machine_world
 	}
 
+	default_starting_district = yes
+	zone_slots = {
+		slot_city_government
+		slot_city_01
+		slot_city_02
+	}
+
 	potential = {
 		exists = owner
 		owner = { has_authority = GF_auth_commonwealth }
@@ -111,6 +118,10 @@ district_GF_generator = {
 		tech_power_plant_1
 	}
 
+	zone_slots = {
+		slot_energy
+	}
+
 	show_on_uncolonized = {
 		exists = from
 		from = { has_authority = GF_auth_commonwealth }
@@ -151,7 +162,7 @@ district_GF_generator = {
 		}
 		modifier = { planet_housing_add = 1 }
 	}
-	
+
 	triggered_desc = {
 		trigger = {
 			exists = owner
@@ -168,6 +179,9 @@ district_GF_mining = {
 
 	prerequisites = {
 		tech_mechanized_mining
+	}
+	zone_slots = {
+		slot_minerals
 	}
 
 	show_on_uncolonized = {
@@ -222,6 +236,10 @@ district_GF_collapse = {
 		text = district_GF_collapse_desc
 	}
 
+	zone_slots = {
+		# TODO: 设计区域
+	}
+
 	show_on_uncolonized = {
 		exists = from
 		from = { has_authority = GF_auth_commonwealth }
@@ -249,7 +267,6 @@ district_GF_collapse = {
 	convert_to = {
 		district_arcology_arms_industry
 		district_rw_industrial
-		district_industrial
 		district_GF_duplicate_industrial
 	}
 
@@ -281,7 +298,7 @@ district_GF_collapse = {
 			pop_amenities_usage_robotic_mult = 0.2
 		}
 	}
-	
+
 	triggered_desc = {
 		text = job_GF_collapser_effect_desc
 	}
@@ -300,6 +317,9 @@ district_GF_assembly = {
 	potential = {
 		uses_district_set = GF_sf_machine_world
 	}
+	zone_slots = {
+		# TODO: 设计区域
+	}
 
 	desc = {
 		trigger = {
@@ -315,7 +335,7 @@ district_GF_assembly = {
 	}
 
 	desc = {
-		trigger = { 
+		trigger = {
 			exists = owner
 			owner = { NOT = { has_authority = GF_auth_commonwealth } }
 		}
@@ -389,7 +409,7 @@ district_GF_assembly = {
 		}
 		text = job_GF_assemble_doll_effect_desc
 	}
-	
+
 	triggered_desc = {
 		trigger = {
 			exists = owner

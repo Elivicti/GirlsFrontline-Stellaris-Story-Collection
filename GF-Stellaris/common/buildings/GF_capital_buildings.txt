@@ -16,6 +16,13 @@ building_GF_colony_shelter = {
 	icon = building_colony_shelter
 
 	category = government
+	building_sets = {
+		government
+		urban
+		industrial
+		foundry
+		factory
+	}
 
 	potential = {
 		exists = owner
@@ -41,9 +48,8 @@ building_GF_colony_shelter = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 3
-		planet_amenities_add = 7
-		planet_max_buildings_add = @buildings_t1
+		planet_housing_add = 300
+		planet_amenities_add = 700
 	}
 
 	triggered_planet_modifier = {
@@ -51,7 +57,7 @@ building_GF_colony_shelter = {
 			exists = owner
 			NOT = { is_planet_class = pc_GF_sf_machine }
 		}
-		job_colonist_add = 2
+		job_colonist_add = 200
 	}
 
 	triggered_planet_modifier = {
@@ -59,8 +65,8 @@ building_GF_colony_shelter = {
 			exists = owner
 			is_planet_class = pc_GF_sf_machine
 		}
-		job_GF_command_doll_add = 1
-		job_GF_assemble_doll_add = 2
+		job_GF_command_doll_add = 100
+		job_GF_assemble_doll_add = 200
 	}
 
 	resources = {
@@ -128,14 +134,14 @@ building_GF_auto_colony_capital = {
 		job_GF_command_doll_per_pop = 0.1
 		job_GF_guard_doll_per_pop = 0.05
 
-		job_GF_command_doll_add = 1
-		job_GF_guard_doll_add = 1
-		job_GF_assemble_doll_add = 4
-		job_GF_dormancy_doll_add = 1
+		job_GF_command_doll_add = 100
+		job_GF_guard_doll_add = 100
+		job_GF_assemble_doll_add = 400
+		job_GF_dormancy_doll_add = 100
 
-		planet_housing_add = 5
-		planet_amenities_add = 5
-		planet_max_buildings_add = @buildings_t1
+		planet_housing_add = 500
+		planet_amenities_add = 500
+
 	}
 
 	triggered_planet_modifier = {
@@ -146,7 +152,7 @@ building_GF_auto_colony_capital = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 100
 		}
 	}
 	triggered_desc = { text = building_GF_auto_colony_capital_effect_desc }
@@ -157,7 +163,7 @@ building_GF_auto_colony_capital = {
 	triggered_desc = { text = job_GF_maintain_doll_effect_desc }
 
 	triggered_planet_modifier = {
-		job_GF_maintain_doll_add = 1
+		job_GF_maintain_doll_add = 100
 		job_clerk_add = -1
 		mult = value:GF_count_district|TYPE|district_city|
 	}
@@ -197,9 +203,8 @@ building_GF_GK_headquarters_1 = {
 		"building_GF_GK_headquarters_2"
 	}
 	planet_modifier = {
-		job_GF_GK_commander_add = 1
-		planet_max_buildings_add = 1
-		planet_housing_add = 1
+		job_GF_GK_commander_add = 100
+		planet_housing_add = 100
 	}
 	resources = {
 		category = planet_buildings
@@ -218,7 +223,7 @@ building_GF_GK_headquarters_1 = {
 			}
 		}
 		modifier = {
- 			job_GF_programmer_add = 1
+ 			job_GF_programmer_add = 100
 		}
 	}
 	triggered_desc = {
@@ -239,7 +244,7 @@ building_GF_GK_headquarters_2 = {
 	base_buildtime = 360
 	can_build = no
 	category = government
-	
+
 	potential = {
 		exists = owner
 		has_building = building_GF_GK_headquarters_1
@@ -256,14 +261,14 @@ building_GF_GK_headquarters_2 = {
 		"building_GF_GK_headquarters_3"
 	}
 	allow = {
-		num_pops >= 10
+		sapient_pop_amount >= 1000
 	}
 	planet_modifier = {
-		job_GF_GK_commander_add = 2
-		planet_max_buildings_add = 2
+		job_GF_GK_commander_add = 200
+		planet_housing_add = 300
 		planet_housing_add = 3
 	}
-	
+
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -281,7 +286,7 @@ building_GF_GK_headquarters_2 = {
 			}
 		}
 		modifier = {
- 			job_GF_programmer_add = 1
+ 			job_GF_programmer_add = 100
 		}
 	}
 	triggered_desc = {
@@ -302,7 +307,7 @@ building_GF_GK_headquarters_3 = {
 	base_buildtime = 360
 	can_build = no
 	category = government
-	
+
 	potential = {
 		exists = owner
 		has_building = building_GF_GK_headquarters_2
@@ -316,15 +321,15 @@ building_GF_GK_headquarters_3 = {
 		}
 	}
 	allow = {
-		num_pops >= 40
+		sapient_pop_amount >= 4000
 	}
 	planet_modifier = {
-		job_GF_GK_commander_add = 3
-		job_GF_GK_officer_add = 1
-		planet_max_buildings_add = 3
+		job_GF_GK_commander_add = 300
+		job_GF_GK_officer_add = 100
+		planet_housing_add = 500
 		planet_housing_add = 5
 	}
-	
+
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -342,7 +347,7 @@ building_GF_GK_headquarters_3 = {
 			}
 		}
 		modifier = {
- 			job_GF_programmer_add = 1
+ 			job_GF_programmer_add = 100
 		}
 	}
 	triggered_desc = {
@@ -364,7 +369,7 @@ building_GF_AU_council_1 = {
 	base_buildtime = 360
 	base_cap_amount = 1
 	category = government
-	
+
 	potential = {
 		exists = owner
 		owner = {
@@ -386,9 +391,8 @@ building_GF_AU_council_1 = {
 		"building_GF_AU_council_2"
 	}
 	planet_modifier = {
-		job_GF_AU_consultant_add = 1
-		planet_max_buildings_add = 1
-		planet_housing_add = 1
+		job_GF_AU_consultant_add = 100
+		planet_housing_add = 100
 	}
 	resources = {
 		category = planet_buildings
@@ -407,7 +411,7 @@ building_GF_AU_council_1 = {
 			}
 		}
 		modifier = {
- 			job_GF_programmer_add = 1
+ 			job_GF_programmer_add = 100
 		}
 	}
 	triggered_desc = {
@@ -444,14 +448,14 @@ building_GF_AU_council_2 = {
 		"building_GF_AU_council_3"
 	}
 	allow = {
-		num_pops >= 10
+		sapient_pop_amount >= 1000
 	}
 	planet_modifier = {
-		job_GF_AU_consultant_add = 2
-		planet_max_buildings_add = 2
+		job_GF_AU_consultant_add = 200
+		planet_housing_add = 300
 		planet_housing_add = 3
 	}
-	
+
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -469,7 +473,7 @@ building_GF_AU_council_2 = {
 			}
 		}
 		modifier = {
- 			job_GF_programmer_add = 1
+ 			job_GF_programmer_add = 100
 		}
 	}
 	triggered_desc = {
@@ -503,15 +507,15 @@ building_GF_AU_council_3 = {
 		}
 	}
 	allow = {
-		num_pops >= 40
+		sapient_pop_amount >= 4000
 	}
 	planet_modifier = {
-		job_GF_AU_consultant_add = 3
-		job_GF_AU_director_add = 1
-		planet_max_buildings_add = 3
+		job_GF_AU_consultant_add = 300
+		job_GF_AU_director_add = 100
+		planet_housing_add = 500
 		planet_housing_add = 5
 	}
-	
+
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -529,7 +533,7 @@ building_GF_AU_council_3 = {
 			}
 		}
 		modifier = {
- 			job_GF_programmer_add = 1
+ 			job_GF_programmer_add = 100
 		}
 	}
 	triggered_desc = {
@@ -572,9 +576,8 @@ building_GF_URNC_committee_1 = {
 		"building_GF_URNC_committee_2"
 	}
 	planet_modifier = {
-		job_GF_URNC_secretary_add = 1
-		planet_max_buildings_add = 1
-		planet_housing_add = 1
+		job_GF_URNC_secretary_add = 100
+		planet_housing_add = 100
 	}
 	resources = {
 		category = planet_buildings
@@ -593,7 +596,7 @@ building_GF_URNC_committee_1 = {
 			}
 		}
 		modifier = {
- 			job_GF_URNC_secretary_add = 1
+ 			job_GF_URNC_secretary_add = 100
 		}
 	}
 	triggered_desc = {
@@ -614,7 +617,7 @@ building_GF_URNC_committee_2 = {
 	base_buildtime = 360
 	can_build = no
 	category = government
-	
+
 	potential = {
 		exists = owner
 		has_building = building_GF_URNC_committee_1
@@ -631,11 +634,11 @@ building_GF_URNC_committee_2 = {
 		"building_GF_URNC_committee_3"
 	}
 	allow = {
-		num_pops >= 10
+		sapient_pop_amount >= 1000
 	}
 	planet_modifier = {
-		job_GF_URNC_secretary_add = 2
-		planet_max_buildings_add = 2
+		job_GF_URNC_secretary_add = 200
+		planet_housing_add = 300
 		planet_housing_add = 3
 	}
 	resources = {
@@ -655,7 +658,7 @@ building_GF_URNC_committee_2 = {
 			}
 		}
 		modifier = {
-			job_GF_programmer_add = 1
+			job_GF_programmer_add = 100
 		}
 	}
 	triggered_desc = {
@@ -689,12 +692,12 @@ building_GF_URNC_committee_3 = {
 		}
 	}
 	allow = {
-		num_pops >= 40
+		sapient_pop_amount >= 4000
 	}
 	planet_modifier = {
-		job_GF_URNC_secretary_add = 3
-		job_GF_URNC_commissioner_add = 1
-		planet_max_buildings_add = 3
+		job_GF_URNC_secretary_add = 300
+		job_GF_URNC_commissioner_add = 100
+		planet_housing_add = 500
 		planet_housing_add = 5
 	}
 	resources = {
@@ -714,7 +717,7 @@ building_GF_URNC_committee_3 = {
 			}
 		}
 		modifier = {
- 			job_GF_programmer_add = 1
+ 			job_GF_programmer_add = 100
 		}
 	}
 	triggered_desc = {
@@ -772,8 +775,8 @@ building_GF_subnet_communication_nexus = {
 	}
 
 	planet_modifier = {
-		job_GF_programmer_add = 2
-		job_GF_liaison_add = 2
+		job_GF_programmer_add = 200
+		job_GF_liaison_add = 200
 	}
 
 	triggered_country_modifier = {
