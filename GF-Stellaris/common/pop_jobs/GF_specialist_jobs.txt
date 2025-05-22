@@ -722,6 +722,31 @@ GF_reverse_collapser_industry = {
 		upkeep = {
 			GF_nyto_collapse_liquid = 10
 		}
+
+		produces = {
+			exotic_gases = 1
+			mult = planet.value:GF_reverse_collapser_rare_resources_modifier_transform|RES|exotic_gases|
+		}
+		upkeep = {
+			GF_nyto_collapse_liquid = 2
+			mult = planet.value:GF_reverse_collapser_rare_resources_modifier_transform|RES|exotic_gases|
+		}
+		produces = {
+			volatile_motes = 1
+			mult = planet.value:GF_reverse_collapser_rare_resources_modifier_transform|RES|volatile_motes|
+		}
+		upkeep = {
+			GF_nyto_collapse_liquid = 2
+			mult = planet.value:GF_reverse_collapser_rare_resources_modifier_transform|RES|volatile_motes|
+		}
+		produces = {
+			rare_crystals = 1
+			mult = planet.value:GF_reverse_collapser_rare_resources_modifier_transform|RES|rare_crystals|
+		}
+		upkeep = {
+			GF_nyto_collapse_liquid = 2
+			mult = planet.value:GF_reverse_collapser_rare_resources_modifier_transform|RES|rare_crystals|
+		}
 	}
 
 	weight = {
