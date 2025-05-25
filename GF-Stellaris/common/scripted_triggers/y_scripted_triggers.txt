@@ -1,7 +1,6 @@
 is_megacorp = {
 	OR = {
 		has_authority = auth_corporate
-		
 		# GF
 		has_valid_civic = GF_civic_GK
 	}
@@ -13,7 +12,7 @@ is_special_colony_type = {
 		has_modifier = penal_colony
 		has_modifier = resort_colony
 		has_modifier = slave_colony
-
+		has_modifier = gestation_colony
 		# GF
 		is_planet_class = pc_GF_automated_city
 	}
@@ -23,12 +22,9 @@ is_special_colony_type = {
 can_be_leader = {
 	has_citizenship_rights = yes
 	# Rule out Traits for servitude & lack of free will
-	NOR = {
-		has_trait = trait_syncretic_proles
-		can_think = no
-	}
+	can_think = yes
 	OR = {
-		is_robot_pop = no
+		is_robot_pop_group = no
 		root = {
 			OR = {
 				has_technology = tech_synthetic_leaders
@@ -63,10 +59,9 @@ entertainer_job_check_trigger = {
 		is_being_purged = no
 		is_being_assimilated = no
 		# Rule out Traits for servitude & lack of free will
-		NOR = {
-			has_trait = trait_syncretic_proles
-			can_think = no
-		}
+		can_think = yes
+		# Rule out Disconnected Drones
+		has_disconnected_drone_citizenship_type = no
 		OR = {
 			NOT = { has_trait = trait_mechanical }
 			owner = { has_technology = tech_droid_workers }
@@ -103,10 +98,9 @@ battle_thrall_job_check_trigger = {
 		is_being_purged = no
 		is_being_assimilated = no
 		# Rule out Traits for servitude & lack of free will
-		NOR = {
-			has_trait = trait_syncretic_proles
-			can_think = no
-		}
+		can_think = yes
+		# Rule out Disconnected Drones
+		has_disconnected_drone_citizenship_type = no
 		NOT = {
 			has_military_service_type = {
 				type = military_service_none
@@ -128,7 +122,7 @@ battle_thrall_job_check_trigger = {
 			}
 			divinity_right_to_work_job_check_trigger_specialist = yes
 		}
-		
+
 		# GF 人形权利为 商品 时，不可进入国家暴力机关
 		NAND = {
 			has_trait = GF_trait_doll
@@ -160,21 +154,19 @@ can_set_ai_policy = {
 	}
 }
 
+
 GF_has_foundry_designation = {
 	OR = {
 		has_foundry_designation = yes
 		has_designation = col_GF_automated_city_alloys
 	}
 }
-
 GF_has_factory_designation = {
 	OR = {
 		has_factory_designation = yes
 		has_designation = col_GF_automated_city_consumer_goods
 	}
 }
-
-
 GF_has_research_designation = {
 	OR = {
 		has_research_designation = yes
