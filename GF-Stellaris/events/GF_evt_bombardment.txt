@@ -451,7 +451,7 @@ planet_event = {
 			5 = {
 				reroll_random = yes
 				random_owned_pop_group = {
-					limit = { is_robot_pop = yes }
+					limit = { is_robot_pop_group = yes }
 
 					reroll_random = yes
 					random_list = {
@@ -505,10 +505,6 @@ planet_event = {
 	}
 
 	immediate = {
-		# resettle_pop = {
-		# 	pop = from
-		# 	planet = fromfrom.owner.capital_scope
-		# }
 		resettle_pop_group = {
 			POP_GROUP = from
 			PLANET = fromfrom.owner.capital_scope
