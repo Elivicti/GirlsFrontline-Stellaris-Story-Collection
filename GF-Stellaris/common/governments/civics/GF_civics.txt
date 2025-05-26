@@ -284,6 +284,8 @@ GF_civic_90WISH = {
 	description = "GF_civic_90WISH_effects"
 	modifier = {
 		leaders_upkeep_mult = 0.10
+		GF_planet_command_dolls_unity_produces_add = 1
+		GF_planet_maintain_dolls_unity_produces_add = 1
 	}
 }
 
