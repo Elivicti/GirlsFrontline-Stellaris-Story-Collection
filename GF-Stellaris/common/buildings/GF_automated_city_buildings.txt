@@ -163,6 +163,7 @@ building_GF_automated_coordination_nexus = {
 
 	category = government
 	potential = {
+		is_planet_class = pc_GF_automated_city
 		OR = {
 			NOT = { exists = owner }
 			owner = {
