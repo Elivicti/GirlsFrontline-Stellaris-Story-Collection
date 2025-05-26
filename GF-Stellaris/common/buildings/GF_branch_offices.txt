@@ -26,7 +26,7 @@ building_GF_military_contractors = {
 
 	planet_modifier = {
 		planet_crime_mult = -0.10
-		job_soldier_add = 1
+		job_soldier_add = 100
 	}
 
 	resources = {
@@ -80,7 +80,7 @@ building_GF_building_contractors = {
 			exists = owner
 			owner = { has_technology = tech_robotic_workers }
 		}
-		job_roboticist_add = 1
+		job_roboticist_add = 100
 	}
 
 	country_modifier = {

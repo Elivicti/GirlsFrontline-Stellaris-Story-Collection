@@ -3,7 +3,7 @@ GF_sercurity_protocol = {
 	icon_frame = 2
 	custom_tooltip = GF_sercurity_protocol_effect_tooltip
 	planet_jobs_robotic_produces_mult_fake = -0.25
-	job_GF_guard_doll_add = 5
+	job_GF_guard_doll_add = 500
 }
 
 GF_cloud_computing_protocol = {
