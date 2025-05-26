@@ -101,7 +101,7 @@ GF_dormancy_doll = {
 	}
 
 	weight = {
-		weight = 0
+		weight = 1
 	}
 }
 GF_command_doll = {
