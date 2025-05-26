@@ -30,7 +30,7 @@
  GF_sercurity_protocol_effect_tooltip:0 "£job_GF_guard_doll£ $job_GF_guard_doll_plural$生成的£defense_army£ 人形防御部队: §G+1§!\n$mod_job_GF_guard_doll_add$: §G+500§!\n$mod_planet_jobs_robotic_produces_mult$: §R-25%§!"
  GF_storage_protocol:0 "人形待机模式"
  GF_storage_protocol_desc:0 "闲置人形已收纳入休眠舱进入待机模式以节省机体能源消耗。\n\n§H提示：配合星球法令云计算协议可以使休眠人形在低消耗的情况下产出科研点。§!"
- GF_storage_protocol_modifier_desc:0 "§Y$building_GF_doll_maintain_center_1$§!额外提供 £job_GF_dormancy_doll£ $mod_job_GF_dormancy_doll_add$: §G+10§!\n§Y$building_GF_doll_maintain_center_2$§!额外提供 £job_GF_dormancy_doll£ $mod_job_GF_dormancy_doll_add$: §G+20§!"
+ GF_storage_protocol_modifier_desc:0 "§Y$building_GF_doll_maintain_center_1$§!额外提供 £job_GF_dormancy_doll£ $mod_job_GF_dormancy_doll_add$: §G+1000§!\n§Y$building_GF_doll_maintain_center_2$§!额外提供 £job_GF_dormancy_doll£ $mod_job_GF_dormancy_doll_add$: §G+2000§!"
  GF_cloud_computing_protocol: "人形云计算协议"
  GF_cloud_computing_protocol_desc: "所有闲置人形的云图算力已接入科研网络。"
  GF_cloud_computing_protocol_modifier_desc: "每$pop_group_unit$ £job_GF_dormancy_doll£ §Y$job_GF_dormancy_doll_plural$§!产出的的 £physics£ £society£ £engineering£ 研究点数: §G+2§!\n$mod_GF_planet_dormancy_energy_upkeep_add$: §R+0.1§!"
