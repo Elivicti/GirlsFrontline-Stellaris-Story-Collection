@@ -353,6 +353,7 @@ GF_zone_autocity_research_01 = {
 
 	included_building_sets = {
 		GF_automated_city_assembly
+		GF_automated_city_research
 		GF_automated_city_generic
 	}
 
