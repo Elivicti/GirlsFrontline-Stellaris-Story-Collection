@@ -1,52 +1,52 @@
 ﻿l_simp_chinese:
 #################################
- NAME_GF_OGAS:0 "国家管理自动化系统"
- NAME_GF_OGAS_adjective:0 "国家管理自动化系统"
+ NAME_GF_OGAS: "国家管理自动化系统"
+ NAME_GF_OGAS_adjective: "国家管理自动化系统"
 # Ruler Title
- GF_RT_MILITARYGL:0 "负责人"
- GF_RT_FERRI:0 "副总指挥"
+ GF_RT_MILITARYGL: "负责人"
+ GF_RT_FERRI: "副总指挥"
 # 名称组
- name_list_GF_DOLL:0 "$GF_ANDROID$"
- name_list_GF_GK:0 "新人类（格里芬与克鲁格安全承包商）"
- name_list_GF_AU:0 "新人类（南联）"
- name_list_GF_URNC:0 "新人类（罗联）"
+ name_list_GF_DOLL: "$GF_ANDROID$"
+ name_list_GF_GK: "新人类（格里芬与克鲁格安全承包商）"
+ name_list_GF_AU: "新人类（南联）"
+ name_list_GF_URNC: "新人类（罗联）"
 
 # SF events
- NAME_GF_sf_via_dolorosa:0 "受难之路"
- NAME_GF_sf_the_great_sepulchre:0 "圣墓"
+ NAME_GF_sf_via_dolorosa: "受难之路"
+ NAME_GF_sf_the_great_sepulchre: "圣墓"
 
 # Species
- NAME_GF_ANDROID:0 "$GF_ANDROID$"
+ NAME_GF_ANDROID: "$GF_ANDROID$"
 
 # 预设国家
- PRESCRIPTED_GF_OGAS:0 "OGAS"
- PRESCRIPTED_species_name_GF_doll:0 "自律人形"
- PRESCRIPTED_species_plural_GF_doll:0 "自律人形"
- PRESCRIPTED_species_adjective_GF_doll:0 "自律人形"
+ PRESCRIPTED_GF_OGAS: "OGAS"
+ PRESCRIPTED_species_name_GF_doll: "自律人形"
+ PRESCRIPTED_species_plural_GF_doll: "自律人形"
+ PRESCRIPTED_species_adjective_GF_doll: "自律人形"
 
- EMPIRE_DESIGN_GF_URNC:0 "罗克萨特主义合众国联盟"
- EMPIRE_DESIGN_GF_URNC_short:0 "罗联"
- PRESCRIPTED_adjective_GF_URNC:0 "罗联"
- PRESCRIPTED_ship_prefix_GF_URNC:0 "RNS"
- EMPIRE_DESIGN_GF_EMPIRE_URNC_desc:0 "$GF_URNC_origin_desc$"
+ EMPIRE_DESIGN_GF_URNC: "罗克萨特主义合众国联盟"
+ EMPIRE_DESIGN_GF_URNC_short: "罗联"
+ PRESCRIPTED_adjective_GF_URNC: "罗联"
+ PRESCRIPTED_ship_prefix_GF_URNC: "RNS"
+ EMPIRE_DESIGN_GF_EMPIRE_URNC_desc: "$GF_URNC_origin_desc$"
 
- EMPIRE_DESIGN_GF_AU:0 "南极联邦"
- EMPIRE_DESIGN_GF_AU_short:0 "南联"
- PRESCRIPTED_adjective_GF_AU:0 "南联"
- PRESCRIPTED_ship_prefix_GF_AU:0 "AUS"
- EMPIRE_DESIGN_GF_EMPIRE_AU_desc:0 "$GF_AU_origin_desc$"
+ EMPIRE_DESIGN_GF_AU: "南极联邦"
+ EMPIRE_DESIGN_GF_AU_short: "南联"
+ PRESCRIPTED_adjective_GF_AU: "南联"
+ PRESCRIPTED_ship_prefix_GF_AU: "AUS"
+ EMPIRE_DESIGN_GF_EMPIRE_AU_desc: "$GF_AU_origin_desc$"
 
- EMPIRE_DESIGN_GF_GK:0 "格里芬与克鲁格安全承包商"
- EMPIRE_DESIGN_GF_GK_short:0 "格里芬"
- PRESCRIPTED_adjective_GF_GK:0 "格里芬"
- PRESCRIPTED_ship_prefix_GF_GK:0 "GKS"
- EMPIRE_DESIGN_GF_EMPIRE_GK_desc:0 "$GF_GK_origin_desc$"
+ EMPIRE_DESIGN_GF_GK: "格里芬与克鲁格安全承包商"
+ EMPIRE_DESIGN_GF_GK_short: "格里芬"
+ PRESCRIPTED_adjective_GF_GK: "格里芬"
+ PRESCRIPTED_ship_prefix_GF_GK: "GKS"
+ EMPIRE_DESIGN_GF_EMPIRE_GK_desc: "$GF_GK_origin_desc$"
 
  EMPIRE_DESIGN_GF_Crisis_Coalition: "$GF_auth_commonwealth$"
  EMPIRE_DESIGN_GF_Crisis_Coalition_short: "联合政府"
 
 ###
- NAME_GF_armored_train:0 "§H钢铁巨兽§!"
+ NAME_GF_armored_train: "§H钢铁巨兽§!"
 
  LOC_GetGFCountryOriginDesc_default: " "
  LOC_GetGFCountryName_default: "[This.GetName]"
