@@ -18,10 +18,6 @@ building_GF_colony_shelter = {
 	category = government
 	building_sets = {
 		government
-		urban
-		industrial
-		foundry
-		factory
 	}
 
 	potential = {
@@ -101,6 +97,9 @@ building_GF_auto_colony_capital = {
 	can_be_disabled = no
 
 	category = government
+	building_sets = {
+		government
+	}
 
 	potential = {
 		exists = owner
@@ -118,11 +117,12 @@ building_GF_auto_colony_capital = {
 	convert_to = {
 		building_colony_shelter
 		building_hive_capital
-		building_machine_capital
+		building_deployment_post
 		building_resort_capital
 		building_slave_capital
 		building_ancient_control_center
 		building_ancient_palace
+		building_colony_shelter_wilderness
 	}
 
 	show_tech_unlock_if = {
@@ -165,7 +165,6 @@ building_GF_auto_colony_capital = {
 
 	triggered_planet_modifier = {
 		job_GF_maintain_doll_add = 100
-		job_clerk_add = -1
 		mult = value:GF_count_district|TYPE|district_city|
 	}
 

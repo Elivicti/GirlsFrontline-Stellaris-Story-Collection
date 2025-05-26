@@ -108,6 +108,12 @@ GF_auto_colony_capacity_add = {
 	max_decimals = 1
 }
 
+GF_auto_colony_pop_load_add = {
+	icon = mod_species_empire_size_mult
+	good = no
+	category = planet
+}
+
 GF_planet_URNC_commissioner_stability_add = {
 	icon = mod_planet_stability_add
 	good = yes

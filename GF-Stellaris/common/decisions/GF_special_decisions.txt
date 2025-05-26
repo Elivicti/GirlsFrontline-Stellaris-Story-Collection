@@ -24,14 +24,15 @@ decision_GF_auto_colony_on = {
 			is_planet_class = pc_GF_automated_city
 			is_urban_planet = yes
 		}
-		owner = { has_authority = GF_auth_commonwealth }
+		exists = owner
+		owner = { GF_is_main_country = yes }
 	}
 
 	allow = {
 		custom_tooltip = {
 			fail_text = decision_resort_colony_no_districts
-			num_districts = { type = any value < 1 }
-			num_buildings = { type = any value < 2 }
+			num_districts = { type = any value < 5 }
+			num_buildings = { type = any value < 3 }
 		}
 		custom_tooltip = {
 			fail_text = no_upgraded_capital_tooltip
@@ -51,8 +52,8 @@ decision_GF_auto_colony_on = {
 			add_building = building_GF_auto_colony_capital
 			set_colony_type = col_GF_auto_colony
 			set_planet_flag = flag_p_GF_auto_colony
-			validate_planet_buildings_and_districts = yes
-			
+			validate_and_repair_planet_buildings_and_districts = yes
+
 			planet_event = { id = GF_colony.10 days = 1 }
 		}
 		custom_tooltip = decision_GF_auto_colony_on_effect_not_automation_tooltip
@@ -60,12 +61,6 @@ decision_GF_auto_colony_on = {
 
 	ai_weight = {
 		weight = 0
-		# modifier = {
-		# 	check_modifier_value = {
-		# 		modifier = pop_environment_tolerance
-		# 		value < 50
-		# 	}
-		# }
 	}
 }
 

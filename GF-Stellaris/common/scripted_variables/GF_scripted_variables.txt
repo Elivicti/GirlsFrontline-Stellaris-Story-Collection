@@ -108,3 +108,8 @@
 @GFTech_tier5weight1 = 30
 @GFTech_tier5weight2 = 25
 @GFTech_tier5weight3 = 20
+
+### Auto Colony
+@GF_auto_colony_boundary_effect_interval = 30
+@GF_auto_colony_boundary_start = 15
+@GF_auto_colony_boundary_addend = 25

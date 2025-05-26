@@ -347,3 +347,33 @@ GF_reverse_collapser_rare_resources_modifier_transform = {
 	add = modifier:planet_artisans_$RES$_$TYPE|produces_add$
 	divide = 2
 }
+
+# 计算方式：factor = (equivalent_pop_load - capacity) / addend
+# equivalent_pop_load = num_pops - 休眠人形数 * 0.75 (等价于：每人口产生1负载，休眠人形产生0.25负载)
+# capacity = start + mod_capacity_add
+
+# this = planet
+GF_auto_colony_equivalent_pop_load = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_pop_amount
+		parameters = { limit = {} }
+		mode = add
+	}
+	divide = 100
+	subtract = modifier:GF_auto_colony_pop_load_add
+}
+# this = planet
+GF_auto_colony_capacity = {
+	base = 0
+	add = modifier:GF_auto_colony_capacity_add
+	add = @GF_auto_colony_boundary_start
+}
+# this = planet
+GF_auto_colony_boundary_factor = {
+	base = 0
+	add = value:GF_auto_colony_equivalent_pop_load
+	subtract = value:GF_auto_colony_capacity
+	min = 0
+	divide = @GF_auto_colony_boundary_addend
+}

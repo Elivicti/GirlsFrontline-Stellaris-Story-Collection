@@ -45,8 +45,7 @@ GF_automated_city_supressed = {
 GF_auto_colony = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_GF_auto_colony.dds"
 	icon_frame = 2
-	pop_growth_speed = -10
-	planet_immigration_pull_mult = -10
+	logistic_growth_mult = -10
 
 	planet_jobs_robotic_produces_mult_fake = 0.15
 	GF_doll_assemblers_assembly_speed_mult = 0.20

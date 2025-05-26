@@ -69,6 +69,13 @@ GF_dormancy_doll = {
 	planet_modifier = {
 		planet_crime_add = -1
 	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet
+			planet = { has_modifier = GF_auto_colony }
+		}
+		GF_auto_colony_pop_load_add = -0.75
+	}
 	resources = {
 		category = GF_planet_dormancy
 		produces = {
@@ -108,22 +115,13 @@ GF_command_doll = {
 	}
 
 	triggered_planet_modifier = {
-		planet_amenities_add = 4
+		planet_amenities_add = 400
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 	resources = {
-		category = planet_bureaucrats
+		category = GF_planet_command_dolls
 		produces = {
 			unity = 3
-		}
-		produces = {
-			trigger = {
-				exists = owner
-				owner = {
-					has_valid_civic = GF_civic_90WISH
-				}
-			}
-			unity = 1
 		}
 	}
 
@@ -160,22 +158,12 @@ GF_maintain_doll = {
 
 	swappable_data = {
 		default = {
-			condition_string = WORKER_JOB_TRIGGER
 			building_icon = building_GF_doll_maintain_center_1
 		}
 	}
 
 	resources = {
-		category = planet_jobs
-		produces = {
-			trigger = {
-				exists = owner
-				owner = {
-					has_valid_civic = GF_civic_90WISH
-				}
-			}
-			unity = 1
-		}
+		category = GF_planet_maintain_dolls
 	}
 
 	possible_pre_triggers = {
@@ -186,9 +174,10 @@ GF_maintain_doll = {
 	}
 	possible_precalc = can_fill_worker_job
 	possible = {
-		always = yes
-		hidden_trigger = { exists = owner }
-		owner = { has_authority = GF_auth_commonwealth }
+		hidden_trigger = {
+			exists = owner
+			owner = { GF_is_main_country = yes }
+		}
 		has_trait = GF_trait_doll
 	}
 
@@ -198,26 +187,12 @@ GF_maintain_doll = {
 	}
 
 	triggered_planet_modifier = {
-		planet_amenities_add = 4
+		planet_amenities_add = 400
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
 	weight = {
 		weight = 1
-		modifier = {
-			factor = 2
-			OR = {
-				has_trait = trait_robot_emotion_emulators
-				has_trait = trait_charismatic
-			}
-		}
-		modifier = {
-			factor = 0.5
-			OR = {
-				has_trait = trait_robot_uncanny
-				has_trait = trait_repugnant
-			}
-		}
 		modifier = {
 			factor = 0.1
 			# NOT = { has_job = GF_maintain_doll }

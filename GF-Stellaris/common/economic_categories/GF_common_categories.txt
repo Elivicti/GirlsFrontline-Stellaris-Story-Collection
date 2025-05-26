@@ -13,6 +13,21 @@ GF_planet_dormancy = {
 	modifier_category = pop_job
 }
 
+GF_planet_command_dolls = {
+	parent = planet_bureaucrats
+	generate_add_modifiers = { produces }
+	triggered_produces_modifier = {
+		key = planet_bureaucrats
+		trigger = { always = yes }
+		modifier_types = { add }
+	}
+	modifier_category = pop_job
+}
+GF_planet_maintain_dolls = {
+	parent = planet_jobs_worker
+	generate_add_modifiers = { produces }
+}
+
 GF_doll_assemblers = {
 	parent = planet_pop_assemblers
 	generate_mult_modifiers = {

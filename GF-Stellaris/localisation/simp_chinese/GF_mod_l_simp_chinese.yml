@@ -379,6 +379,13 @@
  mod_job_GF_maintain_doll_per_pop:0 "每$VALUE$个人口提供§G+1§!个$job_GF_maintain_doll$岗位"
  mod_job_GF_maintain_doll_per_pop_short:0 "\n每$VALUE$ £pop£ §G+1§! £job_GF_maintain_doll£"
 
+ GF_planet_command_dolls: "$job_GF_command_doll_plural$"
+ mod_GF_planet_command_dolls_unity_produces_add: "$GF_planet_command_dolls$生产的 £unity£ $unity$"
+ GF_planet_maintain_dolls: "$job_GF_maintain_doll_plural$"
+ mod_GF_planet_maintain_dolls_unity_produces_add: "$GF_planet_maintain_dolls$生产的 £unity£ $unity$"
+
+ mod_GF_auto_colony_pop_load_add: "自动化遥控殖民协议负荷"
+
 #####
  mod_GF_doll_assemblers_upkeep_mult:0 "$GF_doll_assemblers$维护费"
 
