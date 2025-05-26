@@ -1,6 +1,6 @@
 ﻿l_simp_chinese:
 #################################
-GIRLF:0 "少女前线"
+ GF_new_type_01_shipset_desc: "$humanoid_01_shipset_desc$"
 ############
  GF_ANDROID:0 "仿生自律人形"
  GF_ANDROID_plural:0 "$GF_ANDROID$"
