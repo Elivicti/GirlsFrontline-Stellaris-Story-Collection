@@ -4,7 +4,7 @@ building_GF_military_contractors = {
 	owner_type = corporate
 	category = army
 
-	base_cap_amount = 1
+	planet_limit = 1
 
 	potential = {
 		has_branch_office = yes
@@ -50,7 +50,7 @@ building_GF_building_contractors = {
 	owner_type = corporate
 	category = pop_assembly
 
-	base_cap_amount = 1
+	planet_limit = 1
 
 	empire_limit = {
 		base = 3

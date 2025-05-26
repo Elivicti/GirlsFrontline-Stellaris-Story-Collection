@@ -4,7 +4,7 @@
 building_GF_42lab_1 = {
 	icon = building_GF_42lab_1
 	base_buildtime = 360
-	base_cap_amount = 1
+	planet_limit = 1
 
 	category = government
 	building_sets = {

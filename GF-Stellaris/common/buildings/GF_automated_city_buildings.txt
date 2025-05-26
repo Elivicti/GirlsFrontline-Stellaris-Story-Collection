@@ -183,7 +183,7 @@ building_GF_automated_coordination_nexus = {
 		}
 	}
 
-	base_cap_amount = 1
+	planet_limit = 1
 
 	resources = {
 		category = planet_buildings
@@ -356,7 +356,7 @@ building_GF_automated_politic_module = {
 			owner = { GF_is_main_country = yes }
 		}
 	}
-	base_cap_amount = 4
+	planet_limit = 4
 
 	resources = {
 		category = planet_buildings

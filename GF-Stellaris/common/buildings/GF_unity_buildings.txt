@@ -1,6 +1,6 @@
 building_GF_zener_network_center_1 = {
 	base_buildtime = 240
-	base_cap_amount = 1
+	planet_limit = 1
 	icon = building_GF_zener_network_center_1
 	category = unity
 	building_sets = {

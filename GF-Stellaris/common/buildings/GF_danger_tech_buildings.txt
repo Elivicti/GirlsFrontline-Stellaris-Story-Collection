@@ -6,7 +6,7 @@ building_GF_shrike_den = {
 	can_be_ruined = no
 	can_build = yes
 
-	base_cap_amount = 1
+	planet_limit = 1
 
 	building_sets = {
 		GF_TEMP_NULL
