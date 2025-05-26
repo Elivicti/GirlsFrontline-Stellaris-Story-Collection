@@ -5,7 +5,7 @@ GF_trait_strange_cloth = {
 	randomized = no
 	icon = "gfx/interface/icons/traits/doll/cloth.dds"
 	modifier = {
-		planet_jobs_unity_produces_mult = 0.1
+		entertainer_jobs_bonus_workforce_mult = 0.10
 		planet_pops_consumer_goods_upkeep_mult = 0.10
 	}
 }
@@ -103,7 +103,7 @@ GF_trait_emotional_subroutine = {
 	opposites = { "GF_trait_zener_protocol" }
 	icon="gfx/interface/icons/traits/doll/emotion.dds"
 	modifier = {
-		planet_jobs_unity_produces_mult = 0.1
+		pop_amenities_usage_mult = -0.2
     }
 }
 GF_trait_analysis_model = {
@@ -192,8 +192,7 @@ GF_trait_zener_protocol = {
 	}
 	custom_tooltip_with_modifiers = GF_trait_zener_protocol_effect
 	modifier = {
-		bureaucrat_jobs_bonus_workforce_mult = 0.20
-		planet_jobs_unity_produces_mult = 0.20
+		pop_GF_liaison_bonus_workforce_mult = 0.20
 		species_empire_size_mult = -0.10
 	}
 }
