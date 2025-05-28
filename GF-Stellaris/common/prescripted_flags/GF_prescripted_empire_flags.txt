@@ -1,0 +1,3 @@
+GF_empire_human = {
+	flags = { human_1 custom_start_screen }
+}

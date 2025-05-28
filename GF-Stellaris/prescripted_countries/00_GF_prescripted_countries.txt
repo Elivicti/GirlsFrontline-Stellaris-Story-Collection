@@ -8,7 +8,7 @@ GF_EMPIRE_URNC = {
 	planet_class = "pc_continental"
 	initializer = "sol_system_initializer"
 	system_name = "NAME_Sol"
-	
+
 	graphical_culture = "GF_new_type_01"
 	city_graphical_culture = "GF_new_type_01"
 
@@ -29,10 +29,7 @@ GF_EMPIRE_URNC = {
 
 	advisor_voice_type = l_the_soldier
 
-	flags = {
-		human_1
-		custom_start_screen
-	}
+	flags = GF_empire_human
 
 	empire_flag = {
 		icon = {
@@ -87,7 +84,7 @@ GF_EMPIRE_AU = {
 	planet_class = "pc_continental"
 	initializer = "sol_system_initializer"
 	system_name = "NAME_Sol"
-	
+
 	graphical_culture = "GF_new_type_01"
 	city_graphical_culture = "GF_new_type_01"
 
@@ -108,10 +105,7 @@ GF_EMPIRE_AU = {
 
 	advisor_voice_type = l_materialist
 
-	flags = {
-		human_1
-		custom_start_screen
-	}
+	flags = GF_empire_human
 
 	empire_flag = {
 		icon = {
@@ -167,7 +161,7 @@ GF_EMPIRE_GK = {
 	planet_class = "pc_continental"
 	initializer = "sol_system_initializer"
 	system_name = "NAME_Sol"
-	
+
 	graphical_culture = "GF_new_type_01"
 	city_graphical_culture = "GF_new_type_01"
 
@@ -188,10 +182,7 @@ GF_EMPIRE_GK = {
 
 	advisor_voice_type = l_the_diplomat
 
-	flags = {
-		human_1
-		custom_start_screen
-	}
+	flags = GF_empire_human
 
 	empire_flag = {
 		icon = {
