@@ -2,7 +2,7 @@ GF_sercurity_protocol = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_GF_sercurity_protocol.dds"
 	icon_frame = 2
 	custom_tooltip = GF_sercurity_protocol_effect_tooltip
-	planet_jobs_robotic_produces_mult_fake = -0.25
+	robotic_pop_bonus_workforce_mult = -0.25
 	job_GF_guard_doll_add = 500
 }
 
@@ -47,7 +47,7 @@ GF_auto_colony = {
 	icon_frame = 2
 	logistic_growth_mult = -10
 
-	planet_jobs_robotic_produces_mult_fake = 0.15
+	robotic_pop_bonus_workforce_mult = 0.15
 	GF_doll_assemblers_assembly_speed_mult = 0.20
 	GF_doll_assemblers_upkeep_mult = 0.20
 }
@@ -58,7 +58,7 @@ GF_auto_colony_boundary_modifier = {
 	empire_size_colonies_mult = 1
 	planet_jobs_upkeep_mult = 1
 	planet_pops_robotics_upkeep_mult = 1
-	planet_jobs_robotic_produces_mult_fake = -0.5
+	robotic_pop_bonus_workforce_mult = -0.5
 	planet_pop_assembly_mult = -1
 }
 

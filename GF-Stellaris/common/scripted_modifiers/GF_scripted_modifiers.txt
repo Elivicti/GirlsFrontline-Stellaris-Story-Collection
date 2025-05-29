@@ -141,10 +141,3 @@ GF_doll_assemblers_assembly_speed_mult = {
 	percentage = yes
 	category = planet
 }
-
-planet_jobs_robotic_produces_mult_fake = {
-	icon = mod_planet_jobs_robotic_produces_mult
-	good = yes
-	percentage = yes
-	category = planet
-}

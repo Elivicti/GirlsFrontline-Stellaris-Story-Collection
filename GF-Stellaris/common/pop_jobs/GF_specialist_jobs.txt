@@ -76,7 +76,7 @@ GF_liaison = {
 
 	triggered_planet_modifier = {
 		planet_bureaucrats_produces_mult = 0.05
-		planet_jobs_robotic_produces_mult_fake = 0.05
+		robotic_pop_bonus_workforce_mult = 0.05
 	}
 
 	triggered_planet_modifier = {
