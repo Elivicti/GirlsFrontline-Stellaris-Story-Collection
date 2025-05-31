@@ -137,7 +137,7 @@ GF_trait_leader_ogas_subnet_core = {
 				overlord = { has_technology = GF_tech_mind_upgrade_1 }
 			}
 		}
-		GF_doll_cat_specialist_produces_mult = 0.5
+		GF_doll_cat_specialist_bonus_workforce_mult = 0.5
 	}
 	triggered_councilor_modifier = {
 		potential = {
@@ -146,7 +146,7 @@ GF_trait_leader_ogas_subnet_core = {
 				overlord = { has_technology = GF_tech_mind_upgrade_2 }
 			}
 		}
-		GF_doll_cat_ruler_produces_mult = 0.5
+		GF_doll_cat_ruler_bonus_workforce_mult = 0.5
 	}
 	leader_potential_add = {
 		from = { has_authority = GF_auth_OGAS_subnet }

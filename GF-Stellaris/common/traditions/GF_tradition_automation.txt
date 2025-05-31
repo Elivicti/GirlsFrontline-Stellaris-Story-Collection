@@ -19,7 +19,7 @@ tr_gf_automation_adopt = {
 		has_technology = GF_tech_ogas_computing_center
 	}
 	modifier = {
-		GF_doll_produces_mult = 0.10
+		GF_doll_bonus_workforce_mult = 0.10
 	}
 
 	on_enabled = {

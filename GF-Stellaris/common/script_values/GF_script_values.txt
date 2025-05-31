@@ -222,20 +222,20 @@ GF_get_OGAS_threads_used = {
 }
 
 # scope = pop
-GF_doll_produces_mult = {
+GF_doll_bonus_workforce_mult = {
 	base = 0
-	add = modifier:GF_doll_produces_mult
+	add = modifier:GF_doll_bonus_workforce_mult
 	modifier = {
 		is_pop_category = ruler
-		add = modifier:GF_doll_cat_ruler_produces_mult
+		add = modifier:GF_doll_cat_ruler_bonus_workforce_mult
 	}
 	modifier = {
 		is_pop_category = specialist
-		add = modifier:GF_doll_cat_specialist_produces_mult
+		add = modifier:GF_doll_cat_specialist_bonus_workforce_mult
 	}
 	modifier = {
 		is_pop_category = worker
-		add = modifier:GF_doll_cat_worker_produces_mult
+		add = modifier:GF_doll_cat_worker_bonus_workforce_mult
 	}
 }
 

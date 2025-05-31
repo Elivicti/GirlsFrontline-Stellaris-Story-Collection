@@ -61,24 +61,27 @@ GF_trait_doll = {
 
 	triggered_pop_group_modifier = {
 		potential = { is_being_purged = no }
+		key = mod_GF_doll_bonus_workforce_mult
 		pop_bonus_workforce_mult = 1
-		mult = modifier:GF_doll_produces_mult
+		mult = modifier:GF_doll_bonus_workforce_mult
 	}
 	triggered_pop_group_modifier = {
 		potential = { is_being_purged = no }
-
+		key = mod_GF_doll_cat_worker_bonus_workforce_mult
 		pop_cat_worker_bonus_workforce_mult = 1
-		mult = modifier:GF_doll_cat_worker_produces_mult
+		mult = modifier:GF_doll_cat_worker_bonus_workforce_mult
 	}
 	triggered_pop_group_modifier = {
 		potential = { is_being_purged = no }
+		key = mod_GF_doll_cat_specialist_bonus_workforce_mult
 		pop_cat_specialist_bonus_workforce_mult = 1
-		mult = modifier:GF_doll_cat_specialist_produces_mult
+		mult = modifier:GF_doll_cat_specialist_bonus_workforce_mult
 	}
 	triggered_pop_group_modifier = {
 		potential = { is_being_purged = no }
+		key = mod_GF_doll_cat_ruler_bonus_workforce_mult
 		pop_cat_ruler_bonus_workforce_mult = 1
-		mult = modifier:GF_doll_cat_ruler_produces_mult
+		mult = modifier:GF_doll_cat_ruler_bonus_workforce_mult
 	}
 
 	triggered_pop_group_modifier = {

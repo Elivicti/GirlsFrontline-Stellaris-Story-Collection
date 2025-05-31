@@ -13,7 +13,7 @@ GF_situation_core_chip_deficit = {
 	}
 
 	modifier = {
-		GF_doll_produces_mult = -10
+		GF_doll_bonus_workforce_mult = -10
 		GF_ANDROID_pop_happiness = -10
 	}
 
