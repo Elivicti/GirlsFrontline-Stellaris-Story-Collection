@@ -22,7 +22,7 @@ collapsebomb = {
 		}
 		modifier = { # 有坍塌辐射完全免疫的人口更难被杀死
 			factor = 0.25
-			pop_has_trait = GF_trait_sequela_immune
+			has_trait = GF_trait_sequela_immune
 		}
 	}
 	min_pops_to_kill_pop = 0
@@ -76,9 +76,9 @@ GF_bombardment_capture = {
 			}
 		}
 		complex_trigger_modifier = {
-			trigger = count_owned_pop
+			trigger = count_owned_pop_amount
 			trigger_scope = from
-			parameters = { limit = { is_robot_pop = yes } }
+			parameters = { limit = { is_robot_pop_group = yes } }
 			mult = 0.5
 			mode = factor
 		}
