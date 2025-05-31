@@ -154,8 +154,9 @@ planet_event = {
 		fromfrom = { has_purge_type = { type = purge_GF_assimilation country = prev.from } }
 	}
 	immediate = {
-		create_pop = {
+		create_pop_group = {
 			species = event_target:GF_doll_species_template
+			size = local_pop_amount
 		}
 	}
 }

@@ -182,8 +182,8 @@ on_megastructure_upgraded = {
 }
 
 # We changed a species right
-# This = pop
-on_pop_rights_change = {
+# This = pop_group
+on_pop_group_rights_change = {
 	events = {
 		GF_doll.1005
 	}
@@ -192,7 +192,8 @@ on_pop_rights_change = {
 # A pop has finished purging
 # This = Planet scope
 # From = Country
-# FromFrom = Pop
+# FromFrom = Pop group
+# local_pop_amount = variable of how many pops were purged
 on_pop_purged = {
 	events = {
 		GF_doll.1008

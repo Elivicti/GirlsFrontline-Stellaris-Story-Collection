@@ -59,14 +59,8 @@ GF_doll_assimilation = {
 	}
 
 	resources = {
-		category = planet_jobs
+		category = planet_pops
 		upkeep = { gf_core_chip = 0.5 }
-		upkeep = {
-			trigger = {
-				is_robotic_or_voidspawn_species = yes
-			}
-			energy = @living_standard_energy_normal
-		}
 	}
 
 	weight = {

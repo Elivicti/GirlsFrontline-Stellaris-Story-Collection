@@ -359,3 +359,18 @@ GF_auto_colony_boundary_factor = {
 	min = 0
 	divide = @GF_auto_colony_boundary_addend
 }
+
+# this = ???
+# rate(per month) = 50 + 同化岗数量 * 0.01
+GF_doll_assimilation_rate = {
+	base = 50
+	complex_trigger_modifier = {
+		trigger = num_assigned_jobs
+		trigger_scope = planet
+		parameters = {
+			job = GF_doll_assimilation
+		}
+		mode = add
+		mult = 0.01
+	}
+}
