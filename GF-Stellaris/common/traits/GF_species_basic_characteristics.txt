@@ -1,7 +1,6 @@
 GF_trait_doll = {
 	cost = 0
 	sorting_priority = 29
-	potential_crossbreeding_chance = 0
 	initial = no
 	randomized = no
 	infertile = yes
@@ -31,11 +30,11 @@ GF_trait_doll = {
 				has_trait = GF_trait_mind_upgrade_2
 			}
 		}
-		planet_jobs_specialist_produces_mult = -0.50
+		pop_cat_specialist_bonus_workforce_mult = -0.50
 	}
 	triggered_species_modifier = {
 		potential = { NOT = { has_trait = GF_trait_mind_upgrade_2 } }
-		planet_jobs_ruler_produces_mult = -0.50
+		pop_cat_ruler_bonus_workforce_mult = -0.50
 	}
 
 	resources = {
@@ -59,11 +58,6 @@ GF_trait_doll = {
 	}
 
 	custom_tooltip_with_modifiers = GF_trait_doll_tooltip
-
-	# triggered_planet_pop_group_modifier_for_all = {
-	# 	planet_pop_assemblers_gf_core_chip_upkeep_add = 1
-	# 	pop_bonus_workforce_mult = 1000
-	# }
 
 	triggered_pop_group_modifier = {
 		potential = { is_being_purged = no }
@@ -112,7 +106,6 @@ GF_trait_mind_upgrade_1 = {
 	icon = "gfx/interface/icons/traits/doll/mind_upgrade_1.dds"
 	cost = 0
 	sorting_priority = 28
-	potential_crossbreeding_chance = 0
 	initial = no
 	randomized = no
 	advanced_trait = no
@@ -120,7 +113,6 @@ GF_trait_mind_upgrade_1 = {
 	allowed_archetypes = { GF_ANDROID }
 
 	species_potential_add = { from = { has_technology = GF_tech_mind_upgrade_1 } }
-	species_potential_remove = { from = { has_technology = GF_tech_mind_upgrade_1 } }
 
 	species_possible_add = { from = { has_technology = GF_tech_mind_upgrade_1 } }
 	species_possible_remove = { from = { has_technology = GF_tech_mind_upgrade_1 } }
@@ -136,7 +128,6 @@ GF_trait_mind_upgrade_2 = {
 	icon = "gfx/interface/icons/traits/doll/mind_upgrade_2.dds"
 	cost = 0
 	sorting_priority = 28
-	potential_crossbreeding_chance = 0
 	initial = no
 	randomized = no
 	advanced_trait = no
@@ -144,7 +135,6 @@ GF_trait_mind_upgrade_2 = {
 	allowed_archetypes = { GF_ANDROID }
 
 	species_potential_add = { from = { has_technology = GF_tech_mind_upgrade_2 } }
-	species_potential_remove = { from = { has_technology = GF_tech_mind_upgrade_2 } }
 
 	species_possible_add = { from = { has_technology = GF_tech_mind_upgrade_2 } }
 	species_possible_remove = { from = { has_technology = GF_tech_mind_upgrade_2 } }
