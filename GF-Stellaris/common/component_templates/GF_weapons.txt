@@ -193,7 +193,6 @@ weapon_component_template = {
 	component_set = "GF_COLLAPSE_ENDING_FLASH"
 	size = planet_killer
 	type = planet_killer
-	use_ship_kill_target = no
 
 	size_restriction = { colossus }
 
@@ -544,7 +543,6 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 	min_range = 30
-	use_ship_kill_target = no
 
 	prerequisites = { "GF_tech_collapse_mass_accelerator" }
 	component_set = "GF_COLLAPSE_MASS_ACCELERATOR"

@@ -20,7 +20,7 @@ citizenship_GF_doll_full = {
 citizenship_GF_doll_limited = {
 	is_full_citizenship = yes
 
-	pop_modifier = {
+	pop_group_modifier = {
 		planet_pops_consumer_goods_upkeep_mult = -0.30
 		pop_amenities_usage_mult = -0.30
 		pop_political_power = -0.50
@@ -42,7 +42,7 @@ citizenship_GF_doll_limited = {
 citizenship_GF_doll_servitude = {
 	is_robot_servant = yes
 
-	pop_modifier = {
+	pop_group_modifier = {
 		planet_pops_consumer_goods_upkeep_mult = -0.60
 		pop_amenities_usage_mult = -0.60
 		pop_political_power = -0.75
@@ -63,7 +63,7 @@ citizenship_GF_doll_servitude = {
 citizenship_GF_doll_commodity = {
 	is_robot_servant = yes
 
-	pop_modifier = {
+	pop_group_modifier = {
 		planet_pops_consumer_goods_upkeep_mult = -2
 		pop_amenities_usage_mult = -0.9
 		pop_political_power = -2

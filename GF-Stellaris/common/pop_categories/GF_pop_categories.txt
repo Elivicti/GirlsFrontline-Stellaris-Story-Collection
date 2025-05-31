@@ -2,15 +2,6 @@ GF_freedom_class = {
 	rank = 1
 	clothes_texture_index = 2
 
-	assign_to_pop = {
-		OR = {
-			is_unemployed = yes
-			is_pop_category = GF_freedom_class
-		}
-		GF_can_pop_join_freedom_kindom = yes
-		exists = planet
-		planet = { is_planet_class = pc_GF_automated_city }
-	}
 
 	inline_script = "pop_categories/social_classes_triggered_modifiers"
 	inline_script = "pop_categories/social_classes_triggered_modifiers_no_happiness"
