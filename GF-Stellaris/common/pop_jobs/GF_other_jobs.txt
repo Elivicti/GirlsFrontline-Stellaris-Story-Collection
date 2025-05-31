@@ -15,10 +15,13 @@ GF_freedom_kingdom = {
 		is_being_assimilated = no
 	}
 	possible = {
-		hidden_trigger = { exists = owner }
+		OR = {
+			is_unemployed = yes
+			is_pop_category = GF_freedom_class
+		}
+		GF_can_pop_join_freedom_kindom = yes
 		exists = planet
 		planet = { is_planet_class = pc_GF_automated_city }
-		GF_can_pop_join_freedom_kindom = yes
 	}
 
 	resources = {
