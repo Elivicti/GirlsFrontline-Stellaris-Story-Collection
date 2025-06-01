@@ -38,7 +38,7 @@ GF_trait_doll = {
 	}
 
 	resources = {
-		category = planet_pops
+		category = GF_doll_pops
 		upkeep = {
 			trigger = { is_being_purged = no }
 			gf_core_chip = 0.15
@@ -84,16 +84,7 @@ GF_trait_doll = {
 		mult = modifier:GF_doll_cat_ruler_bonus_workforce_mult
 	}
 
-	triggered_pop_group_modifier = {
-		planet_pops_upkeep_mult = 1
-		mult = modifier:GF_doll_upkeep_mult
-	}
 
-	#triggered_pop_modifier = {
-	#	planet_pops_consumer_goods_upkeep_mult = 1
-	#	mult = modifier:GF_doll_consumer_goods_upkeep_mult
-	#}
-	#
 	#triggered_pop_modifier = {
 	#	pop_political_power = 1
 	#	mult = modifier:GF_doll_political_power

@@ -197,8 +197,21 @@ pop_category_GF_freedom_class = {
 
 GF_doll_pops = {
 	parent = planet_pops
+	generate_mult_modifiers = {
+		upkeep
+	}
 	generate_add_modifiers = {
 		produces
 	}
 	modifier_category = pop_group
+
+	triggered_upkeep_modifier = {
+		key = planet_pops_unemployed
+		modifier_types = {
+			add
+		}
+		trigger = {
+			is_unemployed = yes
+		}
+	}
 }
