@@ -1,0 +1,13 @@
+# 这个on_action中包含用于兼容的on_action
+# 特别地，必须在要兼容的事件触发之前触发
+
+# A pop amount has been grown
+# This = Planet scope
+# From = Country
+# FromFrom = Pop group
+# local_pop_amount = variable of how much was grown
+on_pop_growth = {
+	events = {
+		GF_evt_misc.130 # 早产特质物种长人口的时候会莫名其妙长新人类的物种
+	}
+}

@@ -201,6 +201,40 @@ country_event = {
 	}
 }
 
+#### 早产特质物种莫名其妙长人类物种修复
+
+# A pop amount has been grown
+# This = Planet scope
+# From = Country
+# FromFrom = Pop group
+# local_pop_amount = variable of how much was grown
+# on_pop_growth
+planet_event = {
+	id = GF_evt_misc.130
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		sapient_pop_amount > 100
+		fromfrom = {
+			has_trait = trait_nascent_stage
+
+			# 按理说game_rule已经禁止了未开智人口的增长，但是不知为何还是会长
+			# 所以这里需要提前处理如果长了未开智人口的情况
+			has_trait = trait_presapient_stage
+		}
+	}
+
+	immediate = {
+		# 当未开智物种长了人口时，nascent_stage_species@fromfrom.species理应不存在
+		# 但实际却指向了OGAS国家里的一个事件领袖（也太几把怪了），导致if条件在判断存在时通过
+		# 于是最终创建人口的时候就读取了那个事件领袖的物种
+		fromfrom.species = {
+			# 这里强制指定nascent_stage_species@fromfrom.species为这个未开智物种
+			save_global_event_target_as = nascent_stage_species@this
+		}
+	}
+}
 
 ### on_single_player_save_game_load
 # no scope
