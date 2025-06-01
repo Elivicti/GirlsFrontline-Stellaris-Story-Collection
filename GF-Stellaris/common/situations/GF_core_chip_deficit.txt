@@ -29,7 +29,7 @@ GF_situation_core_chip_deficit = {
 		hidden_effect = {
 			owner = {
 				country_event = { id = GF_deficit.50 }
-				GF_clear_core_chip_deficit_flags = yes 
+				GF_clear_core_chip_deficit_flags = yes
 			}
 			destroy_situation = this
 		}
@@ -124,7 +124,7 @@ GF_situation_core_chip_deficit = {
 			modifier = {
 				add = 5
 				owner = {
-					pop_percentage = {
+					pop_amount_percentage = {
 						percentage < 0.05
 						limit = { has_trait = GF_trait_doll }
 					}
@@ -197,19 +197,19 @@ GF_situation_core_chip_deficit = {
 	# 	}
 
 	# 	ai_weight = {
-			
+
 	# 		modifier = {
 	# 			factor = 0
 	# 			owner = { has_deficit = energy }
 	# 		}
 	# 	}
 	# }
-	
+
 	approach = {
 		name = GF_deficit_core_chip_approach_programmer_subsidies
 		icon = GFX_situation_approach_balance_sheet
 		icon_background = GFX_situation_approach_bg_yellow
-		
+
 		on_select = {
 			custom_tooltip = GF_deficit_core_chip_approach_programmer_subsidies_tooltip
 			hidden_effect = {
@@ -238,7 +238,7 @@ GF_situation_core_chip_deficit = {
 			base = 0
 			modifier = {
 				set = 100
-				owner = { 
+				owner = {
 					GF_can_research_basic_doll_tech_trigger = yes
 					NOT = { has_deficit = energy }
 				}

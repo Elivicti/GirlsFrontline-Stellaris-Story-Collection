@@ -67,15 +67,26 @@ country_event = {
 			limit = { GF_is_doll_leader = yes }
 			kill_leader = { show_notification = yes }
 		}
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = { has_trait = GF_trait_doll }
-			kill_pop = yes
+			kill_all_pop = yes
 		}
 	}
 
 	option = {
 		name = GF_deficit.50.a
 		custom_tooltip = GF_deficit.50.a.tooltip
+	}
+
+	after = {
+		hidden_effect = {
+			capital_scope = {
+				create_pop_group = {
+					species = event_target:GF_doll_species_template
+					size = 10
+				}
+			}
+		}
 	}
 }
 
@@ -155,11 +166,22 @@ situation_event = {
 				modifier = { subtract = 60 }
 				modifier = { min = 0 }
 				owner = {
-					random_owned_pop = {
+					random_owned_pop_group = {
 						limit = { has_trait = GF_trait_doll }
 						save_event_target_as = GF_malfunctioned_pop
+						set_variable_to_random_value = {
+							which = v_GF_malfunctioned_pop_amout
+							min = 80
+							max = 150
+						}
+						floor_variable = v_GF_malfunctioned_pop_amout
 					}
-					country_event = { id = GF_deficit.111 }
+					country_event = {
+						id = GF_deficit.111
+						scopes = {
+							from = event_target:GF_malfunctioned_pop
+						}
+					}
 				}
 			}
 		}
@@ -180,7 +202,13 @@ country_event = {
 		name = GF_deficit.111.a
 		custom_tooltip = GF_deficit.111.a.tooltip
 		hidden_effect = {
-			event_target:GF_malfunctioned_pop = { kill_pop = yes }
+			from = {
+				kill_pop_group = {
+					pop_group = this
+					amount = v_GF_malfunctioned_pop_amout
+				}
+				clear_variable = v_GF_malfunctioned_pop_amout
+			}
 		}
 	}
 }
