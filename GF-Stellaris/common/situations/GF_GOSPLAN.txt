@@ -120,7 +120,7 @@ GF_situation_GOSPLAN = {
 				mult = owner.value:scripted_modifier_mult|MODIFIER|GF_decision_GOSPLAN_effect_mult|
 			}
 			target_modifier = {
-				trade_value_mult = -0.10
+				planet_jobs_trade_produces_mult = -0.10
 			}
 		}
 		stage_2 = {
@@ -145,7 +145,7 @@ GF_situation_GOSPLAN = {
 				mult = owner.value:scripted_modifier_mult|MODIFIER|GF_decision_GOSPLAN_effect_mult|
 			}
 			target_modifier = {
-				trade_value_mult = -0.15
+				planet_jobs_trade_produces_mult = -0.10
 			}
 		}
 		stage_3 = {
@@ -170,7 +170,7 @@ GF_situation_GOSPLAN = {
 				mult = owner.value:scripted_modifier_mult|MODIFIER|GF_decision_GOSPLAN_effect_mult|
 			}
 			target_modifier = {
-				trade_value_mult = -0.20
+				planet_jobs_trade_produces_mult = -0.10
 			}
 		}
 	}

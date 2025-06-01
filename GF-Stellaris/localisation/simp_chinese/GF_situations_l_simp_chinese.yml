@@ -1,25 +1,25 @@
 ﻿l_simp_chinese:
- GF_situation_collapse_liquid_deficit_monthly_change_tooltip:0 "$situation_deficit_monthly_change_tooltip$"
- string_not_in_deficit_GF_nyto_collapse_liquid:0 "$GF_nyto_collapse_liquid$月度结余为正"
- string_resource_reserves_GF_nyto_collapse_liquid:0 "$GF_nyto_collapse_liquid$储备"
- string_expenditures_greater_than_income_GF_nyto_collapse_liquid:0 "$GF_nyto_collapse_liquid$赤字"
+ GF_situation_collapse_liquid_deficit_monthly_change_tooltip: "$situation_deficit_monthly_change_tooltip$"
+ string_not_in_deficit_GF_nyto_collapse_liquid: "$GF_nyto_collapse_liquid$月度结余为正"
+ string_resource_reserves_GF_nyto_collapse_liquid: "$GF_nyto_collapse_liquid$储备"
+ string_expenditures_greater_than_income_GF_nyto_collapse_liquid: "$GF_nyto_collapse_liquid$赤字"
 
- GF_situation_collapse_liquid_deficit:0 "$GF_nyto_collapse_liquid_deficit$"
- GF_situation_collapse_liquid_deficit_type:0 "$GF_nyto_collapse_liquid_deficit$"
- GF_situation_collapse_liquid_deficit_desc:0 "我们的$GF_nyto_collapse_liquid$赤字已经失控了！"
- GF_situation_collapse_liquid_deficit_nyto:0 "$GF_nyto_collapse_liquid_deficit_desc$"
- GF_situation_collapse_liquid_deficit_commonwealth:0 "$GF_situation_collapse_liquid_deficit_desc$所有依赖$GF_nyto_collapse_liquid$的地方都停摆了！"
+ GF_situation_collapse_liquid_deficit: "$GF_nyto_collapse_liquid_deficit$"
+ GF_situation_collapse_liquid_deficit_type: "$GF_nyto_collapse_liquid_deficit$"
+ GF_situation_collapse_liquid_deficit_desc: "我们的$GF_nyto_collapse_liquid$赤字已经失控了！"
+ GF_situation_collapse_liquid_deficit_nyto: "$GF_nyto_collapse_liquid_deficit_desc$"
+ GF_situation_collapse_liquid_deficit_commonwealth: "$GF_situation_collapse_liquid_deficit_desc$所有依赖$GF_nyto_collapse_liquid$的地方都停摆了！"
 
  GF_deficit_collapse_liquid_failed_tooltip: "消耗 £GF_nyto_collapse_liquid£ §Y$GF_nyto_collapse_liquid$§!的§Y区划§!与§Y建筑§!将被§H全部拆除§!。\n消耗 £GF_nyto_collapse_liquid£ §Y$GF_nyto_collapse_liquid$§!的§Y军用舰船§!将被§H解散一半§!。"
 
- GF_deficit_collapse_liquid_approach:0 "坍缩液匮乏"
- GF_deficit_collapse_liquid_approach_nyto:0 "$GF_deficit_collapse_liquid_approach$"
+ GF_deficit_collapse_liquid_approach: "坍缩液匮乏"
+ GF_deficit_collapse_liquid_approach_nyto: "$GF_deficit_collapse_liquid_approach$"
 
- GF_deficit_collapse_liquid_approach_commonwealth_do_nothing:0 "维持当前支出"
- GF_deficit_collapse_liquid_approach_commonwealth_collapser_subsidies:0 "坍塌反应技师补贴"
+ GF_deficit_collapse_liquid_approach_commonwealth_do_nothing: "维持当前支出"
+ GF_deficit_collapse_liquid_approach_commonwealth_collapser_subsidies: "坍塌反应技师补贴"
 
- GF_nyto_collapse_liquid_deficit:0 "坍缩液匮乏"
- GF_nyto_collapse_liquid_deficit_desc:0 "坍缩液匮乏，无论日常生活还是生产建造都陷入瘫痪。"
+ GF_nyto_collapse_liquid_deficit: "坍缩液匮乏"
+ GF_nyto_collapse_liquid_deficit_desc: "坍缩液匮乏，无论日常生活还是生产建造都陷入瘫痪。"
 
 
 # 心智核心匮乏
@@ -94,13 +94,17 @@
 
 
 # 五年经济计划
- GF_situation_GOSPLAN:0 "经济计划"
- GF_situation_GOSPLAN_type:0 "$GF_situation_GOSPLAN$"
- GF_situation_GOSPLAN_desc:0 "为期五年的发展计划，对[target.GetName]的人力与物质资源进行统一规划，有计划地安排重大经济活动，引导和调节经济运行方向，以提高生产效益。"
- GF_situation_GOSPLAN_approach_slow:0 "降低开支"
- GF_situation_GOSPLAN_approach_slow_tooltip:0 "降低用于经济计划的预算以节省开支，但这同样会降低计划带来的增益。"
- GF_situation_GOSPLAN_approach_default:0 "正常开支"
- GF_GOSPLAN_finish_tooltip:0 "$GF_situation_GOSPLAN$完成。"
+ GF_situation_GOSPLAN: "经济计划"
+ GF_situation_GOSPLAN_type: "$GF_situation_GOSPLAN$"
+ GF_situation_GOSPLAN_desc: "为期五年的发展计划，对[target.GetName]的人力与物质资源进行统一规划，有计划地安排重大经济活动，引导和调节经济运行方向，以提高生产效益。"
+ GF_situation_GOSPLAN_approach_slow: "降低开支"
+ GF_situation_GOSPLAN_approach_slow_tooltip: "降低用于经济计划的预算以节省开支，但这同样会降低计划带来的增益。"
+ GF_situation_GOSPLAN_approach_default: "正常开支"
+ GF_GOSPLAN_finish_tooltip: "$GF_situation_GOSPLAN$完成。"
 
- MESSAGE_GF_PLANET_GOSPLAN_ENDED:0 "五年经济计划已结束"
- MESSAGE_GF_PLANET_GOSPLAN_ENDED_DESC:0 "§Y$PLANET$§!的五年经济计划已结束"
+ MESSAGE_GF_PLANET_GOSPLAN_ENDED: "五年经济计划已结束"
+ MESSAGE_GF_PLANET_GOSPLAN_ENDED_DESC: "§Y$PLANET$§!的五年经济计划已结束"
+
+ GF_deficit.200.name: ""
+ GF_deficit.200.desc: ""
+ GF_deficit.200.a: "太糟糕了……"

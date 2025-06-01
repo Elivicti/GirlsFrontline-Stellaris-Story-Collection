@@ -298,9 +298,33 @@ situation_event = {
 					limit = { has_building = building_GF_reverse_collapse }
 					remove_building = building_GF_reverse_collapse
 				}
-				while = {
-					limit = { has_district = district_GF_automated_reverse_collapse }
-					remove_district = district_GF_automated_reverse_collapse
+				if = {
+					limit = { has_zone = { zone = GF_zone_reverse_collapse } }
+					remove_zone = {
+						zone = GF_zone_reverse_collapse
+						all = yes
+					}
+				}
+				if = {
+					limit = { has_zone = { zone = GF_zone_autocity_reverse_collapse_01 } }
+					remove_zone = {
+						zone = GF_zone_autocity_reverse_collapse_01
+						all = yes
+					}
+				}
+				if = {
+					limit = { has_zone = { zone = GF_zone_autocity_reverse_collapse_02 } }
+					remove_zone = {
+						zone = GF_zone_autocity_reverse_collapse_02
+						all = yes
+					}
+				}
+				if = {
+					limit = { has_zone = { zone = GF_zone_autocity_reverse_collapse_03 } }
+					remove_zone = {
+						zone = GF_zone_autocity_reverse_collapse_03
+						all = yes
+					}
 				}
 			}
 
