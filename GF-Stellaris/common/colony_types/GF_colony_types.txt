@@ -61,9 +61,9 @@ col_GF_automated_city_energy = {
 			add = @stickiness
 			has_designation = col_GF_automated_city_energy
 		}
-		complex_trigger_modifier = {
-			trigger = num_zones
-			parameters = { type = GF_zone_autocity_energy }
+		inline_script = {
+			script = "weights/GF_autocity_zone_modifier"
+			zone = GF_zone_autocity_energy
 			mode = add
 			mult = 3
 		}
@@ -82,9 +82,9 @@ col_GF_automated_city_minerals = {
 			add = @stickiness
 			has_designation = col_GF_automated_city_minerals
 		}
-		complex_trigger_modifier = {
-			trigger = num_zones
-			parameters = { type = GF_zone_autocity_minerals }
+		inline_script = {
+			script = "weights/GF_autocity_zone_modifier"
+			zone = GF_zone_autocity_minerals
 			mode = add
 			mult = 3
 		}
@@ -103,9 +103,9 @@ col_GF_automated_city_food = {
 			add = @stickiness
 			has_designation = col_GF_automated_city_food
 		}
-		complex_trigger_modifier = {
-			trigger = num_zones
-			parameters = { type = GF_zone_autocity_food }
+		inline_script = {
+			script = "weights/GF_autocity_zone_modifier"
+			zone = GF_zone_autocity_food
 			mode = add
 			mult = 3
 		}
@@ -128,9 +128,9 @@ col_GF_automated_city_alloys = {
 			add = @stickiness
 			has_designation = col_GF_automated_city_alloys
 		}
-		complex_trigger_modifier = {
-			trigger = num_zones
-			parameters = { type = GF_zone_autocity_foundry }
+		inline_script = {
+			script = "weights/GF_autocity_zone_modifier"
+			zone = GF_zone_autocity_foundry
 			mode = add
 			mult = 3
 		}
@@ -152,9 +152,9 @@ col_GF_automated_city_consumer_goods = {
 			add = @stickiness
 			has_designation = col_GF_automated_city_consumer_goods
 		}
-		complex_trigger_modifier = {
-			trigger = num_zones
-			parameters = { type = GF_zone_autocity_industry }
+		inline_script = {
+			script = "weights/GF_autocity_zone_modifier"
+			zone = GF_zone_autocity_industry
 			mode = add
 			mult = 3
 		}
@@ -176,9 +176,9 @@ col_GF_automated_city_refinery = {
 			add = @stickiness
 			has_designation = col_GF_automated_city_refinery
 		}
-		complex_trigger_modifier = {
-			trigger = num_zones
-			parameters = { type = GF_zone_autocity_refinery }
+		inline_script = {
+			script = "weights/GF_autocity_zone_modifier"
+			zone = GF_zone_autocity_refinery
 			mode = add
 			mult = 3
 		}
@@ -207,9 +207,9 @@ col_GF_automated_city_research = {
 			add = @stickiness
 			has_designation = col_GF_automated_city_research
 		}
-		complex_trigger_modifier = {
-			trigger = num_zones
-			parameters = { type = GF_zone_autocity_research }
+		inline_script = {
+			script = "weights/GF_autocity_zone_modifier"
+			zone = GF_zone_autocity_research
 			mode = add
 			mult = 3
 		}
@@ -237,9 +237,9 @@ col_GF_automated_city_factory = {
 			add = @stickiness
 			has_designation = col_GF_automated_city_factory
 		}
-		complex_trigger_modifier = {
-			trigger = num_zones
-			parameters = { type = GF_zone_autocity_assembly }
+		inline_script = {
+			script = "weights/GF_autocity_zone_modifier"
+			zone = GF_zone_autocity_assembly
 			mode = add
 			mult = 3
 		}
@@ -267,9 +267,9 @@ col_GF_automated_city_collapse = {
 			add = @stickiness
 			has_designation = col_GF_automated_city_collapse
 		}
-		complex_trigger_modifier = {
-			trigger = num_zones
-			parameters = { type = GF_zone_autocity_collapse }
+		inline_script = {
+			script = "weights/GF_autocity_zone_modifier"
+			zone = GF_zone_autocity_collapse
 			mode = add
 			mult = 3
 		}
@@ -298,9 +298,9 @@ col_GF_automated_city_reverse_collapse = {
 			add = @stickiness
 			has_designation = col_GF_automated_city_reverse_collapse
 		}
-		complex_trigger_modifier = {
-			trigger = num_zones
-			parameters = { type = GF_zone_autocity_reverse_collapse }
+		inline_script = {
+			script = "weights/GF_autocity_zone_modifier"
+			zone = GF_zone_autocity_reverse_collapse
 			mode = add
 			mult = 3
 		}

@@ -1,0 +1,19 @@
+
+complex_trigger_modifier = {
+	trigger = num_zones
+	parameters = { type = $zone$_01 }
+	mode = $mode$
+	mult = $mult$
+}
+complex_trigger_modifier = {
+	trigger = num_zones
+	parameters = { type = $zone$_02 }
+	mode = $mode$
+	mult = $mult$
+}
+complex_trigger_modifier = {
+	trigger = num_zones
+	parameters = { type = $zone$_03 }
+	mode = $mode$
+	mult = $mult$
+}
