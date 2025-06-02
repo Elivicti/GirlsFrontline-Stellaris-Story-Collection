@@ -185,9 +185,10 @@ country_event = {
 		capital_scope = {
 			custom_tooltip = GF_overlord.202.a.tooltip
 			hidden_effect = {
-				resettle_pop = {
-					pop = event_target:transfer_pop
-					planet = this
+				resettle_pop_group = {
+					POP_GROUP = event_target:transfer_pop
+					PLANET = this
+					AMOUNT = 100
 				}
 			}
 		}
