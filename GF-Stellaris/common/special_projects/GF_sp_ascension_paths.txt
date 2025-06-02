@@ -4,11 +4,10 @@ special_project = {
 		base = 1000
 		scaled_modifier = {
 			limit = {
-				is_robot_pop = no
 			}
 			scope = this
-			add = 200
-			calc = pop_count
+			add = 2
+			calc = pop_amount
 		}
 	}
 	tech_department = engineering_technology
@@ -27,11 +26,10 @@ special_project = {
 		base = 500
 		scaled_modifier = {
 			limit = {
-				is_robot_pop = no
 			}
 			scope = this
-			add = 100
-			calc = pop_count
+			add = 1
+			calc = pop_amount
 		}
 	}
 	tech_department = engineering_technology

@@ -39,7 +39,7 @@ GF_set_robot_habitability = {
 			}
 		}
 		change_species_characteristics = {
-			add_trait = trait_frozen_planet_preference
+			add_trait = trait_cold_planet_preference
 		}
 	}
 	else = {
@@ -56,7 +56,7 @@ GF_set_robot_habitability = {
 			}
 			1 = {
 				change_species_characteristics = {
-					add_trait = trait_frozen_planet_preference
+					add_trait = trait_cold_planet_preference
 				}
 			}
 		}
@@ -64,7 +64,8 @@ GF_set_robot_habitability = {
 }
 
 # this = country
-GF_set_synthetic_empire_ai_policy_and_breached_evolution = {
+GF_set_synthetic_empire_ai_policy_and_breached_resolution = {
+	# 机械劳工政策
 	if = {
 		limit = { has_policy_flag = robots_outlawed }
 		set_policy = {
@@ -73,6 +74,7 @@ GF_set_synthetic_empire_ai_policy_and_breached_evolution = {
 			cooldown = yes
 		}
 	}
+	# 人工智能政策
 	if = {
 		limit = {
 			OR = {
@@ -87,6 +89,7 @@ GF_set_synthetic_empire_ai_policy_and_breached_evolution = {
 		}
 	}
 
+	# 违反共同体议案
 	if = {
 		limit = {
 			OR = {
@@ -125,6 +128,7 @@ GF_create_synthetic_mod = {
 						set_synth_or_robot_portrait_effect = yes
 
 						save_event_target_as = $SAVE_TARGET_AS$
+						save_global_event_target_as = synthspecies@root.owner
 					}
 				}
 

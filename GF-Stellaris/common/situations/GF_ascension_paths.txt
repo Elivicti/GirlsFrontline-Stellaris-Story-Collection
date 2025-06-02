@@ -11,6 +11,9 @@ GF_situation_digitization = {
 		custom_tooltip = "situation_digitization_outcome"
 		hidden_effect = {
 			situation_event = { id = synth.2 }
+			owner = {
+				set_country_flag = situation_digitization_complete
+			}
 		}
 		set_situation_locked = yes
 	}

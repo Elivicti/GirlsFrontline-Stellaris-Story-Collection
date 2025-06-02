@@ -16,7 +16,7 @@ country_event = {
 	trigger = {
 		NOT = { has_country_flag = flag_GF_synthetics_adopted }
 		has_tradition = tr_synthetics_adopt
-		has_authority = GF_auth_commonwealth
+		GF_is_main_country = yes
 	}
 
 	immediate = {
@@ -84,7 +84,7 @@ country_event = {
 	is_triggered_only = yes
 	immediate = {
 		set_country_flag = synthetic_empire
-		GF_set_synthetic_empire_ai_policy_and_breached_evolution = yes
+		GF_set_synthetic_empire_ai_policy_and_breached_resolution = yes
 
 		GF_create_synthetic_mod = {
 			SAVE_TARGET_AS = GF_new_type_synth
@@ -97,11 +97,10 @@ country_event = {
 				}
 			}
 		}
-		change_dominant_species = {
-			species = event_target:GF_new_type_synth
-		}
 
-		every_owned_pop = {
+		change_dominant_species = { species = event_target:GF_new_type_synth }
+
+		every_owned_pop_group = {
 			limit = {
 				is_being_purged = no
 				species = {
@@ -198,7 +197,10 @@ country_event = {
 					is_event_leader = yes
 				}
 			}
-			add_trait_no_notify = leader_trait_synthetic
+			add_trait = {
+				trait = leader_trait_synthetic
+				show_message = no
+			}
 			remove_trait = leader_trait_cyborg
 		}
 
@@ -250,29 +252,41 @@ country_event = {
 			country_event = { id = utopia.2555 days = 5 }
 			country_event = { id = utopia.2556 days = 10 }
 		}
-
-		random_country = {
+		if = {
 			limit = {
-				OR = {
-					is_country_type = default
-					is_country_type = fallen_empire
-					is_country_type = awakened_fallen_empire
-				}
-				has_ethic = ethic_fanatic_spiritualist
-				has_communications = root
-				NOT = { is_same_value = root }
-			}
-			weights = {
-				base = 1
-				modifier = {
-					add = 99999
+				any_country = {
 					OR = {
 						is_country_type = fallen_empire
 						is_country_type = awakened_fallen_empire
 					}
+					has_ethic = ethic_fanatic_spiritualist
+					has_communications = root
+					NOT = { is_same_value = root }
 				}
 			}
-			country_event = { id = utopia.2557 days = 15 }
+			random_country = {
+				limit = {
+					OR = {
+						is_country_type = fallen_empire
+						is_country_type = awakened_fallen_empire
+					}
+					has_ethic = ethic_fanatic_spiritualist
+					has_communications = root
+					NOT = { is_same_value = root }
+				}
+				country_event = { id = utopia.2557 days = 15 }
+			}
+		}
+		else = {
+			random_country = {
+				limit = {
+					is_country_type = default
+					has_ethic = ethic_fanatic_spiritualist
+					has_communications = root
+					NOT = { is_same_value = root }
+				}
+				country_event = { id = utopia.2557 days = 15 }
+			}
 		}
 	}
 
@@ -294,7 +308,7 @@ country_event = {
 	trigger = {
 		NOT = { has_country_flag = flag_GF_cybernetics_adopted }
 		has_tradition = tr_cybernetics_adopt
-		has_authority = GF_auth_commonwealth
+		GF_is_main_country = yes
 	}
 
 	immediate = {
@@ -341,6 +355,7 @@ country_event = {
 
 	is_triggered_only = yes
 	trigger = {
+		always = no
 		NOT = { has_country_flag = flag_GF_vanilla_cybernetics_project_aborted }
 	}
 
@@ -354,6 +369,10 @@ country_event = {
 				name = SP_GF_FLESH_IS_WEAK
 				owner = this
 			}
+		}
+		if = {
+			limit = { has_special_project = SP_GF_FLESH_IS_WEAK }
+			set_country_flag = flag_GF_vanilla_cybernetics_project_aborted
 		}
 		country_event = { id = GF_ascension_path.2001 days = 1 }
 	}
@@ -411,7 +430,7 @@ country_event = {
 				}
 			}
 			prev = {
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = { is_exact_same_species = event_target:changing_species }
 					change_species = event_target:cybernetic_species
 				}
@@ -445,7 +464,7 @@ country_event = {
 		}
 		# 新创建的species要过一天才能在*_owned_species里遍历到，因此用random_owned_pop来取物种
 		# 相对更吃性能一点，因为傻逼蠢驴
-		random_owned_pop = {
+		random_owned_pop_group = {
 			limit = {
 				species = {
 					has_species_flag = flag_main_species
@@ -459,10 +478,7 @@ country_event = {
 		}
 
 		# change_species = event_target:new_main_species
-		change_dominant_species = {
-			species = event_target:new_main_species
-			# change_all = yes
-		}
+		change_dominant_species = { species = event_target:new_main_species }
 
 		every_owned_leader = {
 			limit = {
@@ -473,7 +489,10 @@ country_event = {
 					has_leader_flag = legendary_leader
 				}
 			}
-			add_trait_no_notify = leader_trait_cyborg
+			add_trait = {
+				trait = leader_trait_cyborg
+				show_message = no
+			}
 		}
 
 		create_message = {
@@ -539,7 +558,7 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		NOT = {
-			any_owned_pop = {
+			any_owned_pop_group = {
 				is_robot_pop = no
 				is_same_species = owner.owner_main_species
 				is_spiritualist = no
