@@ -83,6 +83,10 @@ building_GF_doll_maintain_center_2 = {
 	can_build = no
 	icon = building_GF_doll_maintain_center_2
 	category = amenity
+	building_sets = {
+		government
+		urban
+	}
 	allow = {
 		has_upgraded_capital = yes
 	}

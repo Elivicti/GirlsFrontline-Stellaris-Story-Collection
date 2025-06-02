@@ -83,6 +83,11 @@ building_GF_zener_network_center_2 = {
 	icon = building_GF_zener_network_center_2
 
 	category = unity
+	building_sets = {
+		government
+		urban
+		unity
+	}
 
 	potential = {
 		exists = owner
@@ -162,6 +167,11 @@ building_GF_zener_network_center_3 = {
 	icon = building_GF_zener_network_center_3
 
 	category = unity
+	building_sets = {
+		government
+		urban
+		unity
+	}
 
 	potential = {
 		exists = owner
@@ -245,6 +255,11 @@ building_GF_zener_network_center_4 = {
 	icon = building_GF_zener_network_center_4
 
 	category = unity
+	building_sets = {
+		government
+		urban
+		unity
+	}
 
 	potential = {
 		exists = owner

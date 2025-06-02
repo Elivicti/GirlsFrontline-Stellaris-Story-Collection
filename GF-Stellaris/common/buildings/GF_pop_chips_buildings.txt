@@ -77,6 +77,11 @@ building_GF_42lab_2 = {
 	base_buildtime = 360
 	can_build = no
 	category = government
+	building_sets = {
+		government
+		urban
+		research
+	}
 	potential = {
 		exists = owner
 		has_building = building_GF_42lab_1
@@ -141,6 +146,11 @@ building_GF_42lab_3 = {
 	base_buildtime = 360
 	can_build = no
 	category = government
+	building_sets = {
+		government
+		urban
+		research
+	}
 	potential = {
 		exists = owner
 		has_building = building_GF_42lab_2

@@ -69,6 +69,11 @@ building_GF_collapse_2 = {
 	base_buildtime = @b2_time
 	can_build = no
 	category = manufacturing
+	building_sets = {
+		industrial
+		factory
+		foundry
+	}
 
 	potential = {
 		NOR = {
