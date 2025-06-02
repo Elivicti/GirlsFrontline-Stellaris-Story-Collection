@@ -39,7 +39,7 @@ GF_unlock_keyword_notification_yes = {
 		}
 	}
 }
-GF_unlock_keyword_notification_no = {}
+GF_unlock_keyword_notification_no = { [[VALUE]] }
 GF_unlock_event_archive_notification_yes = {
 	create_message = {
 		type = MESSAGE_TYPE_GF_UNLOCKED_EVENT_ARCHIVE
@@ -52,7 +52,7 @@ GF_unlock_event_archive_notification_yes = {
 		}
 	}
 }
-GF_unlock_event_archive_notification_no = {}
+GF_unlock_event_archive_notification_no = { [[VALUE]] }
 GF_unlock_history_archive_notification_yes = {
 	create_message = {
 		type = MESSAGE_TYPE_GF_UNLOCKED_HISTORY_ARCHIVE
@@ -65,7 +65,7 @@ GF_unlock_history_archive_notification_yes = {
 		}
 	}
 }
-GF_unlock_history_archive_notification_no = {}
+GF_unlock_history_archive_notification_no = { [[VALUE]] }
 
 GF_unlock_archive_notification_impl = {
 	# forward notification call
