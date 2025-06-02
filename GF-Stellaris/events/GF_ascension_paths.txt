@@ -238,7 +238,7 @@ country_event = {
 				species = { has_trait = trait_mechanical }
 				NOT = { has_trait = leader_trait_synthetic }
 			}
-			add_trait_no_notify = leader_trait_synthetic
+			add_trait = { trait = leader_trait_synthetic show_message = no }
 			remove_trait = leader_trait_cyborg
 		}
 
@@ -519,7 +519,7 @@ country_event = {
 				species = { has_trait = trait_cybernetic }
 				NOT = { has_trait = leader_trait_cyborg }
 			}
-			add_trait_no_notify = leader_trait_cyborg
+			add_trait = { trait = leader_trait_cyborg show_message = no }
 		}
 
 		observer_event = { id = observer.55 }

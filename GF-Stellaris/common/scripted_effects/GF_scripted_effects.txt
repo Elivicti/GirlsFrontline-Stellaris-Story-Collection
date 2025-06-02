@@ -694,7 +694,7 @@ GF_deactivate_OGAS_subnet = {
 
 			effect = {
 				remove_all_traits = yes
-				add_trait_no_notify = trait_ruler_eye_for_talent
+				add_trait = { trait = trait_ruler_eye_for_talent show_message = no }
 				save_event_target_as = GF_OGAS_subnet_previous_ruler
 				add_skill_without_trait_selection = 3
 			}

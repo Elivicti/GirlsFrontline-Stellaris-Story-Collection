@@ -149,9 +149,9 @@ planet_event = {
 					set_age = 21
 					effect = {
 						remove_all_traits = yes
-						add_trait_no_notify = subclass_commander_general
-						add_trait_no_notify = leader_trait_heavy_hitter
-						add_trait_no_notify = leader_trait_restrained_2
+						add_trait = { trait = subclass_commander_general show_message = no }
+						add_trait = { trait = leader_trait_heavy_hitter show_message = no }
+						add_trait = { trait = leader_trait_restrained_2 show_message = no }
 					}
 				}
 			}
