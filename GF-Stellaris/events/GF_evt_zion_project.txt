@@ -917,9 +917,9 @@ country_event = {
 		event_target:enhancing_leader = {
 			switch = {
 				trigger = leader_class
-				official  = { add_trait = GF_trait_leader_enhanced_official }
-				scientist = { add_trait = GF_trait_leader_enhanced_scientist }
-				commander = { add_trait = GF_trait_leader_enhanced_commander }
+				official  = { add_trait = { trait = GF_trait_leader_enhanced_official } }
+				scientist = { add_trait = { trait = GF_trait_leader_enhanced_scientist } }
+				commander = { add_trait = { trait = GF_trait_leader_enhanced_commander } }
 			}
 		}
 
@@ -994,9 +994,9 @@ country_event = {
 		event_target:glitching_leader = {
 			switch = {
 				trigger = leader_class
-				official = { add_trait = GF_trait_leader_core_glitch_official }
-				scientist = { add_trait = GF_trait_leader_core_glitch_scientist }
-				commander = { add_trait = GF_trait_leader_core_glitch_commander }
+				official = { add_trait = { trait = GF_trait_leader_core_glitch_official } }
+				scientist = { add_trait = { trait = GF_trait_leader_core_glitch_scientist } }
+				commander = { add_trait = { trait = GF_trait_leader_core_glitch_commander } }
 			}
 			hidden_effect = { set_leader_flag = flag_l_GF_glitching_leader }
 		}
@@ -1052,9 +1052,9 @@ country_event = {
 				}
 				switch = {
 					trigger = leader_class
-					official = { add_trait = GF_trait_leader_inspired_official }
-					scientist = { add_trait = GF_trait_leader_inspired_scientist }
-					commander = { add_trait = GF_trait_leader_inspired_commander }
+					official = { add_trait = { trait = GF_trait_leader_inspired_official } }
+					scientist = { add_trait = { trait = GF_trait_leader_inspired_scientist } }
+					commander = { add_trait = { trait = GF_trait_leader_inspired_commander } }
 				}
 			}
 			else = {

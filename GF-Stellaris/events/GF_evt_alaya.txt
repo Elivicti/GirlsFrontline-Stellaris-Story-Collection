@@ -226,7 +226,7 @@ country_event = {
 			days = -1
 		}
 
-		ruler = { add_trait = GF_trait_leader_ogas_glitch }
+		ruler = { add_trait = { trait = GF_trait_leader_ogas_glitch } }
 		custom_tooltip = GF_OGAS_glitch_tooltip
 		GF_remove_all_ogas_mission_modifier = yes
 		

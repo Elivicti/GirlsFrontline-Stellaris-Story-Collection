@@ -18,25 +18,25 @@ country_event = {
 
 	immediate = {
 		from = {
-			add_trait = GF_trait_leader_doll
+			add_trait = { trait = GF_trait_leader_doll }
 			switch = {
 				trigger = leader_class
 				commander = {
 					if = {
 						limit = { species = { has_trait = GF_trait_tacticalchip } }
-						add_trait = GF_trait_leader_commander_plus
+						add_trait = { trait = GF_trait_leader_commander_plus }
 					}
 				}
 				scientist = {
 					if = {
 						limit = { species = { has_trait = GF_trait_logical_subroutine } }
-						add_trait = GF_trait_leader_scientist_plus
+						add_trait = { trait = GF_trait_leader_scientist_plus }
 					}
 				}
 				official = {
 					if = {
 						limit = { species = { has_trait = GF_trait_zener_protocol } }
-						add_trait = GF_trait_leader_official_plus
+						add_trait = { trait = GF_trait_leader_official_plus }
 					}
 				}
 			}
@@ -61,7 +61,7 @@ country_event = {
 				leader_class = commander
 				NOT = { has_trait = GF_trait_leader_commander_plus }
 			}
-			add_trait = GF_trait_leader_commander_plus
+			add_trait = { trait = GF_trait_leader_commander_plus }
 		}
 	}
 }
@@ -84,7 +84,7 @@ country_event = {
 				NOT = { has_trait = GF_trait_leader_official_plus }
 				NOT = { has_leader_flag = flag_GF_ogas_leader }
 			}
-			add_trait = GF_trait_leader_official_plus
+			add_trait = { trait = GF_trait_leader_official_plus }
 		}
 	}
 }
@@ -106,7 +106,7 @@ country_event = {
 				leader_class = scientist
 				NOT = { has_trait = GF_trait_leader_scientist_plus }
 			}
-			add_trait = GF_trait_leader_scientist_plus
+			add_trait = { trait = GF_trait_leader_scientist_plus }
 		}
 	}
 }

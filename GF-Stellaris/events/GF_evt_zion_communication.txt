@@ -193,7 +193,7 @@ country_event = {
 		}
 		ruler = {
 			add_experience = 500
-			add_trait = GF_trait_leader_ogas_2
+			add_trait = { trait = GF_trait_leader_ogas_2 }
 		}
 		owner = { add_research_option = GF_tech_combat_ogas_computers }
 	}
@@ -203,7 +203,7 @@ country_event = {
 # normal communications
 country_event = {
 	id = GF_zion.20000
-	
+
 	title = GF_ZION
 	is_triggered_only = yes
 
@@ -272,7 +272,7 @@ country_event = {
 			country_event = { id = GF_zion_project.30000 }
 		}
 	}
-	
+
 	option = {
 		name = GF_zion.20000.ogas
 		allow = {
@@ -406,7 +406,7 @@ country_event = {
 			GF_zion_require_resource_stockpile = { RES = energy TIER = 2 }
 		}
 		GF_zion_project_cost = { RES = energy TIER = 2 }
-		
+
 		hidden_effect = {
 			country_event = { id = GF_zion_project.3000 }
 		}

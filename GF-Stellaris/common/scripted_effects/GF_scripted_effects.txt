@@ -595,7 +595,7 @@ GF_convert_to_OGAS_subnet = {
 				remove_trait = GF_trait_leader_doll
 				remove_trait = GF_trait_leader_ogas_2
 				remove_trait = GF_trait_leader_ogas
-				add_trait = GF_trait_leader_ogas_subnet_core
+				add_trait = { trait = GF_trait_leader_ogas_subnet_core }
 			}
 		}
 		establish_communications_no_message = prev

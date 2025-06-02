@@ -114,7 +114,7 @@ country_event = {
 				effect = {
 					remove_trait = GF_trait_leader_doll
 					copy_flags_and_variables_from = prev.ruler
-					add_trait_no_notify = GF_trait_leader_ogas
+					add_trait = { trait = GF_trait_leader_ogas show_message = no }
 					set_leader_flag = legendary_leader				# 传奇领袖
 					set_leader_flag = immune_to_negative_traits		# 免疫负面特质
 					set_leader_flag = leader_death_events_blocked	# 禁止原版死亡事件

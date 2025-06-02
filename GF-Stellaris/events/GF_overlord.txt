@@ -455,7 +455,7 @@ country_event = {
 		is_dialog_only = yes
 		response_text = GF_overlord.10000.mission.busy_response
 	}
-	
+
 
 	option = {
 		name = GF_ogas.10000.logout
@@ -483,7 +483,7 @@ country_event = {
 		name = GF_overlord.11000.governor
 		response_text = GF_overlord.11100.response
 		GF_set_ogas_mission = { modifier = GF_ogas_mode_governor }
-		
+
 	}
 	option = { # en
 		name = GF_overlord.11000.produce
@@ -550,8 +550,8 @@ country_event = {
 
 	option = {
 		name = GF_overlord.11010.a
-		
-		ruler = { add_trait = GF_trait_leader_ogas_glitch }
+
+		ruler = { add_trait = { trait = GF_trait_leader_ogas_glitch } }
 		if = {
 			limit = { has_country_flag = flag_GF_commonwealth_vassal_OGAS_subnet_3 }
 			custom_tooltip = GF_OGAS_glitch_tooltip
@@ -570,7 +570,7 @@ country_event = {
 
 	option = {
 		name = GF_overlord.11011.a
-		
+
 		ruler = {
 			remove_trait = GF_trait_leader_ogas_glitch
 			add_experience = 500
