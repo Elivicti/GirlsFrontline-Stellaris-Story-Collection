@@ -11,7 +11,7 @@ special_project = {
 			limit = { has_trait = GF_trait_sequela }
 			scope = this
 			add = 250
-			calc = pop_count
+			calc = pop_amount
 		}
 	}
 	tech_department = society_technology

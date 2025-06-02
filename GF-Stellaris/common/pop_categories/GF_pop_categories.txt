@@ -1,7 +1,5 @@
 GF_freedom_class = {
 	rank = 1
-	clothes_texture_index = 2
-
 
 	inline_script = "pop_categories/social_classes_triggered_modifiers"
 	inline_script = "pop_categories/social_classes_triggered_modifiers_no_happiness"
