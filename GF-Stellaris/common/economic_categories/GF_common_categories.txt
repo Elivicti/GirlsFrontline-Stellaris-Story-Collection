@@ -182,7 +182,7 @@ GF_automated_city_maintainer = {
 	modifier_category = pop_job
 }
 
-pop_category_GF_freedom_class = {
+GF_pop_category_freedom_class = {
 	parent = planet_pops
 
 	generate_mult_modifiers = {

@@ -5,7 +5,7 @@ GF_freedom_class = {
 	inline_script = "pop_categories/social_classes_triggered_modifiers_no_happiness"
 
 	resources = {
-		category = pop_category_GF_freedom_class
+		category = GF_pop_category_freedom_class
 		produces = {
 			trade = @trade_value_very_high
 		}
