@@ -1,4 +1,5 @@
 ﻿l_simp_chinese:
+# 坍塌液短缺
  GF_situation_collapse_liquid_deficit_monthly_change_tooltip: "$situation_deficit_monthly_change_tooltip$"
  string_not_in_deficit_GF_nyto_collapse_liquid: "$GF_nyto_collapse_liquid$月度结余为正"
  string_resource_reserves_GF_nyto_collapse_liquid: "$GF_nyto_collapse_liquid$储备"
@@ -21,6 +22,9 @@
  GF_nyto_collapse_liquid_deficit: "坍缩液匮乏"
  GF_nyto_collapse_liquid_deficit_desc: "坍缩液匮乏，无论日常生活还是生产建造都陷入瘫痪。"
 
+ GF_deficit.200.name: ""
+ GF_deficit.200.desc: ""
+ GF_deficit.200.a: "太糟糕了……"
 
 # 心智核心匮乏
  GF_situation_core_chip_deficit_monthly_change_tooltip: "$situation_deficit_monthly_change_tooltip$"
@@ -76,7 +80,7 @@
  GF_automated_city_construction_fail_tooltip: "$pc_GF_automated_city$建设将被取消，所有已建设的设施将被拆除。"
  GF_automated_city_construction_complete_tooltip: "[target.GetName]将更改为§H$pc_GF_automated_city$§!。"
 
- GF_automated_city_construction_monthly_change_tooltip: "每月建设进度"
+ GF_automated_city_construction_monthly_change_tooltip: "$pc_GF_automated_city$的建设进度稳步推进，建造更多的区划有助于加速建设进程。"
  GF_automated_city_construction_no_threads: "OGAS线程不足"
 
  GF_automated_city_construction_approach_cancel: "取消建设"
@@ -102,9 +106,7 @@
  GF_situation_GOSPLAN_approach_default: "正常开支"
  GF_GOSPLAN_finish_tooltip: "$GF_situation_GOSPLAN$完成。"
 
+ GF_situation_GOSPLAN_monthly_change_tooltip: "发展计划稳步推进。"
+
  MESSAGE_GF_PLANET_GOSPLAN_ENDED: "五年经济计划已结束"
  MESSAGE_GF_PLANET_GOSPLAN_ENDED_DESC: "§Y$PLANET$§!的五年经济计划已结束"
-
- GF_deficit.200.name: ""
- GF_deficit.200.desc: ""
- GF_deficit.200.a: "太糟糕了……"

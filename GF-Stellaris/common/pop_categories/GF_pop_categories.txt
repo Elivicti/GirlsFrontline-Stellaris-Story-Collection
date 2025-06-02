@@ -65,7 +65,7 @@ GF_freedom_class = {
 			exists = planet
 			planet = { has_modifier = GF_automated_city_supressed }
 		}
-		description = GF_automated_city_supressed
+		key = GF_automated_city_supressed
 		pop_amenities_usage_mult = 1
 		mult = modifier:GF_freedom_kingdom_amenities_usage_mult
 	}
