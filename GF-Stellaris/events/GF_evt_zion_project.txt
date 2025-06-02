@@ -1017,7 +1017,7 @@ country_event = {
 			species = { is_robotic = yes }
 			is_ruler = no
 			OR = {
-				has_skill < 10
+				has_base_skill < 10
 				NOR = {
 					has_trait = GF_trait_leader_inspired_official
 					has_trait = GF_trait_leader_inspired_scientist
@@ -1043,7 +1043,7 @@ country_event = {
 			if = {
 				# 如果领袖已经到达最大等级且未拥有特殊特质，则给予特殊特质
 				limit = {
-					has_skill >= 10
+					has_base_skill >= 10
 					NOR = {
 						has_trait = GF_trait_leader_inspired_official
 						has_trait = GF_trait_leader_inspired_scientist

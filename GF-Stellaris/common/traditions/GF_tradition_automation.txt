@@ -120,7 +120,7 @@ tr_gf_automation_6 = {
 	custom_tooltip_with_modifiers = tr_gf_automation_6_effect_desc
 	modifier = {
 		planet_decision_enact_speed_mult = 0.15
-		planet_administrators_produces_mult = 0.10
+		planet_bureaucrats_produces_mult = 0.10
 		country_edict_fund_add = 20
 	}
 

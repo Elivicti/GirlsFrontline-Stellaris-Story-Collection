@@ -2,7 +2,6 @@
 
 
 GF_trait_leader_scientist_16lab = {
-	cost = 1
 	inline_script = {
 		script = trait/GF_traits
 		CLASS = scientist
@@ -12,6 +11,7 @@ GF_trait_leader_scientist_16lab = {
 		RARITY  = veteran
 		GLOW = no
 		TIER = none
+		TIMED = no
 	}
 	self_modifier = {
 		leader_trait_selection_options_add = 1
@@ -22,7 +22,7 @@ GF_trait_leader_scientist_16lab = {
 	}
 	triggered_councilor_modifier = {
 		all_technology_research_speed = 0.025
-		multiplier = trigger:has_skill
+		multiplier = trigger:has_base_skill
 	}
 	custom_tooltip_with_modifiers = GF_trait_leader_scientist_16lab_councilor_effect
 	leader_potential_add = {
@@ -98,7 +98,6 @@ GF_trait_leader_doll = {
 	leader_class = { scientist commander official }
 }
 GF_trait_leader_commander_plus = {
-	cost = 0
 	inline_script = {
 		script = trait/GF_traits
 		CLASS = commander
@@ -108,6 +107,7 @@ GF_trait_leader_commander_plus = {
 		RARITY = veteran
 		GLOW = yes
 		TIER = none
+		TIMED = no
 	}
 
 	self_modifier = {
@@ -128,7 +128,6 @@ GF_trait_leader_commander_plus = {
 	randomized = no
 }
 GF_trait_leader_scientist_plus = {
-	cost = 0
 	inline_script = {
 		script = trait/GF_traits
 		CLASS = scientist
@@ -138,6 +137,7 @@ GF_trait_leader_scientist_plus = {
 		RARITY = veteran
 		GLOW = yes
 		TIER = none
+		TIMED = no
 	}
 	self_modifier = {
 		species_leader_exp_gain = 0.2
@@ -152,7 +152,6 @@ GF_trait_leader_scientist_plus = {
 	randomized = no
 }
 GF_trait_leader_official_plus = {
-	cost = 0
 	inline_script = {
 		script = trait/GF_traits
 		CLASS = official
@@ -162,6 +161,7 @@ GF_trait_leader_official_plus = {
 		RARITY = veteran
 		GLOW = yes
 		TIER = none
+		TIMED = no
 	}
 	self_modifier = {
 		species_leader_exp_gain = 0.2
@@ -184,7 +184,6 @@ GF_trait_leader_official_plus = {
 }
 
 GF_trait_leader_doll_cloud_network_node = {
-	cost = 0
 	# @trait_sorting_priority_$RARITY$_$COUNCIL$_$TIER$
 	# @trait_sorting_priority_veteran_no_none
 	inline_script = {
