@@ -378,6 +378,7 @@ utility_component_template = {
 		### fleet action tooltip showed in fleet ui
 		context_menu_name = GF_deploy_RC_beacon_menu_title
 		icon = GFX_fleet_order_button_special_project
+		icon_selected = GFX_fleet_order_button_special_project_selected
 
 		### not sure when this is fired
 		on_cancel = on_GF_RC_beacon_deployment_canceled
