@@ -406,6 +406,11 @@
  mod_pop_GF_dormancy_doll_bonus_workforce_add: "$GF_dormancy_doll$的岗位效率"
  mod_pop_GF_dormancy_doll_bonus_workforce_mult: "$GF_dormancy_doll$的岗位效率"
 
+ GF_pop_category_dormancy_doll: "休眠人形"
+ mod_GF_pop_category_dormancy_doll_physics_research_produces_add: "$GF_pop_category_dormancy_doll$产出的 £physics_research£ $physics_research$"
+ mod_GF_pop_category_dormancy_doll_society_research_produces_add: "$GF_pop_category_dormancy_doll$产出的 £society_research£ $society_research$"
+ mod_GF_pop_category_dormancy_doll_engineering_research_produces_add: "$GF_pop_category_dormancy_doll$产出的 £engineering_research£ $engineering_research$"
+
 
  mod_GF_auto_colony_pop_load_add: "自动化遥控殖民协议负荷"
 
