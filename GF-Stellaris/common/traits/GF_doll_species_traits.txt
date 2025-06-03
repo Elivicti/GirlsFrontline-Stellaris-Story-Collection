@@ -21,16 +21,17 @@ GF_trait_delicious_food = {
 	}
 }
 GF_trait_doll_expand = {
-	cost = 1
+	cost = 2
 	allowed_archetypes = { GF_ANDROID }
 	initial = yes
 	randomized = no
 	icon = "gfx/interface/icons/traits/doll/expand.dds"
 	modifier = {
-		planet_jobs_produces_mult = 0.10
+		pop_workforce_mult = 0.2
 		army_damage_mult = 0.10
 
-		species_empire_size_mult = 0.10
+		species_empire_size_mult = 0.20
+		planet_pops_upkeep_mult = 0.05
 	}
 }
 ######(advance)
@@ -194,6 +195,12 @@ GF_trait_zener_protocol = {
 	modifier = {
 		pop_GF_liaison_bonus_workforce_mult = 0.20
 		species_empire_size_mult = -0.10
+	}
+
+	triggered_pop_group_modifier = {
+		potential = { has_trait = GF_trait_doll_expand }
+		species_empire_size_mult = -0.10
+		planet_pops_upkeep_mult = -0.05
 	}
 }
 GF_trait_sercurity_program = {
