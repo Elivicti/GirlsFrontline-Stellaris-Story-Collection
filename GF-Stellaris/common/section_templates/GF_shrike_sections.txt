@@ -9,7 +9,7 @@
 
 # Swarm Large Ship Section
 ship_section_template = {
-	key = "GF_shrike_warshiparge_key"
+	key = "GF_shrike_warshiplarge_key"
 	ship_size = GF_shrike_warship_large
 	fits_on_slot = mid
 	entity = "GF_shrike_warship_large_entity"
