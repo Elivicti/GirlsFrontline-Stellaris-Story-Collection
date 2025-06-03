@@ -4,7 +4,7 @@
 
  GF_Stellaris_Update_Log_Tip: "要获取更详细的§Y更新日志§!，请前往§Y创意工坊页面§!查看§Y改动说明§!。\n\n如果您在使用过程中对本机功能还有其他建议，或者发现系统错误，请向OGAS维护与升级部门主管安娜小姐反馈，QQ群：1035699926\n其他开发者若要接入本机系统，请参阅§Y000_documentation§!目录。"
 
- GF_Stellaris_Log_20250528: "1. 适配§Y4.0§!\n2. §Y$pc_GF_automated_city$§!现在使用§Y区域特化§!而不是§Y专精类型§!\n3. 调整了§Y$pc_GF_automated_city$§!部分建筑提供的修正\n4. 移除了§Y$job_GF_reverse_collapser_refinery_plural$§!，现在§Y$job_GF_reverse_collapser_industry_plural$§!将会受到§Y$job_foundry_plural$§!与§Y$job_artisan_plural$§!的§Y稀有资源产出增加§!修正\n5. §Y$GF_ANDROID_plural$§!组装时不再需要 £gf_core_chip£ §Y$gf_core_chip$§!，人口的 £gf_core_chip£ §Y$gf_core_chip$维护费§!提高至§R0.15§!\n6. §Y$job_GF_programmer_plural$§!产出的 £gf_core_chip£ §Y$gf_core_chip$§!提高至§G2.5§!\n7. 调整§Y$GF_ANDROID_plural$§!部分特质\n8. 添加对§YPlanet Diversity§!的兼容"
+ GF_Stellaris_Log_20250528: "1. 适配§Y4.0§!\n2. §Y$pc_GF_automated_city$§!现在使用§Y区域特化§!而不是§Y专精类型§!\n3. 调整了§Y$pc_GF_automated_city$§!部分建筑提供的修正\n4. 移除了§Y$job_GF_reverse_collapser_refinery_plural$§!，现在§Y$job_GF_reverse_collapser_industry_plural$§!将会受到§Y$job_foundry_plural$§!与§Y$job_artisan_plural$§!的§Y稀有资源产出增加§!修正\n5. §Y$GF_ANDROID_plural$§!组装时不再需要 £gf_core_chip£ §Y$gf_core_chip$§!，人口的 £gf_core_chip£ §Y$gf_core_chip$维护费§!提高至§R0.15§!\n6. §Y$job_GF_programmer_plural$§!产出的 £gf_core_chip£ §Y$gf_core_chip$§!提高至§G2.5§!\n7. 调整§Y$GF_ANDROID_plural$§!部分特质\n8. 降低§Y$GF_faction_name_relic_department$§!产出的资源\n9. 添加对§YPlanet Diversity§!的兼容"
 
  # 2025.1.14
  GF_Stellaris_Log_20250114: "1. §Y$pc_GF_automated_city$§!现在会根据星球大小获得区划上限加成和区划产生的帝国规模增加\n2. 新增§Y$pc_GF_automated_city$§!相关的 £engineering£ §Y循环科技§!\n3. 调整§Y$council_agenda_GF_agenda_automation_name$§!议程提供的效果\n4. 新增人形立绘\n5. 其他问题修复与优化"
