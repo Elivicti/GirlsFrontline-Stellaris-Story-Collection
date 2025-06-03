@@ -382,6 +382,27 @@
  GF_planet_maintain_dolls: "$job_GF_maintain_doll_plural$"
  mod_GF_planet_maintain_dolls_unity_produces_add: "$GF_planet_maintain_dolls$生产的 £unity£ $unity$"
 
+ pop_cat_GF_dormancy_doll: "$job_GF_dormancy_doll$"
+ pop_cat_GF_dormancy_doll_plural: "$job_GF_dormancy_doll_plural$"
+ pop_cat_GF_dormancy_doll_desc: "$job_GF_dormancy_doll_plural_desc$"
+ mod_pop_cat_GF_dormancy_doll_happiness: "$pop_cat_GF_dormancy_doll$幸福度"
+ mod_pop_cat_GF_dormancy_doll_political_power: "$pop_cat_GF_dormancy_doll$政治权力"
+ mod_pop_cat_GF_dormancy_doll_bonus_workforce_mult: "$pop_cat_GF_dormancy_doll$的岗位效率"
+ mod_pop_cat_GF_dormancy_doll_bonus_workforce_add: "$pop_cat_GF_dormancy_doll$的岗位效率"
+
+ mod_job_GF_dormancy_doll_max_workforce_add: "$job_GF_dormancy_doll$$MOD_JOB_MAX_WORKFORCE_MULT$"
+ mod_job_GF_dormancy_doll_max_workforce_mult: "$job_GF_dormancy_doll$$MOD_JOB_MAX_WORKFORCE_MULT$"
+ mod_job_GF_dormancy_doll_per_pop: "每$VALUE$个人口提供§G+1§!个$job_GF_dormancy_doll$岗位"
+ mod_job_GF_dormancy_doll_per_pop_short: "\n每$VALUE$ £pop£ §G+1§! £job_GF_dormancy_doll£"
+ mod_job_GF_dormancy_doll_per_crime: "每$VALUE$行星£crime£§Y犯罪度§!§R+1§!$job_GF_dormancy_doll$岗位"
+ mod_pop_GF_dormancy_doll_promotion_time_mult: "$GF_dormancy_doll$晋升时间"
+ mod_pop_GF_dormancy_doll_demotion_time_mult: "$GF_dormancy_doll$降级时间"
+ mod_pop_GF_dormancy_doll_workforce_add: "$GF_dormancy_doll$的岗位效率"
+ mod_pop_GF_dormancy_doll_workforce_mult: "$GF_dormancy_doll$的岗位效率"
+ mod_pop_GF_dormancy_doll_bonus_workforce_add: "$GF_dormancy_doll$的岗位效率"
+ mod_pop_GF_dormancy_doll_bonus_workforce_mult: "$GF_dormancy_doll$的岗位效率"
+
+
  mod_GF_auto_colony_pop_load_add: "自动化遥控殖民协议负荷"
 
 #####

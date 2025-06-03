@@ -11,6 +11,9 @@ GF_cloud_computing_protocol = {
 	icon_frame = 2
 	custom_tooltip = GF_cloud_computing_protocol_modifier_desc
 	GF_planet_dormancy_energy_upkeep_add = 0.1
+	GF_pop_category_dormancy_doll_physics_research_produces_add = 2
+	GF_pop_category_dormancy_doll_society_research_produces_add = 2
+	GF_pop_category_dormancy_doll_engineering_research_produces_add = 2
 }
 
 GF_storage_protocol = {

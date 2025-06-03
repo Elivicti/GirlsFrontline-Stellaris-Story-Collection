@@ -70,3 +70,27 @@ GF_freedom_class = {
 		mult = modifier:GF_freedom_kingdom_amenities_usage_mult
 	}
 }
+
+GF_dormancy_doll = {
+	rank = 1
+	allow_resettlement = {
+		has_citizenship_rights = no
+	}
+	resettlement_cost = {
+		energy = 500
+	}
+
+	inline_script = "pop_categories/social_classes_triggered_modifiers_no_happiness"
+
+	resources = {
+		category = GF_pop_category_dormancy_doll
+	}
+
+	pop_group_modifier = {
+		planet_pops_upkeep_mult = -2
+		pop_housing_usage_mult = -2
+		pop_amenities_usage_mult = -2
+		pop_political_power = -2
+		species_empire_size_mult = -2
+	}
+}

@@ -31,8 +31,8 @@ building_GF_doll_maintain_center_1 = {
 		building_hive_warren
 	}
 	planet_modifier = {
-		planet_housing_add = 5
-		planet_amenities_add = 5
+		planet_housing_add = 500
+		planet_amenities_add = 500
 		planet_pops_robotics_upkeep_mult = -0.05
 		GF_ANDROID_pop_happiness = 0.05
 	}
@@ -105,8 +105,8 @@ building_GF_doll_maintain_center_2 = {
 		building_communal_housing_large
 	}
 	planet_modifier = {
-		planet_housing_add = 10
-		planet_amenities_add = 10
+		planet_housing_add = 1000
+		planet_amenities_add = 1000
 		planet_pops_robotics_upkeep_mult = -0.1
 		GF_ANDROID_pop_happiness = 0.1
 	}

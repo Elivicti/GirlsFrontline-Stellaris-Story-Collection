@@ -215,3 +215,12 @@ GF_doll_pops = {
 		}
 	}
 }
+
+GF_pop_category_dormancy_doll = {
+	parent = GF_doll_pops
+	modifier_category = pop_group
+
+	generate_add_modifiers = {
+		produces upkeep
+	}
+}
