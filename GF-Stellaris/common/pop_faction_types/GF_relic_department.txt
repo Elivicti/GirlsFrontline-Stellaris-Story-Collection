@@ -18,10 +18,10 @@ GF_relic_department = {
 	resources = {
 		category = pop_factions
 		produces = {
-			influence = 0.15
-			physics_research = 1
-			society_research = 1
-			engineering_research = 1
+			influence = 0.05
+			physics_research = 0.2
+			society_research = 0.2
+			engineering_research = 0.2
 		}
 	}
 
@@ -45,7 +45,7 @@ GF_relic_department = {
 	}
 
 	can_join_faction = {
-		# is_shackled_robot = no
+		has_citizenship_rights = yes
 		OR = {
 			# has_job = bureaucrat
 			# has_job = manager
@@ -57,15 +57,15 @@ GF_relic_department = {
 			is_pop_category = ruler
 		}
 
-		if = {
-			limit = { has_trait = GF_trait_doll }
-			owner = {
-				OR = {
-					has_policy_flag = GF_doll_right_full
-					has_policy_flag = GF_doll_right_limited
-				}
-			}
-		}
+		# if = {
+		# 	limit = { has_trait = GF_trait_doll }
+		# 	owner = {
+		# 		OR = {
+		# 			has_policy_flag = GF_doll_right_full
+		# 			has_policy_flag = GF_doll_right_limited
+		# 		}
+		# 	}
+		# }
 	}
 
 	attraction = {
