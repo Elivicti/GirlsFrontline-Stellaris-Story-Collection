@@ -1,5 +1,5 @@
 ﻿l_simp_chinese:
- GIRLF:0 "少女前线"
+ GIRLF: "少女前线"
 ############
  mod_GF_energy_produces_add: "产出的 £energy£ $energy$"
  mod_GF_minerals_produces_add: "产出的 £minerals£ $minerals$"
@@ -62,6 +62,9 @@
  mod_leader_generals_gf_core_chip_upkeep_add:0 "$mod_leaders_gf_core_chip_upkeep_mult$"
 
  mod_planet_pop_assemblers_gf_core_chip_upkeep_add: "组装 £gf_core_chip£ $gf_core_chip$维护费"
+
+ mod_planet_pops_robotics_food_upkeep_mult: "机器人 £food£ $food$维护费"
+ mod_planet_pops_food_upkeep_mult: "人口 £food£ $food$维护费"
 ############ economics
  GF_ship_collapse_weapons:0 "坍塌武器"
  GF_ship_collapse_armors:0 "坍塌装甲"

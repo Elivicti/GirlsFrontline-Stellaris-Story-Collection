@@ -17,7 +17,7 @@ GF_trait_delicious_food = {
 	icon="gfx/interface/icons/traits/doll/food.dds"
 	modifier = {
 		pop_happiness = 0.20
-		planet_pops_robotics_food_upkeep_mult = 1.0
+		planet_pops_food_upkeep_mult = 1.0
 	}
 }
 GF_trait_doll_expand = {
