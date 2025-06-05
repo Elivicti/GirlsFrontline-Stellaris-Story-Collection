@@ -37,6 +37,7 @@ GF_new_types_robot = {
 			"sd_fun_robot"
 			"ms_robotic_01"
 			"ms_robotic_02"
+			"ms_human_01_machine"
 		}
 	}
 
@@ -44,13 +45,24 @@ GF_new_types_robot = {
 		randomizable = {
 			OR = {
 				has_synthetic_dawn = yes
-				has_plantoids = yes
+				AND = {
+					has_machine_age_dlc = yes
+					has_plantoids = yes
+				}
+			}
+			# The create_species effect can't properly take the possible trigger below into account.
+			# Work around this by disabling this class for species randomization after game start.
+			NOT = {
+				has_global_flag = game_started
 			}
 		}
 		playable = {
 			OR = {
 				has_synthetic_dawn = yes
-				has_plantoids = yes
+				AND = {
+					has_machine_age_dlc = yes
+					has_plantoids = yes
+				}
 			}
 		}
 		portraits = {
@@ -59,32 +71,96 @@ GF_new_types_robot = {
 	}
 
 	conditional_portraits = {
-		randomizable = { has_lithoids = yes }
-		playable = { has_lithoids = yes }
+		randomizable = {
+			AND = {
+				OR = {
+					has_synthetic_dawn = yes
+					has_machine_age_dlc = yes
+				}
+				has_lithoids = yes
+			}
+		}
+		playable = {
+			AND = {
+				OR = {
+					has_synthetic_dawn = yes
+					has_machine_age_dlc = yes
+				}
+				has_lithoids = yes
+			}
+		}
 		portraits = {
 			"lith_machine"
 		}
 	}
 
 	conditional_portraits = {
-		randomizable = { has_necroids = yes }
-		playable = { has_necroids = yes }
+		randomizable = {
+			AND = {
+				OR = {
+					has_synthetic_dawn = yes
+					has_machine_age_dlc = yes
+				}
+				has_necroids = yes
+			}
+		}
+		playable = {
+			AND = {
+				OR = {
+					has_synthetic_dawn = yes
+					has_machine_age_dlc = yes
+				}
+				has_necroids = yes
+			}
+		}
 		portraits = {
 			"nec_machine"
 		}
 	}
 
 	conditional_portraits = {
-		randomizable = { has_aquatics = yes }
-		playable = { has_aquatics = yes }
+		randomizable = {
+			AND = {
+				OR = {
+					has_synthetic_dawn = yes
+					has_machine_age_dlc = yes
+				}
+				has_aquatics = yes
+			}
+		}
+		playable = {
+			AND = {
+				OR = {
+					has_synthetic_dawn = yes
+					has_machine_age_dlc = yes
+				}
+				has_aquatics = yes
+			}
+		}
 		portraits = {
 			"aqu_machine"
 		}
 	}
 
 	conditional_portraits = {
-		randomizable = { has_toxoids = yes }
-		playable = { has_toxoids = yes }
+		randomizable = {
+			AND = {
+				OR = {
+					has_synthetic_dawn = yes
+					has_machine_age_dlc = yes
+				}
+				has_toxoids = yes
+			}
+		}
+		playable = {
+			AND = {
+				OR = {
+					has_synthetic_dawn = yes
+					has_machine_age_dlc = yes
+				}
+				has_toxoids = yes
+			}
+		}
 		portraits = {
 			"tox_machine"
 		}
@@ -107,8 +183,20 @@ GF_new_types_robot = {
 	}
 
 	conditional_portraits = {
-		randomizable = { has_rick_the_cube_dlc = yes }
-		playable = { has_rick_the_cube_dlc = yes }
+		randomizable = {
+			has_rick_the_cube_dlc = yes
+			OR = {
+				has_synthetic_dawn = yes
+				has_machine_age_dlc = yes
+			}
+		}
+		playable = {
+			has_rick_the_cube_dlc = yes
+			OR = {
+				has_synthetic_dawn = yes
+				has_machine_age_dlc = yes
+			}
+		}
 		portraits = {
 			"cyb_machine"
 		}
