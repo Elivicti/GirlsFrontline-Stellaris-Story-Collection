@@ -35,6 +35,12 @@ GF_doll_assemblers = {
 	}
 	modifier_category = pop_job
 
+	triggered_upkeep_modifier = {
+		key = planet_pop_assemblers
+		modifier_types = { add }
+		trigger = { always = yes }
+		use_parent_icon = yes
+	}
 }
 
 GF_ship_collapse_weapons = {
