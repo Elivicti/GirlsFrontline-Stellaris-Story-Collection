@@ -2,7 +2,7 @@
 #################################
  GF_trait_doll:0 "仿生自律人形"
  GF_trait_doll_desc:0 "§L仿生自律人形是一种人造机械人偶，其外表采用仿生材质且据旧时代的传统塑造成女性，而内部基础骨架为合金构成，由电力驱动，控制中心装有处理器以处理接受的命令，同时搭载基础心智云图以更好模拟人类思维与个性。基于以上特性，她们有更强大的躯体与基本的智能，能更好的适应恶劣环境、完成各种任务，是工人与战士的优良人选。§!"
- GF_trait_doll_tooltip:0 "每$pop_group_unit$人口 £food£ $food$维护费: §R+0.5§!\n$t$—每$pop_group_unit$人口 £gf_core_chip£ $gf_core_chip$维护费: §R+0.15§!"
+ GF_trait_doll_tooltip:0 "每$pop_group_unit$人口 £food£ $food$维护费: §R+0.5§!\n$t$—每$pop_group_unit$人口 £gf_core_chip£ $gf_core_chip$维护费: $@GF_doll_pops_gf_core_chip_upkeep|-=$"
  GF_trait_doll_master:0 "控偶师"
  GF_trait_doll_master_desc:0 "§L这一物种自遭受辐射污染以后，不再愿意亲自从事高强度的宇宙探索任务，而将社会的各项基础工作交给更为强壮的人形，自己只需发号施令就可以了。§!"
  GF_trait_doll_master_effect_desc:0 "当星球上没有§Y$GF_trait_doll$§!人口时，§Y$pop_cat_ruler$§!和§Y$pop_cat_specialist$§!产出的资源: §R-10%§!"

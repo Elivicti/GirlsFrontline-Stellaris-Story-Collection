@@ -41,7 +41,7 @@ GF_trait_doll = {
 		category = GF_doll_pops
 		upkeep = {
 			trigger = { is_being_purged = no }
-			gf_core_chip = 0.15
+			gf_core_chip = @GF_doll_pops_gf_core_chip_upkeep
 		}
 		upkeep = {
 			trigger = {

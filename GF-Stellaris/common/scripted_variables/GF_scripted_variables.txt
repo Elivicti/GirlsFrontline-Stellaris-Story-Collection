@@ -9,6 +9,10 @@
 @trait_sorting_priority_veteran_always_none = 215
 @trait_sorting_priority_paragon_triggered_none = 240
 
+# species traits
+@GF_doll_pops_gf_core_chip_upkeep = 0.15         # per pop unit (100 pops)
+@GF_doll_pops_assembling_gf_core_chip_cost = 0.5 # per planet_pop_assembly_add
+
 # projects from Zion
 @GF_zion_project_energy_cost_1 = 5000
 @GF_zion_project_energy_cost_2 = 10000
