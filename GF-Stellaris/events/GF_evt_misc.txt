@@ -218,20 +218,32 @@ planet_event = {
 		sapient_pop_amount > 100
 		fromfrom = {
 			has_trait = trait_nascent_stage
-
-			# 按理说game_rule已经禁止了未开智人口的增长，但是不知为何还是会长
-			# 所以这里需要提前处理如果长了未开智人口的情况
-			has_trait = trait_presapient_stage
+		}
+		# 在某个非常申必的条件下，nascent_stage_species@fromfrom.species可能会不存在，这种情况理应会被一个if判断处理
+		# 但实际这玩意指向了OGAS国家里的一个事件领袖（也太几把怪了），导致if条件在判断存在时通过
+		# 于是最终创建人口的时候就读取了那个事件领袖的物种
+		# 所以这里强制判断一下是不是同一个物种，不是就给他强行修正
+		exists = event_target:nascent_stage_species@fromfrom.species
+		event_target:nascent_stage_species@fromfrom.species = {
+			NOT = { is_same_species = prev.fromfrom }
 		}
 	}
 
 	immediate = {
-		# 当未开智物种长了人口时，nascent_stage_species@fromfrom.species理应不存在
-		# 但实际却指向了OGAS国家里的一个事件领袖（也太几把怪了），导致if条件在判断存在时通过
-		# 于是最终创建人口的时候就读取了那个事件领袖的物种
-		fromfrom.species = {
-			# 这里强制指定nascent_stage_species@fromfrom.species为这个未开智物种
-			save_global_event_target_as = nascent_stage_species@this
+		fromfrom = {
+			species = {
+				save_event_target_as = nascent_stage_source_species
+			}
+			modify_species = {
+				species = species
+				add_trait = trait_presapient_stage
+				inherit_parent_rights = yes
+				sapient = no
+				change_scoped_species = no
+				effect = {
+					save_global_event_target_as = nascent_stage_species@event_target:nascent_stage_source_species
+				}
+			}
 		}
 	}
 }
