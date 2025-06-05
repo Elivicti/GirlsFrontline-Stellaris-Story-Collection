@@ -7,6 +7,7 @@ GF_guard_doll = {
 			building_icon = building_stronghold
 		}
 	}
+	tags = { soldier }
 
 	planet_modifier = {
 		planet_crime_add = -5
@@ -60,6 +61,7 @@ GF_command_doll = {
 			building_icon = building_GF_auto_colony_capital
 		}
 	}
+	tags = { unity amenities }
 
 	triggered_planet_modifier = {
 		planet_amenities_add = 400
@@ -108,6 +110,7 @@ GF_maintain_doll = {
 			building_icon = building_GF_doll_maintain_center_1
 		}
 	}
+	tags = { amenities }
 
 	resources = {
 		category = GF_planet_maintain_dolls
@@ -158,6 +161,7 @@ GF_assemble_doll = {
 			building_icon = building_GF_doll_factory
 		}
 	}
+	tags = { pop_assembly }
 
 	possible_pre_triggers = {
 		has_owner = yes

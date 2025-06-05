@@ -8,6 +8,7 @@ GF_freedom_kingdom = {
 			condition_string = GF_freedom_kingdom_conditions
 		}
 	}
+	tags = { GF_automated_city research unity }
 	can_set_priority = no
 
 	possible_pre_triggers = {

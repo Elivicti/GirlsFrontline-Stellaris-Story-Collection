@@ -7,6 +7,18 @@ GF_URNC_commissioner = {
 			building_icon = building_capital
 		}
 	}
+	tags = { unity amenities }
+	triggered_tags = {
+		trigger = {
+			planet = {
+				check_modifier_value = {
+					modifier = GF_planet_URNC_commissioner_stability_add
+					value > 0
+				}
+			}
+		}
+		tags = { stability }
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -107,6 +119,7 @@ GF_AU_director = {
 			building_icon = building_institute
 		}
 	}
+	tags = { research amenities }
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -251,6 +264,7 @@ GF_GK_officer = {
 			building_icon = building_capital
 		}
 	}
+	tags = { unity amenities }
 
 	possible_pre_triggers = {
 		has_owner = yes

@@ -7,6 +7,7 @@ GF_assemble_mechanic = {
 			building_icon = building_GF_doll_factory
 		}
 	}
+	tags = { pop_assembly }
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -64,6 +65,7 @@ GF_liaison = {
 			building_icon = building_GF_zener_network_center_1
 		}
 	}
+	tags = { unity }
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -117,6 +119,7 @@ GF_programmer = {
 			building_icon = building_GF_42lab_2
 		}
 	}
+	tags = { research }
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -156,6 +159,7 @@ GF_URNC_secretary = {
 			building_icon = building_capital
 		}
 	}
+	tags = { unity amenities }
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -247,7 +251,7 @@ GF_AU_consultant = {
 			icon = researcher
 		}
 	}
-	tags = { research }
+	tags = { research amenities }
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -382,6 +386,7 @@ GF_GK_commander = {
 			building_icon = building_capital
 		}
 	}
+	tags = { unity amenities trade }
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -465,6 +470,7 @@ GF_collapser = {
 			building_icon = building_GF_collapse_1
 		}
 	}
+	tags = { industry GF_collapse }
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -530,6 +536,7 @@ GF_reverse_collapser_refinery = {
 			building_icon = building_GF_reverse_collapse
 		}
 	}
+	tags = { industry GF_reverse_collapse }
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -679,6 +686,7 @@ GF_reverse_collapser_industry = {
 			building_icon = building_GF_reverse_collapse
 		}
 	}
+	tags = { industry GF_reverse_collapse }
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -776,6 +784,7 @@ GF_reverse_collapser_research = {
 			building_icon = building_GF_reverse_collapse
 		}
 	}
+	tags = { research GF_reverse_collapse }
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -829,6 +838,7 @@ GF_system_dispatcher = {
 		}
 	}
 	possible_precalc = can_fill_specialist_job
+	tags = { stability GF_automated_city }
 
 	planet_modifier = {
 		GF_system_maintenance = 0.12
@@ -872,6 +882,7 @@ GF_maintenance_engineer = {
 		}
 	}
 	possible_precalc = can_fill_specialist_job
+	tags = { stability GF_automated_city }
 
 	planet_modifier = {
 		GF_system_maintenance = 0.06
@@ -917,6 +928,7 @@ GF_relic_researcher = {
 			building_icon = building_research_lab_1
 		}
 	}
+	tags = { research minor_artifacts }
 
 	possible_pre_triggers = {
 		has_owner = yes
