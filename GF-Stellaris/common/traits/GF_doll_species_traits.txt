@@ -8,6 +8,7 @@ GF_trait_strange_cloth = {
 		entertainer_jobs_bonus_workforce_mult = 0.10
 		planet_pops_consumer_goods_upkeep_mult = 0.10
 	}
+	tags = { GF_ANDROID species amenities drawbacks }
 }
 GF_trait_delicious_food = {
 	cost = 0
@@ -19,6 +20,7 @@ GF_trait_delicious_food = {
 		pop_happiness = 0.20
 		planet_pops_food_upkeep_mult = 1.0
 	}
+	tags = { GF_ANDROID species happiness food drawbacks }
 }
 GF_trait_doll_expand = {
 	cost = 2
@@ -33,6 +35,7 @@ GF_trait_doll_expand = {
 		species_empire_size_mult = 0.20
 		planet_pops_upkeep_mult = 0.05
 	}
+	tags = { GF_ANDROID species pop_output empire_size drawbacks }
 }
 ######(advance)
 GF_trait_fire_core = {
@@ -48,6 +51,7 @@ GF_trait_fire_core = {
 	modifier = {
 		army_damage_mult = 0.20
 	}
+	tags = { GF_ANDROID species army positive }
 }
 GF_trait_vanometriccell = {
 	cost = 1
@@ -63,6 +67,7 @@ GF_trait_vanometriccell = {
 	modifier = {
 		planet_pops_upkeep_mult = -0.10
 	}
+	tags = { GF_ANDROID species upkeep positive }
 }
 GF_trait_liquid_metal_skeleton = {
 	cost = 1
@@ -77,6 +82,7 @@ GF_trait_liquid_metal_skeleton = {
 	modifier = {
 		planet_pop_assembly_mult = 0.10
 	}
+	tags = { GF_ANDROID species pop_assembly positive }
 }
 GF_trait_adapted_skin = {
 	cost = 1
@@ -91,6 +97,7 @@ GF_trait_adapted_skin = {
 	modifier = {
 		pop_environment_tolerance = 0.20
 	}
+	tags = { GF_ANDROID species habitability positive }
 }
 GF_trait_emotional_subroutine = {
 	cost = 1
@@ -106,6 +113,7 @@ GF_trait_emotional_subroutine = {
 	modifier = {
 		pop_amenities_usage_mult = -0.2
     }
+	tags = { GF_ANDROID species amenities positive }
 }
 GF_trait_analysis_model = {
 	cost = 1
@@ -121,6 +129,7 @@ GF_trait_analysis_model = {
 	modifier = {
 		researcher_jobs_bonus_workforce_mult = 0.1
 	}
+	tags = { GF_ANDROID species research positive }
 }
 ######(perk1)
 GF_trait_logical_subroutine = {
@@ -141,6 +150,7 @@ GF_trait_logical_subroutine = {
 	modifier = {
 		researcher_jobs_bonus_workforce_mult = 0.2
 	}
+	tags = { GF_ANDROID species research positive }
 }
 GF_trait_mind_cloud = {
 	cost = 2
@@ -158,6 +168,7 @@ GF_trait_mind_cloud = {
 		species_leader_exp_gain = 0.20
 		negative_leader_traits_species = -2
 	}
+	tags = { GF_ANDROID species leader positive }
 }
 GF_trait_tacticalchip = {
 	cost = 1
@@ -176,6 +187,7 @@ GF_trait_tacticalchip = {
 	modifier = {
 		army_damage_mult = 0.20
 	}
+	tags = { GF_ANDROID species army positive }
 }
 GF_trait_zener_protocol = {
 	cost = 1
@@ -202,6 +214,7 @@ GF_trait_zener_protocol = {
 		species_empire_size_mult = -0.10
 		planet_pops_upkeep_mult = -0.05
 	}
+	tags = { GF_ANDROID species empire_size positive }
 }
 GF_trait_sercurity_program = {
 	cost = 1
@@ -221,6 +234,7 @@ GF_trait_sercurity_program = {
 		pop_happiness = 0.2
 		pop_government_ethic_attraction = 0.50
 	}
+	tags = { GF_ANDROID species ethic_attraction happiness positive }
 }
 ######(perk2)
 GF_trait_nanobot_hives = {
@@ -240,6 +254,7 @@ GF_trait_nanobot_hives = {
 	modifier = {
 		planet_pops_upkeep_mult = -0.20
     }
+	tags = { GF_ANDROID species upkeep positive }
 }
 GF_trait_quantum_processors = {
 	cost = 2
@@ -257,6 +272,7 @@ GF_trait_quantum_processors = {
 		pop_cat_ruler_bonus_workforce_mult = 0.10
 		pop_cat_specialist_bonus_workforce_mult = 0.10
 	}
+	tags = { GF_ANDROID species pop_output positive }
 }
 GF_trait_overclock = {
 	cost = -3
@@ -274,6 +290,7 @@ GF_trait_overclock = {
 	modifier = {
 		planet_pops_upkeep_mult = 0.10
 	}
+	tags = { GF_ANDROID species upkeep negative }
 }
 GF_trait_nuclear_engine = {
 	cost = 2
@@ -291,4 +308,5 @@ GF_trait_nuclear_engine = {
 	modifier = {
 		pop_cat_worker_bonus_workforce_mult = 0.20
 	}
+	tags = { GF_ANDROID species pop_output positive }
 }

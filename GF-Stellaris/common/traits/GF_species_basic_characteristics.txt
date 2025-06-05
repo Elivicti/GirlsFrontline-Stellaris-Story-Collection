@@ -5,6 +5,8 @@ GF_trait_doll = {
 	randomized = no
 	infertile = yes
 
+	tags = { GF_ANDROID species special }
+
 	species_potential_add = { always = no }
 	species_possible_add = { always = yes }
 	species_possible_remove = { always = no }
@@ -103,6 +105,7 @@ GF_trait_mind_upgrade_1 = {
 	initial = no
 	randomized = no
 	advanced_trait = no
+	tags = { GF_ANDROID species special positive }
 
 	allowed_archetypes = { GF_ANDROID }
 
@@ -125,6 +128,7 @@ GF_trait_mind_upgrade_2 = {
 	initial = no
 	randomized = no
 	advanced_trait = no
+	tags = { GF_ANDROID species special positive }
 
 	allowed_archetypes = { GF_ANDROID }
 
@@ -145,6 +149,7 @@ GF_trait_sequela = {
 	sorting_priority = 29
 	initial = no
 	randomized = no
+	tags = { GF_GAVIRUL negative special  pop_growth }
 
 	species_potential_add = { from = { GF_has_completed_gavirul_project = yes } }
 	species_possible_add = { from = { GF_has_completed_gavirul_project = yes } }

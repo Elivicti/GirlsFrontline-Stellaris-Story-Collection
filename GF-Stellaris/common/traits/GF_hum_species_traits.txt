@@ -8,6 +8,7 @@ GF_trait_doll_master = {
 	species_possible_remove = { always = no }
 	species_possible_merge_add = { always = no }
 	advanced_trait = no
+	tags = { special pop_output drawbacks }
 	modifier = {
 		species_leader_exp_gain = 0.10
 		pop_cat_ruler_bonus_workforce_mult = 0.20
@@ -42,6 +43,7 @@ GF_trait_self_dependence = {
 	sorting_priority = 28
 	initial = yes
 	randomized = no
+	tags = { special pop_output pop_growth drawbacks }
 
 	species_potential_add = { always = no }
 	species_possible_remove = { always = no }
@@ -70,6 +72,7 @@ GF_trait_sequela_immune = {
 
 	sorting_priority = 29
 	randomized = no
+	tags = { GF_GAVIRUL special pop_output pop_growth }
 
 	species_potential_add = { from = { GF_has_completed_gavirul_project = yes } }
 	species_possible_add = { from = { GF_has_completed_gavirul_project = yes } }
