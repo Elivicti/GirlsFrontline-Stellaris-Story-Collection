@@ -9,6 +9,7 @@ building_GF_doll_factory = {
 	building_sets = {
 		government
 		urban
+		automation
 	}
 
 	potential = {

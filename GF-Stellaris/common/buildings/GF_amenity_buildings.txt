@@ -7,6 +7,7 @@ building_GF_doll_maintain_center_1 = {
 	building_sets = {
 		government
 		urban
+		automation
 	}
 
 	potential = {
@@ -86,6 +87,7 @@ building_GF_doll_maintain_center_2 = {
 	building_sets = {
 		government
 		urban
+		automation
 	}
 	allow = {
 		has_upgraded_capital = yes
