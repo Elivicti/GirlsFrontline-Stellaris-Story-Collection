@@ -11,3 +11,11 @@ on_pop_growth = {
 		GF_evt_misc.130 # 早产特质物种长人口的时候会莫名其妙长新人类的物种
 	}
 }
+
+# A leader is added to the leader pool, available for recruitment
+# scope: country, from: leader
+on_added_to_leader_pool = {
+	events = {
+		GF_evt_misc.140
+	}
+}

@@ -248,6 +248,52 @@ planet_event = {
 	}
 }
 
+
+#### 防止女仆领袖生成把人形替换掉
+
+# on_added_to_leader_pool
+# this = country
+# from = leader
+country_event = {
+	id = GF_evt_misc.140
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		from.species = { has_trait = GF_trait_doll }
+	}
+	immediate = {
+		from = {
+			# 暴力添加所有flag
+			set_leader_flag = ms_is_maid_ldr
+			set_leader_flag = ms_ldr_of_est_green
+			set_leader_flag = ms_ldr_of_est_red
+			set_leader_flag = ms_ldr_of_est_blue
+			set_leader_flag = ms_ldr_of_est_white
+
+			leader_event = {
+				id = GF_evt_misc.141
+				days = 1
+			}
+		}
+	}
+}
+leader_event = {
+	id = GF_evt_misc.141
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_trait = GF_trait_leader_doll
+	}
+	immediate = {
+		# 移除所有flag以防止被错认
+		remove_leader_flag = ms_is_maid_ldr
+		remove_leader_flag = ms_ldr_of_est_green
+		remove_leader_flag = ms_ldr_of_est_red
+		remove_leader_flag = ms_ldr_of_est_blue
+		remove_leader_flag = ms_ldr_of_est_white
+	}
+}
+
 ### on_single_player_save_game_load
 # no scope
 
