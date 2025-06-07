@@ -79,6 +79,23 @@ GF_relic_department = {
 			owner = { has_country_flag = flag_GF_has_doll_rights_oganization }
 		}
 		modifier = {
+			factor = 0.5
+			has_trait = GF_trait_doll
+			has_citizenship_type = {
+				type = citizenship_GF_doll_limited
+				country = from
+			}
+		}
+		modifier = {
+			factor = 0.25
+			from = {
+				pop_amount_percentage = {
+					limit = { member_of_faction = GF_relic_department }
+					percentage > 0.30
+				}
+			}
+		}
+		modifier = {
 			factor = 2
 			member_of_faction = manifesti
 		}
