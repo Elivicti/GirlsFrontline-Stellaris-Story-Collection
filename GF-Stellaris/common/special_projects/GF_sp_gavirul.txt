@@ -10,7 +10,7 @@ special_project = {
 		scaled_modifier = {
 			limit = { has_trait = GF_trait_sequela }
 			scope = this
-			add = 250
+			add = 2.5
 			calc = pop_amount
 		}
 	}
