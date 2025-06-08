@@ -1,5 +1,5 @@
 ﻿l_simp_chinese:
- GF_only_one_computing_center: "$TRIGGER_FAIL$至多只能建造一座$GF_computing_center_3$"
+ GF_only_one_computing_center: "$TRIGGER_FAIL$至多只能建造一座$GF_computing_center_4$"
  GF_mega_requires_single_star_system: "$TRIGGER_FAIL$只能在单恒星星系建造"
 
  GF_computing_center_0: "OGAS计算中心基址"
