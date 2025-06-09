@@ -10,11 +10,10 @@ district_GF_center = {
 
 	show_on_uncolonized = {
 		exists = from
-		from = { has_authority = GF_auth_commonwealth }
+		from = { GF_is_main_country = yes }
 		uses_district_set = GF_sf_machine_world
 	}
 
-	default_starting_district = yes
 	zone_slots = {
 		slot_city_government
 		slot_city_01
@@ -23,12 +22,16 @@ district_GF_center = {
 
 	potential = {
 		exists = owner
-		owner = { has_authority = GF_auth_commonwealth }
+		owner = { GF_is_main_country = yes }
 		uses_district_set = GF_sf_machine_world
 	}
 
 	allow = {
 		NOT = { has_modifier = resort_colony }
+		hidden_trigger = { exists = owner }
+		owner = {
+			has_technology = GF_tech_doll_assemble
+		}
 	}
 
 	conversion_ratio = 1
