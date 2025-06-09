@@ -29,7 +29,7 @@ country_event = {
 	id = GF_start.1
 	title = GF_start.1.name
 	desc = GF_start.1.desc
-	
+
 	picture = {
 		picture = GFX_evt_GF_URNC_flag
 		trigger = { has_valid_civic = GF_civic_URNC }
@@ -200,7 +200,7 @@ planet_event = {
 			value = 2
 		}
 
-		# add_district = district_industrial
+		add_district = district_city
 		add_district = district_mining
 
 		remove_building = building_commercial_zone
