@@ -42,9 +42,14 @@ planet_event = {
 								has_trait = GF_trait_sequela_immune
 							}
 						}
+						set_variable_to_random_value = {
+							which = v_GF_collapsebomb_killed_pop_amount
+							min = 50
+							max = 200
+						}
 						kill_pop_group = {
 							pop_group = this
-							amount = 100
+							amount = v_GF_collapsebomb_killed_pop_amount
 						}
 					}
 				}

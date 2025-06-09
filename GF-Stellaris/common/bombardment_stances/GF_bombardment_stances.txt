@@ -1,7 +1,7 @@
 collapsebomb = {
 	trigger = {
 		owner = {
-			has_authority = GF_auth_commonwealth
+			GF_is_main_country = yes
 			has_policy_flag = GF_enable_collapse_bombardment
 		}
 	}
@@ -26,6 +26,7 @@ collapsebomb = {
 		}
 	}
 	min_pops_to_kill_pop = 0
+	kill_pop_amount = { min = 20 max = 150}
 
 	# root = fleet
 	# from = planet
@@ -62,7 +63,8 @@ GF_bombardment_capture = {
 			is_robot_pop = yes
 		}
 	}
-	min_pops_to_kill_pop = 3
+	min_pops_to_kill_pop = 300
+	kill_pop_amount = { min = 0 max = 100}
 
 	# root = fleet
 	# from = planet
