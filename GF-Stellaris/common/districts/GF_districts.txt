@@ -52,8 +52,12 @@ district_GF_center = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 700
+		planet_housing_add = 800
 		job_GF_maintain_doll_add = 300
+	}
+	triggered_planet_modifier = {
+		potential = { has_deposit = d_GF_sf_control_center }
+		planet_housing_add = 200
 	}
 
 	triggered_planet_modifier = {

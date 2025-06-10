@@ -2,6 +2,7 @@
  district_GF_center:0 "人形管理中枢"
  district_GF_center_plural:0 "人形管理中枢"
  district_GF_center_desc:0 "负责调配、收纳、维护人形的中枢区划，内有专门的人形休眠仓与维护设施。"
+ d_GF_sf_control_center_tooltip: "$t$每个$district_GF_center$提供的$MOD_PLANET_HOUSING_ADD$: §G+200§!"
  district_GF_generator:0 "能源区划"
  district_GF_generator_plural:0 "能源区划"
  district_GF_generator_desc:0 "专门产生能源的区划，为整个星球的生产活动提供能量。"

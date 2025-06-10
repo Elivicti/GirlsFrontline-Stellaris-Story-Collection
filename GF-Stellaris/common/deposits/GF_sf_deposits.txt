@@ -34,6 +34,7 @@ d_GF_sf_control_center = {
 		job_GF_liaison_add = 200
 		species_empire_size_mult = -0.10
 	}
+	custom_tooltip = d_GF_sf_control_center_tooltip
 	drop_weight = { weight = 0 }
 }
 
