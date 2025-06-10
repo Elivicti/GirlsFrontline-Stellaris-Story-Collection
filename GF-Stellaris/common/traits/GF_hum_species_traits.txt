@@ -12,11 +12,11 @@ GF_trait_doll_master = {
 	modifier = {
 		species_leader_exp_gain = 0.10
 		pop_cat_ruler_bonus_workforce_mult = 0.20
-		pop_cat_specialist_bonus_workforce_mult = 0.15
-		pop_cat_worker_bonus_workforce_mult = -0.35
+		pop_cat_specialist_bonus_workforce_mult = 0.20
+		pop_cat_worker_bonus_workforce_mult = -0.25
 		pop_category_specialists_consumer_goods_upkeep_add = 0.10
-		pop_category_rulers_consumer_goods_upkeep_add = 0.15
-		army_damage_mult = -0.50
+		pop_category_rulers_consumer_goods_upkeep_add = 0.10
+		army_damage_mult = -0.30
 	}
 	custom_tooltip_with_modifiers = GF_trait_doll_master_effect_desc
 	triggered_pop_group_modifier = {
@@ -52,8 +52,8 @@ GF_trait_self_dependence = {
 	advanced_trait = no
 	modifier = {
 		army_damage_mult = 0.50
-		pop_cat_worker_bonus_workforce_mult = 0.70
-		logistic_growth_mult = 0.25
+		pop_cat_worker_bonus_workforce_mult = 0.50
+		logistic_growth_mult = 0.15
 		planet_pops_consumer_goods_upkeep_mult = -0.20
 		planet_pops_upkeep_mult = 0.15
 	}
