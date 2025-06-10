@@ -37,6 +37,8 @@
  GF_zone_reverse_collapse_desc: "专门用于逆向坍塌反应生产资源的特区。"
  mod_planet_GF_zone_reverse_collapse_build_speed_mult: "$GF_zone_reverse_collapse$建造速度"
 
+ GF_district_name_collapse_reaction: "坍塌反应工厂"
+ GF_district_name_reverse_collapse: "物质重构工厂"
 
 ## 复制的原版区划
  district_GF_duplicate_city:0 "$district_city$"
