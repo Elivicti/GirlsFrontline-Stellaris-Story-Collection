@@ -1,3 +1,12 @@
+GF_slot_energy_or_minerals = {
+	unlock = { always = yes }
+
+	included_zone_sets = {
+		energy
+		minerals
+	}
+}
+
 GF_slot_industrial = {
 	unlock = { always = yes }
 	include = {

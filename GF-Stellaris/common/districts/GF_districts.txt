@@ -126,8 +126,7 @@ district_GF_generator_or_mining = {
 	}
 
 	zone_slots = {
-		slot_energy
-		slot_minerals
+		GF_slot_energy_or_minerals
 	}
 
 	resources = {
