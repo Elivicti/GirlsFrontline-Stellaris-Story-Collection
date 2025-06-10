@@ -22,7 +22,7 @@
  GF_OGAS_subnet_2_leaders:0 "核心强化协议"
  GF_OGAS_subnet_2_leaders_desc:0 "§E附属国招募池内的机械领袖：§!\n$t$领袖等级: §G+2§!\n§E转移领袖：§!\n$t$附属国可以将§Y机械领袖§!交换到宗主国"
  GF_OGAS_subnet_2_doll_assemble:0 "人形制造协议"
- GF_OGAS_subnet_2_doll_assemble_desc:0 "§E附属国：§!\n$t$解锁人形制造技术，允许组装人形 £pop£ 人口\n$t$若此后§Y脱离§!原宗主，该技术将被回收\n§E附属国境内的机械人口：§!\n$t$每§Y6个月§!向宗主国移交一个机械 £pop£ 人口"
+ GF_OGAS_subnet_2_doll_assemble_desc:0 "§E附属国：§!\n$t$解锁人形制造技术，允许组装人形 £pop£ 人口\n$t$若此后§Y脱离§!原宗主，该技术将被回收\n§E附属国境内的机械人口：§!\n$t$每§Y6个月§!向宗主国移交100机械 £pop£ 人口"
 
  GF_OGAS_subnet_3_modifier:0 "OGAS子网加成 III"
  GF_OGAS_subnet_3_penalties:0 "OGAS子网惩罚 III"
@@ -35,18 +35,18 @@
  GF_overlord.201.name:0 "人口已移交"
  GF_overlord.201.desc:0 "根据我们与[overlord.GetName]的协议，已经将我们境内的[transfer_pop.Species.GetName]的一个人口移交至[overlord.Capital.GetName]。\n"
  GF_overlord.201.a:0 "已知晓。"
- GF_overlord.201.a.tooltip:0 "§Y[transfer_pop.Planet.GetName]§!上的一个£pop£人口：已移交"
+ GF_overlord.201.a.tooltip:0 "§Y[transfer_pop.Planet.GetName]§!上的100 £pop£ 人口：已移交"
  GF_overlord.201.b:0 "不再提醒。"
 
  GF_overlord.202.name:0 "人口已移交"
- GF_overlord.202.desc:0 "根据我们与[from.GetName]的协议，[from.GetName]境内的一个[transfer_pop.Species.GetName]人口已移交至我们的首都。\n"
+ GF_overlord.202.desc:0 "根据我们与[from.GetName]的协议，[from.GetName]境内的100个[transfer_pop.Species.GetName]人口已移交至我们的首都。\n"
  GF_overlord.202.a:0 "很好。"
- GF_overlord.202.a.tooltip:0 "获得一个[transfer_pop.Species.GetName]£pop£人口"
+ GF_overlord.202.a.tooltip:0 "获得100[transfer_pop.Species.GetName] £pop£ 人口"
  GF_overlord.202.b:0 "不再提醒。"
 
  MESSAGE_TYPE_GF_ROBOT_POP_TRANSFERED_TITLE:0 "机械人口已移交"
- MESSAGE_TYPE_GF_ROBOT_POP_TRANSFERED_SUBNET_DESC:0 "根据协议，§Y$PLANET$§!上的一个§Y$POP$ £pop£ §!人口已移交至§Y$OVERLORD$§!"
- MESSAGE_TYPE_GF_ROBOT_POP_TRANSFERED_OVERLORD_DESC:0 "根据协议，§Y$SUBNET$§!境内的一个§Y$POP$ £pop£ §!人口已移交至我们的首都"
+ MESSAGE_TYPE_GF_ROBOT_POP_TRANSFERED_SUBNET_DESC:0 "根据协议，§Y$PLANET$§!上的100个§Y$POP$ £pop£ §!人口已移交至§Y$OVERLORD$§!"
+ MESSAGE_TYPE_GF_ROBOT_POP_TRANSFERED_OVERLORD_DESC:0 "根据协议，§Y$SUBNET$§!境内的100个§Y$POP$ £pop£ §!人口已移交至我们的首都"
 
  GF_overlord.203.name:0 "资源已上供"
  GF_overlord.203.desc:0 "我们没有足够的机械人口向宗主国移交，作为代替，需要向宗主国进贡一些资源。\n"
