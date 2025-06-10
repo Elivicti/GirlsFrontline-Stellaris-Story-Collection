@@ -144,24 +144,6 @@ district_GF_generator_or_mining = {
 		potential = {
 			exists = owner
 			owner = { is_regular_empire = yes }
-			has_generator_designation = yes
-		}
-		job_technician_add = 200
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-			has_mining_designation = yes
-		}
-		job_miner_add = 200
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-			has_mining_designation = no
-			has_generator_designation = no
 		}
 		job_technician_add = 100
 		job_miner_add = 100
@@ -172,24 +154,6 @@ district_GF_generator_or_mining = {
 		potential = {
 			exists = owner
 			owner = { is_gestalt = yes }
-			has_generator_designation = yes
-		}
-		job_technician_drone_add = 200
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-			has_mining_designation = yes
-		}
-		job_mining_drone_add = 200
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-			has_mining_designation = no
-			has_generator_designation = no
 		}
 		job_technician_drone_add = 100
 		job_mining_drone_add = 100
