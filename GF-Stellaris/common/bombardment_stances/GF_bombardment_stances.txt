@@ -64,7 +64,7 @@ GF_bombardment_capture = {
 		}
 	}
 	min_pops_to_kill_pop = 300
-	kill_pop_amount = { min = 0 max = 100}
+	kill_pop_amount = { min = 0 max = 80 }
 
 	# root = fleet
 	# from = planet
