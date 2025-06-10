@@ -2,7 +2,6 @@ GF_zone_assembly = {
 	icon = GFX_GF_zone_assembly_icon
 	base_buildtime = @zone_buildtime
 
-
 	potential = {
 		exists = owner
 		owner = {
@@ -11,14 +10,9 @@ GF_zone_assembly = {
 	}
 
 	unlock = {
-		OR = {
-			is_planet_class = pc_GF_sf_machine
-			AND = {
-				exists = owner
-				owner = {
-					has_technology = GF_tech_doll_assemble
-				}
-			}
+		exists = owner
+		owner = {
+			has_technology = GF_tech_doll_assemble
 		}
 	}
 
@@ -29,8 +23,22 @@ GF_zone_assembly = {
 		}
 	}
 
-	district_planet_modifier = {
+	triggered_district_planet_modifier = {
+		potential = { is_planet_class = pc_GF_sf_machine }
 		job_GF_assemble_doll_add = 100
+	}
+	triggered_district_planet_modifier = {
+		potential = { NOT = { is_planet_class = pc_GF_sf_machine } }
+		job_GF_assemble_mechanic_add = 100
+	}
+	triggered_district_planet_modifier = {
+		potential = {
+			OR = {
+				is_urban_planet = yes
+				is_planet_class = pc_ringworld_habitable
+			}
+		}
+		job_GF_assemble_mechanic_add = 50
 	}
 
 	planet_modifier = {
@@ -41,9 +49,15 @@ GF_zone_assembly = {
 		script = zones/shared_city_non_urban_zone_modifiers
 	}
 
+	zone_sets = {
+		urban
+		ring_world
+	}
 
 	included_building_sets = {
 		industrial
+		foundry
+		factory
 		automation
 	}
 }
@@ -55,18 +69,20 @@ GF_zone_collapse = {
 	potential = {
 		exists = owner
 		owner = {
-			GF_can_research_tech_trigger = { TECH = GF_tech_collapse_plant_1 }
+			has_technology = GF_tech_collapse_plant_1
 		}
 	}
+	show_in_tech = GF_tech_collapse_plant_1
 
 	unlock = {
-		OR = {
-			is_planet_class = pc_GF_sf_machine
-			AND = {
-				exists = owner
-				owner = {
-					has_technology = GF_tech_collapse_plant_1
-				}
+		if = {
+			limit = { is_planet_class = pc_GF_sf_machine }
+			always = yes
+		}
+		else = {
+			hidden_trigger = { exists = owner }
+			owner = {
+				has_technology = GF_tech_collapse_plant_1
 			}
 		}
 	}
@@ -81,6 +97,14 @@ GF_zone_collapse = {
 	district_planet_modifier = {
 		job_GF_collapser_add = 100
 	}
+	triggered_district_planet_modifier = {
+		potential = { is_planet_class = pc_ringworld_habitable }
+		job_GF_collapser_add = 400
+	}
+	triggered_district_planet_modifier = {
+		potential = { is_urban_planet = yes }
+		job_GF_collapser_add = 200
+	}
 
 	planet_modifier = {
 		zone_building_slots_add = 3
@@ -91,8 +115,15 @@ GF_zone_collapse = {
 	}
 
 
+	zone_sets = {
+		urban
+		ring_world
+	}
+
 	included_building_sets = {
 		industrial
+		foundry
+		factory
 		automation
 	}
 }
@@ -104,18 +135,20 @@ GF_zone_reverse_collapse = {
 	potential = {
 		exists = owner
 		owner = {
-			GF_can_research_tech_trigger = { TECH = GF_tech_reverse_collapse_plant }
+			has_technology = GF_tech_reverse_collapse_plant
 		}
 	}
+	show_in_tech = GF_tech_reverse_collapse_plant
 
 	unlock = {
-		OR = {
-			is_planet_class = pc_GF_sf_machine
-			AND = {
-				exists = owner
-				owner = {
-					has_technology = GF_tech_reverse_collapse_plant
-				}
+		if = {
+			limit = { is_planet_class = pc_GF_sf_machine }
+			always = yes
+		}
+		else = {
+			hidden_trigger = { exists = owner }
+			owner = {
+				has_technology = GF_tech_reverse_collapse_plant
 			}
 		}
 	}
@@ -130,10 +163,53 @@ GF_zone_reverse_collapse = {
 
 	triggered_district_planet_modifier = {
 		potential = { GF_has_research_designation = no }
-		job_GF_reverse_collapser_industry_add = 200
+		job_GF_reverse_collapser_industry_add = 100
 	}
 	triggered_district_planet_modifier = {
+		potential = {
+			is_planet_class = pc_GF_sf_machine
+			GF_has_research_designation = no
+		}
+		job_GF_reverse_collapser_industry_add = 100
+	}
+	triggered_district_planet_modifier = {
+		potential = {
+			is_planet_class = pc_ringworld_habitable
+			GF_has_research_designation = no
+		}
+		job_GF_reverse_collapser_industry_add = 400
+	}
+	triggered_district_planet_modifier = {
+		potential = {
+			is_urban_planet = yes
+			GF_has_research_designation = no
+		}
+		job_GF_reverse_collapser_industry_add = 200
+	}
+
+	triggered_district_planet_modifier = {
 		potential = { GF_has_research_designation = yes }
+		job_GF_reverse_collapser_research_add = 100
+	}
+	triggered_district_planet_modifier = {
+		potential = {
+			is_planet_class = pc_GF_sf_machine
+			GF_has_research_designation = yes
+		}
+		job_GF_reverse_collapser_research_add = 100
+	}
+	triggered_district_planet_modifier = {
+		potential = {
+			is_planet_class = pc_ringworld_habitable
+			GF_has_research_designation = yes
+		}
+		job_GF_reverse_collapser_research_add = 400
+	}
+	triggered_district_planet_modifier = {
+		potential = {
+			is_urban_planet = yes
+			GF_has_research_designation = yes
+		}
 		job_GF_reverse_collapser_research_add = 200
 	}
 
@@ -145,9 +221,15 @@ GF_zone_reverse_collapse = {
 		script = zones/shared_city_non_urban_zone_modifiers
 	}
 
+	zone_sets = {
+		urban
+		ring_world
+	}
 
 	included_building_sets = {
 		industrial
+		foundry
+		factory
 		automation
 	}
 
