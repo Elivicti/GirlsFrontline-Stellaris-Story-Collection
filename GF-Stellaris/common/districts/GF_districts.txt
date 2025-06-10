@@ -175,8 +175,6 @@ district_GF_collapse = {
 	}
 
 	zone_slots = {
-		# TODO: 设计区域
-		# slot_city_government
 		GF_slot_industrial
 	}
 
@@ -207,7 +205,6 @@ district_GF_collapse = {
 	convert_to = {
 		district_arcology_arms_industry
 		district_rw_industrial
-		district_GF_duplicate_industrial
 	}
 
 	resources = {
@@ -258,8 +255,7 @@ district_GF_assembly = {
 		uses_district_set = GF_sf_machine_world
 	}
 	zone_slots = {
-		# TODO: 设计区域
-		GF_slot_industrial
+		GF_slot_industrial_assembly
 	}
 
 	desc = {
