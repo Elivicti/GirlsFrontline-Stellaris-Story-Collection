@@ -9,6 +9,11 @@ GF_freedom_class = {
 		produces = {
 			trade = @trade_value_very_high
 		}
+		produces = {
+			physics_research = 2
+			society_research = 2
+			engineering_research = 2
+		}
 		upkeep = { consumer_goods = 1 }
 	}
 

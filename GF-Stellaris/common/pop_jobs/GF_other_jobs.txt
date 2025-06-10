@@ -28,9 +28,6 @@ GF_freedom_kingdom = {
 	resources = {
 		category = planet_jobs
 		produces = {
-			physics_research = 2
-			society_research = 2
-			engineering_research = 2
 			unity = 3
 		}
 		upkeep = { consumer_goods = 0.5 }
@@ -40,7 +37,7 @@ GF_freedom_kingdom = {
 	}
 
 	weight = {
-		weight = @clerk_job_weight
+		weight = @specialist_job_weight
 		modifier = {
 			set = 10000
 			is_unemployed = yes
