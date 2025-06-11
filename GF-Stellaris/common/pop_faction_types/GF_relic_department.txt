@@ -16,9 +16,9 @@ GF_relic_department = {
 	persistent_faction = yes
 
 	resources = {
-		category = pop_factions
+		category = GF_relic_department_faction
 		produces = {
-			influence = 0.05
+			influence = 0.005
 			physics_research = 0.2
 			society_research = 0.2
 			engineering_research = 0.2

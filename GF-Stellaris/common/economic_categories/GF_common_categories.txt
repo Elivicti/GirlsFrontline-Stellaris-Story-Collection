@@ -230,3 +230,11 @@ GF_pop_category_dormancy_doll = {
 		produces upkeep
 	}
 }
+
+GF_relic_department_faction = {
+	parent = pop_factions
+	generate_add_modifiers = {
+		produces
+	}
+	modifier_category = country
+}

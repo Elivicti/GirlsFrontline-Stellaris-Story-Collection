@@ -351,6 +351,18 @@ event = {
 			country_event = {
 				id = GF_doll.518
 			}
+			# 前20年增加遗迹署的影响力产出
+			if = {
+				limit = {
+					years_passed < 20
+					NOT = { has_modifier = GF_relic_department_faction_influence }
+				}
+				add_modifier = {
+					modifier = GF_relic_department_faction_influence
+					days = 1
+					time_multiplier = value:days_until|year|20|
+				}
+			}
 		}
 	}
 }

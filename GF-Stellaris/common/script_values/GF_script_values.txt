@@ -374,3 +374,12 @@ GF_doll_assimilation_rate = {
 		mult = 0.01
 	}
 }
+
+# this = any
+days_until = {
+	[[day]   add = $day$ ]
+	[[month] add = $month$ mult = 30 ]
+	[[year]  add = $year$  mult = 360 ]
+	subtract = trigger:days_passed
+	min = 0
+}

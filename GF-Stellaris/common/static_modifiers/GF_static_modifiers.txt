@@ -181,3 +181,9 @@ GF_OGAS_subnet_assemble_speed_compensate = {
 GF_captured_pop_debuff = {
 	planet_pops_upkeep_mult = 0.5
 }
+
+####
+GF_relic_department_faction_influence = {
+	hide_from_country_list = yes
+	GF_relic_department_faction_influence_produces_add = 0.045
+}

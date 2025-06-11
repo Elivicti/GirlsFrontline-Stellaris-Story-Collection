@@ -39,7 +39,14 @@ pop_faction_event = {
 	}
 
 	immediate = {
-		owner = { set_country_flag = flag_GF_relic_department }
+		owner = {
+			set_country_flag = flag_GF_relic_department
+			# 前20年增加遗迹署的影响力产出
+			add_modifier = {
+				modifier = GF_relic_department_faction_influence
+				years = 20
+			}
+		}
 	}
 
 	option = {
