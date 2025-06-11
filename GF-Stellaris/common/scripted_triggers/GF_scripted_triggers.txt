@@ -488,6 +488,11 @@ GF_is_computing_center = {
 # scope = pop
 GF_can_pop_join_freedom_kindom = {
 	has_citizenship_rights = yes
+	OR = {
+		is_unemployed = yes
+		is_pop_category = GF_freedom_class
+		is_pop_category = civilian
+	}
 }
 
 # this = pop/species

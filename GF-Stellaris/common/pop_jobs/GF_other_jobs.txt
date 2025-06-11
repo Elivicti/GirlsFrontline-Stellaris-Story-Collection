@@ -19,6 +19,7 @@ GF_freedom_kingdom = {
 		OR = {
 			is_unemployed = yes
 			is_pop_category = GF_freedom_class
+			is_pop_category = civilian
 		}
 		GF_can_pop_join_freedom_kindom = yes
 		exists = planet

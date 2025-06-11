@@ -21,10 +21,6 @@ GF_freedom_class = {
 		weight = 1
 		modifier = {
 			set = 10000
-			OR = {
-				is_unemployed = yes
-				is_pop_category = GF_freedom_class
-			}
 			GF_can_pop_join_freedom_kindom = yes
 		}
 	}
