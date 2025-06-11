@@ -5,21 +5,17 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		has_authority = GF_auth_commonwealth
-		count_pop_faction = {
-			limit = { is_pop_faction_type = GF_relic_department }
-			count = 0
-		}
+		GF_is_main_country = yes
+		NOT = { any_pop_faction = { is_pop_faction_type = GF_relic_department } }
 	}
 
 	immediate = {
-		every_owned_pop = { force_faction_evaluation = yes }
+		every_owned_pop_group = { force_faction_evaluation = yes }
 		enable_faction_of_type = GF_relic_department
 		country_event = {
 			id = GF_factions.0
 			days = 1
 		}
-		
 	}
 }
 
