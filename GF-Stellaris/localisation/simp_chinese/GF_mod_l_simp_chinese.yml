@@ -361,7 +361,7 @@
  mod_job_GF_AU_director_add:0 "理事岗位"
  mod_job_GF_GK_officer_add:0 "代行官岗位"
 
- GF_pop_category_freedom_class: "$job_GF_freedom_kingdom$"
+ GF_pop_category_freedom_class: "$pop_cat_GF_freedom_class$"
  mod_job_GF_freedom_kingdom_add: "$job_GF_freedom_kingdom$岗位"
  mod_job_GF_freedom_kingdom_per_pop: "每$VALUE$个人口提供§G+1§!个$job_GF_freedom_kingdom$岗位"
  mod_job_GF_freedom_kingdom_per_pop_short: "每$VALUE$ £pop£ §G+1§! £job_GF_freedom_kingdom£"
