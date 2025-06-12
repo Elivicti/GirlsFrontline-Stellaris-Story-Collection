@@ -218,3 +218,185 @@ district_GF_autocity_specialization_03 = {
 }
 
 
+# 这些区划只是为了给区域的swap_type用，只用来修改区划的外观，无实际效果
+
+district_GF_automated_energy = {
+	base_buildtime = @build_time
+	icon = district_rw_generator
+	is_capped_by_modifier = no
+
+	zone_slots = {}
+
+	show_on_uncolonized = { always = no }
+	potential = { always = no }
+	allow = { always = no }
+
+	resources = {}
+	planet_modifier = {}
+
+	triggered_desc = {
+		text = job_GF_maintenance_engineer_effect_desc
+	}
+}
+district_GF_automated_mining = {
+	base_buildtime = @build_time
+	icon = district_mining
+	is_capped_by_modifier = no
+
+	zone_slots = {}
+
+	show_on_uncolonized = { always = no }
+	potential = { always = no }
+	allow = { always = no }
+
+	resources = {}
+	planet_modifier = {}
+
+	triggered_desc = {
+		text = job_GF_maintenance_engineer_effect_desc
+	}
+}
+district_GF_automated_farming = {
+	base_buildtime = @build_time
+	icon = district_rw_farming
+	is_capped_by_modifier = no
+
+	zone_slots = {}
+
+	show_on_uncolonized = { always = no }
+	potential = { always = no }
+	allow = { always = no }
+
+	resources = {}
+	planet_modifier = {}
+
+	triggered_desc = {
+		text = job_GF_maintenance_engineer_effect_desc
+	}
+}
+
+district_GF_automated_foundry = {
+	base_buildtime = @build_time
+	icon = district_arcology_arms_industry
+	is_capped_by_modifier = no
+
+	zone_slots = {}
+
+	show_on_uncolonized = { always = no }
+	potential = { always = no }
+	allow = { always = no }
+
+	resources = {}
+	planet_modifier = {}
+
+	triggered_desc = {
+		text = job_GF_maintenance_engineer_effect_desc
+	}
+}
+district_GF_automated_industry = {
+	base_buildtime = @build_time
+	icon = district_arcology_civilian_industry
+	is_capped_by_modifier = no
+	zone_slots = {}
+
+	show_on_uncolonized = { always = no }
+	potential = { always = no }
+	allow = { always = no }
+
+
+	resources = {}
+	planet_modifier = {}
+
+	triggered_desc = {
+		text = job_GF_maintenance_engineer_effect_desc
+	}
+}
+district_GF_automated_refinery = {
+	base_buildtime = @build_time
+	is_capped_by_modifier = no
+
+	zone_slots = {}
+
+	show_on_uncolonized = { always = no }
+	potential = { always = no }
+	allow = { always = no }
+
+	resources = {}
+	planet_modifier = {}
+
+	triggered_desc = {
+		text = job_GF_maintenance_engineer_effect_desc
+	}
+}
+
+district_GF_automated_research = {
+	base_buildtime = @build_time
+	icon = district_rw_science
+	is_capped_by_modifier = no
+
+	zone_slots = {}
+
+	show_on_uncolonized = { always = no }
+	potential = { always = no }
+	allow = { always = no }
+
+	resources = {}
+	planet_modifier = {}
+
+	triggered_desc = {
+		text = job_GF_maintenance_engineer_effect_desc
+	}
+}
+district_GF_automated_factory = {
+	base_buildtime = @build_time
+	icon = district_GF_assembly
+	is_capped_by_modifier = no
+
+	zone_slots = {}
+
+	show_on_uncolonized = { always = no }
+	potential = { always = no }
+	allow = { always = no }
+
+	resources = {}
+	planet_modifier = {}
+
+	triggered_desc = {
+		text = job_GF_maintenance_engineer_effect_desc
+	}
+}
+district_GF_automated_collapse = {
+	base_buildtime = @build_time
+	icon = district_GF_collapse
+	is_capped_by_modifier = no
+
+	zone_slots = {}
+
+	show_on_uncolonized = { always = no }
+	potential = { always = no }
+	allow = { always = no }
+
+	resources = {}
+	planet_modifier = {}
+
+	triggered_desc = {
+		text = job_GF_maintenance_engineer_effect_desc
+	}
+}
+district_GF_automated_reverse_collapse = {
+	base_buildtime = @build_time
+	is_capped_by_modifier = no
+
+	zone_slots = {}
+
+	show_on_uncolonized = { always = no }
+	potential = { always = no }
+	allow = { always = no }
+
+	resources = {}
+	planet_modifier = {}
+
+	triggered_desc = {
+		text = job_GF_maintenance_engineer_effect_desc
+	}
+}

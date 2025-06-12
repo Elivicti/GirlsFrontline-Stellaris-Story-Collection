@@ -34,6 +34,9 @@ GF_zone_autocity_generator_02 = {
 	base_buildtime = @zone_buildtime
 	icon = GFX_colony_type_GF_auto_city_energy
 
+	swap_type = district_GF_automated_energy
+	swap_type_weight = 5
+
 	resources = {
 		category = planet_zones
 		cost = { minerals = @zone_cost }
@@ -86,6 +89,9 @@ GF_zone_autocity_mining_02 = {
 	base_buildtime = @zone_buildtime
 	icon = GFX_colony_type_GF_auto_city_minerals
 
+	swap_type = district_GF_automated_mining
+	swap_type_weight = 5
+
 	resources = {
 		category = planet_zones
 		cost = { minerals = @zone_cost }
@@ -132,6 +138,9 @@ GF_zone_autocity_mining_02 = {
 GF_zone_autocity_farming_02 = {
 	base_buildtime = @zone_buildtime
 	icon = GFX_colony_type_GF_auto_city_food
+
+	swap_type = district_GF_automated_farming
+	swap_type_weight = 5
 
 	resources = {
 		category = planet_zones
@@ -182,6 +191,9 @@ GF_zone_autocity_foundry_02 = {
 	base_buildtime = @zone_buildtime
 	icon = GFX_colony_type_GF_auto_city_alloys
 
+	swap_type = district_GF_automated_foundry
+	swap_type_weight = 5
+
 	resources = {
 		category = planet_zones
 		cost = { minerals = @zone_cost }
@@ -231,6 +243,9 @@ GF_zone_autocity_industry_02 = {
 	base_buildtime = @zone_buildtime
 	icon = GFX_colony_type_GF_auto_city_consumer_goods
 
+	swap_type = district_GF_automated_industry
+	swap_type_weight = 5
+
 	resources = {
 		category = planet_zones
 		cost = { minerals = @zone_cost }
@@ -279,6 +294,9 @@ GF_zone_autocity_industry_02 = {
 GF_zone_autocity_refinery_02 = {
 	base_buildtime = @zone_buildtime
 	icon = GFX_colony_type_GF_auto_city_refinery
+
+	swap_type = district_GF_automated_refinery
+	swap_type_weight = 5
 
 	resources = {
 		category = planet_zones
@@ -332,6 +350,9 @@ GF_zone_autocity_research_02 = {
 	base_buildtime = @zone_buildtime
 	icon = GFX_colony_type_GF_auto_city_research
 
+	swap_type = district_GF_automated_research
+	swap_type_weight = 5
+
 	resources = {
 		category = planet_zones
 		cost = { minerals = @zone_cost }
@@ -353,6 +374,7 @@ GF_zone_autocity_research_02 = {
 
 	included_building_sets = {
 		GF_automated_city_assembly
+		GF_automated_city_research
 		GF_automated_city_generic
 	}
 
@@ -383,6 +405,9 @@ GF_zone_autocity_research_02 = {
 GF_zone_autocity_assembly_02 = {
 	base_buildtime = @zone_buildtime
 	icon = GFX_colony_type_GF_auto_city_factory
+
+	swap_type = district_GF_automated_factory
+	swap_type_weight = 5
 
 	resources = {
 		category = planet_zones
@@ -434,6 +459,9 @@ GF_zone_autocity_collapse_02 = {
 	base_buildtime = @zone_buildtime
 	icon = GFX_colony_type_GF_auto_city_collapse
 
+	swap_type = district_GF_automated_collapse
+	swap_type_weight = 5
+
 	resources = {
 		category = planet_zones
 		cost = { minerals = @zone_cost }
@@ -481,6 +509,11 @@ GF_zone_autocity_collapse_02 = {
 GF_zone_autocity_reverse_collapse_02 = {
 	base_buildtime = @zone_buildtime
 	icon = GFX_colony_type_GF_auto_city_reverse_collapse
+
+	swap_type = district_GF_automated_reverse_collapse
+	swap_type_weight = 5
+
+	max_buildings = 3
 
 	resources = {
 		category = planet_zones
