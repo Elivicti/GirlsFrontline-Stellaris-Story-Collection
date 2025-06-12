@@ -208,7 +208,7 @@ utility_component_template = {
 		GF_fire_support_ship
 	}
 	component_set = "combat_computers"
-	ship_behavior = "GF_ogas_artillery"
+	ship_behavior = "artillery"
 	prerequisites = { "GF_tech_combat_ogas_computers" }
 	ai_tags = { artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 	ai_tag_weight = 0
@@ -261,7 +261,7 @@ utility_component_template = {
 		GF_fire_support_ship
 	}
 	component_set = "combat_computers"
-	ship_behavior = "GF_ogas_carrier"
+	ship_behavior = "carrier"
 	prerequisites = { "GF_tech_combat_ogas_computers" }
 	ai_tags = { carrier }
 	ai_tag_weight = 0
