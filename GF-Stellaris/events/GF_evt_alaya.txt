@@ -1,20 +1,20 @@
 namespace = GF_alaya
 
+# on_tech_increased
 country_event = {
-	id = GF_alaya.0
+	id = GF_alaya.10
 	hide_window = yes
 
 	is_triggered_only = yes
 
 	trigger = {
-		has_authority = GF_auth_commonwealth
 		has_country_flag = flag_GF_collapse_relic_surveyed
 		last_increased_tech = GF_tech_collapse_relic_tech
 	}
 
 	immediate = {
 		country_event = {
-			id = GF_alaya.001
+			id = GF_alaya.11
 			days = 30
 		}
 	}
@@ -22,26 +22,21 @@ country_event = {
 
 country_event = {
 	# 在研究完“遗迹技术”30天后触发
-	id = GF_alaya.001
-	title = GF_alaya.001.name
-	desc = GF_alaya.001.desc
+	id = GF_alaya.11
+	title = GF_alaya.11.name
+	desc = GF_alaya.11.desc
 
 	is_triggered_only = yes
 	show_sound = event_scanner
 	picture = GFX_evt_physics_research
 
-	trigger = {
-		has_authority = GF_auth_commonwealth
-		has_technology = GF_tech_collapse_relic_tech
-	}
-
 	option = {
-		name = GF_alaya.001.a
-		
+		name = GF_alaya.11.a
+
 		hidden_effect = {
 			every_system = {
 				limit = { has_star_flag = flag_s_GF_has_collapse_relic_site_in_system }
-	
+
 				random_system_planet = {
 					limit = { has_planet_flag = flag_p_GF_collapse_relic_site_1 }
 					enable_special_project = {
@@ -49,7 +44,6 @@ country_event = {
 						owner = root
 						location = this
 					}
-					
 				}
 				random_system_planet = {
 					limit = { has_planet_flag = flag_p_GF_collapse_relic_site_2 }
@@ -58,7 +52,6 @@ country_event = {
 						owner = root
 						location = this
 					}
-					
 				}
 				random_system_planet = {
 					limit = { has_planet_flag = flag_p_GF_collapse_relic_site_3 }
@@ -79,14 +72,11 @@ country_event = {
 }
 
 country_event = {
-	id = GF_alaya.002
+	id = GF_alaya.12
 	hide_window = yes
 	is_triggered_only = yes
 
 	trigger = {
-		has_authority = GF_auth_commonwealth
-		has_technology = GF_tech_collapse_relic_tech
-
 		# 检查已经收集的遗迹设施数量
 		NOT = {
 			has_completed_event_chain_counter = {
@@ -106,19 +96,16 @@ country_event = {
 }
 
 country_event = {
-	id = GF_alaya.003
-	title = GF_alaya.003.name
-	desc = GF_alaya.003.desc
+	id = GF_alaya.13
+	title = GF_alaya.13.name
+	desc = GF_alaya.13.desc
 
 	is_triggered_only = yes
 	show_sound = event_finding_loot
 	picture = GFX_evt_ancient_artifact
 	event_chain = GF_collect_relic_device_event_chain
 
-
 	trigger = {
-		has_authority = GF_auth_commonwealth
-		has_technology = GF_tech_collapse_relic_tech
 		has_completed_event_chain_counter = {
 			event_chain = "GF_collect_relic_device_event_chain"
 			counter = "c_GF_devices_collected"
@@ -126,11 +113,11 @@ country_event = {
 	}
 
 	option = {
-		name = GF_alaya.003.a
+		name = GF_alaya.13.a
 
 		hidden_effect = {
 			country_event = {
-				id = GF_alaya.004
+				id = GF_alaya.14
 				days = 45
 				random = 30
 			}
@@ -140,14 +127,21 @@ country_event = {
 
 # 遗迹设施全部回收完毕，加buff
 country_event = {
-	id = GF_alaya.004
-	title = GF_alaya.004.name
-	desc = GF_alaya.004.desc
+	id = GF_alaya.14
+	title = GF_alaya.14.name
+	desc = GF_alaya.14.desc
 
 	is_triggered_only = yes
 	show_sound = event_construction
 	picture = GFX_evt_analyzing_artifacts
 	event_chain = GF_collect_relic_device_event_chain
+
+	trigger = {
+		has_completed_event_chain_counter = {
+			event_chain = "GF_collect_relic_device_event_chain"
+			counter = "c_GF_devices_collected"
+		}
+	}
 
 	immediate = {
 		# 用于本地化文件显示她/他
@@ -158,19 +152,9 @@ country_event = {
 		}
 	}
 
-	trigger = {
-		has_authority = GF_auth_commonwealth
-		has_technology = GF_tech_collapse_relic_tech
-		
-		has_completed_event_chain_counter = {
-			event_chain = "GF_collect_relic_device_event_chain"
-			counter = "c_GF_devices_collected"
-		}
-	}
 
 	option = {
-		name = GF_alaya.004.a
-
+		name = GF_alaya.14.a
 		end_event_chain = "GF_collect_relic_device_event_chain"
 
 		add_modifier = {
@@ -212,12 +196,6 @@ country_event = {
 		}
 	}
 
-	trigger = {
-		has_authority = GF_auth_commonwealth
-		has_technology = GF_tech_collapse_relic_tech
-		has_modifier = "GF_productive_relic_device"
-	}
-
 	option = {
 		name = GF_alaya.100.a
 		remove_modifier = "GF_productive_relic_device"
@@ -229,7 +207,7 @@ country_event = {
 		ruler = { add_trait = { trait = GF_trait_leader_ogas_glitch } }
 		custom_tooltip = GF_OGAS_glitch_tooltip
 		GF_remove_all_ogas_mission_modifier = yes
-		
+
 		enable_special_project = { name = SP_GF_ALAYA_BEGIN }
 	}
 }
@@ -243,12 +221,6 @@ country_event = {
 	is_triggered_only = yes
 	show_sound = event_yellow_alert
 	picture = GFX_evt_GF_net_world
-
-	trigger = {
-		has_authority = GF_auth_commonwealth
-		has_technology = GF_tech_collapse_relic_tech
-		has_modifier = "GF_productive_relic_abnormal"
-	}
 
 	immediate = {
 		# 用于本地化文件显示她/他
@@ -284,12 +256,6 @@ country_event = {
 	show_sound = event_slot_machine
 	picture = GFX_evt_GF_white_net
 	event_chain = GF_alaya_event_chain
-
-	trigger = {
-		has_authority = GF_auth_commonwealth
-		has_technology = GF_tech_collapse_relic_tech
-		has_modifier = "GF_productive_relic_abnormal"
-	}
 
 	option = {
 		name = GF_alaya.102.a
@@ -555,12 +521,6 @@ country_event = {
 	show_sound = event_synthetic_evolution
 	picture = GFX_evt_sapient_AI
 
-	trigger = {
-		has_authority = GF_auth_commonwealth
-		has_technology = GF_tech_collapse_relic_tech
-		has_modifier = "GF_productive_relic_abnormal"
-	}
-
 	immediate = {
 		every_subject = {
 			limit = { has_country_flag = flag_GF_commonwealth_vassal_OGAS_subnet_2 }
@@ -588,5 +548,4 @@ country_event = {
 			}
 		}
 	}
-	
 }

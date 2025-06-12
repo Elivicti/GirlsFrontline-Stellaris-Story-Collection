@@ -107,17 +107,17 @@
  SP_GF_COLLECT_RELIC_DEVICE:0 "回收§Y[this.GetName]§!上的遗迹设施"
  SP_GF_COLLECT_RELIC_DEVICE_DESC:0 "这颗星球上的遗迹中还存在尚能使用的遗迹设施，派遣工程船来回收它们。"
 
- GF_alaya.001.name:0 "$GF_collect_relic_device_event_chain_title$"
- GF_alaya.001.desc:0 "在完成已有的遗迹技术的研究后，我们的科学家建议派遣工程队去回收在外星遗迹里尚能使用的设施，以便研究并利用那些先进的设施来加强我们的生产。"
- GF_alaya.001.a:0 "就这么办。"
+ GF_alaya.11.name:0 "$GF_collect_relic_device_event_chain_title$"
+ GF_alaya.11.desc:0 "在完成已有的遗迹技术的研究后，我们的科学家建议派遣工程队去回收在外星遗迹里尚能使用的设施，以便研究并利用那些先进的设施来加强我们的生产。"
+ GF_alaya.11.a:0 "就这么办。"
 
- GF_alaya.003.name:0 "遗迹设施回收完成"
- GF_alaya.003.desc:0 "所有的遗迹设施已经全部回收完毕，帝国的科学家已经联合工程小组对这些遗迹设施展开了修复工作，相信这些设施很快就能正式投入生产了。"
- GF_alaya.003.a:0 "很好。"
+ GF_alaya.13.name:0 "遗迹设施回收完成"
+ GF_alaya.13.desc:0 "所有的遗迹设施已经全部回收完毕，帝国的科学家已经联合工程小组对这些遗迹设施展开了修复工作，相信这些设施很快就能正式投入生产了。"
+ GF_alaya.13.a:0 "很好。"
 
- GF_alaya.004.name:0 "遗迹设施已投入生产"
- GF_alaya.004.desc:0 "在帝国的科学家和工程组不懈的努力下，[physics_research_leader.GetTheyCN]终于完成了遗迹设施的修复工作。但这些修复后的设施的工作状态却并不理想。\n\n幸运的是，得益于§Y[Root.GetRulerName]§!强大的学习能力和兼容性，她成功地接入了遗迹设施并覆写了控制指令，现在这些遗迹设施正在全力运作，为我们帝国的生产和研究提供便利。"
- GF_alaya.004.a:0 "好极了。"
+ GF_alaya.14.name:0 "遗迹设施已投入生产"
+ GF_alaya.14.desc:0 "在帝国的科学家和工程组不懈的努力下，[physics_research_leader.GetTheyCN]终于完成了遗迹设施的修复工作。但这些修复后的设施的工作状态却并不理想。\n\n幸运的是，得益于§Y[Root.GetRulerName]§!强大的学习能力和兼容性，她成功地接入了遗迹设施并覆写了控制指令，现在这些遗迹设施正在全力运作，为我们帝国的生产和研究提供便利。"
+ GF_alaya.14.a:0 "好极了。"
 ####
 
 #### 事件链：阿赖耶识

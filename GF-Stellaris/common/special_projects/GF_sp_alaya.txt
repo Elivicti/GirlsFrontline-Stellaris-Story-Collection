@@ -16,63 +16,44 @@ special_project = {
 
 	on_success = {
 		owner = {
-			country_event = {
-				id = GF_alaya.002
-			}
-		}
-		
-		hidden_effect = {
-			owner = {
-				country_event = {
-					id = GF_alaya.003
-				}
+			country_event = { id = GF_alaya.12 }
+			hidden_effect = {
+				country_event = { id = GF_alaya.13 }
 			}
 		}
 	}
 }
 
 special_project = {
-	
 	#找出遗迹设施异常原因
 
 	key = SP_GF_ALAYA_BEGIN
-	event_scope = country_event
-
 	picture = GFX_evt_glitchy_matrix
 
+	event_scope = country_event
 	location = no
 
 	cost = 16000
 	tech_department = physics_technology
 
 	on_success = {
-		country_event = {
-			id = GF_alaya.101
-		}
+		country_event = { id = GF_alaya.101 }
 	}
 }
 
 special_project = {
-
 	# 进入锡安
 
 	key = SP_GF_ENTER_ZION
-	event_scope = country_event
-
 	picture = GFX_evt_GF_net_world
 
+	event_scope = country_event
 	location = yes
 
 	cost = 20000
 	tech_department = physics_technology
 
 	event_chain = "GF_alaya_event_chain"
-
-	requirements = {
-		shipclass_science_ship = 1
-		leader = scientist
-		skill >= 5
-	}
 
 	on_success = {
 		country_event = {
@@ -82,14 +63,12 @@ special_project = {
 }
 
 special_project = {
-
 	# 与锡安断开连接
 
 	key = SP_GF_DISCONNECT_WITH_ZION
-	event_scope = country_event
-
 	picture = GFX_evt_glitchy_matrix
 
+	event_scope = country_event
 	location = yes
 
 	cost = 15000
@@ -97,11 +76,6 @@ special_project = {
 
 	event_chain = "GF_alaya_event_chain"
 
-	requirements = {
-		shipclass_science_ship = 1
-		leader = scientist
-		skill >= 5
-	}
 
 	on_success = {
 		country_event = {
@@ -111,26 +85,18 @@ special_project = {
 }
 
 special_project = {
-
 	# 维持锡安存在
 
 	key = SP_GF_COEXIST_WITH_ZION
-	event_scope = country_event
-
 	picture = GFX_evt_sapient_AI
 
 	location = yes
+	event_scope = country_event
 
 	cost = 20000
 	tech_department = engineering_technology
 
 	event_chain = "GF_alaya_event_chain"
-
-	requirements = {
-		shipclass_science_ship = 1
-		leader = scientist
-		skill >= 5
-	}
 
 	on_success = {
 		country_event = {
