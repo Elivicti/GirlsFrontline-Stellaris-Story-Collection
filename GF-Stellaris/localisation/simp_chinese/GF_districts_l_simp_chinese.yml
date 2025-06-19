@@ -67,6 +67,7 @@
 
  GF_zone_autocity_nexus: "管理特区"
  GF_zone_autocity_nexus_plural: "管理特区"
+ GF_zone_autocity_nexus_desc: ""
 
  GF_zone_autocity_city_expand: "城市扩张"
  GF_zone_autocity_city_expand_plural: "城市扩张"
@@ -74,7 +75,7 @@
 
  district_GF_autocity_specialization_01: "生产特化中心01"
  district_GF_autocity_specialization_01_plural: "生产特化中心01"
- district_GF_autocity_specialization_01_desc: ""
+ district_GF_autocity_specialization_01_desc: "这里的大型自动化生产设施正在等待使用。"
  mod_planet_district_GF_autocity_specialization_01_build_speed_mult: "$district_GF_autocity_specialization_01$建造速度"
 
  GF_zone_autocity_generator_01: "能源生产特区"
