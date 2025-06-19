@@ -539,7 +539,7 @@ building_GF_automated_factory = {
 	position_priority = 20
 	building_sets = {
 		GF_automated_city_government
-		GF_automated_city_generic
+		GF_automated_city_basic_assembly
 	}
 
 	category = pop_assembly

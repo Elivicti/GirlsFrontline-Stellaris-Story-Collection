@@ -277,10 +277,22 @@ GF_zone_autocity_nexus = {
 	}
 
 	max_buildings = 6
+	planet_modifier = {
+		zone_building_slots_add = 6
+	}
 
 	unlock = {
 		exists = owner
 		owner = { GF_can_build_automated_city = yes }
+	}
+
+	included_building_sets = {
+		GF_automated_city_government
+		GF_automated_city_generic
+		GF_automated_city_basic_assembly
+	}
+	excluded_building_sets = {
+		GF_automated_city_assembly
 	}
 }
 
@@ -317,5 +329,9 @@ GF_zone_autocity_city_expand = {
 	included_building_sets = {
 		GF_automated_city_government
 		GF_automated_city_generic
+		GF_automated_city_basic_assembly
+	}
+	excluded_building_sets = {
+		GF_automated_city_assembly
 	}
 }
