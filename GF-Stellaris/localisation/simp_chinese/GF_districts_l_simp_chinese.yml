@@ -67,7 +67,10 @@
 
  GF_zone_autocity_nexus: "管理特区"
  GF_zone_autocity_nexus_plural: "管理特区"
- GF_zone_autocity_nexus_desc: "$zone_g$"
+
+ GF_zone_autocity_city_expand: "城市扩张"
+ GF_zone_autocity_city_expand_plural: "城市扩张"
+ GF_zone_autocity_city_expand_desc: "宽敞舒适的豪华公寓延伸至天际线。"
 
  district_GF_autocity_specialization_01: "生产特化中心01"
  district_GF_autocity_specialization_01_plural: "生产特化中心01"

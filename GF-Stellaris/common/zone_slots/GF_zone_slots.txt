@@ -64,13 +64,13 @@ GF_slot_autocity_nexus = {
 GF_slot_autocity_01 = {
 	unlock = { always = yes }
 	include = {
-		GF_zone_autocity_nexus
+		GF_zone_autocity_city_expand
 	}
 }
 GF_slot_autocity_02 = {
 	unlock = { always = yes }
 	include = {
-		GF_zone_autocity_nexus
+		GF_zone_autocity_city_expand
 	}
 }
 
