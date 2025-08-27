@@ -452,7 +452,7 @@
 
  mod_GF_pop_debuff_from_capture_mult:0 "$bombardment_GF_bombardment_capture$负面效果"
 #####
- mod_district_GF_assembly_max:0 "$district_GF_assembly$最大建造数量"
+ mod_district_GF_assembly_max_add:0 "$district_GF_assembly$最大建造数量"
 
 ####
  mod_planet_building_GF_connection_nexus_build_speed_mult: "$building_GF_connection_nexus$建造速度"
