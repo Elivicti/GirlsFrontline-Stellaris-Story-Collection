@@ -2,7 +2,7 @@ d_GF_south_pole_mineral = {
 	is_for_colonizable = yes
 	icon = d_GF_south_pole_mineral
 	planet_modifier = {
-		district_mining_max = 4
+		district_mining_max_add = 4
 	}
 	drop_weight = {
 		weight = 0
@@ -13,7 +13,7 @@ d_GF_south_pole_energy = {
 	is_for_colonizable = yes
 	icon = d_GF_south_pole_energy
 	planet_modifier = {
-		district_generator_max = 4
+		district_generator_max_add = 4
 	}
 	drop_weight = {
 		weight = 0
@@ -89,7 +89,7 @@ d_GF_south_asia_food = {
 	is_for_colonizable = yes
 	icon = d_GF_south_asia_food
 	planet_modifier = {
-		district_farming_max = 3
+		district_farming_max_add = 3
 	}
 	drop_weight = {
 		weight = 0
@@ -100,7 +100,7 @@ d_GF_amazon_food = {
 	is_for_colonizable = yes
 	icon = d_GF_amazon_food
 	planet_modifier = {
-		district_farming_max = 3
+		district_farming_max_add = 3
 	}
 	drop_weight = {
 		weight = 0
@@ -134,7 +134,7 @@ d_GF_australia_mineral = {
 	is_for_colonizable = yes
 	icon = d_GF_australia_mineral
 	planet_modifier = {
-		district_mining_max = 2
+		district_mining_max_add = 2
 	}
 	drop_weight = {
 		weight = 0
@@ -145,8 +145,8 @@ d_GF_asia_europe_factory = {
 	is_for_colonizable = yes
 	icon = d_GF_asia_europe_factory
 	planet_modifier = {
-		district_mining_max = 4
-		district_generator_max = 4
+		district_mining_max_add = 4
+		district_generator_max_add = 4
 	}
 	drop_weight = {
 		weight = 0
@@ -172,9 +172,9 @@ d_GF_south_pole_urban = {
 	planet_modifier = {
 		planet_housing_add = 3
 		job_GF_relic_researcher_add = 100
-		district_farming_max = 1
-		district_mining_max = 1
-		district_generator_max = 1
+		district_farming_max_add = 1
+		district_mining_max_add = 1
+		district_generator_max_add = 1
 		planet_max_districts_add = 3
 	}
 	drop_weight = {

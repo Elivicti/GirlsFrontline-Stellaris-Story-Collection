@@ -44,7 +44,7 @@ d_GF_sf_doll_factory_ruin = {
 	icon = d_GF_doll_factory_ruin
 	category = deposit_cat_blockers
 	planet_modifier = {
-		district_GF_assembly_max = -5
+		district_GF_assembly_max_add = -5
 	}
 
 	use_for_min_max_adjustments = yes
