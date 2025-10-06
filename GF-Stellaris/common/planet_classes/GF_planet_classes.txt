@@ -51,6 +51,7 @@ pc_GF_sf_machine = {
 	picture = pc_ai
 
 	icon = GFX_planet_type_machine
+	icon_large = GFX_planet_type_machine_big
 
 	atmosphere_color		= hsv { 0.09 0.8 0.7 }
 	atmosphere_intensity	= 0.4
@@ -94,6 +95,7 @@ pc_GF_collapsed = {
 	entity = "GF_collapsed_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_GF_collapsed
+	icon_large = GFX_planet_type_GF_collapsed_big
 
 	atmosphere_color		= hsv { 0.33 0.29 0.98 }
 	atmosphere_intensity	= 1.0
@@ -121,6 +123,7 @@ pc_GF_collapsed_not_habitable = {
 	entity = "GF_collapsed_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_GF_collapsed
+	icon_large = GFX_planet_type_GF_collapsed_big
 
 	atmosphere_color		= hsv { 0.33 0.29 0.98 }
 	atmosphere_intensity	= 1.0
@@ -148,6 +151,7 @@ pc_GF_automated_city = {
 	entity = "GF_automated_city_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_GF_automated_city
+	icon_large = GFX_planet_type_GF_automated_city_big
 
 	climate = "artificial"
 

@@ -284,8 +284,16 @@ spriteTypes = {
 		textureFile = "gfx/interface/icons/planet_types/pc_type_GF_collapsed.dds"
 	}
 	spriteType = {
+		name = "GFX_planet_type_GF_collapsed_big"
+		textureFile = "gfx/interface/icons/planet_types/pc_type_GF_collapsed_big.dds"
+	}
+	spriteType = {
 		name = "GFX_planet_type_GF_automated_city"
 		textureFile = "gfx/interface/icons/planet_types/pc_type_GF_automated_city.dds"
+	}
+	spriteType = {
+		name = "GFX_planet_type_GF_automated_city_big"
+		textureFile = "gfx/interface/icons/planet_types/pc_type_GF_automated_city_big.dds"
 	}
 
 	# districts
