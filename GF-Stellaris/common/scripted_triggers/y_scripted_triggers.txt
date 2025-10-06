@@ -31,6 +31,7 @@ can_be_leader = {
 				is_machine_empire = yes
 				is_mechanical_empire = yes
 				is_individual_machine = yes
+				has_country_flag = synthetic_fertility_no_bodies_left
 
 				# GF
 				GF_allow_doll_leaders = yes
