@@ -9,7 +9,7 @@ GF_new_type = {
 
 	graphical_culture = GF_new_type_01
 	move_pop_sound_effect = "moving_pop_confirmation"
-	trait = "GF_trait_sequela"
+	trait = "trait_organic"
 }
 
 GF_doll = {
@@ -64,7 +64,7 @@ ogas_consciousness = {
 	use_climate_preference = no
 	portrait_modding = no
 	randomized = no
-	
+
 	leader_age_min = 100
 	leader_age_max = 500
 	graphical_culture = extra_dimensional_01

@@ -66,6 +66,7 @@ GF_EMPIRE_URNC = {
 		adjective = "PRESCRIPTED_species_adjective_humans1"
 		name_list = "GF_URNC"
 
+		trait = "trait_organic"
 		trait = "GF_trait_sequela"
 		trait = "GF_trait_self_dependence"
 		trait = "trait_intelligent"
@@ -143,6 +144,7 @@ GF_EMPIRE_AU = {
 		adjective = "PRESCRIPTED_species_adjective_humans1"
 		name_list = "GF_AU"
 
+		trait = "trait_organic"
 		trait = "GF_trait_sequela"
 		trait = "GF_trait_doll_master"
 		trait = "trait_intelligent"
@@ -220,6 +222,7 @@ GF_EMPIRE_GK = {
 		adjective = "PRESCRIPTED_species_adjective_humans1"
 		name_list = "GF_GK"
 
+		trait = "trait_organic"
 		trait = "GF_trait_sequela"
 		trait = "GF_trait_doll_master"
 		trait = "trait_thrifty"
