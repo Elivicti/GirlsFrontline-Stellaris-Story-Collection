@@ -8,6 +8,7 @@ building_GF_connection_nexus = {
 	can_demolish = no
 	position_priority = 0
 	category = government
+	capital_tier = 5
 
 	building_sets = {
 		GF_automated_city_government
