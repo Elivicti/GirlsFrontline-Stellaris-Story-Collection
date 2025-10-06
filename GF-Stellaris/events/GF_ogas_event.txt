@@ -17,6 +17,7 @@ country_event = {
 			clone_leader = {
 				target = from
 				event_leader = yes
+				tier = leader_tier_legendary
 
 				skip_background_generation = yes
 				background_ethic = ethic_materialist
@@ -105,6 +106,7 @@ country_event = {
 				target = prev.ruler
 				species = event_target:GF_ogas_species
 				event_leader = yes
+				tier = leader_tier_legendary
 
 				skip_background_generation = yes
 				background_ethic = ethic_materialist
