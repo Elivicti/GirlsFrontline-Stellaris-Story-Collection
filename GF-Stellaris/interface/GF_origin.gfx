@@ -1,9 +1,19 @@
 spriteTypes = {
-	
 	spriteType = {
 		name = "GFX_evt_GF_origin_commonwealth"
 		texturefile = "gfx/event_pictures/origins/origin_gf_commonwealth.dds"
 		alwaystransparent = yes
 	}
- 
+	spriteType = {
+		parent = "GFX_evt_GF_origin_commonwealth"
+		name = "GFX_evt_GF_origin_commonwealth_zoom_1"
+		upper_left = { x = 24 y = 5 }
+		lower_right = { x = 167 y = 109 }
+	}
+	spriteType = {
+		parent = "GFX_evt_GF_origin_commonwealth"
+		name = "GFX_evt_GF_origin_commonwealth_zoom_2"
+		upper_left = { x = 24 y = 5 }
+		lower_right = { x = 134 y = 85 }
+	}
 }

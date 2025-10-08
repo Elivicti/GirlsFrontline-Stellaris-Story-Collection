@@ -1,0 +1,20 @@
+namespace = GF_timeline
+
+event = {
+	id = GF_timeline.1
+	hide_window = yes
+
+	is_triggered_only = yes
+	immediate = {
+		every_country = {
+			limit = { GF_is_main_country = yes }
+			add_timeline_event = {
+				type = timeline_origin
+				override_tooltip = "GF_origin_commonwealth_desc"
+				override_text = { "text:GF_origin_commonwealth" }
+				override_texture = { "background:GFX_evt_GF_origin_commonwealth" }
+				override_id = timeline_GF_origin_commonwealth
+			}
+		}
+	}
+}

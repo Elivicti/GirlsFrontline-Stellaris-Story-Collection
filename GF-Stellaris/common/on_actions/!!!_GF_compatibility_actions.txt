@@ -1,6 +1,10 @@
 # 这个on_action中包含用于兼容的on_action
 # 特别地，必须在要兼容的事件触发之前触发
 
+on_game_start = {
+	events = { GF_timeline.1 }
+}
+
 # A pop amount has been grown
 # This = Planet scope
 # From = Country
