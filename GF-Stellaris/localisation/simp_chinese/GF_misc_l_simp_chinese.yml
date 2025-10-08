@@ -19,3 +19,7 @@
  GF_evt_misc.112.desc: "我们在[From.GetName]中输给了[FromFrom.GetName]，尽管对方要求我们施行[FromFrom.GetName]的主流思潮与政体，但为保证国家的完整性，我们必须保持为§Y$GF_auth_commonwealth$§!。\n\n作为替代，我们被对方狠狠地羞辱了。"
  GF_evt_misc.112.a: "可恶……"
  GF_evt_misc.112.a.tooltip: "§Y恢复§!原先的§Y主流思潮§!与§Y政体§!\n§Y$NAME_GF_OGAS$ [GF_ogas_leader.GetName]§!重新成为统治者\n\n"
+
+# TIMELINE
+ TIMELINE_GF_RESET_INVALID_ORIGIN: "重置起源"
+ TIMELINE_GF_RESET_INVALID_ORIGIN_DESC: "§L[GetDate]§!\n\n一局游戏中仅允许§H一位§!玩家使用['civic:GF_origin_commonwealth']起源，因此您帝国的起源已被§R重置§!。"
