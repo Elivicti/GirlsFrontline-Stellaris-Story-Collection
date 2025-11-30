@@ -103,7 +103,18 @@ GF_get_thread_usage_from_auto_city = {
 		parameters = {
 			limit = {
 				is_planet_class = pc_GF_automated_city
-				has_planet_flag = flag_p_GF_automated_city_advanced_resources
+				OR = {
+					has_zone = { zone = GF_zone_autocity_generator_01 }
+					has_zone = { zone = GF_zone_autocity_mining_01 }
+					has_zone = { zone = GF_zone_autocity_farming_01 }
+					has_zone = { zone = GF_zone_autocity_foundry_01 }
+					has_zone = { zone = GF_zone_autocity_industry_01 }
+					has_zone = { zone = GF_zone_autocity_refinery_01 }
+					has_zone = { zone = GF_zone_autocity_research_01 }
+					has_zone = { zone = GF_zone_autocity_assembly_01 }
+					has_zone = { zone = GF_zone_autocity_collapse_01 }
+					has_zone = { zone = GF_zone_autocity_reverse_collapse_01 }
+				}
 			}
 		}
 		mode = add
@@ -113,11 +124,42 @@ GF_get_thread_usage_from_auto_city = {
 		parameters = {
 			limit = {
 				is_planet_class = pc_GF_automated_city
-				has_planet_flag = flag_p_GF_automated_city_special_resources
+				OR = {
+					has_zone = { zone = GF_zone_autocity_generator_02 }
+					has_zone = { zone = GF_zone_autocity_mining_02 }
+					has_zone = { zone = GF_zone_autocity_farming_02 }
+					has_zone = { zone = GF_zone_autocity_foundry_02 }
+					has_zone = { zone = GF_zone_autocity_industry_02 }
+					has_zone = { zone = GF_zone_autocity_refinery_02 }
+					has_zone = { zone = GF_zone_autocity_research_02 }
+					has_zone = { zone = GF_zone_autocity_assembly_02 }
+					has_zone = { zone = GF_zone_autocity_collapse_02 }
+					has_zone = { zone = GF_zone_autocity_reverse_collapse_02 }
+				}
 			}
 		}
 		mode = add
-		mult = 2
+	}
+	complex_trigger_modifier = {
+		trigger = count_owned_planet
+		parameters = {
+			limit = {
+				is_planet_class = pc_GF_automated_city
+				OR = {
+					has_zone = { zone = GF_zone_autocity_generator_03 }
+					has_zone = { zone = GF_zone_autocity_mining_03 }
+					has_zone = { zone = GF_zone_autocity_farming_03 }
+					has_zone = { zone = GF_zone_autocity_foundry_03 }
+					has_zone = { zone = GF_zone_autocity_industry_03 }
+					has_zone = { zone = GF_zone_autocity_refinery_03 }
+					has_zone = { zone = GF_zone_autocity_research_03 }
+					has_zone = { zone = GF_zone_autocity_assembly_03 }
+					has_zone = { zone = GF_zone_autocity_collapse_03 }
+					has_zone = { zone = GF_zone_autocity_reverse_collapse_03 }
+				}
+			}
+		}
+		mode = add
 	}
 	complex_trigger_modifier = {
 		trigger = count_owned_planet
