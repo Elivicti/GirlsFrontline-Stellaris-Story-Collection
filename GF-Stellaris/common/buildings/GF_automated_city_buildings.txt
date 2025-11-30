@@ -155,6 +155,9 @@ building_GF_connection_nexus = {
 		}
 		text = building_GF_subnet_communication_nexus_effect
 	}
+	triggered_desc = {
+		text = GF_zone_specialization_level_tt
+	}
 }
 
 building_GF_automated_coordination_nexus = {

@@ -77,12 +77,17 @@ GF_zone_autocity_generator_02 = {
 	}
 
 	triggered_planet_modifier = {
-
 		GF_automated_city_districts_production_02_rare_crystals_cost_add = @rare_cost
 
 		GF_automated_city_districts_production_02_energy_upkeep_add = @base_upkeep_t2_delta
 		GF_automated_city_districts_production_02_rare_crystals_upkeep_add = @rare_upkeep_t1
+	}
 
+	triggered_desc = {
+		text = GF_zone_specialization_level_tt
+	}
+	on_built = {
+		owner = { GF_check_OGAS_threads_over_cap_effect = { from = prev } }
 	}
 }
 GF_zone_autocity_mining_02 = {
@@ -134,6 +139,13 @@ GF_zone_autocity_mining_02 = {
 
 		GF_automated_city_districts_production_02_energy_upkeep_add = @base_upkeep_t3_delta
 	}
+
+	triggered_desc = {
+		text = GF_zone_specialization_level_tt
+	}
+	on_built = {
+		owner = { GF_check_OGAS_threads_over_cap_effect = { from = prev } }
+	}
 }
 GF_zone_autocity_farming_02 = {
 	base_buildtime = @zone_buildtime
@@ -184,6 +196,13 @@ GF_zone_autocity_farming_02 = {
 
 		GF_automated_city_districts_production_02_energy_upkeep_add = @base_upkeep_t2_delta
 		GF_automated_city_districts_production_02_volatile_motes_upkeep_add = @rare_upkeep_t1
+	}
+
+	triggered_desc = {
+		text = GF_zone_specialization_level_tt
+	}
+	on_built = {
+		owner = { GF_check_OGAS_threads_over_cap_effect = { from = prev } }
 	}
 }
 
@@ -238,6 +257,13 @@ GF_zone_autocity_foundry_02 = {
 		GF_automated_city_districts_production_02_volatile_motes_upkeep_add = @rare_upkeep_t2
 		GF_automated_city_districts_production_02_minerals_upkeep_add = @material_upkeep_t1
 	}
+
+	triggered_desc = {
+		text = GF_zone_specialization_level_tt
+	}
+	on_built = {
+		owner = { GF_check_OGAS_threads_over_cap_effect = { from = prev } }
+	}
 }
 GF_zone_autocity_industry_02 = {
 	base_buildtime = @zone_buildtime
@@ -289,6 +315,13 @@ GF_zone_autocity_industry_02 = {
 		GF_automated_city_districts_production_02_energy_upkeep_add = @base_upkeep_t2_delta
 		GF_automated_city_districts_production_02_rare_crystals_upkeep_add = @rare_upkeep_t2
 		GF_automated_city_districts_production_02_minerals_upkeep_add = @material_upkeep_t1
+	}
+
+	triggered_desc = {
+		text = GF_zone_specialization_level_tt
+	}
+	on_built = {
+		owner = { GF_check_OGAS_threads_over_cap_effect = { from = prev } }
 	}
 }
 GF_zone_autocity_refinery_02 = {
@@ -342,6 +375,13 @@ GF_zone_autocity_refinery_02 = {
 
 		GF_automated_city_districts_production_02_energy_upkeep_add = @base_upkeep_t2_delta
 		GF_automated_city_districts_production_02_minerals_upkeep_add = @material_upkeep_t1
+	}
+
+	triggered_desc = {
+		text = GF_zone_specialization_level_tt
+	}
+	on_built = {
+		owner = { GF_check_OGAS_threads_over_cap_effect = { from = prev } }
 	}
 }
 
@@ -401,6 +441,13 @@ GF_zone_autocity_research_02 = {
 		GF_automated_city_districts_production_02_energy_upkeep_add = @base_upkeep_t3_delta
 		GF_automated_city_districts_production_02_exotic_gases_upkeep_add = @rare_upkeep_t3
 	}
+
+	triggered_desc = {
+		text = GF_zone_specialization_level_tt
+	}
+	on_built = {
+		owner = { GF_check_OGAS_threads_over_cap_effect = { from = prev } }
+	}
 }
 GF_zone_autocity_assembly_02 = {
 	base_buildtime = @zone_buildtime
@@ -454,6 +501,13 @@ GF_zone_autocity_assembly_02 = {
 		GF_automated_city_districts_production_02_alloys_upkeep_add = 8
 		GF_automated_city_districts_production_02_gf_core_chip_upkeep_add = 2
 	}
+
+	triggered_desc = {
+		text = GF_zone_specialization_level_tt
+	}
+	on_built = {
+		owner = { GF_check_OGAS_threads_over_cap_effect = { from = prev } }
+	}
 }
 GF_zone_autocity_collapse_02 = {
 	base_buildtime = @zone_buildtime
@@ -505,6 +559,13 @@ GF_zone_autocity_collapse_02 = {
 		GF_automated_city_districts_production_02_energy_upkeep_add = @base_upkeep_t3_delta
 		GF_automated_city_districts_production_02_minerals_upkeep_add = @material_upkeep_t1
 	}
+
+	triggered_desc = {
+		text = GF_zone_specialization_level_tt
+	}
+	on_built = {
+		owner = { GF_check_OGAS_threads_over_cap_effect = { from = prev } }
+	}
 }
 GF_zone_autocity_reverse_collapse_02 = {
 	base_buildtime = @zone_buildtime
@@ -512,8 +573,6 @@ GF_zone_autocity_reverse_collapse_02 = {
 
 	swap_type = district_GF_automated_reverse_collapse
 	swap_type_weight = 5
-
-	max_buildings = 3
 
 	resources = {
 		category = planet_zones
@@ -563,5 +622,12 @@ GF_zone_autocity_reverse_collapse_02 = {
 		GF_automated_city_districts_production_02_energy_upkeep_add = @base_upkeep_t2_delta
 		GF_automated_city_districts_production_02_gf_core_chip_upkeep_add = @rare_upkeep_t3
 		GF_automated_city_districts_production_02_GF_nyto_collapse_liquid_upkeep_add = @material_upkeep_t2
+	}
+
+	triggered_desc = {
+		text = GF_zone_specialization_level_tt
+	}
+	on_built = {
+		owner = { GF_check_OGAS_threads_over_cap_effect = { from = prev } }
 	}
 }

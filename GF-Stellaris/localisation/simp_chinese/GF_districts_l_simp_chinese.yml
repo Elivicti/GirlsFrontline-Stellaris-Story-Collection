@@ -73,6 +73,8 @@
  GF_zone_autocity_city_expand_plural: "城市扩张"
  GF_zone_autocity_city_expand_desc: "宽敞舒适的豪华公寓延伸至天际线。"
 
+ GF_zone_specialization_level_tt: "区域产生的§Y$mod_GF_automated_city_specialization_level$§!越高，产生的 £mod_GF_OGAS_threads_used_add£ §H$mod_GF_OGAS_threads_used_add$§!越高"
+
  district_GF_autocity_specialization_01: "生产特化中心01"
  district_GF_autocity_specialization_01_plural: "生产特化中心01"
  district_GF_autocity_specialization_01_desc: "这里的大型自动化生产设施正在等待使用。"
