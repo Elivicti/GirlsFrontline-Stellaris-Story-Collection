@@ -6,6 +6,9 @@ GF_freedom_class = {
 
 	resources = {
 		category = GF_pop_category_freedom_class
+		# Living Standard Trait Output
+		inline_script = "pop_categories/living_standard_ruler_production"
+
 		produces = {
 			trade = @trade_value_very_high
 		}
