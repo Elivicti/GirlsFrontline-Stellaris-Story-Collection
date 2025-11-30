@@ -20,7 +20,10 @@ is_special_colony_type = {
 
 # P社牛魔酬宾
 can_be_leader = {
-	has_citizenship_rights = yes
+	OR = {
+		has_citizenship_rights = yes
+		has_citizenship_type = { type = citizenship_shroud_touched country = root }
+	}
 	# Rule out Traits for servitude & lack of free will
 	can_think = yes
 	OR = {
@@ -102,11 +105,6 @@ battle_thrall_job_check_trigger = {
 		can_think = yes
 		# Rule out Disconnected Drones
 		has_disconnected_drone_citizenship_type = no
-		NOT = {
-			has_military_service_type = {
-				type = military_service_none
-			}
-		}
 		OR = {
 			NOT = { has_trait = trait_mechanical }
 			owner = { has_technology = tech_droid_workers }

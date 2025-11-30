@@ -40,17 +40,8 @@ species_can_live_on_planet = {
 
 				has_trait = trait_machine_unit
 				has_trait = trait_mechanical
-				AND = {
-					has_trait = trait_cybernetic
-					exists = root.owner
-					root.owner = {
-						is_machine_empire = yes
-						OR = {
-							has_civic = civic_machine_assimilator # Assimilator empire
-							has_ascension_perk = ap_mechromancy
-						}
-					}
-				}
+				has_trait = trait_cybernetic
+				has_unplugged_positive_trait = yes
 			}
 		}
 		# GF 神秘机械星球
@@ -144,6 +135,12 @@ can_species_be_assembled = {
 			root.owner = { is_individual_machine = yes }
 		}
 	}
+	OR = { # GF
+		NOT = { has_trait = GF_trait_doll }
+		root.owner = {
+			GF_can_build_doll_species = yes
+		}
+	}
 	NOT = {
 		AND = {
 			has_virtual_species_trait = yes
@@ -156,12 +153,6 @@ can_species_be_assembled = {
 	has_population_control = {
 		type = no
 		country = root.owner
-	}
-	OR = { # GF
-		NOT = { has_trait = GF_trait_doll }
-		root.owner = {
-			GF_can_build_doll_species = yes
-		}
 	}
 }
 
@@ -217,19 +208,11 @@ can_species_be_assembled = {
 # }
 
 
-# This = species one
-# Root = species two
+# This = species
 can_crossbreed_species = {
 	is_crossbreeding_possible = yes
-	root = { is_crossbreeding_possible = yes }
-	NOR = {
-		has_trait = GF_trait_doll	# GF
-		is_subspecies = root
-		root = { is_subspecies = prev }
-	}
+	NOT = { has_trait = GF_trait_doll }
 }
-
-
 
 
 

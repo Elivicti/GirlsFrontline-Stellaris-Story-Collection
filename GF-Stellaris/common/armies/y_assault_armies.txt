@@ -1,4 +1,4 @@
-#Defensive armies can't transport of the planet
+#Defensive armies can't transport off the planet
 #maintenance is directly scripted here. 0.25 translates to 0.25 monthly cost (excluding other upkeep modifiers)
 #morale_damage = 1		# average morale damage of the army, default: auto (calculated from morale * MORALE_DAMAGE_MULT)
 
@@ -44,25 +44,30 @@ assault_army = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
+			has_origin = origin_shroud_forged
 		}
 	}
 	potential_country = {
 		OR = {
 			is_machine_empire = no
 			has_valid_civic = civic_machine_assimilator
+			has_origin = origin_shroud_forged
 		}
 		is_wilderness_empire = no
 	}
 	potential = {
 		from = {
-			NOR = {
-				has_trait = "trait_mechanical"
-				has_trait = "trait_machine_unit"
-				has_trait = "trait_limited_cybernetic"
-				is_sapient = no
+			OR = {
+				has_trait = trait_shroud_forged
+				NOR = {
+					has_trait = "trait_mechanical"
+					has_trait = "trait_machine_unit"
+					has_trait = "trait_limited_cybernetic"
+					is_sapient = no
 
-				# GF
-				has_trait = "GF_trait_doll"
+					# GF
+					has_trait = "GF_trait_doll"
+				}
 			}
 		}
 	}
@@ -76,10 +81,7 @@ assault_army = {
 				has_technology = tech_telepathy
 				has_technology = tech_gene_seed_purification
 				AND = {
-					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
-					}
+					is_militarist = yes
 					has_technology = tech_gene_banks
 				}
 			}
@@ -195,10 +197,7 @@ slave_army = {
 				has_technology = tech_telepathy
 				has_technology = tech_gene_seed_purification
 				AND = {
-					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
-					}
+					is_militarist = yes
 					has_technology = tech_gene_banks
 				}
 				AND = {
@@ -285,10 +284,7 @@ clone_army = {
 				has_technology = tech_telepathy
 				has_technology = tech_gene_seed_purification
 				NAND = {
-					OR = {
-						has_ethic = ethic_militarist
-						has_ethic = ethic_fanatic_militarist
-					}
+					is_militarist = yes
 					has_technology = tech_gene_banks
 				}
 			}
@@ -339,7 +335,10 @@ psionic_army = {
 
 	prerequisites = { "tech_telepathy" }
 	potential_country = {
-		is_machine_empire = no
+		OR = {
+			is_machine_empire = no
+			has_origin = origin_shroud_forged
+		}
 		is_wilderness_empire = no
 	}
 	potential = {
@@ -348,14 +347,17 @@ psionic_army = {
 				NOT = { host_has_dlc = "Utopia" }
 				has_psionic_species_trait = yes
 			}
-			NOR = {
-				has_trait = "trait_mechanical"
-				has_trait = "trait_machine_unit"
-				has_trait = "trait_limited_cybernetic"
-				is_sapient = no
+			OR = {
+				has_trait = trait_shroud_forged
+				NOR = {
+					has_trait = "trait_mechanical"
+					has_trait = "trait_machine_unit"
+					has_trait = "trait_limited_cybernetic"
+					is_sapient = no
 
-				# GF
-				has_trait = "GF_trait_doll"
+					# GF
+					has_trait = "GF_trait_doll"
+				}
 			}
 		}
 	}
