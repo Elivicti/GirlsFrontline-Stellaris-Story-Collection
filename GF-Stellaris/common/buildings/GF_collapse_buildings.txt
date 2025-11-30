@@ -4,6 +4,7 @@
 
 building_GF_collapse_1 = {
 	base_buildtime = @b1_time
+	auto_generate_description = no
 
 	category = manufacturing
 	building_sets = {
@@ -68,6 +69,7 @@ building_GF_collapse_1 = {
 building_GF_collapse_2 = {
 	base_buildtime = @b2_time
 	can_build = no
+	auto_generate_description = no
 	category = manufacturing
 	building_sets = {
 		industrial
@@ -127,6 +129,7 @@ building_GF_collapse_2 = {
 
 building_GF_reverse_collapse = {
 	base_buildtime = @b2_time
+	auto_generate_description = no
 
 	category = manufacturing
 	building_sets = {

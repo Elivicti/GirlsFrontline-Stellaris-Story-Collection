@@ -9,6 +9,7 @@ building_GF_connection_nexus = {
 	position_priority = 0
 	category = government
 	capital_tier = 5
+	auto_generate_description = no
 
 	building_sets = {
 		GF_automated_city_government
@@ -161,6 +162,7 @@ building_GF_automated_coordination_nexus = {
 	base_buildtime = 720
 	position_priority = 2
 	building_sets = { GF_automated_city_government }
+	auto_generate_description = no
 
 	category = government
 	potential = {
@@ -279,6 +281,7 @@ building_GF_automated_maintenance_module = {
 		GF_automated_city_generic
 	}
 	position_priority = 10
+	auto_generate_description = no
 
 	category = government
 	potential = {
@@ -316,6 +319,7 @@ building_GF_automated_defence_module = {
 		GF_automated_city_generic
 	}
 	position_priority = 11
+	auto_generate_description = no
 
 	category = army
 	potential = {
@@ -351,6 +355,7 @@ building_GF_automated_politic_module = {
 		GF_automated_city_government
 		GF_automated_city_generic
 	}
+	auto_generate_description = no
 
 	category = government
 	potential = {
@@ -404,6 +409,7 @@ building_GF_underground_expansion_module = {
 		GF_automated_city_generic
 	}
 	position_priority = 13
+	auto_generate_description = no
 
 	category = government
 	potential = {
@@ -437,6 +443,7 @@ building_GF_energy_management_module = {
 		GF_automated_city_generic
 	}
 	position_priority = 14
+	auto_generate_description = no
 
 	category = resource
 	potential = {
@@ -471,6 +478,7 @@ building_GF_entertainment_module = {
 		GF_automated_city_generic
 	}
 	position_priority = 15
+	auto_generate_description = no
 
 	category = amenity
 	potential = {
@@ -506,6 +514,7 @@ building_GF_residential_module = {
 		GF_automated_city_generic
 	}
 	position_priority = 16
+	auto_generate_description = no
 
 	category = amenity
 	potential = {
@@ -542,6 +551,7 @@ building_GF_automated_factory = {
 		GF_automated_city_government
 		GF_automated_city_basic_assembly
 	}
+	auto_generate_description = no
 
 	category = pop_assembly
 
@@ -594,6 +604,7 @@ building_GF_automated_energy_module = {
 		GF_automated_city_generic
 		GF_automated_city_energy
 	}
+	auto_generate_description = no
 
 	category = resource
 	potential = {
@@ -633,6 +644,7 @@ building_GF_automated_mining_module = {
 		GF_automated_city_generic
 		GF_automated_city_minerals
 	}
+	auto_generate_description = no
 
 	category = resource
 	potential = {
@@ -672,6 +684,7 @@ building_GF_automated_farming_module = {
 		GF_automated_city_generic
 		GF_automated_city_food
 	}
+	auto_generate_description = no
 
 	category = resource
 	potential = {
@@ -714,6 +727,7 @@ building_GF_automated_foundry_module = {
 		GF_automated_city_generic
 		GF_automated_city_foundry
 	}
+	auto_generate_description = no
 
 	category = manufacturing
 	potential = {
@@ -753,6 +767,7 @@ building_GF_automated_industry_module = {
 		GF_automated_city_generic
 		GF_automated_city_industry
 	}
+	auto_generate_description = no
 
 	category = manufacturing
 	potential = {
@@ -792,6 +807,7 @@ building_GF_automated_refinery_module = {
 		GF_automated_city_generic
 		GF_automated_city_refinery
 	}
+	auto_generate_description = no
 
 	category = manufacturing
 	potential = {
@@ -834,6 +850,7 @@ building_GF_automated_research_module = {
 		GF_automated_city_generic
 		GF_automated_city_research
 	}
+	auto_generate_description = no
 
 	category = research
 	potential = {
@@ -874,6 +891,7 @@ building_GF_automated_factory_module = {
 		GF_automated_city_generic
 		GF_automated_city_assembly
 	}
+	auto_generate_description = no
 
 	category = pop_assembly
 
@@ -916,6 +934,7 @@ building_GF_automated_collapse_module = {
 		GF_automated_city_generic
 		GF_automated_city_collapse
 	}
+	auto_generate_description = no
 
 	category = manufacturing
 	potential = {
@@ -957,6 +976,7 @@ building_GF_automated_reverse_collapse_module = {
 		GF_automated_city_generic
 		GF_automated_city_reverse_collapse
 	}
+	auto_generate_description = no
 
 	category = manufacturing
 

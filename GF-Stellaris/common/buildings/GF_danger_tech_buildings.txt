@@ -5,6 +5,7 @@ building_GF_shrike_den = {
 	can_demolish = yes
 	can_be_ruined = no
 	can_build = yes
+	auto_generate_description = no
 
 	planet_limit = 1
 
