@@ -159,6 +159,14 @@ fleet_event = {
 	location = from
 	archaeology = yes
 	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
 	option = {
 		name = "GF_sf_site.31.a"
 		small_artifact_reward = yes
@@ -174,6 +182,14 @@ fleet_event = {
 	location = from
 	archaeology = yes
 	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
 	option = {
 		name = "GF_sf_site.32.a"
 		small_artifact_reward = yes
@@ -189,6 +205,14 @@ fleet_event = {
 	location = from
 	archaeology = yes
 	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
 	option = {
 		name = "GF_sf_site.33.a"
 		small_artifact_reward = yes
@@ -204,6 +228,14 @@ fleet_event = {
 	location = from
 	archaeology = yes
 	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
 	option = {
 		name = "GF_sf_site.34.a"
 		small_artifact_reward = yes
