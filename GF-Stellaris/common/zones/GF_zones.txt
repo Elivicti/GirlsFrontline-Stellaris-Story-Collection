@@ -298,7 +298,7 @@ GF_zone_autocity_nexus = {
 
 GF_zone_autocity_city_expand = {
 	base_buildtime = @zone_buildtime
-	icon = GFX_colony_type_urban
+	icon = GFX_district_specialization_urban
 
 	resources = {
 		category = planet_zones
