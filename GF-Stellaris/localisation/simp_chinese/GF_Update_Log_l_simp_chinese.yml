@@ -1,8 +1,11 @@
 ﻿l_simp_chinese:
 #################
- GF_Stellaris_Update_Log: "§R注意：新版本不保证与旧版存档的兼容性，载入旧版存档前请备份存档§!\n\n$GF_Stellaris_Log_20250610$\n\n$GF_Stellaris_Update_Log_Tip$"
+ GF_Stellaris_Update_Log: "§R注意：新版本不保证与旧版存档的兼容性，载入旧版存档前请备份存档§!\n\n$GF_Stellaris_Log_20251130$\n\n$GF_Stellaris_Update_Log_Tip$"
 
  GF_Stellaris_Update_Log_Tip: "要获取更详细的§Y更新日志§!，请前往§Y创意工坊页面§!查看§Y改动说明§!。\n\n如果您在使用过程中对本机功能还有其他建议，或者发现系统错误，请向OGAS维护与升级部门主管安娜小姐反馈，QQ群：1035699926\n其他开发者若要接入本机系统，请参阅§Y000_documentation§!目录。"
+
+ # 2025.11.30
+ GF_Stellaris_Log_20251130: "1. 适配§Y4.2§!\n2. 生活标准现在会影响§Y$pop_cat_GF_freedom_class$§!产出的贸易额\n3. 考古点§Y$GF_sf_site_3$§!的每一个阶段现在都需要点击事件选项后才能进入下一阶段\n4. 母星外的三个遗迹考古点的前两个阶段不再需要点击事件选项才能进入下一阶段\n5. 取消§Y42Lab建筑§!的建造限制\n6. 下调§Y$GF_faction_name_relic_department$§!的基础影响力产出\n99. 文本与图片、图标优化"
 
  GF_Stellaris_Log_20250610: "$GF_Stellaris_Log_20250528$\n10. 其他修复、适配与数值调整"
 
