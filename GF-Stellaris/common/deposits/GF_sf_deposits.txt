@@ -15,7 +15,6 @@ d_GF_sf_control_center_ruin = {
 		planet_structures_upkeep_mult = 0.5
 	}
 	blocker_swap_types = { d_GF_sf_control_center }
-	use_for_min_max_adjustments = yes
 	resources = {
 		category = deposit_blockers
 		cost = {
@@ -47,7 +46,6 @@ d_GF_sf_doll_factory_ruin = {
 		district_GF_assembly_max_add = -5
 	}
 
-	use_for_min_max_adjustments = yes
 	resources = {
 		category = deposit_blockers
 		cost = {
@@ -65,7 +63,6 @@ d_GF_sf_battle_field = {
 	planet_modifier = {
 		planet_max_districts_add = -5
 	}
-	use_for_min_max_adjustments = yes
 	resources = {
 		category = deposit_blockers
 		cost = {
@@ -110,7 +107,6 @@ d_GF_sf_relic_entrance = {
 		}
 	}
 	
-	use_for_min_max_adjustments = yes
 	resources = {
 		category = deposit_blockers
 		cost = {
