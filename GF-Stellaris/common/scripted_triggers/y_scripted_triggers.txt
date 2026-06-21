@@ -12,7 +12,6 @@ is_special_colony_type = {
 		has_modifier = penal_colony
 		has_modifier = resort_colony
 		has_modifier = slave_colony
-		has_modifier = gestation_colony
 		# GF
 		is_planet_class = pc_GF_automated_city
 	}
@@ -26,6 +25,7 @@ can_be_leader = {
 	}
 	# Rule out Traits for servitude & lack of free will
 	can_think = yes
+	NOT = { has_trait = trait_syncretic_proles }
 	OR = {
 		is_robot_pop_group = no
 		root = {
@@ -70,9 +70,13 @@ entertainer_job_check_trigger = {
 			NOT = { has_trait = trait_mechanical }
 			owner = { has_technology = tech_droid_workers }
 		}
-		NOT = {
+		NOR = {
 			has_citizenship_type = {
 				type = citizenship_organic_trophy
+				country = owner
+			}
+			has_citizenship_type = {
+				type = citizenship_cruise_passenger
 				country = owner
 			}
 		}
@@ -105,13 +109,22 @@ battle_thrall_job_check_trigger = {
 		can_think = yes
 		# Rule out Disconnected Drones
 		has_disconnected_drone_citizenship_type = no
+		NOT = {
+			has_military_service_type = {
+				type = military_service_none
+			}
+		}
 		OR = {
 			NOT = { has_trait = trait_mechanical }
 			owner = { has_technology = tech_droid_workers }
 		}
-		NOT = {
+		NOR = {
 			has_citizenship_type = {
 				type = citizenship_organic_trophy
+				country = owner
+			}
+			has_citizenship_type = {
+				type = citizenship_cruise_passenger
 				country = owner
 			}
 		}

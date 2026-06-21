@@ -21,9 +21,19 @@ assault_army = {
 			trigger = {
 				from = {
 					country_uses_bio_ships = no
+					is_nomadic = no
 				}
 			}
 			minerals = 100
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+					is_nomadic = yes
+				}
+			}
+			alloys = 50
 		}
 		cost = {
 			trigger = {
@@ -46,6 +56,7 @@ assault_army = {
 			has_valid_civic = civic_machine_assimilator
 			has_origin = origin_shroud_forged
 		}
+		is_wilderness_empire = no
 	}
 	potential_country = {
 		OR = {
@@ -120,9 +131,19 @@ slave_army = {
 			trigger = {
 				from = {
 					country_uses_bio_ships = no
+					is_nomadic = no
 				}
 			}
 			minerals = 50
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+					is_nomadic = yes
+				}
+			}
+			alloys = 25
 		}
 		cost = {
 			trigger = {
@@ -157,7 +178,7 @@ slave_army = {
 				}
 			}
 		}
-		any_owned_pop_group = { is_pop_category = slave }
+		any_owned_pop_group = { is_enslaved = yes }
 	}
 	potential_country = {
 		OR = {
@@ -170,7 +191,7 @@ slave_army = {
 	potential = {
 		owner = {
 			any_owned_pop_group = {
-				is_pop_category = slave
+				is_enslaved = yes
 				is_same_species = from
 			}
 		}
@@ -226,9 +247,19 @@ clone_army = {
 			trigger = {
 				from = {
 					country_uses_bio_ships = no
+					is_nomadic = no
 				}
 			}
 			minerals = 75
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+					is_nomadic = yes
+				}
+			}
+			alloys = 37.5
 		}
 		cost = {
 			trigger = {
@@ -314,9 +345,19 @@ psionic_army = {
 			trigger = {
 				from = {
 					country_uses_bio_ships = no
+					is_nomadic = no
 				}
 			}
 			minerals = 250
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+					is_nomadic = yes
+				}
+			}
+			alloys = 125
 		}
 		cost = {
 			trigger = {
@@ -343,10 +384,7 @@ psionic_army = {
 	}
 	potential = {
 		from = {
-			OR = {
-				NOT = { host_has_dlc = "Utopia" }
-				has_psionic_species_trait = yes
-			}
+			has_psionic_species_trait = yes
 			OR = {
 				has_trait = trait_shroud_forged
 				NOR = {
@@ -374,7 +412,7 @@ psionic_army = {
 		modifier = {
 			set = 0
 			is_fallen_empire = yes
-			NOT = { has_ethic = ethic_fanatic_spiritualist }
+			NOT = { is_fanatic_spiritualist = yes }
 		}
 	}
 }
@@ -396,9 +434,19 @@ gene_warrior_army = {
 			trigger = {
 				from = {
 					country_uses_bio_ships = no
+					is_nomadic = no
 				}
 			}
 			minerals = 300
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+					is_nomadic = yes
+				}
+			}
+			alloys = 150
 		}
 		cost = {
 			trigger = {
@@ -439,7 +487,7 @@ gene_warrior_army = {
 		modifier = {
 			set = 0
 			is_fallen_empire = yes
-			NOT = { has_ethic = ethic_fanatic_xenophile }
+			is_fanatic_xenophile = no
 		}
 	}
 }
