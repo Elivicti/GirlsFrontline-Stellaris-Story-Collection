@@ -24,7 +24,6 @@
 
 district_GF_automated_nexus = {
 	base_buildtime = @build_time
-	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes
 
 	prerequisites = { "GF_tech_ternary_quantum_computing" }
@@ -99,7 +98,6 @@ district_GF_automated_nexus = {
 district_GF_autocity_specialization_01 = {
 	base_buildtime = @build_time
 	icon = district_arcology_housing_secondary
-	is_capped_by_modifier = no
 
 	prerequisites = { "GF_tech_ternary_quantum_computing" }
 	show_tech_unlock_if = { always = no }
@@ -139,7 +137,6 @@ district_GF_autocity_specialization_01 = {
 district_GF_autocity_specialization_02 = {
 	base_buildtime = @build_time
 	icon = district_arcology_housing_secondary
-	is_capped_by_modifier = no
 
 	prerequisites = { "GF_tech_ternary_quantum_computing" }
 	show_tech_unlock_if = { always = no }
@@ -179,7 +176,6 @@ district_GF_autocity_specialization_02 = {
 district_GF_autocity_specialization_03 = {
 	base_buildtime = @build_time
 	icon = district_arcology_housing_secondary
-	is_capped_by_modifier = no
 
 	prerequisites = { "GF_tech_ternary_quantum_computing" }
 	show_tech_unlock_if = { always = no }
@@ -223,7 +219,6 @@ district_GF_autocity_specialization_03 = {
 district_GF_automated_energy = {
 	base_buildtime = @build_time
 	icon = district_rw_generator
-	is_capped_by_modifier = no
 
 	zone_slots = {}
 
@@ -241,7 +236,6 @@ district_GF_automated_energy = {
 district_GF_automated_mining = {
 	base_buildtime = @build_time
 	icon = district_mining
-	is_capped_by_modifier = no
 
 	zone_slots = {}
 
@@ -259,7 +253,6 @@ district_GF_automated_mining = {
 district_GF_automated_farming = {
 	base_buildtime = @build_time
 	icon = district_rw_farming
-	is_capped_by_modifier = no
 
 	zone_slots = {}
 
@@ -278,7 +271,6 @@ district_GF_automated_farming = {
 district_GF_automated_foundry = {
 	base_buildtime = @build_time
 	icon = district_arcology_arms_industry
-	is_capped_by_modifier = no
 
 	zone_slots = {}
 
@@ -296,7 +288,6 @@ district_GF_automated_foundry = {
 district_GF_automated_industry = {
 	base_buildtime = @build_time
 	icon = district_arcology_civilian_industry
-	is_capped_by_modifier = no
 	zone_slots = {}
 
 	show_on_uncolonized = { always = no }
@@ -313,7 +304,6 @@ district_GF_automated_industry = {
 }
 district_GF_automated_refinery = {
 	base_buildtime = @build_time
-	is_capped_by_modifier = no
 
 	zone_slots = {}
 
@@ -332,7 +322,6 @@ district_GF_automated_refinery = {
 district_GF_automated_research = {
 	base_buildtime = @build_time
 	icon = district_rw_science
-	is_capped_by_modifier = no
 
 	zone_slots = {}
 
@@ -350,7 +339,6 @@ district_GF_automated_research = {
 district_GF_automated_factory = {
 	base_buildtime = @build_time
 	icon = district_GF_assembly
-	is_capped_by_modifier = no
 
 	zone_slots = {}
 
@@ -368,7 +356,6 @@ district_GF_automated_factory = {
 district_GF_automated_collapse = {
 	base_buildtime = @build_time
 	icon = district_GF_collapse
-	is_capped_by_modifier = no
 
 	zone_slots = {}
 
@@ -385,7 +372,6 @@ district_GF_automated_collapse = {
 }
 district_GF_automated_reverse_collapse = {
 	base_buildtime = @build_time
-	is_capped_by_modifier = no
 
 	zone_slots = {}
 
