@@ -1,0 +1,356 @@
+namespace = GF_fleet
+
+
+# on_single_player_save_game_load
+event = {
+	id = GF_fleet.320
+	hide_window = yes
+
+	is_triggered_only = yes
+	immediate = {
+		every_system = {
+			limit = { has_star_flag = flag_s_GF_reverse_collapse_gateway_beacon }
+			if = {
+				limit = {
+					any_system_megastructure = {
+						is_megastructure_type = GF_reverse_collapse_beacon
+					}
+				}
+				random_system_megastructure = {
+					limit = { is_megastructure_type = GF_reverse_collapse_beacon }
+					save_event_target_as = beacon
+				}
+				random_fleet_in_system = {
+					limit = { has_fleet_flag = flag_f_GF_RC_beacon_defense_station }
+					set_location = event_target:beacon
+					fleet_event = {
+						id = GF_fleet.321
+						days = 1
+					}
+				}
+			}
+			else = {
+				remove_star_flag = flag_s_GF_reverse_collapse_gateway_beacon
+			}
+		}
+	}
+}
+fleet_event = {
+	id = GF_fleet.321
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:beacon = {
+			set_owner = prev.owner
+			if = {
+				limit = { NOT = { has_megastructure_flag = flag_mega_GF_will_expire } }
+				set_megastructure_flag = flag_mega_GF_will_expire
+				prevprev = {
+					fleet_event = {
+						id = GF_fleet.332
+						days = @GF_reverse_collapse_beacon_expire_days
+					}
+				}
+			}
+		}
+	}
+}
+
+# 舰队行动：部署信标失败
+planet_event = {
+	id = GF_fleet.329
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			from.owner = {
+				NOT = {
+					any_owned_design = {
+						is_ship_size = GF_RC_beacon_military_station
+					}
+				}
+			}
+			solar_system = {
+				OR = {
+					has_star_flag = flag_s_GF_reverse_collapse_gateway_beacon
+					has_star_flag = flag_s_GF_reverse_collapse_gateway_node
+				}
+			}
+		}
+	}
+
+	immediate = {
+		from.owner = {
+			create_message = {
+				type = MESSAGE_TYPE_GF_REVERSE_BEACON_DEPLOYMENT_FAILED
+				localization = MESSAGE_GF_REVERSE_BEACON_DEPLOYMENT_FAILED_DESC
+				target = prev
+				days = 30
+				variable = {
+					type = name
+					localization = PLANET
+					scope = prev
+				}
+			}
+		}
+	}
+}
+# 舰队行动：部署信标
+planet_event = {
+	id = GF_fleet.330
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		from.owner = {
+			any_owned_design = {
+				is_ship_size = GF_RC_beacon_military_station
+			}
+		}
+		solar_system = {
+			NOR = {
+				has_star_flag = flag_s_GF_reverse_collapse_gateway_beacon
+				has_star_flag = flag_s_GF_reverse_collapse_gateway_node
+			}
+		}
+	}
+
+	immediate = {
+		from.owner = {
+			random_owned_design = {
+				limit = {
+					is_ship_size = GF_RC_beacon_military_station
+				}
+				save_event_target_as = GF_RC_beacon_station_design
+			}
+		}
+		solar_system = {
+			spawn_megastructure = {
+				type = GF_reverse_collapse_beacon
+				planet = prev
+				owner = prev.from
+				init_effect = {
+					create_fleet = {
+						name = NAME_GF_RC_beacon_station
+						settings = {
+							can_disband = no
+						}
+						effect = {
+							set_owner = from.owner
+							set_location = prev
+							create_ship = {
+								name = NAME_GF_RC_beacon_station
+								design = event_target:GF_RC_beacon_station_design
+							}
+							save_global_event_target_as = GF_RC_beacon_defense@from
+							save_event_target_as = tmp
+							set_fleet_flag = flag_f_GF_RC_beacon_defense_station
+							fleet_event = {
+								id = GF_fleet.331
+								days = 30
+							}
+							fleet_event = {
+								id = GF_fleet.332
+								days = @GF_reverse_collapse_beacon_expire_days
+							}
+						}
+					}
+					set_megastructure_flag = flag_mega_GF_will_expire
+					save_global_event_target_as = GF_RCbeacon@event_target:tmp
+				}
+			}
+		}
+		from = {
+			save_global_event_target_as = GF_RC_beacon_fleet@event_target:tmp
+			set_fleet_flag = flag_f_GF_RC_beacon_deployed
+			set_saved_date = {
+				key = GF_RC_beacon_expire_date
+				days_from_present = @GF_reverse_collapse_beacon_expire_days
+			}
+			owner = {
+				create_message = {
+					type = MESSAGE_TYPE_GF_REVERSE_BEACON_DEPLOYED
+					target = prevprev
+					localization = MESSAGE_GF_REVERSE_BEACON_DEPLOYED_DESC
+					days = 30
+					variable = {
+						type = name
+						localization = PLANET
+						scope = prevprev
+					}
+					variable = {
+						type = name
+						localization = FLEET
+						scope = prev
+					}
+				}
+			}
+		}
+	}
+}
+# 月检，处理一些特殊情况下信标的所有权被移交的情况
+fleet_event = {
+	id = GF_fleet.331
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:GF_RCbeacon@this = {
+			set_owner = prev.owner
+		}
+		fleet_event = {
+			id = GF_fleet.331
+			days = 30
+		}
+	}
+}
+# 定时移除
+fleet_event = {
+	id = GF_fleet.332
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:GF_RCbeacon@this = {
+			planet = {
+				save_event_target_as = orbiting_planet
+			}
+		}
+		event_target:GF_RC_beacon_fleet@this = {
+			save_event_target_as = beacon_fleet
+			GF_set_RC_beacon_fleet_cooldown = yes
+		}
+		owner = {
+			create_message = {
+				type = MESSAGE_TYPE_GF_REVERSE_BEACON_DISMANTLED
+				target = event_target:orbiting_planet
+				localization = MESSAGE_GF_REVERSE_BEACON_EXPIRED_DESC
+				days = 30
+				variable = {
+					type = name
+					localization = PLANET
+					scope = event_target:orbiting_planet
+				}
+				variable = {
+					type = name
+					localization = FLEET
+					scope = event_target:beacon_fleet
+				}
+			}
+		}
+		solar_system = {
+			remove_star_flag = flag_s_GF_reverse_collapse_gateway_beacon
+		}
+		remove_megastructure = event_target:GF_RCbeacon@this
+		delete_fleet = this
+	}
+}
+
+# 支援舰被解散
+# This = owner of fleet
+# From = disbanded fleet
+country_event = {
+	id = GF_fleet.333
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		from = {
+			has_fleet_flag = flag_f_GF_RC_beacon_deployed
+		}
+	}
+	immediate = {
+		event_target:GF_RC_beacon_defense@from = {
+			save_event_target_as = tmp
+			solar_system = {
+				remove_star_flag = flag_s_GF_reverse_collapse_gateway_beacon
+			}
+		}
+		create_message = {
+			type = MESSAGE_TYPE_GF_REVERSE_BEACON_DISMANTLED
+			localization = MESSAGE_GF_REVERSE_BEACON_DISMANTLED_DESC
+			target = event_target:GF_RCbeacon@event_target:tmp.planet
+			days = 30
+			variable = {
+				type = name
+				localization = PLANET
+				scope = event_target:GF_RCbeacon@event_target:tmp.planet
+			}
+		}
+		remove_megastructure = event_target:GF_RCbeacon@event_target:tmp
+		delete_fleet = event_target:GF_RC_beacon_defense@from
+	}
+}
+
+# 支援舰或基站被摧毁
+# This = owner of fleet 1 (destroyed)
+# From = owner of fleet 2 (combatant)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+country_event = {
+	id = GF_fleet.334
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		fromfrom = {
+			has_fleet_flag = flag_f_GF_RC_beacon_deployed
+		}
+	}
+
+	immediate = {
+		event_target:GF_RC_beacon_defense@fromfrom = {
+			save_event_target_as = tmp
+			solar_system = {
+				remove_star_flag = flag_s_GF_reverse_collapse_gateway_beacon
+			}
+		}
+		create_message = {
+			type = MESSAGE_TYPE_GF_REVERSE_BEACON_DESTROYED
+			localization = MESSAGE_GF_REVERSE_BEACON_DESTROYED_DESC
+			target = event_target:GF_RCbeacon@event_target:tmp.planet
+			days = 30
+			variable = {
+				type = name
+				localization = PLANET
+				scope = event_target:GF_RCbeacon@event_target:tmp.planet
+			}
+		}
+		remove_megastructure = event_target:GF_RCbeacon@event_target:tmp
+		delete_fleet = event_target:GF_RC_beacon_defense@fromfrom
+	}
+}
+country_event = {
+	id = GF_fleet.335
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		fromfrom = {
+			has_fleet_flag = flag_f_GF_RC_beacon_defense_station
+		}
+	}
+
+	immediate = {
+		fromfrom.solar_system = {
+			remove_star_flag = flag_s_GF_reverse_collapse_gateway_beacon
+		}
+		create_message = {
+			type = MESSAGE_TYPE_GF_REVERSE_BEACON_DESTROYED
+			localization = MESSAGE_GF_REVERSE_BEACON_DESTROYED_DESC
+			target = event_target:GF_RCbeacon@fromfrom.planet
+			days = 30
+			variable = {
+				type = name
+				localization = PLANET
+				scope = event_target:GF_RCbeacon@fromfrom.planet
+			}
+		}
+		remove_megastructure = event_target:GF_RCbeacon@fromfrom
+		event_target:GF_RC_beacon_fleet@fromfrom = {
+			GF_set_RC_beacon_fleet_cooldown = yes
+		}
+	}
+}

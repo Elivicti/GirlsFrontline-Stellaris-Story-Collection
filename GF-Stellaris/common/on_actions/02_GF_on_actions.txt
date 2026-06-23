@@ -210,10 +210,10 @@ on_entering_GF_RCgateway = { }
 # Fired by scripted_action_possible in utility_component_template on a ship,
 # This = planet
 # From = fleet
-on_GF_RC_beacon_deployed = {
+on_GF_RC_beacon_deployment_completed = {
 	events = {
-		GF_mega.329
-		GF_mega.330
+		GF_fleet.329
+		GF_fleet.330
 	}
 }
 # This = planet
