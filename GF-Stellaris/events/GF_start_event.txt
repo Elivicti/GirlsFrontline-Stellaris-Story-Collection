@@ -75,7 +75,7 @@ country_event = {
 		}
 
 		# Add special deposits
-		capital_scope = {
+		capital_scope.planet = {
 			save_global_event_target_as = GF_home_world
 			set_planet_flag = flag_p_GF_home_world
 			set_planet_flag = suppress_archaeological_sites
@@ -132,7 +132,7 @@ country_event = {
 		create_species = {
 			class = HUM
 			portrait = random
-			homeworld = capital_scope
+			homeworld = capital_scope.planet
 			name = random
 			adjective = random
 			name_list = HUMAN1
@@ -159,7 +159,7 @@ country_event = {
 		}
 		change_government = random
 		remove_country_flag = human_1
-		capital_scope = {
+		capital_scope.planet = {
 			remove_planet_flag = planet_earth
 			solar_system = {
 				remove_star_flag = sol_system
@@ -215,7 +215,7 @@ planet_event = {
 	}
 }
 
-planet_event = {
+colony_event = {
 	id = GF_start.20
 	hide_window = yes
 
@@ -232,7 +232,7 @@ planet_event = {
 			name_list = GF_DOLL
 			class = GF_doll
 			portrait = GF_doll
-			homeworld = root
+			homeworld = planet
 			gender = female
 			traits = {
 				trait = GF_trait_doll

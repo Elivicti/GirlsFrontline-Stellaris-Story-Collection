@@ -23,7 +23,7 @@ on_game_start_country = {
 # scope: planet
 # from: founder species
 # fromfrom: secondary species (if exists)
-empire_init_capital_planet = {
+empire_init_capital_colony = {
 	events = {
 		GF_start.20	# 初始化第二物种（人形）
 	}

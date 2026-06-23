@@ -192,7 +192,7 @@ country_event = {
 	}
 
 	immediate = {
-		capital_scope = {
+		capital_scope.planet = {
 			clear_deposits = yes
 			planet_event = {
 				id = GF_start.10

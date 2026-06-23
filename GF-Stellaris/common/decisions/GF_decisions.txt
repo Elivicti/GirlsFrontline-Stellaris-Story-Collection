@@ -458,7 +458,7 @@ decision_GF_autocity_ring_construction = {
 	owned_planets_only = yes
 
 	resources = {
-		category = starbase_stations
+		category = starbases
 		cost = {
 			alloys = 2000
 			influence = 150
@@ -551,7 +551,7 @@ decision_GF_autocity_ring_construction = {
 		modifier = {
 			factor = 3
 			solar_system = {
-				any_system_colony = {
+				any_system_planet_colony = {
 					pop_amount >= 5000
 					NOT = { exists = orbital_defence }
 				}
@@ -566,7 +566,7 @@ decision_GF_autocity_ring_upgrade = {
 	enactment_time = 120
 
 	resources = {
-		category = starbase_stations
+		category = starbases
 		cost = {
 			alloys = 2500
 			influence = 200
@@ -637,7 +637,7 @@ decision_GF_autocity_ring_upgrade = {
 		modifier = {
 			factor = 3
 			solar_system = {
-				any_system_colony = {
+				any_system_planet_colony = {
 					pop_amount >= 5000
 					NOT = { exists = orbital_defence }
 				}

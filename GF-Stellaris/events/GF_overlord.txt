@@ -182,7 +182,7 @@ country_event = {
 	}
 
 	after = {
-		capital_scope = {
+		capital_scope.planet = {
 			custom_tooltip = GF_overlord.202.a.tooltip
 			hidden_effect = {
 				resettle_pop_group = {
