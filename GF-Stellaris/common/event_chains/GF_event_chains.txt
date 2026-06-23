@@ -2,6 +2,7 @@
 GF_sf_event_chain = {
 	icon = "gfx/interface/icons/situation_log/situation_log_alert.dds"
 	picture = GFX_evt_GF_core_with_butterfly
+	situation_log_category = GF_sangvis_ferri
 }
 
 GF_collect_relic_device_event_chain = {
@@ -10,14 +11,17 @@ GF_collect_relic_device_event_chain = {
 	counter = {
 		c_GF_devices_collected = { max = 3 }
 	}
+	situation_log_category = GF_collapse_relic
 }
 
 GF_alaya_event_chain = {
 	picture = GFX_evt_GF_overhanging_forest
 	icon = "gfx/interface/icons/situation_log/situation_log_ai.dds"
+	situation_log_category = GF_ogas
 }
 
 GF_secrets_of_zion_event_chain = {
 	picture = GFX_evt_GF_white_net
 	icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
+	situation_log_category = GF_ogas
 }

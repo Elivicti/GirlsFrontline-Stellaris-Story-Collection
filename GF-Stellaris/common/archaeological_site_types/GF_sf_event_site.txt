@@ -1,6 +1,7 @@
 #遗迹1
 GF_sf_site_1 = {
 	desc = "GF_sf_site_1_desc"
+	situation_log_category = GF_sangvis_ferri
 
 	picture = GFX_evt_barren_dig_site
 	stages = 3	#阶段
@@ -41,6 +42,7 @@ GF_sf_site_1 = {
 #遗迹2
 GF_sf_site_2 = {
 	desc = "GF_sf_site_2_desc"
+	situation_log_category = GF_sangvis_ferri
 
 	picture = GFX_evt_relic_world_street
 	stages = 4	#阶段
@@ -86,6 +88,7 @@ GF_sf_site_2 = {
 #遗迹3
 GF_sf_site_3 = {
 	desc = "GF_sf_site_3_desc"
+	situation_log_category = GF_sangvis_ferri
 	
 	picture = GFX_evt_contingency_planet
 	stages = 4	#阶段

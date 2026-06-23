@@ -9,6 +9,7 @@ GF_collapse_relic_site_0 = {
 
 	desc = GF_collapse_relic_site_0_desc
 	picture = GFX_evt_GF_door
+	situation_log_category = GF_collapse_relic
 
 	max_instances = 1
 	allow = {
@@ -70,6 +71,7 @@ GF_collapse_relic_site = {
 
 	desc = GF_collapse_relic_site_1_desc
 	picture = GFX_evt_GF_door
+	situation_log_category = GF_collapse_relic
 
 	stages = 3
 	max_instances = 3

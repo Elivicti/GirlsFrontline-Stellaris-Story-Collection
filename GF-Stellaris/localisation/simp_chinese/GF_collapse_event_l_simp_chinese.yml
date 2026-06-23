@@ -1,6 +1,7 @@
 ﻿l_simp_chinese:
 ############################################
  GF_dialog_tooltip:0 "§H注意§!：此选项会开启下一步事件"
+ GF_collapse_relic: "未知文明遗迹"
 
  GF_contact_ogas_tooltip:0 "登入OGAS系统"
 
