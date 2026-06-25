@@ -38,11 +38,6 @@ district_GF_center = {
 
 	conversion_ratio = 1
 	convert_to = {
-		district_arcology_housing
-		district_rw_nexus
-		district_nexus
-		district_city
-		district_hive
 		district_GF_duplicate_city
 		district_GF_duplicate_nexus
 	}
@@ -222,11 +217,6 @@ district_GF_collapse = {
 		}
 	}
 
-	conversion_ratio = 1
-	convert_to = {
-		district_arcology_arms_industry
-	}
-
 	resources = {
 		category = planet_districts_industrial
 		cost = { minerals = @city_cost }
@@ -248,8 +238,14 @@ district_GF_collapse = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { NOT = { has_technology = GF_tech_ecological_recovery } }
+			owner? = { NOT = { has_technology = GF_tech_ecological_recovery } }
+		}
+		job_GF_collapser_add = -200
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner? = { NOT = { has_technology = GF_tech_ecological_recovery } }
 		}
 		modifier = {
 			pop_amenities_usage_robotic_mult = 0.2

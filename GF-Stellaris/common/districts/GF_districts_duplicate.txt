@@ -4,10 +4,11 @@
 
 # 城市区划
 district_GF_duplicate_city = {
-	icon = district_city
 	base_buildtime = 480
+
 	exempt_from_ai_planet_specialization = yes
-	# default_starting_district = yes
+	default_starting_district = yes
+	overlay_icon = GFX_district_government
 
 	zone_slots = {
 		slot_city_government
@@ -16,8 +17,7 @@ district_GF_duplicate_city = {
 	}
 
 	show_on_uncolonized = {
-		exists = from
-		from = {
+		from? = {
 			is_regular_empire = yes
 			GF_is_main_country = no
 		}
@@ -25,14 +25,15 @@ district_GF_duplicate_city = {
 	}
 
 	potential = {
-		OR = {
-			NOT = { exists = owner } #this condition is needed for galaxy generation
-			AND = {
-				exists = owner
-				owner = {
-					is_regular_empire = yes
-					GF_is_main_country = no
+		owner? = {
+			GF_is_main_country = no
+			OR = {
+				is_regular_empire = yes
+				AND = {
+					is_country_type = primitive
+					is_hive_empire = no
 				}
+				is_country_type = mechanocalibrator
 			}
 		}
 		uses_district_set = GF_sf_machine_world
@@ -45,22 +46,17 @@ district_GF_duplicate_city = {
 	}
 
 	allow = {
-		is_special_colony_type = no
+		hidden_trigger = { is_special_colony_type = no }
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_carrier_flag = arcology_project_construction }
+		}
 	}
 
 	conversion_ratio = 1
 	convert_to = {
-		district_crashed_slaver_ship
-		district_arcology_housing
-		district_rw_city
-		district_nexus
-		district_hive
-		district_prison
-		district_craglands
-		district_mindlink
-		district_crashed_slaver_ship
-		district_resort
-		district_slave
+		district_GF_center
+		district_GF_duplicate_nexus
 	}
 
 	resources = {
@@ -142,6 +138,18 @@ district_GF_duplicate_city = {
 		}
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_tankbound_empire = yes
+			}
+		}
+		modifier = {
+			job_production_overseer_add = 100
+		}
+	}
+
 	inline_script = {
 		script = districts/district_triggered_name_urban
 	}
@@ -157,9 +165,10 @@ district_GF_duplicate_city = {
 
 # 中枢区划
 district_GF_duplicate_nexus = {
-	icon = district_nexus
 	base_buildtime = 480
+
 	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_government
 
 	zone_slots = {
 		slot_city_government
@@ -168,35 +177,35 @@ district_GF_duplicate_nexus = {
 	}
 
 	show_on_uncolonized = {
-		exists = from
-		from = { is_machine_empire = yes }
+		from? = {
+			is_machine_empire = yes
+			GF_is_main_country = no
+		}
 		uses_district_set = GF_sf_machine_world
 	}
 
 	potential = {
-		exists = owner
-		owner = { is_machine_empire = yes }
-		uses_district_set = GF_sf_machine_world
-		NAND = {
-			is_capital = yes
-			owner = {
-				has_menace_perk = menp_behemoth_mind_meld
-			}
+		owner? = {
+			GF_is_main_country = no
+			is_machine_empire = yes
 		}
+		uses_district_set = GF_sf_machine_world
 	}
 
 	allow = {
-		NOT = { has_modifier = resort_colony }
+		hidden_trigger = {
+			NOT = { has_modifier = resort_colony }
+		}
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_carrier_flag = arcology_project_construction }
+		}
 	}
 
 	conversion_ratio = 1
 	convert_to = {
-		district_arcology_housing
-		district_rw_nexus
-		district_city
-		district_hive
-		district_craglands
-		district_mindlink
+		district_GF_duplicate_city
+		district_GF_center
 	}
 
 	resources = {
@@ -225,15 +234,6 @@ district_GF_duplicate_nexus = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_modifier = gestation_colony
-		}
-		modifier = {
-			job_gestation_drone_add = 100
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
 			exists = owner
 			owner = { has_technology = tech_housing_2 }
 		}
@@ -252,11 +252,14 @@ district_GF_duplicate_nexus = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			has_modifier = gestation_colony
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_tankbound_empire = yes }
 		}
-		text = job_gestation_drone_effect_desc
+		modifier = {
+			job_production_overseer_add = 100
+		}
 	}
 
 	inline_script = {
