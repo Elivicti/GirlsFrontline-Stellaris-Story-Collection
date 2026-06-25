@@ -88,8 +88,8 @@ decision_GF_auto_colony_off = {
 		}
 
 		hidden_effect = {
-			add_building = building_colony_shelter
 			remove_building = building_GF_auto_colony_capital
+			add_building = building_colony_shelter
 			set_colony_type = col_city
 			remove_planet_flag = flag_p_GF_auto_colony
 
