@@ -296,10 +296,10 @@ spriteTypes = {
 		textureFile = "gfx/interface/icons/planet_types/pc_type_GF_automated_city_big.dds"
 	}
 
-	# districts
+	# districts (used by custom gui)
 	spriteType = {
 		name = "GFX_district_GF_automated_nexus"
-		textureFile = "gfx/interface/icons/districts/district_GF_automated_nexus.dds"
+		textureFile = "gfx/interface/icons/districts/district_arcology_administrative.dds"
 	}
 	spriteType = {
 		name = "GFX_district_GF_automated_energy"
@@ -323,7 +323,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_district_GF_automated_refinery"
-		textureFile = "gfx/interface/icons/districts/district_GF_automated_refinery.dds"
+		textureFile = "gfx/interface/icons/districts/district_geothermal.dds"
 	}
 	spriteType = {
 		name = "GFX_district_GF_automated_research"
@@ -385,53 +385,27 @@ spriteTypes = {
 	}
 
 	# districts & zones
-	corneredTileSpriteType = {
-		name = "GFX_district_GF_center_box_icon_rectangle"
-		texturefile = "gfx/interface/icons/districts/grid_box/district_rw_generator_rectangle.dds"
-		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
-		noOfFrames = 3
-		animation = {
-			animationmaskfile = "gfx/interface/icons/districts/grid_box/default_animated_mask.dds"
-			animationtexturefile = "gfx/interface/icons/districts/grid_box/default_animated_texture.dds"
-			animationrotation = 90.0
-			animationlooping = yes
-			animationtime = 2.0
-			animationdelay = 0.0
-			animationblendmode = "add"       #add, multiply, overlay
-			animationtype = "pulsing"      #scrolling, rotating, pulsing
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-			#animationframes = { 1 2 3 }
-		}
+	spriteType = {
+		name = "GFX_district_rare_resources"
+		textureFile = "gfx/interface/icons/districts/overlay/rare_resources.dds"
 	}
 	spriteType = {
-		name = "GFX_district_GF_center_bg"
-		texturefile = "gfx/interface/planetview/district_backgrounds/district_city_bg.dds"
+		name = "GFX_district_generate_or_mining"
+		textureFile = "gfx/interface/icons/districts/overlay/generator_or_mining.dds"
+	}
+	spriteType = {
+		name = "GFX_district_GF_collapse_liquid"
+		textureFile = "gfx/interface/icons/resources/GF_nyto_collapse_liquid_large.dds"
+	}
+	spriteType = {
+		name = "GFX_district_GF_core_chip"
+		textureFile = "gfx/interface/icons/resources/gf_core_chip_market_large.dds"
+	}
+	spriteType = {
+		name = "GFX_district_robotic_assembly"
+		textureFile = "gfx/interface/icons/districts/overlay/robotic_assembly.dds"
 	}
 
-	corneredTileSpriteType = {
-		name = "GFX_district_GF_generator_or_mining_box_icon_rectangle"
-		texturefile = "gfx/interface/icons/districts/grid_box/district_generator.dds"
-		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
-		noOfFrames = 3
-		animation = {
-			animationmaskfile = "gfx/interface/icons/districts/grid_box/default_animated_mask.dds"
-			animationtexturefile = "gfx/interface/icons/districts/grid_box/default_animated_texture.dds"
-			animationrotation = 90.0
-			animationlooping = yes
-			animationtime = 2.0
-			animationdelay = 0.0
-			animationblendmode = "add"       #add, multiply, overlay
-			animationtype = "pulsing"      #scrolling, rotating, pulsing
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-			#animationframes = { 1 2 3 }
-		}
-	}
-	spriteType = {
-		name = "GFX_district_GF_generator_or_mining_bg"
-		texturefile = "gfx/interface/planetview/district_backgrounds/district_generator_bg.dds"
-	}
 
 	corneredTileSpriteType = {
 		name = "GFX_district_GF_collapse_box_icon_rectangle"
@@ -452,86 +426,7 @@ spriteTypes = {
 			#animationframes = { 1 2 3 }
 		}
 	}
-	spriteType = {
-		name = "GFX_district_GF_collapse_bg"
-		texturefile = "gfx/interface/planetview/district_backgrounds/district_farming_bg.dds"
-	}
-	corneredTileSpriteType = {
-		name = "GFX_district_GF_assembly_box_icon_rectangle"
-		texturefile = "gfx/interface/icons/districts/grid_box/district_GF_assembly_rectangle.dds"
-		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
-		noOfFrames = 3
-		animation = {
-			animationmaskfile = "gfx/interface/icons/districts/grid_box/default_animated_mask.dds"
-			animationtexturefile = "gfx/interface/icons/districts/grid_box/default_animated_texture.dds"
-			animationrotation = 90.0
-			animationlooping = yes
-			animationtime = 2.0
-			animationdelay = 0.0
-			animationblendmode = "add"       #add, multiply, overlay
-			animationtype = "pulsing"      #scrolling, rotating, pulsing
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-			#animationframes = { 1 2 3 }
-		}
-	}
-	spriteType = {
-		name = "GFX_district_GF_assembly_bg"
-		texturefile = "gfx/interface/planetview/district_backgrounds/district_hab_science_bg.dds"
-	}
 
-	spriteType = {
-		name = "GFX_district_GF_automated_nexus_bg"
-		textureFile = "gfx/interface/planetview/district_backgrounds/district_city_bg.dds"
-	}
-	corneredTileSpriteType = {
-		name = "GFX_district_GF_automated_nexus_box_icon_rectangle"
-		texturefile = "gfx/interface/icons/districts/grid_box/district_GF_automated_nexus_rectangle.dds"
-		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
-		noOfFrames = 3
-		animation = {
-			animationmaskfile = "gfx/interface/icons/districts/grid_box/default_animated_mask.dds"
-			animationtexturefile = "gfx/interface/icons/districts/grid_box/default_animated_texture.dds"
-			animationrotation = 90.0
-			animationlooping = yes
-			animationtime = 2.0
-			animationdelay = 0.0
-			animationblendmode = "add"       #add, multiply, overlay
-			animationtype = "pulsing"      #scrolling, rotating, pulsing
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-			#animationframes = { 1 2 3 }
-		}
-	}
-
-	spriteType = {
-		name = "GFX_district_GF_automated_refinery_bg"
-		textureFile = "gfx/interface/planetview/district_backgrounds/district_arcology_housing_secondary_bg.dds"
-	}
-	corneredTileSpriteType = {
-		name = "GFX_district_GF_automated_refinery_box_icon_rectangle"
-		texturefile = "gfx/interface/icons/districts/grid_box/district_GF_automated_refinery_rectangle.dds"
-		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
-		noOfFrames = 3
-		animation = {
-			animationmaskfile = "gfx/interface/icons/districts/grid_box/default_animated_mask.dds"
-			animationtexturefile = "gfx/interface/icons/districts/grid_box/default_animated_texture.dds"
-			animationrotation = 90.0
-			animationlooping = yes
-			animationtime = 2.0
-			animationdelay = 0.0
-			animationblendmode = "add"       #add, multiply, overlay
-			animationtype = "pulsing"      #scrolling, rotating, pulsing
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-			#animationframes = { 1 2 3 }
-		}
-	}
-
-	spriteType = {
-		name = "GFX_district_GF_automated_reverse_collapse_bg"
-		textureFile = "gfx/interface/planetview/district_backgrounds/district_resort_secondary_bg.dds"
-	}
 	corneredTileSpriteType = {
 		name = "GFX_district_GF_automated_reverse_collapse_box_icon_rectangle"
 		texturefile = "gfx/interface/icons/districts/grid_box/district_GF_automated_reverse_collapse_rectangle.dds"

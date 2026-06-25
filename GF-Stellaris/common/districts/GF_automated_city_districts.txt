@@ -25,6 +25,10 @@
 district_GF_automated_nexus = {
 	base_buildtime = @build_time
 	exempt_from_ai_planet_specialization = yes
+	icon = district_arcology_administrative
+	overlay_icon = GFX_district_government
+	district_background = district_city
+	gridbox = district_arcology_administrative
 
 	prerequisites = { "GF_tech_ternary_quantum_computing" }
 	show_tech_unlock_if = { always = no }
@@ -219,6 +223,7 @@ district_GF_autocity_specialization_03 = {
 district_GF_automated_energy = {
 	base_buildtime = @build_time
 	icon = district_rw_generator
+	overlay_icon = GFX_district_energy
 
 	zone_slots = {}
 
@@ -236,6 +241,7 @@ district_GF_automated_energy = {
 district_GF_automated_mining = {
 	base_buildtime = @build_time
 	icon = district_mining
+	overlay_icon = GFX_district_minerals
 
 	zone_slots = {}
 
@@ -253,6 +259,7 @@ district_GF_automated_mining = {
 district_GF_automated_farming = {
 	base_buildtime = @build_time
 	icon = district_rw_farming
+	overlay_icon = GFX_district_food
 
 	zone_slots = {}
 
@@ -271,6 +278,7 @@ district_GF_automated_farming = {
 district_GF_automated_foundry = {
 	base_buildtime = @build_time
 	icon = district_arcology_arms_industry
+	overlay_icon = GFX_district_alloys
 
 	zone_slots = {}
 
@@ -288,12 +296,13 @@ district_GF_automated_foundry = {
 district_GF_automated_industry = {
 	base_buildtime = @build_time
 	icon = district_arcology_civilian_industry
+	overlay_icon = GFX_district_consumer_goods
+
 	zone_slots = {}
 
 	show_on_uncolonized = { always = no }
 	potential = { always = no }
 	allow = { always = no }
-
 
 	resources = {}
 	planet_modifier = {}
@@ -304,6 +313,10 @@ district_GF_automated_industry = {
 }
 district_GF_automated_refinery = {
 	base_buildtime = @build_time
+	icon = district_geothermal
+	overlay_icon = GFX_district_rare_resources
+	district_background = district_arcology_urban_1
+	gridbox = district_mining
 
 	zone_slots = {}
 
@@ -322,6 +335,7 @@ district_GF_automated_refinery = {
 district_GF_automated_research = {
 	base_buildtime = @build_time
 	icon = district_rw_science
+	overlay_icon = GFX_district_GF_core_chip
 
 	zone_slots = {}
 
@@ -339,6 +353,7 @@ district_GF_automated_research = {
 district_GF_automated_factory = {
 	base_buildtime = @build_time
 	icon = district_GF_assembly
+	overlay_icon = GFX_district_robotic_assembly
 
 	zone_slots = {}
 
@@ -356,6 +371,7 @@ district_GF_automated_factory = {
 district_GF_automated_collapse = {
 	base_buildtime = @build_time
 	icon = district_GF_collapse
+	overlay_icon = GFX_district_GF_collapse_liquid
 
 	zone_slots = {}
 
@@ -372,6 +388,7 @@ district_GF_automated_collapse = {
 }
 district_GF_automated_reverse_collapse = {
 	base_buildtime = @build_time
+	district_background = district_resort_1
 
 	zone_slots = {}
 

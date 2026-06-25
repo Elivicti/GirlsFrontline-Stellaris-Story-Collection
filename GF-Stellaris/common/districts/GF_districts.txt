@@ -5,6 +5,9 @@
 district_GF_center = {
 	base_buildtime = 480
 	icon = district_GF_center
+	overlay_icon = GFX_district_government
+	district_background = district_city
+	gridbox = district_arcology_administrative
 	exempt_from_ai_planet_specialization = yes
 
 	show_on_uncolonized = {
@@ -115,7 +118,9 @@ district_GF_center = {
 }
 district_GF_generator_or_mining = {
 	base_buildtime = 240
-	# icon = district_generator
+	overlay_icon = GFX_district_generate_or_mining
+	district_background = district_generator
+	gridbox = district_mining
 
 	show_on_uncolonized = {
 		uses_district_set = GF_sf_machine_world
@@ -164,6 +169,8 @@ district_GF_generator_or_mining = {
 #少前坍塌反应区划
 district_GF_collapse = {
 	base_buildtime = 480
+	district_background = district_farming
+	overlay_icon = GFX_district_GF_collapse_liquid
 
 	desc = {
 		trigger = { uses_district_set = GF_sf_machine_world }
@@ -258,6 +265,9 @@ district_GF_assembly = {
 	base_buildtime = 360
 	icon = district_GF_assembly
 	is_uncapped = { always = no }
+	district_background = district_hab_science
+	gridbox = district_arcology_housing
+	overlay_icon = GFX_district_robotic_assembly
 
 	show_on_uncolonized = {
 		exists = from
