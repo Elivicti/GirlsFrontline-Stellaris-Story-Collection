@@ -73,7 +73,7 @@ GF_trait_liquid_metal_skeleton = {
 	cost = 1
 	initial = no
 	randomized = no
-    species_potential_add = {
+	species_potential_add = {
 		exists = from
 		from = { has_technology = GF_tech_doll_modding }
 	}
@@ -112,7 +112,7 @@ GF_trait_emotional_subroutine = {
 	icon="gfx/interface/icons/traits/doll/emotion.dds"
 	modifier = {
 		pop_amenities_usage_mult = -0.2
-    }
+	}
 	tags = { GF_ANDROID species amenities positive }
 }
 GF_trait_analysis_model = {
@@ -253,7 +253,7 @@ GF_trait_nanobot_hives = {
 	}
 	modifier = {
 		planet_pops_upkeep_mult = -0.20
-    }
+	}
 	tags = { GF_ANDROID species upkeep positive }
 }
 GF_trait_quantum_processors = {
