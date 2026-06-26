@@ -198,62 +198,55 @@ GF_create_collapse_relic_site = {
 # this = system (source)
 GF_select_sf_event_target = {
 	$OWNER$ = { save_event_target_as = event_owner }
-	save_event_target_as = source_system
-	while = {
-		limit = { NOT = { exists = event_target:$EVENT_TARGET$ } }
-		closest_system = {
-			limit = {
-				NOT = { has_star_flag = flag_s_GF_sf_event_system }
-				distance = {
-					source = prev
-					min_jumps = @GF_sf_event_system_jump_distance_min
-					max_jumps = @GF_sf_event_system_jump_distance_max
-				}
-				OR = {
-					NOT = { exists = space_owner }
-					space_owner = {
-						is_same_value = event_target:event_owner
-					}
-				}
-				NOT = {
-					any_fleet_in_system = {
-						owner = { is_hostile_to = event_target:event_owner }
-					}
-				}
-				any_system_planet = {
-					OR = {
-						[[ASTEROID]     is_asteroid     = $ASTEROID$     ]
-						[[PLANET_CLASS] is_planet_class = $PLANET_CLASS$ ]
-					}
-					has_anomaly = no
-					NOR = {
-						has_planet_flag = suppress_archaeological_sites
-						exists = archaeological_site
-					}
+	closest_system = {
+		limit = {
+			NOT = { has_star_flag = flag_s_GF_sf_event_system }
+			distance = {
+				source = prev
+				min_jumps = @GF_sf_event_system_jump_distance_min
+				max_jumps = @GF_sf_event_system_jump_distance_max
+			}
+			OR = {
+				NOT = { exists = space_owner }
+				space_owner = {
+					is_same_value = event_target:event_owner
 				}
 			}
-			random_system_planet = {
-				limit = {
-					OR = {
-						[[ASTEROID]     is_asteroid     = $ASTEROID$     ]
-						[[PLANET_CLASS] is_planet_class = $PLANET_CLASS$ ]
-					}
-					has_anomaly = no
-					NOR = {
-						has_planet_flag = suppress_archaeological_sites
-						exists = archaeological_site
-					}
+			NOT = {
+				any_fleet_in_system = {
+					owner = { is_hostile_to = event_target:event_owner }
 				}
-				save_event_target_as = $EVENT_TARGET$
+			}
+			any_system_planet = {
+				OR = {
+					[[ASTEROID] is_asteroid = $ASTEROID$ ]
+					[[PLANET_CLASS] is_planet_class = $PLANET_CLASS$ ]
+				}
+				has_anomaly = no
+				NOR = {
+					has_planet_flag = suppress_archaeological_sites
+					exists = archaeological_site
+				}
 			}
 		}
-	}
-
-	event_target:$EVENT_TARGET$.solar_system = {
+		random_system_planet = {
+			limit = {
+				OR = {
+					[[ASTEROID] is_asteroid = $ASTEROID$ ]
+					[[PLANET_CLASS] is_planet_class = $PLANET_CLASS$ ]
+				}
+				has_anomaly = no
+				NOR = {
+					has_planet_flag = suppress_archaeological_sites
+					exists = archaeological_site
+				}
+			}
+			save_event_target_as = $EVENT_TARGET$
+		}
 		set_star_flag = flag_s_GF_sf_event_system
-	}
-	event_target:event_owner = {
-		set_visited = event_target:$EVENT_TARGET$.solar_system
+		event_target:event_owner = {
+			set_visited = prev
+		}
 	}
 }
 

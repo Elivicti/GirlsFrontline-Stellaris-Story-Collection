@@ -44,9 +44,9 @@ fleet_event = {
 	immediate = {
 		solar_system = {
 			GF_select_sf_event_target = {
-				OWNER = owner
+				OWNER = prev.owner
 				ASTEROID = yes
-				EVENT_TARGET = GF_sf_site_target
+				EVENT_TARGET = GF_sf_site_target_2
 			}
 		}
 	}
@@ -54,7 +54,10 @@ fleet_event = {
 		name = "GF_sf_site.13.a"
 		fleet_event = {
 			id = GF_sf.30
-			scopes = { from = event_target:GF_sf_site_target }
+			scopes = {
+				from = event_target:GF_sf_site_target_2
+				fromfrom = from
+			}
 		}
 		owner = {
 			small_artifact_reward = yes
@@ -131,9 +134,9 @@ fleet_event = {
 	immediate = {
 		solar_system = {
 			GF_select_sf_event_target = {
-				OWNER = owner
+				OWNER = prev.owner
 				ASTEROID = yes
-				EVENT_TARGET = GF_sf_site_target
+				EVENT_TARGET = GF_sf_site_target_4
 			}
 		}
 	}
@@ -141,7 +144,10 @@ fleet_event = {
 		name = "GF_sf_site.24.a"
 		fleet_event = {
 			id = GF_sf.50
-			scopes = { from = event_target:GF_sf_site_target }
+			scopes = {
+				from = event_target:GF_sf_site_target_4
+				fromfrom = from
+			}
 		}
 		owner = {
 			small_artifact_reward = yes

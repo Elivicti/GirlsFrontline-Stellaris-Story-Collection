@@ -61,7 +61,30 @@ planet_event = {
 	event_chain = GF_sf_event_chain
 
 	option = {
+		name = "GF_sf.reselect_target"
+		trigger = { NOT ={ exists = from } }
+		allow = { NOT = { exists = from } }
+		hidden_effect = {
+			fromfrom.solar_system = {
+				GF_select_sf_event_target = {
+					OWNER = prev.owner
+					PLANET_CLASS = pc_barren
+					EVENT_TARGET = GF_sf_site_target_1
+				}
+			}
+			planet_event = {
+				id = GF_sf.20
+				scopes = {
+					from = event_target:GF_sf_site_target_1
+					fromfrom = fromfrom
+				}
+			}
+		}
+	}
+
+	option = {
 		name = "GF_sf.20.a"
+		allow = { exists = from }
 		from = {
 			enable_special_project = {
 				name = "GF_sf_event_project_2"
@@ -69,6 +92,7 @@ planet_event = {
 				owner = prev.owner
 			}
 		}
+		default_hide_option = yes
 	}
 }
 
@@ -104,7 +128,29 @@ fleet_event = {
 	event_chain = GF_sf_event_chain
 
 	option = {
+		name = "GF_sf.reselect_target"
+		trigger = { NOT = { exists = from } }
+		allow = { NOT = { exists = from } }
+		hidden_effect = {
+			fromfrom.solar_system = {
+				GF_select_sf_event_target = {
+					OWNER = prev.owner
+					ASTEROID = yes
+					EVENT_TARGET = GF_sf_site_target_2
+				}
+			}
+			fleet_event = {
+				id = GF_sf.30
+				scopes = {
+					from = event_target:GF_sf_site_target_2
+					fromfrom = fromfrom
+				}
+			}
+		}
+	}
+	option = {
 		name = "GF_sf.30.a"
+		allow = { exists = from }
 		from = {
 			enable_special_project = {
 				name = "GF_sf_event_project_3"
@@ -127,14 +173,50 @@ ship_event = {
 	event_chain = GF_sf_event_chain
 
 	option = {
+		name = "GF_sf.reselect_target"
+		trigger = { NOT ={ exists = from } }
+		allow = { NOT ={ exists = from } }
+		hidden_effect = {
+			fromfrom.solar_system = {
+				GF_select_sf_event_target = {
+					OWNER = prev.owner
+					PLANET_CLASS = pc_barren
+					EVENT_TARGET = GF_sf_site_target_3
+				}
+			}
+			ship_event = {
+				id = GF_sf.40
+				scopes = {
+					from = event_target:GF_sf_site_target_3
+					fromfrom = fromfrom
+				}
+			}
+		}
+	}
+
+	option = {
 		name = "GF_sf.40.a"
+		allow = { exists = from }
+		hidden_effect = {
+			owner = {
+				GF_unlock_archive = {
+					TYPE = keyword
+					VALUE = concept_GF_parapluie_virus
+				}
+			}
+		}
+		from = {
+			enable_special_project = {
+				name = "GF_sf_event_project_4"
+				location = this
+				owner = prev.owner
+			}
+		}
 	}
 	option = {
 		name = "GF_sf.40.b"
+		allow = { exists = from }
 		custom_tooltip = GF_sf.40.b.tooltip
-	}
-
-	after = {
 		hidden_effect = {
 			owner = {
 				GF_unlock_archive = {
@@ -184,7 +266,30 @@ fleet_event = {
 	event_chain = GF_sf_event_chain
 
 	option = {
+		name = "GF_sf.reselect_target"
+		trigger = { NOT = { exists = from } }
+		allow = { NOT = { exists = from } }
+		hidden_effect = {
+			fromfrom.solar_system = {
+				GF_select_sf_event_target = {
+					OWNER = prev.owner
+					ASTEROID = yes
+					EVENT_TARGET = GF_sf_site_target_4
+				}
+			}
+			fleet_event = {
+				id = GF_sf.50
+				scopes = {
+					from = event_target:GF_sf_site_target_4
+					fromfrom = fromfrom
+				}
+			}
+		}
+	}
+
+	option = {
 		name = "GF_sf.50.a"
+		allow = { exists = from }
 		from = {
 			enable_special_project = {
 				name = "GF_sf_event_project_5"

@@ -9,15 +9,15 @@ special_project = {
 	on_success = {
 		solar_system = {
 			GF_select_sf_event_target = {
-				OWNER = owner
+				OWNER = prev.owner
 				PLANET_CLASS = pc_barren
-				EVENT_TARGET = GF_sf_site_target
+				EVENT_TARGET = GF_sf_site_target_1
 			}
 		}
 		planet_event = {
 			id = GF_sf.20
 			scopes = {
-				from = event_target:GF_sf_site_target
+				from = event_target:GF_sf_site_target_1
 			}
 		}
 	}
@@ -60,15 +60,15 @@ special_project = {
 	on_success = {
 		solar_system = {
 			GF_select_sf_event_target = {
-				OWNER = owner
+				OWNER = prev.owner
 				PLANET_CLASS = pc_barren
-				EVENT_TARGET = GF_sf_site_target
+				EVENT_TARGET = GF_sf_site_target_3
 			}
 		}
 		ship_event = {
 			id = GF_sf.40
 			scopes = {
-				from = event_target:GF_sf_site_target
+				from = event_target:GF_sf_site_target_3
 				fromfrom = from
 			}
 		}
