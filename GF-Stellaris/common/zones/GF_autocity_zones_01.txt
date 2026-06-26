@@ -36,6 +36,9 @@ GF_zone_autocity_generator_01 = {
 
 	swap_type = district_GF_automated_energy
 	swap_type_weight = 5
+	zone_sets = {
+		GF_zone_set_autocity_specialization_01
+	}
 
 	resources = {
 		category = planet_zones
@@ -96,6 +99,9 @@ GF_zone_autocity_mining_01 = {
 
 	swap_type = district_GF_automated_mining
 	swap_type_weight = 5
+	zone_sets = {
+		GF_zone_set_autocity_specialization_01
+	}
 
 	resources = {
 		category = planet_zones
@@ -153,6 +159,9 @@ GF_zone_autocity_farming_01 = {
 
 	swap_type = district_GF_automated_farming
 	swap_type_weight = 5
+	zone_sets = {
+		GF_zone_set_autocity_specialization_01
+	}
 
 	resources = {
 		category = planet_zones
@@ -212,6 +221,9 @@ GF_zone_autocity_foundry_01 = {
 
 	swap_type = district_GF_automated_foundry
 	swap_type_weight = 5
+	zone_sets = {
+		GF_zone_set_autocity_specialization_01
+	}
 
 	resources = {
 		category = planet_zones
@@ -271,6 +283,9 @@ GF_zone_autocity_industry_01 = {
 
 	swap_type = district_GF_automated_industry
 	swap_type_weight = 5
+	zone_sets = {
+		GF_zone_set_autocity_specialization_01
+	}
 
 	resources = {
 		category = planet_zones
@@ -330,6 +345,9 @@ GF_zone_autocity_refinery_01 = {
 
 	swap_type = district_GF_automated_refinery
 	swap_type_weight = 5
+	zone_sets = {
+		GF_zone_set_autocity_specialization_01
+	}
 
 	resources = {
 		category = planet_zones
@@ -392,6 +410,9 @@ GF_zone_autocity_research_01 = {
 
 	swap_type = district_GF_automated_research
 	swap_type_weight = 5
+	zone_sets = {
+		GF_zone_set_autocity_specialization_01
+	}
 
 	resources = {
 		category = planet_zones
@@ -455,6 +476,9 @@ GF_zone_autocity_assembly_01 = {
 
 	swap_type = district_GF_automated_factory
 	swap_type_weight = 5
+	zone_sets = {
+		GF_zone_set_autocity_specialization_01
+	}
 
 	resources = {
 		category = planet_zones
@@ -515,6 +539,9 @@ GF_zone_autocity_collapse_01 = {
 
 	swap_type = district_GF_automated_collapse
 	swap_type_weight = 5
+	zone_sets = {
+		GF_zone_set_autocity_specialization_01
+	}
 
 	resources = {
 		category = planet_zones
@@ -573,6 +600,9 @@ GF_zone_autocity_reverse_collapse_01 = {
 
 	swap_type = district_GF_automated_reverse_collapse
 	swap_type_weight = 5
+	zone_sets = {
+		GF_zone_set_autocity_specialization_01
+	}
 
 	resources = {
 		category = planet_zones
