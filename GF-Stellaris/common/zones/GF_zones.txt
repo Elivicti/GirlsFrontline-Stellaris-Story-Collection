@@ -23,6 +23,8 @@ GF_zone_assembly = {
 		}
 	}
 
+	max_buildings = @GF_zone_normal_max_buildings
+
 	triggered_district_planet_modifier = {
 		potential = { is_planet_class = pc_GF_sf_machine }
 		job_GF_assemble_doll_add = 100
@@ -94,6 +96,8 @@ GF_zone_collapse = {
 		}
 	}
 
+	max_buildings = @GF_zone_normal_max_buildings
+
 	district_planet_modifier = {
 		job_GF_collapser_add = 100
 	}
@@ -160,6 +164,7 @@ GF_zone_reverse_collapse = {
 		}
 	}
 
+	max_buildings = @GF_zone_normal_max_buildings
 
 	triggered_district_planet_modifier = {
 		potential = { GF_has_research_designation = no }
@@ -276,10 +281,7 @@ GF_zone_autocity_nexus = {
 		uses_district_set = GF_automated_city_district_set
 	}
 
-	max_buildings = 6
-	planet_modifier = {
-		zone_building_slots_add = 6
-	}
+	max_buildings = @GF_zone_government_max_buildings
 
 	unlock = {
 		exists = owner
@@ -309,10 +311,7 @@ GF_zone_autocity_city_expand = {
 		uses_district_set = GF_automated_city_district_set
 	}
 
-	max_buildings = 3
-	planet_modifier = {
-		zone_building_slots_add = 3
-	}
+	max_buildings = @GF_zone_normal_max_buildings
 
 	triggered_district_planet_modifier = {
 		planet_housing_add = 400

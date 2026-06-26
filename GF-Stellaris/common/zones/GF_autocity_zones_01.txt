@@ -40,6 +40,8 @@ GF_zone_autocity_generator_01 = {
 		GF_zone_set_autocity_specialization_01
 	}
 
+	max_buildings = @GF_zone_normal_max_buildings
+
 	resources = {
 		category = planet_zones
 		cost = { minerals = @zone_cost }
@@ -103,6 +105,8 @@ GF_zone_autocity_mining_01 = {
 		GF_zone_set_autocity_specialization_01
 	}
 
+	max_buildings = @GF_zone_normal_max_buildings
+
 	resources = {
 		category = planet_zones
 		cost = { minerals = @zone_cost }
@@ -162,6 +166,8 @@ GF_zone_autocity_farming_01 = {
 	zone_sets = {
 		GF_zone_set_autocity_specialization_01
 	}
+
+	max_buildings = @GF_zone_normal_max_buildings
 
 	resources = {
 		category = planet_zones
@@ -225,6 +231,8 @@ GF_zone_autocity_foundry_01 = {
 		GF_zone_set_autocity_specialization_01
 	}
 
+	max_buildings = @GF_zone_normal_max_buildings
+
 	resources = {
 		category = planet_zones
 		cost = { minerals = @zone_cost }
@@ -287,6 +295,8 @@ GF_zone_autocity_industry_01 = {
 		GF_zone_set_autocity_specialization_01
 	}
 
+	max_buildings = @GF_zone_normal_max_buildings
+
 	resources = {
 		category = planet_zones
 		cost = { minerals = @zone_cost }
@@ -348,6 +358,8 @@ GF_zone_autocity_refinery_01 = {
 	zone_sets = {
 		GF_zone_set_autocity_specialization_01
 	}
+
+	max_buildings = @GF_zone_normal_max_buildings
 
 	resources = {
 		category = planet_zones
@@ -413,6 +425,8 @@ GF_zone_autocity_research_01 = {
 	zone_sets = {
 		GF_zone_set_autocity_specialization_01
 	}
+
+	max_buildings = @GF_zone_normal_max_buildings
 
 	resources = {
 		category = planet_zones
@@ -480,6 +494,8 @@ GF_zone_autocity_assembly_01 = {
 		GF_zone_set_autocity_specialization_01
 	}
 
+	max_buildings = @GF_zone_normal_max_buildings
+
 	resources = {
 		category = planet_zones
 		cost = { minerals = @zone_cost }
@@ -543,6 +559,8 @@ GF_zone_autocity_collapse_01 = {
 		GF_zone_set_autocity_specialization_01
 	}
 
+	max_buildings = @GF_zone_normal_max_buildings
+
 	resources = {
 		category = planet_zones
 		cost = { minerals = @zone_cost }
@@ -603,6 +621,8 @@ GF_zone_autocity_reverse_collapse_01 = {
 	zone_sets = {
 		GF_zone_set_autocity_specialization_01
 	}
+
+	max_buildings = @GF_zone_normal_max_buildings
 
 	resources = {
 		category = planet_zones

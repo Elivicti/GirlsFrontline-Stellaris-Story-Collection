@@ -117,3 +117,7 @@
 @GF_auto_colony_boundary_effect_interval = 30
 @GF_auto_colony_boundary_start = 15
 @GF_auto_colony_boundary_addend = 25
+
+### Zone building count
+@GF_zone_government_max_buildings = 6
+@GF_zone_normal_max_buildings = 3
