@@ -1,13 +1,13 @@
 GF_collapse_relic = {
 	priority = 3
 	localization = GF_collapse_relic
-	icon = "GFX_category_developments"
+	icon = "GFX_GF_category_relic_department"
 }
 
 GF_ogas = {
 	priority = 3
 	localization = GF_ogas
-	icon = "GFX_category_developments"
+	icon = "GFX_GF_category_ogas"
 }
 
 GF_sangvis_ferri = {

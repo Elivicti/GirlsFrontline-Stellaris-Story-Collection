@@ -384,6 +384,16 @@ spriteTypes = {
 		textureFile = "gfx/interface/icons/modifiers/mod_GF_OGAS_threads_add.dds"
 	}
 
+	# situation log
+	spriteType = {
+		name = "GFX_GF_category_relic_department"
+		texturefile = "gfx/interface/icons/situation_log/categories/GF_category_relic_department.dds"
+	}
+	spriteType = {
+		name = "GFX_GF_category_ogas"
+		texturefile = "gfx/interface/icons/situation_log/categories/GF_category_ogas.dds"
+	}
+
 	# districts & zones
 	spriteType = {
 		name = "GFX_district_rare_resources"
