@@ -229,6 +229,7 @@ decision_GF_rebuild_purify_wall = {
 }
 
 decision_GF_eliminate_all_elid = {
+	important = yes
 	owned_planets_only = yes
 	icon = decision_eliminate_all_elid
 
@@ -424,6 +425,7 @@ decision_GF_GOSPLAN = {
 }
 
 decision_GF_analyse_orb_mainframe_alpha = {
+	important = yes
 	icon = decision_engineering_research
 	owned_planets_only = yes
 
