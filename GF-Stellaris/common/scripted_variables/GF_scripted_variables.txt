@@ -31,6 +31,22 @@
 @GF_zion_cooldown_delay_years_9  = 3240
 @GF_zion_cooldown_delay_years_10 = 3600
 
+# ship components
+@GF_collapse_energy_lance_xlarge_collateral_damage = 300
+@GF_collapse_energy_lance_xlarge_collateral_range = 35
+
+@GF_collapse_energy_lance_titanic_collateral_damage = 600
+@GF_collapse_energy_lance_titanic_collateral_range = 50
+
+@GF_collapse_weapon_explosive_collateral_damage = 40
+@GF_collapse_weapon_explosive_collateral_range = 15
+
+@GF_collapse_weapon_l_kinetic_collateral_damage = 60
+@GF_collapse_weapon_l_kinetic_collateral_range = 6
+
+@GF_collapse_weapon_xl_kinetic_collateral_damage = 100
+@GF_collapse_weapon_xl_kinetic_collateral_range = 8
+
 # OGAS升级提升线程数的起始等级
 @GF_OGAS_leveled_thread_add_start_after_level = 5
 

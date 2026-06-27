@@ -71,6 +71,17 @@ weapon_component_template = {
 	ai_tags = { weapon_role_artillery }
 	ai_tag_weight = 0
 
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 1.5
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	collateral_damage = @GF_collapse_energy_lance_xlarge_collateral_damage
+	collateral_range = @GF_collapse_energy_lance_xlarge_collateral_range
+
 	damage = {
 		min = 1600
 		max = 2400
@@ -141,6 +152,17 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_GF_collapsed t_slot }
 	ai_tags = { weapon_role_artillery }
 	ai_tag_weight = 0
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 1.5
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	collateral_damage = @GF_collapse_energy_lance_titanic_collateral_damage
+	collateral_range = @GF_collapse_energy_lance_titanic_collateral_range
 
 	damage = {
 		min = 6000
@@ -371,6 +393,10 @@ weapon_component_template = {
 		}
 	}
 	power = @GF_weapon_s_power
+
+	collateral_damage = @GF_collapse_weapon_explosive_collateral_damage
+	collateral_range = @GF_collapse_weapon_explosive_collateral_range
+
 	damage = {
 		min = 48
 		max = 80
@@ -438,6 +464,10 @@ weapon_component_template = {
 		}
 	}
 	power = @GF_weapon_s_power
+
+	collateral_damage = @GF_collapse_weapon_explosive_collateral_damage
+	collateral_range = @GF_collapse_weapon_explosive_collateral_range
+
 	damage = {
 		min = 240
 		max = 300
@@ -504,6 +534,9 @@ weapon_component_template = {
 	}
 	power = @GF_weapon_l_power
 
+	collateral_damage = @GF_collapse_weapon_l_kinetic_collateral_damage
+	collateral_range = @GF_collapse_weapon_l_kinetic_collateral_range
+
 	damage = {
 		min = 240
 		max = 600
@@ -518,7 +551,7 @@ weapon_component_template = {
 	total_fire_time = 50
 	range = 150
 	accuracy = 0.8
-	
+
 	ai_weight = {
 		inline_script = {
 			script = "weights/GF_non_default_country_components_weight"
@@ -563,6 +596,9 @@ weapon_component_template = {
 		}
 	}
 	power = @GF_weapon_xl_power
+
+	collateral_damage = @GF_collapse_weapon_xl_kinetic_collateral_damage
+	collateral_range = @GF_collapse_weapon_xl_kinetic_collateral_range
 
 	damage = {
 		min = 1800
@@ -612,7 +648,7 @@ weapon_component_template = {
 	projectile_gfx = "GF_collapse_cannon_s"
 	tags = { weapon_type_kinetic weapon_type_GF_collapsed s_slot }
 	ai_tags = { weapon_role_anti_shield brawler }
-	
+
 	resources = {
 		category = GF_ship_collapse_weapons
 		cost = {
@@ -669,7 +705,7 @@ weapon_component_template = {
 	projectile_gfx = "GF_collapse_cannon_m"
 	tags = { weapon_type_kinetic weapon_type_GF_collapsed m_slot }
 	ai_tags = { weapon_role_anti_shield brawler }
-	
+
 	resources = {
 		category = GF_ship_collapse_weapons
 		cost = {
@@ -727,7 +763,7 @@ weapon_component_template = {
 	projectile_gfx = "GF_collapse_cannon_l"
 	tags = { weapon_type_kinetic weapon_type_GF_collapsed l_slot }
 	ai_tags = { weapon_role_anti_shield brawler }
-	
+
 	resources = {
 		category = GF_ship_collapse_weapons
 		cost = {
@@ -833,7 +869,7 @@ strike_craft_component_template = {
 	tags = { weapon_type_strike_craft }
 	ai_tags = { weapon_role_point_defense carrier }
 	point_defence_targets = { "strike_craft" "missile" }
-	
+
 	ai_weight = {
 		inline_script = {
 			script = "weights/GF_non_default_country_components_weight"
