@@ -3,6 +3,7 @@
 ##########################################################################
 # Auto Colony
 decision_GF_auto_colony_on = {
+	important = yes
 	owned_planets_only = yes
 	icon = decision_GF_auto_colony_on
 
@@ -65,6 +66,7 @@ decision_GF_auto_colony_on = {
 }
 
 decision_GF_auto_colony_off = {
+	important = yes
 	owned_planets_only = yes
 	icon = decision_GF_auto_colony_off
 
@@ -107,6 +109,7 @@ decision_GF_auto_colony_off = {
 }
 
 decision_GF_automated_city_project = {
+	important = yes
 	icon = decision_GF_automated_city_project
 	enactment_time = 30
 	owned_planets_only = yes
@@ -169,6 +172,7 @@ decision_GF_automated_city_project = {
 }
 
 decision_GF_automated_city_supress = {
+	important = yes
 	enactment_time = 0
 	owned_planets_only = yes
 	icon = decision_automated_city_supress_level_up
@@ -272,6 +276,7 @@ decision_GF_automated_city_supress = {
 }
 
 decision_GF_automated_city_supress_level_down = {
+	important = yes
 	enactment_time = 0
 	owned_planets_only = yes
 	icon = decision_automated_city_supress_level_down
@@ -313,6 +318,7 @@ decision_GF_automated_city_supress_level_down = {
 }
 
 decision_GF_automated_city_supress_cancel = {
+	important = yes
 	enactment_time = 0
 	owned_planets_only = yes
 	icon = decision_automated_city_supress_level_down
