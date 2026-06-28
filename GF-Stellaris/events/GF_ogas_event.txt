@@ -24,8 +24,6 @@ country_event = {
 				custom_description = GF_ogas_leader_desc
 
 				effect = {
-					copy_flags_and_variables_from = from
-					remove_leader_flag = retirement_is_default
 					remove_trait = GF_trait_leader_doll
 					save_global_event_target_as = GF_ogas_leader
 					if = {
@@ -35,7 +33,11 @@ country_event = {
 				}
 			}
 		}
-		event_target:GF_ogas_leader = { set_owner = prev }
+		event_target:GF_ogas_leader = {
+			copy_flags_and_variables_from = from
+			remove_leader_flag = retirement_is_default
+			set_owner = prev
+		}
 		assign_leader = event_target:GF_ogas_leader
 	}
 }
@@ -115,20 +117,20 @@ country_event = {
 
 				effect = {
 					remove_trait = GF_trait_leader_doll
-					copy_flags_and_variables_from = prev.ruler
 					add_trait = { trait = GF_trait_leader_ogas show_message = no }
-					set_leader_flag = legendary_leader				# 传奇领袖
-					set_leader_flag = immune_to_negative_traits		# 免疫负面特质
-					set_leader_flag = leader_death_events_blocked	# 禁止原版死亡事件
-					set_leader_flag = flag_GF_ogas_leader
-					set_leader_flag = has_gained_level_trait
-					set_leader_flag = block_governor_traits
 					save_global_event_target_as = GF_ogas_leader
 					add_trait = { trait = subclass_official_economy_councilor show_message = no }
 				}
 			}
 		}
 		event_target:GF_ogas_leader = {
+			copy_flags_and_variables_from = prev.ruler
+			set_leader_flag = legendary_leader            # 传奇领袖
+			set_leader_flag = immune_to_negative_traits   # 免疫负面特质
+			set_leader_flag = leader_death_events_blocked # 禁止原版死亡事件
+			set_leader_flag = flag_GF_ogas_leader
+			set_leader_flag = has_gained_level_trait
+			set_leader_flag = block_governor_traits
 			set_owner = prev
 			if = {
 				limit = {
@@ -444,8 +446,6 @@ country_event = {
 					immortal = yes
 					effect = {
 						save_global_event_target_as = GF_OGAS_mission_text
-						set_leader_flag = flag_l_GF_OGAS_mission_text
-						set_leader_flag = leader_death_events_blocked
 						reroll_random = yes
 						if = {
 							limit = { root = { GF_OGAS_has_any_available_threads = yes } }
@@ -459,6 +459,10 @@ country_event = {
 							set_name = GF_ogas.11200.desc.d
 						}
 					}
+				}
+				event_target:GF_OGAS_mission_text = {
+					set_leader_flag = flag_l_GF_OGAS_mission_text
+					set_leader_flag = leader_death_events_blocked
 				}
 			}
 		}
@@ -569,9 +573,11 @@ country_event = {
 					traits = { trait = leader_trait_chosen }
 					effect = {
 						remove_trait = GF_trait_leader_doll
-						set_leader_flag = flag_l_GF_archive_title
 						save_global_event_target_as = GF_archive_title
 					}
+				}
+				event_target:GF_archive_title = {
+					set_leader_flag = flag_l_GF_archive_title
 				}
 			}
 			else = {

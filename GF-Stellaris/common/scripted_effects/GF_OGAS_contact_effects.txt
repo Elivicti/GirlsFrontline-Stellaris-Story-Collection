@@ -142,8 +142,10 @@ GF_set_OGAS_story_event_picture = {
 					skill = 10
 					effect = {
 						save_global_event_target_as = GF_ogas_story_event_picture@prevprev
-						set_leader_flag = flag_$PICTURE$
 					}
+				}
+				event_target:GF_ogas_story_event_picture@prev = {
+					set_leader_flag = flag_$PICTURE$
 				}
 			}
 		}

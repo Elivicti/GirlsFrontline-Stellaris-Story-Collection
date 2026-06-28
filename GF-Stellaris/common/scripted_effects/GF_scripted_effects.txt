@@ -581,9 +581,6 @@ GF_convert_to_OGAS_subnet = {
 
 			effect = {
 				set_leader_flag = flag_GF_ogas_subnet_leader_@event_target:GF_vassal_subnet
-				set_leader_flag = legendary_leader				# 传奇领袖
-				set_leader_flag = immune_to_negative_traits		# 免疫负面特质
-				set_leader_flag = leader_death_events_blocked   # 禁止原版死亡事件
 				save_event_target_as = GF_ogas_leader_subnet
 				remove_trait = GF_trait_leader_doll
 				remove_trait = GF_trait_leader_ogas_2
@@ -594,6 +591,9 @@ GF_convert_to_OGAS_subnet = {
 		establish_communications_no_message = prev
 	}
 	event_target:GF_ogas_leader_subnet = {
+		set_leader_flag = legendary_leader            # 传奇领袖
+		set_leader_flag = immune_to_negative_traits   # 免疫负面特质
+		set_leader_flag = leader_death_events_blocked # 禁止原版死亡事件
 		set_owner = prev
 	}
 	assign_leader = event_target:GF_ogas_leader_subnet
