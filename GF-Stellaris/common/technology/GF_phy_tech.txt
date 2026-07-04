@@ -438,10 +438,6 @@ GF_tech_reverse_collapse_gateway = {
 			has_ascension_perk = ap_grasp_the_void
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
-			has_ascension_perk = ap_technological_ascendancy
-		}
-		modifier = {
 			factor = 5
 			has_technology = GF_tech_collapse_slingshot_protocal
 		}
