@@ -1,4 +1,72 @@
 
+utility_component_template = {
+	key = "GF_SHIP_AURA_COLLAPSE_SHIELD_DAMPENER"
+	size = medium
+	icon = "GFX_GF_aura_collapse_shield_dampener"
+	icon_frame = 1
+	power = -50
+
+	resources = {
+		category = GF_ship_collapse_utilities
+		cost = {
+			alloys = 200
+			GF_nyto_collapse_liquid = 5
+		}
+		upkeep = {
+			alloys = 2
+			GF_nyto_collapse_liquid = 2
+		}
+	}
+
+	potential = {
+		OR = {
+			ship_uses_titan_components = yes
+			ship_uses_dsc_components = yes
+		}
+	}
+	component_set = "ship_aura_components"
+	prerequisites = { GF_tech_collapse_shield_dampener }
+
+	hostile_aura = {
+		name = "aura_shield_dampener"
+		radius = 240
+		apply_on = ships
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = GF_hostile_collapse_shield_dampener
+			priority = 1
+		}
+
+		modifier = {
+			ship_shield_mult = -0.20
+			ship_damage_reduction_mult = -0.10
+		}
+	}
+	friendly_aura = {
+		name = "aura_category_defensive"
+		apply_on = ships
+
+		stack_info = {
+			id = "GF_friendly_collapse_weapon_enhance"
+			priority = 1
+		}
+
+		modifier = {
+			weapon_type_GF_collapsed_weapon_damage_mult = 0.10
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 2
+			is_ai = yes
+			is_preferred_weapons = weapon_type_energy
+		}
+	}
+}
+
+#####################################################################################################################
 
 # Strike Craft
 utility_component_template = {
@@ -155,6 +223,69 @@ utility_component_template = {
 #####################
 # 光环部件
 #####################
+
+utility_component_template = {
+	key = "GF_SHIP_AURA_COLLAPSE_SHIELD_DAMPENER_EX"
+	size = medium
+	icon = "GFX_GF_aura_collapse_shield_dampener"
+	icon_frame = 1
+	power = -100
+
+	resources = {
+		category = GF_ship_collapse_utilities
+		cost = {
+			alloys = 300
+			GF_nyto_collapse_liquid = 10
+		}
+		upkeep = {
+			alloys = 5
+			GF_nyto_collapse_liquid = 5
+		}
+	}
+
+	size_restriction = { GF_fire_support_ship }
+	component_set = "GF_fire_support_ship_aura"
+	prerequisites = { GF_tech_collapse_shield_dampener }
+
+	hostile_aura = {
+		name = "aura_shield_dampener"
+		system_wide = yes
+		apply_on = ships
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = GF_hostile_collapse_shield_dampener_ex
+			priority = 1
+		}
+
+		modifier = {
+			ship_shield_mult = -0.30
+			ship_damage_reduction_mult = -0.20
+		}
+	}
+	friendly_aura = {
+		name = "aura_category_defensive"
+		system_wide = yes
+		apply_on = ships
+
+		stack_info = {
+			id = "GF_friendly_collapse_weapon_enhance"
+			priority = 10
+		}
+
+		modifier = {
+			weapon_type_GF_collapsed_weapon_damage_mult = 0.15
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 2
+			is_ai = yes
+			is_preferred_weapons = weapon_type_energy
+		}
+	}
+}
 
 utility_component_template = {
 	key = "GF_SHIP_AURA_HOSTILE_SUPRESSION"

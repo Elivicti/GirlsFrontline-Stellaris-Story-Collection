@@ -451,6 +451,29 @@ GF_tech_reverse_collapse_gateway = {
 	}
 }
 
+GF_tech_collapse_shield_dampener = {
+	area = physics
+	tier = 5
+	cost = @GFTech_tier5cost3
+	category = { particles }
+	ai_update_type = military
+	is_rare = yes
+
+	potential = { GF_can_research_tech_trigger = { TECH = GF_tech_collapse_shield_dampener } }
+	prerequisites = {
+		GF_tech_fire_support_ship
+		GF_tech_collapse_relic_tech
+	}
+
+	weight = @GFTech_tier5weight3
+	weight_modifier = {
+		modifier = {
+			factor = value:tech_weight_likelihood
+			has_trait_in_council = { TRAIT = leader_trait_expertise_particles }
+		}
+	}
+}
+
 GF_tech_ogas_computing_center = {
 	area = physics
 	tier = 5

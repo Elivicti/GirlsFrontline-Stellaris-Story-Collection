@@ -79,6 +79,9 @@
  GF_tech_reverse_collapse_gateway_feature_title: "§H解锁特性：§!星门升级"
  GF_tech_reverse_collapse_gateway_feature_desc: "允许将建设完成的§Y星门§!改造为使用§Y逆向坍塌§!原理进行亚空间移动，任何不掌握§Y$GF_tech_collapse_jump_drive$§!技术的帝国将§R无法穿过§!改造后的星门。"
 
+ GF_tech_collapse_shield_dampener: "$GF_SHIP_AURA_COLLAPSE_SHIELD_DAMPENER$"
+ GF_tech_collapse_shield_dampener_desc: "利用坍塌粒子形成削弱立场，大幅降低敌方舰船的防御能力，使其变得不堪一击。"
+
  GF_tech_reverse_collapse_gateway_beacon: "逆向坍塌信标"
  GF_tech_reverse_collapse_gateway_beacon_desc: "这种特制的大功率逆向坍塌信标允许逆向坍塌星门从任何地方构建与之相通的亚空间隧道，通过支援舰可在战场上机动部署，能够极大提升我们舰队机动作战的能力。"
 

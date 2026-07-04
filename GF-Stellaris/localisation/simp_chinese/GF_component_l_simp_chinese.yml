@@ -92,6 +92,9 @@
  GF_SHIP_AURA_HOSTILE_HARASSMENT: "袭扰无人机"
  GF_SHIP_AURA_HOSTILE_SUPRESSION: "电子入侵压制计算机"
 
+ GF_SHIP_AURA_COLLAPSE_SHIELD_DAMPENER: "坍塌立场投射器"
+ GF_SHIP_AURA_COLLAPSE_SHIELD_DAMPENER_EX: "$GF_SHIP_AURA_COLLAPSE_SHIELD_DAMPENER$"
+
  GF_REVERSE_COLLAPSE_WARP_BEACON: "逆向坍塌信标"
  GF_REVERSE_COLLAPSE_WARP_BEACON_AURA: "逆向坍塌跃迁增幅器"
  GF_reverse_collapse_warp_beacon_aura_tooltip: "§E光环仅对搭载了$GF_COLLAPSE_JUMP_DRIVE$的舰船生效§!\n\n§H解锁舰队行动：§!$GF_fleet_action_deploy_RC_beacon$\n$GF_fleet_action_deploy_RC_beacon_desc$\n\n$GF_fleet_action_deploy_RC_beacon_effect_desc$"

@@ -152,6 +152,10 @@ spriteTypes = {
 		name = "GFX_GF_reverse_collapse_warp_beacon"
 		textureFile = "gfx/interface/icons/ship_parts/ship_part_reverse_collapse_warp_beacon.dds"
 	}
+	spriteType = {
+		name = "GFX_GF_aura_collapse_shield_dampener"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_aura_collapse_shield_dampener.dds"
+	}
 
 	## shrike
 	spriteType = {
