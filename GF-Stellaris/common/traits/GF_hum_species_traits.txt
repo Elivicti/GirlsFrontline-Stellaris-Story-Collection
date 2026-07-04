@@ -30,6 +30,7 @@ GF_trait_doll_master = {
 		pop_cat_ruler_bonus_workforce_mult = -0.10
 		pop_cat_specialist_bonus_workforce_mult = -0.10
 	}
+	allowed_origins = { GF_origin_commonwealth }
 	allowed_archetypes = { BIOLOGICAL }
 	ai_weight = {
 		weight = 0
@@ -57,6 +58,7 @@ GF_trait_self_dependence = {
 		planet_pops_consumer_goods_upkeep_mult = -0.20
 		planet_pops_upkeep_mult = 0.15
 	}
+	allowed_origins = { GF_origin_commonwealth }
 	custom_tooltip_with_modifiers = GF_trait_self_dependence_effect_tooltip
 	allowed_archetypes = { BIOLOGICAL }
 	ai_weight = { weight = 0 }
