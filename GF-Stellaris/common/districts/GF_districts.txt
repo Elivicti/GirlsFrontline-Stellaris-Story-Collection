@@ -49,7 +49,7 @@ district_GF_center = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 800
+		planet_housing_add = 1000
 		job_GF_maintain_doll_add = 300
 	}
 	triggered_planet_modifier = {
@@ -71,7 +71,7 @@ district_GF_center = {
 			exists = owner
 			owner = { has_technology = tech_housing_1 }
 		}
-		modifier = { planet_housing_add = 100 }
+		modifier = { planet_housing_add = 500 }
 	}
 
 	triggered_planet_modifier = {
@@ -80,7 +80,7 @@ district_GF_center = {
 			owner = { has_technology = tech_housing_2 }
 		}
 		modifier = {
-			planet_housing_add = 100
+			planet_housing_add = 200
 			job_GF_maintain_doll_add = 100
 		}
 	}
@@ -138,7 +138,7 @@ district_GF_generator_or_mining = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 300
+		planet_housing_add = 600
 	}
 
 	# 非格式塔
@@ -232,7 +232,7 @@ district_GF_collapse = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 300
+		planet_housing_add = 600
 		job_GF_collapser_add = 200
 	}
 
@@ -312,7 +312,7 @@ district_GF_assembly = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 300
+		planet_housing_add = 600
 	}
 
 	triggered_planet_modifier = {
