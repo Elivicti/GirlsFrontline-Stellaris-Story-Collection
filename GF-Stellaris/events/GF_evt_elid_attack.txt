@@ -305,7 +305,7 @@ country_event = {
 	}
 
 	immediate = {
-		fromfrom = {
+		fromfrom.planet = {
 			fire_on_action = {
 				on_action = on_GF_elid_invasion_defeated
 			}
@@ -326,7 +326,7 @@ country_event = {
 	}
 
 	immediate = {
-		fromfrom = {
+		fromfrom.planet = {
 			fire_on_action = {
 				on_action = on_GF_elid_invasion_lost
 			}

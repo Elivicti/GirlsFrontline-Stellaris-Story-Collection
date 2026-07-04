@@ -113,20 +113,20 @@ on_GF_elid_invasion_lost = {
 }
 
 # Triggers country_event for the defender upon victory
-# Root = country, planet owner
+# Root = country, colony owner
 # From = country, attack leader
-# FromFrom = planet
-on_planet_defenders_win = {
+# FromFrom = colony
+on_colony_defenders_win = {
 	events = {
 		GF_elid.610
 	}
 }
 
 # Triggers country_event for the defender upon defeat
-# This = country, planet owner
+# This = country, colony owner
 # From = country, attack leader
-# FromFrom = planet
-on_planet_defenders_lose = {
+# FromFrom = colony
+on_colony_defenders_lose = {
 	events = {
 		GF_elid.620
 	}
