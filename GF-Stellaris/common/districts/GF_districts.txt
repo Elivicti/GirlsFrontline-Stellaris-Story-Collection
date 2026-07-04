@@ -233,14 +233,10 @@ district_GF_collapse = {
 
 	planet_modifier = {
 		planet_housing_add = 600
-		job_GF_collapser_add = 200
 	}
-
 	triggered_planet_modifier = {
-		potential = {
-			owner? = { NOT = { has_technology = GF_tech_ecological_recovery } }
-		}
-		job_GF_collapser_add = -200
+		potential = { owner = { has_technology = GF_tech_collapse } }
+		job_GF_collapser_add = 200
 	}
 
 	triggered_planet_modifier = {
@@ -253,6 +249,7 @@ district_GF_collapse = {
 	}
 
 	triggered_desc = {
+		trigger = { owner = { has_technology = GF_tech_collapse } }
 		text = job_GF_collapser_effect_desc
 	}
 }
