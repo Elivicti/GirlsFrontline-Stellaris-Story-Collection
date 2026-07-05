@@ -209,7 +209,7 @@ country_event = {
 # FromFrom = Pop group
 # local_pop_amount = variable of how much was grown
 # on_pop_growth
-planet_event = {
+colony_event = {
 	id = GF_evt_misc.130
 	hide_window = yes
 

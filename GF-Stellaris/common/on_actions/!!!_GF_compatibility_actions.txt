@@ -6,7 +6,7 @@ on_game_start = {
 }
 
 # A pop amount has been grown
-# This = Planet scope
+# This = Colony scope
 # From = Country
 # FromFrom = Pop group
 # local_pop_amount = variable of how much was grown
