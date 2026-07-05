@@ -36,10 +36,10 @@ on_planet_bombarded = {
 	}
 }
 
-# Planet has reached 0 pops from orbital bombardment
-# This = Planet
+# Colony has reached 0 pops from orbital bombardment
+# This = Colony
 # From = Bombarder
-on_planet_zero_pops = {
+on_colony_zero_pops = {
 	events = {
 		GF_bombardment.2000
 		# GF_bombardment.1100	# 轰炸目标概率变为坍塌死寂星球

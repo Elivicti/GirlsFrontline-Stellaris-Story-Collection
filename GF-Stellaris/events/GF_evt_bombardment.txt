@@ -126,8 +126,27 @@ planet_event = {
 	}
 }
 
-planet_event = {
+colony_event = {
 	id = GF_bombardment.2000
+	hide_window = yes
+
+	is_triggered_only = yes
+	trigger = {
+		carrier = { is_scope_type = planet }
+	}
+	immediate = {
+		planet = {
+			planet_event = {
+				id = GF_bombardment.2001
+				scopes = {
+					from = from
+				}
+			}
+		}
+	}
+}
+planet_event = {
+	id = GF_bombardment.2001
 	hide_window = yes
 
 	is_triggered_only = yes
@@ -238,7 +257,6 @@ planet_event = {
 		}
 	}
 }
-
 ### 非居住站（包括普通星球和环世界）被轰炸至坍塌
 
 # 轰炸者
