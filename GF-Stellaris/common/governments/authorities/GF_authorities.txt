@@ -9,6 +9,7 @@ GF_auth_commonwealth = {
 	ruler_council_position = GF_councilor_ruler_commonwealth
 
 	possible = {
+		is_nomadic = no
 		ethics = {
 			NOR = {
 				value = ethic_gestalt_consciousness
