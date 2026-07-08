@@ -6,7 +6,6 @@ GF_ANDROID = {
 	resources = {
 		category = planet_pops
 
-		inline_script = "pop_resources/regular_upkeep"      # Regular food, mineral and energy upkeep.
 		inline_script = "pop_resources/pop_misc_production" # Resource production from other sources
 	}
 }
