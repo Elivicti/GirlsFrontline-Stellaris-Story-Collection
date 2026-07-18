@@ -4,8 +4,8 @@ GF_fire_support_ship = {
 	graphical_culture = yes
 	entity = firesupport_ship_frame_entity
 
-	collision_radius = @juggernaut_formation_priority
-	formation_priority =  @titan_formation_priority
+	collision_radius = 24
+	formation_priority = 24
 	max_speed = @speed_slow
 	acceleration = 0.2
 	rotation_speed = 0.05
