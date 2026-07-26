@@ -1362,6 +1362,10 @@ country_event = {
 		GF_set_zion_deep_dive_cooldown = { YEARS = 10 }
 		default_hide_option = yes
 	}
+
+	after = {
+		GF_zion_comm_end = yes
+	}
 }
 
 country_event = {
