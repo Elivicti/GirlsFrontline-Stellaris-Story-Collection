@@ -93,14 +93,14 @@ GF_auto_colony_capacity_add = {
 	icon = mod_country_admin_cap_add
 	good = yes
 	percentage = no
-	category = planet
+	category = colony
 	max_decimals = 1
 }
 
 GF_auto_colony_pop_load_add = {
 	icon = mod_species_empire_size_mult
 	good = no
-	category = planet
+	category = colony
 }
 
 GF_planet_URNC_commissioner_stability_add = {
@@ -128,5 +128,5 @@ GF_doll_assemblers_assembly_speed_mult = {
 	icon = mod_pop_assembly_speed
 	good = yes
 	percentage = yes
-	category = planet
+	category = colony
 }

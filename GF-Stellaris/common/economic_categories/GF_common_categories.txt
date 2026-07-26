@@ -136,7 +136,7 @@ GF_planet_reverse_collapser_researcher = {
 
 GF_automated_city_districts = {
 	parent = planet_districts
-	modifier_category = planet
+	modifier_category = colony
 
 	generate_mult_modifiers = {
 		produces
@@ -145,7 +145,7 @@ GF_automated_city_districts = {
 }
 GF_automated_city_districts_production_01 = {
 	parent = GF_automated_city_districts
-	modifier_category = planet
+	modifier_category = colony
 
 	generate_add_modifiers = {
 		produces
@@ -155,7 +155,7 @@ GF_automated_city_districts_production_01 = {
 }
 GF_automated_city_districts_production_02 = {
 	parent = GF_automated_city_districts
-	modifier_category = planet
+	modifier_category = colony
 
 	generate_add_modifiers = {
 		produces
@@ -165,7 +165,7 @@ GF_automated_city_districts_production_02 = {
 }
 GF_automated_city_districts_production_03 = {
 	parent = GF_automated_city_districts
-	modifier_category = planet
+	modifier_category = colony
 
 	generate_add_modifiers = {
 		produces
@@ -176,7 +176,7 @@ GF_automated_city_districts_production_03 = {
 
 GF_automated_city_districts_nexus = {
 	parent = GF_automated_city_districts
-	modifier_category = planet
+	modifier_category = colony
 	generate_add_modifiers = { upkeep }
 }
 
