@@ -207,11 +207,30 @@ planet_event = {
 			value = 2
 		}
 
-		add_district = district_city
-		add_district = district_mining
-
 		remove_building = building_commercial_zone
 		add_building = building_GF_42lab_1
+
+		add_district = district_city
+		add_district = district_city
+		add_district = district_city
+		while = {
+			limit = {
+				num_districts = {
+					type = district_mining
+					value < 5
+				}
+			}
+			add_district = district_mining
+		}
+		while = {
+			limit = {
+				num_districts = {
+					type = district_generator
+					value < 4
+				}
+			}
+			add_district = district_generator
+		}
 	}
 }
 
